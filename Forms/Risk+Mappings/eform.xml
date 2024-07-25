@@ -1,0 +1,1442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EForm xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Description>List - Risk</Description>
+  <DataDefinition>
+    <MinimumRows>1</MinimumRows>
+    <Columns>
+      <SystemColumn Which="EFormType" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="RecordID" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="LineNumber" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateCreated" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateLastUpdated" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateDue" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateClosed" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Priority" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="0-Unassigned" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Status" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="Start" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Assignee" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Sender" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Originator" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Description" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="WasRejected" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <Column Name="Likelihood" DataType="String" Guid="a3334ee8-41da-4cf0-96ee-d34810a491d0" IsHeader="false" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Consequence" DataType="String" Guid="004230ab-8efc-45f0-b523-d8c1642cbc16" IsHeader="false" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Risk Score" DataType="Number" Guid="9bcbfa88-ec77-4ff4-ae28-48a938e0e807" IsHeader="false" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Risk Rating" DataType="String" Guid="84ec7cd6-85bf-41b7-945f-046903706530" IsHeader="false" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Likelihood Array" DataType="Any" Guid="978ea2fd-cd69-466a-a5d0-f32ead307989" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="ARRAY_SELECT(&#xA;&#x9;SPLIT([Likelihoods], &quot;,&quot;), $(i, item) &#xA;&#x9;TRIM($item)&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Consequence Array" DataType="Any" Guid="3ddec5b4-f7f5-4661-b1af-aa84fd14a8cb" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="ARRAY_SELECT(&#xA;&#x9;SPLIT([Consequences], &quot;,&quot;), $(i, item) &#xA;&#x9;TRIM($item)&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Likelihoods" DataType="String" Guid="1b1626b5-1345-4121-a408-0ec0eb46d71d" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Consequences" DataType="String" Guid="936d3a41-ad76-4519-9fa6-d1909c801b11" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Risk Ratings" DataType="String" Guid="82d884bf-f118-40b3-8470-b6bb6556050c" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="COALESCE(&#xA;  [Risk Ratings],&#xA;  &quot;Low, Medium, High, Extreme&quot;&#xA;)" DefaultValue="Low, Medium, High, Extreme" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Risk Colours" DataType="String" Guid="7e14d4c8-22b9-481c-bdae-1e31c3bcd1eb" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="COALESCE(&#xA;  [Risk Colours],&#xA;  &quot;#b7df43, #ecca60, #e8b000, #e5281e, #bc251d&quot;&#xA;)" DefaultValue="#b7df43, #ecca60, #e8b000, #e5281e, #bc251d" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Risk Text Colours" DataType="String" Guid="fa5c6ad8-91a4-402d-8f39-fd6b17d4f01c" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Distinct Consequence" DataType="String" Guid="cc1b9f13-62e8-4ad6-a0fc-7dee573aada2" IsHeader="false" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="LET $result := TRIM(ARRAY_INDEX(SPLIT([Consequences], &quot;,&quot;), [LineNumber]));&#xA;RETURN IF($result = &quot;&quot;, NULL(), $result)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Distinct Likelihood" DataType="String" Guid="1434b7b3-7cb5-413d-b886-9d6f2059cf36" IsHeader="false" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="LET $result := TRIM(ARRAY_INDEX(SPLIT([Likelihoods], &quot;,&quot;), [LineNumber]));&#xA;RETURN IF($result = &quot;&quot;, NULL(), $result)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Distinct Risk Rating" DataType="String" Guid="c187582b-244f-4281-80d8-f5ed65f151be" IsHeader="false" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="LET $result := TRIM(ARRAY_INDEX(SPLIT([Risk Ratings], &quot;,&quot;), [LineNumber]));&#xA;RETURN IF($result = &quot;&quot;, NULL(), $result)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Distinct Background Colour" DataType="String" Guid="b61e1a63-2ca3-45bf-82e9-5af722137a33" IsHeader="false" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="LET $result := TRIM(ARRAY_INDEX(SPLIT([Risk Colours], &quot;,&quot;), [LineNumber]));&#xA;RETURN IF($result = &quot;&quot;, NULL(), $result)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Distinct Text Colour" DataType="String" Guid="19ef9ef2-6766-4c21-af36-3cf00d73d9ff" IsHeader="false" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="LET $result := TRIM(ARRAY_INDEX(SPLIT([Risk Text Colours], &quot;,&quot;), [LineNumber]));&#xA;RETURN IF($result = &quot;&quot;, NULL(), $result)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Parent Structure" DataType="Any" Guid="dd525840-c306-4ae1-bd2d-dd8504da5b57" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="LET $current := ARRAY([EFormType], [RecordID]);&#xA;LET $descriptionColumns := &#xA;HASH(&#xA;&#x9;&quot;Contract&quot;,  &#x9;&#x9;&#x9;&#x9;&#x9;&quot;Contract Number&quot;, &#xA;&#x9;&quot;Vendor&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;Company Name&quot;,&#xA;&#x9;&quot;Procurement&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&quot;Procurement Number&quot;,&#xA;&#x9;&quot;Project&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;Project Number&quot;,&#xA;    &quot;Evaluation&quot;, &#x9;&#x9;    &#x9;&#x9;&quot;Description&quot;,&#xA;  &#x9;&quot;Information Request&quot;,  &#x9;&#x9;&quot;File No.&quot;, &#xA;&#x9;&quot;Subpoena&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&quot;File No.&quot;,&#xA;&#x9;&quot;Privacy Incident&quot;, &#x9;&#x9;&#x9;&quot;File No.&quot;&#xA;); &#xA;&#xA;LET $altFormName:= HASH(&#xA;  &#x9;&quot;Insurance&quot;,&#x9;&quot;Compliance&quot;&#xA;  );&#xA;&#xA;LET $getLabelText := $(eFormType, recordID)&#xA;(&#xA;  &#x9;LET $targetColumn := HASH_GET($descriptionColumns, $eFormType);&#xA;  &#x9;RETURN &#xA;  &#x9;IF( $targetColumn = NULL, NULL,&#xA;&#x9;&#x9;LET $isthisRecord := ARRAY($eFormType, $recordID) = $current;&#xA;&#x9;&#x9;LET $title:= &#xA;&#x9;&#x9;IF( $isthisRecord = TRUE, &#xA;&#x9;&#x9;&#x9;CURRENT_VALUE($targetColumn),&#xA;&#x9;&#x9;&#x9;ARRAY_FIRST(DB_LOOKUP(&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY($targetColumn),&#xA;&#x9;&#x9;&#x9;&#x9;$eFormType, &#xA;&#x9;&#x9;&#x9;&#x9;&quot;[RecordID] FAST_EQUAL_TO &quot; &amp; $recordID&#xA;&#x9;&#x9;&#x9;))&#xA;&#x9;&#x9;  );&#xA;&#x9;&#x9;//shortern the descriptive label/ title&#xA;&#x9;&#x9;LET $charCount := LEN($title);&#xA;&#x9;&#x9;LET $titleArray := SPLIT($title, &quot; &quot;);&#xA;&#x9;&#x9;LET $wordCount := ARRAY_LENGTH($titleArray);&#xA;&#xA;&#x9;&#x9;LET $charLimit := 30; &#xA;&#x9;&#x9;LET $wordLimit := ARRAY_LENGTH( SPLIT( LEFT($title, $charLimit), &quot; &quot;) );&#xA;&#xA;&#x9;  RETURN //ARRAY_TAKE($titleArray, $wordLimit)&#xA;&#x9;&#x9;IF(&#xA;&#x9;&#x9;&#x9;$wordCount &lt;= $wordLimit, $title,&#xA;&#x9;&#x9;&#x9;ARRAY_JOIN(&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_TAKE($titleArray, $wordLimit), &quot; &quot;&#xA;&#x9;&#x9;&#x9;)&amp; &quot; ...&quot;&#xA;&#x9;&#x9;)&#xA;&#x9;  )&#xA; &#xA;); &#xA;&#xA;LET $getReadAccess := $(eFormType, recordID)&#xA;( EBMS_GET_EFORMRECORD_PERMISSION($eFormType, $recordID, &quot;read&quot;));&#xA;&#xA;LET $currentDes := CALL($getLabelText, [EFormType], [RecordID]);&#xA;LET $currentAccess := FALSE;&#xA;&#xA;RETURN&#xA;IF(&#xA;&#x9;[Parent Structure] &lt;&gt; NULL, [Parent Structure],&#xA;  &#x9;(&#xA;&#xA;&#x9;  LET $parent := &#xA;&#x9;  IF( &#xA;&#x9;&#x9;[RecordID] &gt; 0, &#xA;&#x9;&#x9;(&#xA;&#x9;&#x9;  LET $record := EBMS_GET_PARENT_RECORD(ARRAY_FIRST($current), ARRAY_INDEX($current, 2));&#xA;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF(  ARRAY_FIRST($record) == NULL, NULL,&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_CONCAT( &#xA;&#x9;&#x9;&#x9;&#x9;  $record, &#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getLabelText, ARRAY_FIRST($record), ARRAY_INDEX($record, 2)),&#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getReadAccess, ARRAY_FIRST($record), ARRAY_INDEX($record, 2))&#xA;&#x9;&#x9;&#x9;&#x9;  )&#xA;&#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;  )); &#xA;&#xA;&#x9;  LET $gParent := &#xA;&#x9;  IF( &#xA;&#x9;&#x9; $parent &lt;&gt; NULL, &#xA;&#x9;&#x9;(&#xA;&#x9;&#x9;  LET $record := EBMS_GET_PARENT_RECORD(ARRAY_FIRST($parent), ARRAY_INDEX($parent, 2));&#xA;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF(  ARRAY_FIRST($record) == NULL, NULL,&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_CONCAT( &#xA;&#x9;&#x9;&#x9;&#x9;  $record, &#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getLabelText, ARRAY_FIRST($record), ARRAY_INDEX($record, 2)),&#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getReadAccess, ARRAY_FIRST($record), ARRAY_INDEX($record, 2))&#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;&#x9;  )&#xA;&#x9;  )); &#xA;&#xA;&#x9;  LET $hash :=  &#xA;&#x9;  HASH_MERGE(&#xA;&#x9;&#x9;  IF( $parent &lt;&gt; NULL, HASH(&quot;parent&quot;, &#x9;$parent)),&#xA;&#x9;&#x9;  IF( $gParent &lt;&gt; NULL, HASH(&quot;gparent&quot;, &#x9;$gParent))&#xA;&#x9;  );&#xA;&#xA;&#x9;  LET $parentStructure := &#x9;//2nd instance&#xA;&#x9;  IF( &#xA;&#x9;&#x9;  ARRAY_LENGTH(HASH_KEYS($hash)) &gt;0, $hash, NULL&#xA;&#x9;  );&#xA;&#xA;&#x9;  LET $parentData:= &#xA;&#x9;  ARRAY_WHERE(&#xA;&#x9;&#x9;ARRAY(&#xA;&#x9;&#x9;&#x9;$gParent, &#xA;&#x9;&#x9;&#x9;$parent, &#xA;&#x9;&#x9;&#x9;ARRAY_CONCAT($current, $currentDes, $currentAccess),&#xA;&#x9;&#x9;), $(i,item) $item &lt;&gt; NULL&#xA;&#x9;   );&#xA;  &#xA;&#xA;&#x9;  LET $parentChain:=&#xA;&#x9;&#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;&#x9;  $parentData, $(i, item)&#xA;&#x9;&#x9;&#x9;  ARRAY_TAKE($item, 2)&#xA;&#x9;   );&#xA;&#xA;&#xA;&#x9;  LET $parentLinks :=&#xA;&#x9;  ARRAY_SELECT(&#xA;&#x9;&#x9;  $parentData, $(i, item) &#xA;&#x9;&#x9;&#x9;  LET $eFormType &#x9;&#x9;:= ARRAY_FIRST($item);&#xA;&#x9;&#x9;&#x9;  LET $recordID &#x9;&#x9;:= ARRAY_INDEX($item, 2);&#xA;&#x9;&#x9;&#x9;  LET $descriptiveLabel := ARRAY_INDEX($item, 3);&#xA;&#x9;&#x9;&#x9;  LET $hasReadAccess&#x9;:= ARRAY_INDEX($item, 4);&#xA;&#x9;&#x9;&#x9;  LET $URL&#x9;:= &quot;records/&quot; &amp; URLENCODE($eFormType) &amp; &quot;/&quot; &amp; $recordID ;&#xA;&#x9;&#x9;&#x9;  LET $showEFormType := $eFormType &lt;&gt; &quot;Vendor&quot;;&#xA;&#xA;&#x9;&#x9;&#x9;  LET $labelColour := &#xA;&#x9;&#x9;&#x9;&#x9;  IF(&#xA;&#x9;&#x9;&#x9;&#x9;   AND($eFormType = [EFormType], $recordID = [RecordID]),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #5D5D5D;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9; $hasReadAccess = TRUE,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #4D87B7;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #5D5D5D;&quot;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;  );&#xA;&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;  LET $labeltext:= &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  IF( $showEFormType == TRUE, &quot; &quot; &amp; COALESCE(HASH_GET($altFormName, $eFormType), $eFormType) ) &amp;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  IF(NOT(ISBLANK($descriptiveLabel)), &quot; &quot; &amp; $descriptiveLabel);&#xA;&#xA;&#x9;&#x9;&#x9;  LET $label :=  &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;span style=&quot;&quot;margin-left: 5px;&quot; &amp; $labelColour &amp; &quot;&quot;&quot;&gt;&quot; &amp;&#xA;&#x9;&#x9;&#x9;&#x9;  HTMLENCODE($labeltext) &amp; &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;/span&gt;&quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF( &#xA;&#x9;&#x9;&#x9;&#x9;  $hasReadAccess == TRUE, &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;a style=&quot;&quot;text-decoration-line: none;&quot;&quot; href=&quot; &amp; HTMLENCODE($URL) &amp; &quot;&gt;&quot; &amp; $label &amp; &quot;&lt;/a&gt;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;  $label &#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;  );&#xA;&#xA;&#x9;   LET $separator :=   &quot;&lt;svg style=&quot;&quot;vertical-align: bottom; margin-left: 5px; height: 18px;&quot;&quot; xmlns=&quot;&quot;http://www.w3.org/2000/svg&quot;&quot; viewBox=&quot;&quot;0 0 256 512&quot;&quot;&gt;&lt;path fill=&quot;&quot;#5D5D5D&quot;&quot; d=&quot;&quot;M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z&quot;&quot;/&gt;&lt;/svg&gt;&quot;;&#xA;&#x9;  &#xA;&#x9;  LET $breadcrumb := &quot;&lt;div style=&quot;&quot;height: 23px; padding-left: 5px; font-size: 10pt; color: #5D5D5D; &quot;&quot;&gt;You are here:&quot; &amp; ARRAY_JOIN($parentLinks, $separator) &amp; &quot;&lt;/div&gt;&quot;;&#xA;&#xA;&#x9;  RETURN &#xA;&#x9;  HASH(&#xA;&#x9;&#x9;  &quot;Parent Structure&quot;,&#x9;$parentStructure,&#xA;&#x9;&#x9;  &quot;Parent Data&quot;, &#x9;&#x9;$parentData,&#xA;&#x9;&#x9;  &quot;Parent Chain&quot;,&#x9;&#x9;$parentChain,&#xA;&#x9;&#x9;  &quot;Breadcrumb&quot;,&#x9;&#x9;$breadcrumb&#xA;&#x9;&#x9;)&#xA;&#x9; )&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Parent Chain" DataType="Any" Guid="122bd878-9f7e-4be1-857b-369bbc3b8f85" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="HASH_GET([Parent Structure], &quot;Parent Chain&quot;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+    </Columns>
+    <ReferenceGroups />
+    <Kpis />
+    <MergeFields />
+  </DataDefinition>
+  <Views>
+    <ViewEntry Name="Default">
+      <View BackColor="0,0,0,0">
+        <PdfSettings>
+          <PageNumberMode>None</PageNumberMode>
+          <FooterTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </PdfSettings>
+        <SidebarMode>Lock</SidebarMode>
+        <HorizontalAlign>Default</HorizontalAlign>
+        <Security>
+          <Roles>
+            <RoleEntry Use="true">
+              <Role>Everyone</Role>
+            </RoleEntry>
+          </Roles>
+        </Security>
+        <Sections>
+          <Section ColumnCount="1" Margin="36" BlockSpacing="20" PageWidth="826" PageHeight="1169">
+            <Name xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            <Notes></Notes>
+            <Blocks>
+              <Block IsReadOnly="false" ID="8b527d0b-b086-47e4-a776-dc82fbec7dab">
+                <Controls>
+                  <Title ID="Control52" IsReadOnly="false" LineNumber="1" Left="7" Top="4" Width="23" Height="2" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Text></Text>
+                    <UseEFormNameAsText>false</UseEFormNameAsText>
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>12</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="[EFormType]" />
+                    </FormulaBindings>
+                  </Title>
+                  <Label Text="#" ID="Control126" IsReadOnly="false" LineNumber="1" Left="27" Top="4" Width="9" Height="2" TabIndex="3" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Right</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>8</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="&quot;Record #&quot; &amp; IF([RecordID] &lt; 0, &quot;&lt;NEW&gt;&quot;, [RecordID])" />
+                    </FormulaBindings>
+                  </Label>
+                  <TextBox ID="Control238" IsReadOnly="false" LineNumber="1" Left="31" Top="10" Width="6" Height="2" TabIndex="1" Visible="false" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <ReferencedDataColumn>Parent Chain</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,222,245,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>8</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <RichLabel Text="" ID="Control237" IsReadOnly="false" LineNumber="1" Left="0" Top="10" Width="31" Height="2" TabIndex="100" Visible="true" ShowBorder="false" PrintBorder="false" ShowWhenPrinting="false">
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="HASH_GET([Parent Structure], &quot;Breadcrumb&quot;)" />
+                      <Binding PropertyName="Visible" Expression="[RecordID] &gt; 0" />
+                    </FormulaBindings>
+                  </RichLabel>
+                </Controls>
+                <HeadingText></HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>12</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,255,255,255</BackColor>
+                <HeadingBackColor>64,64,64,255</HeadingBackColor>
+                <HeadingTextColor>224,224,224,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>64,64,64,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>InheritFromView</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+              <RepeaterBlock IsReadOnly="false" ID="Block4">
+                <HeaderControls>
+                  <Label Text="Probability" ID="Control5" IsReadOnly="false" LineNumber="1" Left="1" Top="17" Width="9" Height="2" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Impact" ID="Control6" IsReadOnly="false" LineNumber="1" Left="10" Top="17" Width="9" Height="2" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Risk Rating" ID="Control7" IsReadOnly="false" LineNumber="1" Left="19" Top="17" Width="9" Height="2" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Score" ID="Control8" IsReadOnly="false" LineNumber="1" Left="28" Top="17" Width="8" Height="2" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Likelihoods (low to high, comma separated):" ID="Control9" IsReadOnly="false" LineNumber="1" Left="1" Top="1" Width="15" Height="2" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Consequences (low to high, comma separated):" ID="Control10" IsReadOnly="false" LineNumber="1" Left="1" Top="3" Width="15" Height="2" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <TextBox ID="Control13" IsReadOnly="false" LineNumber="1" Left="16" Top="1" Width="20" Height="2" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Likelihoods</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <ChangeFieldValues>
+                          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <FieldEntries>
+                            <FieldEntry>
+                              <ColumnName>Distinct Likelihood</ColumnName>
+                              <AssignWholeColumn>true</AssignWholeColumn>
+                              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <Formula>ARRAY_SELECT(SPLIT([Likelihoods], ","), $(i, item) TRIM($item))</Formula>
+                            </FieldEntry>
+                          </FieldEntries>
+                          <UpdateRecordFormulas>false</UpdateRecordFormulas>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </ChangeFieldValues>
+                      </Tasks>
+                    </Event>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <TextBox ID="Control14" IsReadOnly="false" LineNumber="1" Left="16" Top="3" Width="20" Height="2" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Consequences</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <ChangeFieldValues>
+                          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <FieldEntries>
+                            <FieldEntry>
+                              <ColumnName>Distinct Consequence</ColumnName>
+                              <AssignWholeColumn>true</AssignWholeColumn>
+                              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <Formula>ARRAY_SELECT(SPLIT([Consequences], ","), $(i, item) TRIM($item))</Formula>
+                            </FieldEntry>
+                          </FieldEntries>
+                          <UpdateRecordFormulas>false</UpdateRecordFormulas>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </ChangeFieldValues>
+                      </Tasks>
+                    </Event>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <Button ID="Control15" IsReadOnly="false" LineNumber="1" Left="8" Top="13" Width="6" Height="3" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="false">
+                    <Text>Build Mapping</Text>
+                    <CausesValidation>false</CausesValidation>
+                    <ValidationTag xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <ChangeFieldValues>
+                          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <FieldEntries>
+                            <FieldEntry>
+                              <ColumnName>Likelihood</ColumnName>
+                              <AssignWholeColumn>true</AssignWholeColumn>
+                              <LineNumberFormula></LineNumberFormula>
+                              <Formula>LET $iterations := ARRAY_LENGTH([Likelihood Array]) * ARRAY_LENGTH([Consequence Array]);
+LET $likelihoodLength := ARRAY_LENGTH([Likelihood Array]); 
+LET $consequenceLength := ARRAY_LENGTH([Consequence Array]); 
+
+LET $result := 
+ARRAY_SELECT(
+	RANGE(0, $iterations), $(i, item)
+	ARRAY_INDEX([Likelihood Array], CEILING($i / $consequenceLength))
+);
+
+RETURN $result</Formula>
+                            </FieldEntry>
+                            <FieldEntry>
+                              <ColumnName>Consequence</ColumnName>
+                              <AssignWholeColumn>true</AssignWholeColumn>
+                              <LineNumberFormula></LineNumberFormula>
+                              <Formula>LET $iterations := ARRAY_LENGTH([Likelihood Array]) * ARRAY_LENGTH([Consequence Array]);
+LET $likelihoodLength := ARRAY_LENGTH([Likelihood Array]); 
+LET $consequenceLength := ARRAY_LENGTH([Consequence Array]); 
+
+LET $result := 
+ARRAY_SELECT(
+	RANGE(0, $iterations), $(i, item)
+	LET $magicNumber := FLOOR(($i - 1) / $consequenceLength) * $consequenceLength;	
+	RETURN ARRAY_INDEX([Consequence Array], $i - $magicNumber));
+
+RETURN $result</Formula>
+                            </FieldEntry>
+                          </FieldEntries>
+                          <Description>Create Mappings</Description>
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </ChangeFieldValues>
+                      </Tasks>
+                    </Event>
+                    <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <TypeOfButton>Custom</TypeOfButton>
+                    <BorderColor>180,180,180,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Button>
+                  <Button ID="Control16" IsReadOnly="false" LineNumber="1" Left="23" Top="13" Width="6" Height="3" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="false">
+                    <Text>Linear Score</Text>
+                    <CausesValidation>false</CausesValidation>
+                    <ValidationTag xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <ChangeFieldValues>
+                          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <FieldEntries>
+                            <FieldEntry>
+                              <ColumnName>Risk Score</ColumnName>
+                              <AssignWholeColumn>true</AssignWholeColumn>
+                              <LineNumberFormula></LineNumberFormula>
+                              <Formula>LET $likelihoods := EACH [Likelihood];
+LET $likelihoodLength := ARRAY_LENGTH([Likelihood Array]);
+LET $consequenceLength := ARRAY_LENGTH([Consequence Array]);
+
+RETURN
+ARRAY_SELECT(
+	RANGE(0, ARRAY_LENGTH($likelihoods)), $(i, item) 
+	LET $x := ARRAY_INDEXOF([Likelihood Array], [Likelihood]#$i);
+	LET $y := ARRAY_INDEXOF([Consequence Array], [Consequence]#$i);
+	RETURN 
+	FLOOR((($x / $likelihoodLength) * ($y / $consequenceLength)) * 100)
+)</Formula>
+                            </FieldEntry>
+                            <FieldEntry>
+                              <ColumnName>Risk Rating</ColumnName>
+                              <AssignWholeColumn>true</AssignWholeColumn>
+                              <LineNumberFormula></LineNumberFormula>
+                              <Formula>ARRAY_SELECT(
+	EACH [Risk Score], $(i, item)
+	IF(
+		$item &gt;= 75, ARRAY_INDEX(SPLIT([Risk Ratings], ", "), 4), 
+		$item &gt;= 50, ARRAY_INDEX(SPLIT([Risk Ratings], ", "), 3),  
+		$item &gt;= 25, ARRAY_INDEX(SPLIT([Risk Ratings], ", "), 2), 
+		$item &gt;= 0,  ARRAY_INDEX(SPLIT([Risk Ratings], ", "), 1)
+	)
+)</Formula>
+                            </FieldEntry>
+                          </FieldEntries>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </ChangeFieldValues>
+                      </Tasks>
+                    </Event>
+                    <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <TypeOfButton>Custom</TypeOfButton>
+                    <BorderColor>180,180,180,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Button>
+                  <Label Text="Risk Ratings (low to high, comma separated):" ID="Control329" IsReadOnly="false" LineNumber="1" Left="1" Top="5" Width="15" Height="2" TabIndex="2" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Background colours (low to high, comma separated):" ID="Control330" IsReadOnly="false" LineNumber="1" Left="1" Top="7" Width="15" Height="2" TabIndex="3" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <TextBox ID="Control331" IsReadOnly="false" LineNumber="1" Left="16" Top="5" Width="20" Height="2" TabIndex="4" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Risk Ratings</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <ChangeFieldValues>
+                          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <FieldEntries>
+                            <FieldEntry>
+                              <ColumnName>Distinct Risk Rating</ColumnName>
+                              <AssignWholeColumn>true</AssignWholeColumn>
+                              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <Formula>ARRAY_SELECT(SPLIT([Risk Ratings], ","), $(i, item) TRIM($item))</Formula>
+                            </FieldEntry>
+                          </FieldEntries>
+                          <UpdateRecordFormulas>false</UpdateRecordFormulas>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </ChangeFieldValues>
+                      </Tasks>
+                    </Event>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <TextBox ID="Control332" IsReadOnly="false" LineNumber="1" Left="16" Top="7" Width="20" Height="2" TabIndex="5" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Risk Colours</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <ChangeFieldValues>
+                          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <FieldEntries>
+                            <FieldEntry>
+                              <ColumnName>Distinct Background Colour</ColumnName>
+                              <AssignWholeColumn>true</AssignWholeColumn>
+                              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <Formula>ARRAY_SELECT(SPLIT([Risk Colours], ","), $(i, item) TRIM($item))</Formula>
+                            </FieldEntry>
+                          </FieldEntries>
+                          <UpdateRecordFormulas>false</UpdateRecordFormulas>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </ChangeFieldValues>
+                      </Tasks>
+                    </Event>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <Label Text="Text colours (low to high, comma separated):" ID="Control333" IsReadOnly="false" LineNumber="1" Left="1" Top="9" Width="15" Height="2" TabIndex="6" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <TextBox ID="Control334" IsReadOnly="false" LineNumber="1" Left="16" Top="9" Width="20" Height="2" TabIndex="7" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Risk Text Colours</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <ChangeFieldValues>
+                          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <FieldEntries>
+                            <FieldEntry>
+                              <ColumnName>Distinct Text Colour</ColumnName>
+                              <AssignWholeColumn>true</AssignWholeColumn>
+                              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <Formula>ARRAY_SELECT(SPLIT([Risk Text Colours], ","), $(i, item) TRIM($item))</Formula>
+                            </FieldEntry>
+                          </FieldEntries>
+                          <UpdateRecordFormulas>false</UpdateRecordFormulas>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </ChangeFieldValues>
+                      </Tasks>
+                    </Event>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                </HeaderControls>
+                <FooterControls>
+                  <RichLabel Text="&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;&lt;br /&gt;&#xA;&lt;br /&gt;" ID="Control266" IsReadOnly="false" LineNumber="1" Left="1" Top="4" Width="35" Height="20" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Event>
+                      <Tasks>
+                        <ChangeFieldValues>
+                          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <FieldEntries>
+                            <FieldEntry>
+                              <ColumnName>Temp</ColumnName>
+                              <AssignWholeColumn>false</AssignWholeColumn>
+                              <LineNumberFormula>1</LineNumberFormula>
+                              <Formula>SPLIT($clickid, "|")</Formula>
+                            </FieldEntry>
+                            <FieldEntry>
+                              <ColumnName>Risk Likelihood</ColumnName>
+                              <AssignWholeColumn>false</AssignWholeColumn>
+                              <LineNumberFormula>1</LineNumberFormula>
+                              <Formula>ARRAY_FIRST([Temp])</Formula>
+                            </FieldEntry>
+                            <FieldEntry>
+                              <ColumnName>Risk Consequence</ColumnName>
+                              <AssignWholeColumn>false</AssignWholeColumn>
+                              <LineNumberFormula>1</LineNumberFormula>
+                              <Formula>ARRAY_LAST([Temp])</Formula>
+                            </FieldEntry>
+                          </FieldEntries>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </ChangeFieldValues>
+                      </Tasks>
+                    </Event>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="LET $totalW := 35 * 20 - 2;&#xA;LET $totalH := 20 * 10 - 8; &#xA;LET $headingHeight := 24;&#xA;&#xA;LET $colours := SPLIT([Risk Colours], &quot;, &quot;);&#xA;LET $textColours := SPLIT([Risk Text Colours], &quot;, &quot;);&#xA;LET $ratings := SPLIT([Risk Ratings], &quot;, &quot;); &#xA;LET $fontsize := &quot;13px&quot;;&#xA;&#xA;LET $ratingtoColourMap :=&#xA;HASH(&#xA;&#x9;ARRAY_INDEX($ratings, 1), 1,&#xA;&#x9;ARRAY_INDEX($ratings, 2), 2,  &#xA;&#x9;ARRAY_INDEX($ratings, 3), 3, &#xA;&#x9;ARRAY_INDEX($ratings, 4), 4&#xA;);&#xA;&#xA;LET $map := &#xA;ARRAY_TRANSPOSE(&#xA;&#x9;ARRAY(&#xA;&#x9;&#x9;EACH [Consequence],&#xA;&#x9;&#x9;EACH [Likelihood],&#xA;&#x9;&#x9;EACH [Risk Rating],&#xA;&#x9;&#x9;EACH [Risk Score]&#xA;&#x9;)&#xA;);&#xA;&#xA;LET $consequences := [Consequence Array];&#xA;LET $likelihoods := ARRAY_REVERSE([Likelihood Array]);&#xA;&#xA;// calculate actual col/row width/height&#xA;LET $w := $totalW / (ARRAY_LENGTH($consequences) + 1);&#xA;LET $h := ($totalH - $headingHeight) / (ARRAY_LENGTH($likelihoods));&#xA;&#xA;LET $consequenceRow := &#xA;&quot;&lt;tr&gt;&quot; &amp; &#xA;&#x9;&quot;&lt;td style=&quot;&quot;background-color: white; width:&quot; &amp; $w &amp; &quot;px;height:&quot; &amp; $headingHeight &amp; &quot;px&quot;&quot;&gt;&lt;/td&gt;&quot; &#xA;&#x9;&amp; ARRAY_JOIN(ARRAY_SELECT($consequences, $(col, consequence) (&#xA;&#x9;&quot;&lt;td style=&quot;&quot;background-color: white; text-align: center; font-size: &quot; &amp; $fontsize &amp; &quot;; width:&quot; &amp; $w &amp; &quot;px&quot;&quot;&gt;&quot; &amp; HTMLENCODE($consequence) &amp; &quot;&lt;/td&gt;&quot;)&#xA;&#x9;)) &amp; &#xA;&quot;&lt;/tr&gt;&quot;;&#xA;&#x9;&#xA;RETURN&#xA; &quot;&lt;table style=&quot;&quot;border-collapse:collapse&quot;&quot; cellpadding=&quot;&quot;0&quot;&quot; cellspacing=&quot;&quot;0&quot;&quot;&gt;&quot; &amp; &#xA;&#x9;ARRAY_JOIN(ARRAY_SELECT(&#xA;&#x9;&#x9;$likelihoods,&#xA;&#x9;&#x9;$(row, likelihood) (&#xA;&#x9;&#x9;&#x9;&quot;&lt;tr&gt;&lt;td style=&quot;&quot;background-color: white; padding-right: 10px; font-size: &quot; &amp; $fontsize &amp; &quot;; text-align: right; height:&quot; &amp; $h &amp; &quot;px&quot;&quot;&gt;&quot; &amp; HTMLENCODE($likelihood) &amp; &quot;&lt;/td&gt;&quot; &#xA;&#x9;&#x9;&#x9;&amp; ARRAY_JOIN(ARRAY_SELECT(&#xA;&#x9;&#x9;&#x9;&#x9;$consequences,&#xA;&#x9;&#x9;&#x9;&#x9;$(col, consequence) (&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;LET $key   := ARRAY($likelihood, $consequence);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;LET $matches := ARRAY_WHERE($map, $(i, item) ARRAY(ARRAY_INDEX($item, 2), ARRAY_INDEX($item, 1)) = $key);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;LET $riskRating := ARRAY_INDEX(ARRAY_FIRST($matches), 3);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;LET $riskScore := ARRAY_INDEX(ARRAY_FIRST($matches), 4);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;LET $colorIndex := HASH_GET($ratingtoColourMap, $riskRating);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;LET $color := ARRAY_INDEX($colours, $colorIndex);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;LET $textColor := ARRAY_INDEX($textColours, $colorIndex);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;LET $style := &quot;display: inline-block; width: 49%; cursor: pointer; text-decoration: none; color: &quot; &amp; HTMLENCODE($textColor) &amp; &quot;;font-size: &quot; &amp; $fontsize &amp; &quot;;&quot;;&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;RETURN &quot;&lt;td style=&quot;&quot;text-align:center;border:0px;background-color:&quot; &amp; HTMLENCODE($color) &amp; &quot;&quot;&quot;&gt; &lt;div style=&quot;&quot;&quot; &amp; HTMLENCODE($style) &amp; &quot;&quot;&quot;&gt;&quot; &amp; HTMLENCODE($riskRating) &amp; &quot;&lt;/div&gt;&lt;/td&gt;&quot;&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;)&#xA;&#x9;&#x9;&#x9;)) &amp; &quot;&lt;/tr&gt;&quot;&#xA;&#x9;&#x9;)&#xA;&#x9;)) &amp; &#xA;&#x9;$consequenceRow &amp; &#xA;&quot;&lt;/table&gt;&quot;" />
+                    </FormulaBindings>
+                  </RichLabel>
+                  <Label Text="Heat Map Preview" ID="Control11" IsReadOnly="false" LineNumber="1" Left="1" Top="1" Width="35" Height="3" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>64,64,64,255</BackColor>
+                    <TextColor>255,255,255,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                </FooterControls>
+                <ItemTemplate>
+                  <TextBox ID="Control1" IsReadOnly="false" LineNumber="1" Left="1" Top="1" Width="9" Height="2" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Likelihood</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <TextBox ID="Control2" IsReadOnly="false" LineNumber="1" Left="10" Top="1" Width="9" Height="2" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Consequence</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <TextBox ID="Control3" IsReadOnly="false" LineNumber="1" Left="28" Top="1" Width="8" Height="2" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Risk Score</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <ChangeFieldValues>
+                          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <FieldEntries />
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </ChangeFieldValues>
+                      </Tasks>
+                    </Event>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <TextBox ID="Control4" IsReadOnly="false" LineNumber="1" Left="19" Top="1" Width="9" Height="2" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Risk Rating</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <Box ID="Control335" IsReadOnly="false" LineNumber="1" Left="0" Top="0" Width="37" Height="4" TabIndex="0" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BackColor>246,246,246,255</BackColor>
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <Radius>4</Radius>
+                    <FormulaBindings />
+                  </Box>
+                </ItemTemplate>
+                <InitialRowCount>1</InitialRowCount>
+                <MaxHeight>0</MaxHeight>
+                <EnableRepeaterControls>true</EnableRepeaterControls>
+                <HeaderHeight>19</HeaderHeight>
+                <FooterHeight>25</FooterHeight>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Details</HeadingText>
+                <HeadingHeight>3</HeadingHeight>
+                <BodyHeight>4</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>1</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>InheritFromView</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </RepeaterBlock>
+            </Blocks>
+          </Section>
+        </Sections>
+        <AutoBreak>true</AutoBreak>
+        <EnableSquash>false</EnableSquash>
+        <BannerHtmlTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </View>
+    </ViewEntry>
+  </Views>
+  <Security>
+    <PermissionSetName>Custom</PermissionSetName>
+    <Roles>
+      <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+        <Role>External Evaluation Panel Members</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+        <Role>Vendor Accounts</Role>
+      </RoleEntry>
+    </Roles>
+    <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+    <RecordReadAccessFilter>
+      <GroupingExpression Operator="And">
+        <Children />
+      </GroupingExpression>
+    </RecordReadAccessFilter>
+    <RecordWriteAccessFilter>
+      <GroupingExpression Operator="And">
+        <Children />
+      </GroupingExpression>
+    </RecordWriteAccessFilter>
+    <ComponentAccessControlGroups />
+  </Security>
+  <SecurityParts>
+    <Security>
+      <PermissionSetName>Custom</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>External Evaluation Panel Members</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Vendor Accounts</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordWriteAccessFilter>
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Open Access</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>External Evaluation Panel Members</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Vendor Accounts</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordWriteAccessFilter>
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Department Level Access</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Vendor Accounts</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>External Evaluation Panel Members</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordWriteAccessFilter>
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - CompareCoOps</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Vendor Accounts</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>External Evaluation Panel Members</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordWriteAccessFilter>
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Boroondara</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Vendor Accounts</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>External Evaluation Panel Members</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordWriteAccessFilter>
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Cenitex</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>External Evaluation Panel Members</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Vendor Accounts</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordWriteAccessFilter>
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - CoGD</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>External Evaluation Panel Members</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Vendor Accounts</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordWriteAccessFilter>
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Ombudsman</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Vendor Accounts</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>External Evaluation Panel Members</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordWriteAccessFilter>
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Obsolete - Open Set</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>External Evaluation Panel Members</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Vendor Accounts</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordWriteAccessFilter>
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Obsolete - Implementation Set</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>External Evaluation Panel Members</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Vendor Accounts</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordWriteAccessFilter>
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Stonnington</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>External Evaluation Panel Members</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="false" Delete="false" Administrate="false">
+          <Role>Vendor Accounts</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordWriteAccessFilter>
+      <ComponentAccessControlGroups />
+    </Security>
+  </SecurityParts>
+  <Categories>
+    <CategoryRef>Managed List</CategoryRef>
+  </Categories>
+  <Workflow>
+    <EnableAutomatedWorkflow>false</EnableAutomatedWorkflow>
+    <AllowManualOverride>true</AllowManualOverride>
+    <PromptUserOnWorkflowChange>false</PromptUserOnWorkflowChange>
+    <States>
+      <State Name="Start" Left="100" Top="100">
+        <Transitions />
+        <NotificationTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <SendNotification>false</SendNotification>
+        <ForceAssigneeTo xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </State>
+      <State Name="Closed" Left="100" Top="200">
+        <Transitions />
+        <NotificationTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <SendNotification>false</SendNotification>
+        <ForceAssigneeTo xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </State>
+    </States>
+  </Workflow>
+  <Settings>
+    <DefaultView>Default</DefaultView>
+    <NotifyOnSave>Never</NotifyOnSave>
+    <DefaultToNotifyOnSave>false</DefaultToNotifyOnSave>
+    <NotifyOnSaveTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <NotifyOnCreate>false</NotifyOnCreate>
+    <NotifyOnCreateRecordTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <IncludeRenderedViewInCreateRecordNotification>false</IncludeRenderedViewInCreateRecordNotification>
+    <NotifyOnWorkflowChange>false</NotifyOnWorkflowChange>
+    <NotifyOnWorkflowChangeTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <NotifyOnClosed>false</NotifyOnClosed>
+    <NotifyOnClosedTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <AllowUserToPreviewNotifications>false</AllowUserToPreviewNotifications>
+    <DefaultUserToPreviewNotifications>false</DefaultUserToPreviewNotifications>
+    <DeleteWithParent>true</DeleteWithParent>
+    <EnableManualLinkedEFormRecordsManagement>false</EnableManualLinkedEFormRecordsManagement>
+    <IsQuickSearchable>true</IsQuickSearchable>
+    <AssignNewRecordsToCurrentUser>false</AssignNewRecordsToCurrentUser>
+    <EnableDuplicatingRecords>false</EnableDuplicatingRecords>
+    <EnableDeleteFromTabularView>false</EnableDeleteFromTabularView>
+    <EnableAddFromTabularView>false</EnableAddFromTabularView>
+    <PromptUserBeforeNavigatingAway>true</PromptUserBeforeNavigatingAway>
+  </Settings>
+  <Attachments>
+    <Folders />
+  </Attachments>
+  <Dependants>
+    <Selectors />
+  </Dependants>
+  <Credentials>
+    <Credentials />
+  </Credentials>
+  <CustomEvents>
+    <Event>
+      <Name>Send Email</Name>
+      <Guid>a2a0ebf6-a571-4c37-9f43-fb701b80f868</Guid>
+      <Description></Description>
+      <Tasks>
+        <Notification>
+          <AttachRecordViewAsPdf>false</AttachRecordViewAsPdf>
+          <SendEmailImmediately>true</SendEmailImmediately>
+          <AttachLogo>false</AttachLogo>
+          <AttachRecordViewName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <AttachedRecordViewFilenameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Attachments />
+          <DontSendToCurrentRole>false</DontSendToCurrentRole>
+          <Template>
+            <ToAddressesTemplate></ToAddressesTemplate>
+            <CcAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            <BccAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            <ReplyToAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            <SubjectTemplate>Untitled email</SubjectTemplate>
+            <BodyTemplate>Dear user,{ EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }Regards</BodyTemplate>
+            <IsBodyHtml>false</IsBodyHtml>
+            <UseDefaultFrame>true</UseDefaultFrame>
+          </Template>
+          <LibraryEmailTemplateNameTemplate>{ARRAY_INDEX($eventargs, 1)//1. Template Name//2. Recipient List}</LibraryEmailTemplateNameTemplate>
+          <Location>Library</Location>
+          <DisplayLogMessages>true</DisplayLogMessages>
+          <SendFromTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Notification>
+      </Tasks>
+    </Event>
+  </CustomEvents>
+</EForm>

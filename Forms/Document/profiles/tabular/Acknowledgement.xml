@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Document" Alias="" Aggregate="None" Width="338" />
+    <Column Name="Status" Alias="" Aggregate="None" Width="129" />
+    <Column Name="Date Approved" Alias="" Aggregate="None" Width="120" />
+    <RemoteColumn Name="Acknowledged by" ShowViewLink="false">
+      <RelationshipChain>
+        <Remote Type="Child" RemoteEFormType="Acknowledgement" ReferenceGroupName="">
+          <Filter>
+            <GroupingExpression Operator="And">
+              <Children>
+                <CriterionExpression>
+                  <Criterion>
+                    <TextCriterion>
+                      <Text>[LineNumber] = 1</Text>
+                    </TextCriterion>
+                  </Criterion>
+                </CriterionExpression>
+              </Children>
+            </GroupingExpression>
+          </Filter>
+        </Remote>
+      </RelationshipChain>
+      <OrderBy>[Status] ASC, [Date of Event] ASC, [DateCreated] ASC</OrderBy>
+      <DataSelection ShowOnlyAggregates="false">
+        <Columns>
+          <Column Name="Assignee Name" Alias="Name" Width="150" Aggregate="None" />
+          <Column Name="Status" Alias="" Width="100" Aggregate="None" />
+          <Column Name="DateCreated" Alias="Date Requested" Width="100" Aggregate="None" />
+          <Column Name="Date of Event" Alias="Date Acknowledged" Width="100" Aggregate="None" />
+        </Columns>
+      </DataSelection>
+    </RemoteColumn>
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="ContainsInsensitive">
+              <Left>
+                <SourceEFormColumnReferenceCriterion ColumnName="Status" />
+              </Left>
+              <Right>
+                <ConstantCriterion>
+                  <Value>
+                    <String>Approved</String>
+                  </Value>
+                </ConstantCriterion>
+              </Right>
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[Document] ASC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

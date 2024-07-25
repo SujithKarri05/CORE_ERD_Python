@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Evaluation</EForm>
+  <Name>All Individual Evaluations Complete</Name>
+  <Description>Sends to Procurement Officer when all Evaluations are complete </Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>role:"{[Username in Role]}"</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>Individual Evaluations Complete</SubjectTemplate>
+    <BodyTemplate>Hello {[Individual Display Name in Role]},
+
+All individual evaluations for a procurement have been submitted. 
+
+Access the evaluation record to move to the next stage: { EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+
+Procurement: {[Title]} 
+Individual Evaluations Due Date: {[Individual Evaluations Due Date]} 
+
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

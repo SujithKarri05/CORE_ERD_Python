@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Procurement</EForm>
+  <Name>Successful / Unsuccessful Notification</Name>
+  <Description>To: Respondent selected in dropdown</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{[Email To]}</ToAddressesTemplate>
+    <CcAddressesTemplate>{[Email Cc]}</CcAddressesTemplate>
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>{[Email Subject]}</SubjectTemplate>
+    <BodyTemplate>{[Email Text]}</BodyTemplate>
+    <IsBodyHtml>true</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators>
+    <RecordFile>
+      <ResultFilenameTemplate
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <WholeFolder>true</WholeFolder>
+      <TargetFileTemplate
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EFormType>Procurement</EFormType>
+      <EFormTypeTemplate></EFormTypeTemplate>
+      <RecordIDFormula>[RecordID]</RecordIDFormula>
+      <PathTemplate>Respondent Letter</PathTemplate>
+    </RecordFile>
+  </AttachedFileGenerators>
+</PredefinedEmailTemplate>

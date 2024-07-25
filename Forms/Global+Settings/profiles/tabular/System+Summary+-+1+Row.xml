@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <AdvancedColumn Name="# of Active Contracts" Width="225" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>STEP TO [Contract] 
+ON [To].[LineNumber] = 1
+AND [To].[Status] = 'Active'
+GET COUNT(0)</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <AdvancedColumn Name="# of Contracts in Setup" Width="225" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>STEP TO [Contract] 
+ON [To].[LineNumber] = 1
+AND [To].[Status] = 'Setup'
+GET COUNT(0)</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <AdvancedColumn Name="# of Awarded Procurement Plans" Width="225" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>STEP TO [Procurement] 
+ON [To].[LineNumber] = 1
+AND [To].[Status] = 'Awarded'
+GET COUNT(0)</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <AdvancedColumn Name="# of Approved Submissions" Width="225" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>STEP TO [Submission] 
+ON [To].[LineNumber] = 1
+AND [To].[Status] = 'Approved'
+GET COUNT(0)</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>--Number of rows to show
+[LineNumber] &lt;= 1</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>false</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] DESC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

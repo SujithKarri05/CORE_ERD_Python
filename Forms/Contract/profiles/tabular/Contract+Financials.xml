@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Contract Number" Alias="" Aggregate="None" Width="185" />
+    <Column Name="Vendor Name" Alias="Vendor" Aggregate="None" Width="205" />
+    <Column Name="Total Extension Value" Alias="Total Extensions" Aggregate="None" Width="123" />
+    <Column Name="Total Variation Value" Alias="Total Variations" Aggregate="None" Width="112" />
+    <Column Name="Initial Contract Value Excl. Tax" Alias="" Aggregate="None" Width="200" />
+    <Column Name="Tax" Alias="" Aggregate="None" Width="93" />
+    <Column Name="Tax Percent" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Initial Contract Value Incl. Tax" Alias="" Aggregate="None" Width="185" />
+    <Column Name="Approved Extension Value" Alias="Approved Extensions" Aggregate="Sum" Width="140" />
+    <Column Name="Approved Variation Value" Alias="Approved Variations" Aggregate="Sum" Width="164" />
+    <Column Name="Total Contract Value Excl Tax" Alias="Total Contract Value Excl. Tax" Aggregate="Sum" Width="185" />
+    <Column Name="Total Contract Value" Alias="Total Contract Value Incl. Tax" Aggregate="Sum" Width="197" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[LineNumber] = 1 AND [Contract Number] &lt;&gt; NULL</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[Approved Variation Value] DESC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Vendor Accounts</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

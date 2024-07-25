@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="DateCreated" Alias="Created" Aggregate="None" Width="124" />
+    <Column Name="Sender" Alias="Most Recently Updated By" Aggregate="None" Width="221" />
+    <Column Name="Register Name" Alias="" Aggregate="None" Width="233" />
+    <Column Name="Register Prefix" Alias="" Aggregate="None" Width="137" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children />
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>false</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy></OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

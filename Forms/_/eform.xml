@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EForm xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Description>General</Description>
+  <DataDefinition>
+    <MinimumRows>0</MinimumRows>
+    <Columns>
+      <SystemColumn Which="EFormType" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="RecordID" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="LineNumber" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateCreated" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateLastUpdated" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateDue" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateClosed" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Priority" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="0-Unassigned" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Status" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="Start" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Assignee" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Sender" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Originator" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Description" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="WasRejected" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <Column Name="Temp" DataType="Any" Guid="dbbf2a46-c1eb-4286-93a5-ed9c991ee858" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="test1" DataType="String" Guid="c86c98cc-e472-499d-a527-991d9d2a4c03" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="3213132" DataType="String" Guid="02b18878-9937-4770-971e-fe1deb156d77" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="12312re1r" DataType="Any" Guid="939e54f7-2c18-43bb-969c-d5f7e3d53f7e" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="123123123" DataType="Boolean" Guid="aa2ae00b-3902-4da4-9614-5f622c8536fd" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Text" DataType="String" Guid="965e9bbd-1493-4eae-95d6-6c0b0a36f850" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="&quot;Test&quot;" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="asdasdasd" DataType="String" Guid="36140154-9f9e-4ccf-813a-0626c7c8f613" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="dfsgsdhsdfh" DataType="String" Guid="69205ded-bccd-4c3a-a3b3-c88c151c018c" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Name" DataType="String" Guid="2c1d5323-e9a6-4542-972e-a5cfdeeaa1a0" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="vert" DataType="String" Guid="0598daa4-c57a-4df0-badb-6cf94cf520cf" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Parent Structure" DataType="Any" Guid="dd525840-c306-4ae1-bd2d-dd8504da5b57" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="LET $current := ARRAY([EFormType], [RecordID]);&#xA;LET $descriptionColumns := &#xA;HASH(&#xA;&#x9;&quot;Contract&quot;,  &#x9;&#x9;&#x9;&#x9;&#x9;&quot;Contract Number&quot;, &#xA;&#x9;&quot;Vendor&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;Company Name&quot;,&#xA;&#x9;&quot;Procurement&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&quot;Procurement Number&quot;,&#xA;&#x9;&quot;Project&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;Project Number&quot;,&#xA;    &quot;Evaluation&quot;, &#x9;&#x9;    &#x9;&#x9;&quot;Description&quot;,&#xA;  &#x9;&quot;Information Request&quot;,  &#x9;&#x9;&quot;File No.&quot;, &#xA;&#x9;&quot;Subpoena&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&quot;File No.&quot;,&#xA;&#x9;&quot;Privacy Incident&quot;, &#x9;&#x9;&#x9;&quot;File No.&quot;&#xA;); &#xA;&#xA;LET $altFormName:= HASH(&#xA;  &#x9;&quot;Insurance&quot;,&#x9;&quot;Compliance&quot;&#xA;  );&#xA;&#xA;LET $getLabelText := $(eFormType, recordID)&#xA;(&#xA;  &#x9;LET $targetColumn := HASH_GET($descriptionColumns, $eFormType);&#xA;  &#x9;RETURN &#xA;  &#x9;IF( $targetColumn = NULL, NULL,&#xA;&#x9;&#x9;LET $isthisRecord := ARRAY($eFormType, $recordID) = $current;&#xA;&#x9;&#x9;LET $title:= &#xA;&#x9;&#x9;IF( $isthisRecord = TRUE, &#xA;&#x9;&#x9;&#x9;CURRENT_VALUE($targetColumn),&#xA;&#x9;&#x9;&#x9;ARRAY_FIRST(DB_LOOKUP(&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY($targetColumn),&#xA;&#x9;&#x9;&#x9;&#x9;$eFormType, &#xA;&#x9;&#x9;&#x9;&#x9;&quot;[RecordID] FAST_EQUAL_TO &quot; &amp; $recordID&#xA;&#x9;&#x9;&#x9;))&#xA;&#x9;&#x9;  );&#xA;&#x9;&#x9;//shortern the descriptive label/ title&#xA;&#x9;&#x9;LET $charCount := LEN($title);&#xA;&#x9;&#x9;LET $titleArray := SPLIT($title, &quot; &quot;);&#xA;&#x9;&#x9;LET $wordCount := ARRAY_LENGTH($titleArray);&#xA;&#xA;&#x9;&#x9;LET $charLimit := 30; &#xA;&#x9;&#x9;LET $wordLimit := ARRAY_LENGTH( SPLIT( LEFT($title, $charLimit), &quot; &quot;) );&#xA;&#xA;&#x9;  RETURN //ARRAY_TAKE($titleArray, $wordLimit)&#xA;&#x9;&#x9;IF(&#xA;&#x9;&#x9;&#x9;$wordCount &lt;= $wordLimit, $title,&#xA;&#x9;&#x9;&#x9;ARRAY_JOIN(&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_TAKE($titleArray, $wordLimit), &quot; &quot;&#xA;&#x9;&#x9;&#x9;)&amp; &quot; ...&quot;&#xA;&#x9;&#x9;)&#xA;&#x9;  )&#xA; &#xA;); &#xA;&#xA;LET $getReadAccess := $(eFormType, recordID)&#xA;( EBMS_GET_EFORMRECORD_PERMISSION($eFormType, $recordID, &quot;read&quot;));&#xA;&#xA;LET $currentDes := CALL($getLabelText, [EFormType], [RecordID]);&#xA;LET $currentAccess := FALSE;&#xA;&#xA;RETURN&#xA;IF(&#xA;&#x9;[Parent Structure] &lt;&gt; NULL, [Parent Structure],&#xA;  &#x9;(&#xA;&#xA;&#x9;  LET $parent := &#xA;&#x9;  IF( &#xA;&#x9;&#x9;[RecordID] &gt; 0, &#xA;&#x9;&#x9;(&#xA;&#x9;&#x9;  LET $record := EBMS_GET_PARENT_RECORD(ARRAY_FIRST($current), ARRAY_INDEX($current, 2));&#xA;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF(  ARRAY_FIRST($record) == NULL, NULL,&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_CONCAT( &#xA;&#x9;&#x9;&#x9;&#x9;  $record, &#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getLabelText, ARRAY_FIRST($record), ARRAY_INDEX($record, 2)),&#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getReadAccess, ARRAY_FIRST($record), ARRAY_INDEX($record, 2))&#xA;&#x9;&#x9;&#x9;&#x9;  )&#xA;&#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;  )); &#xA;&#xA;&#x9;  LET $gParent := &#xA;&#x9;  IF( &#xA;&#x9;&#x9; $parent &lt;&gt; NULL, &#xA;&#x9;&#x9;(&#xA;&#x9;&#x9;  LET $record := EBMS_GET_PARENT_RECORD(ARRAY_FIRST($parent), ARRAY_INDEX($parent, 2));&#xA;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF(  ARRAY_FIRST($record) == NULL, NULL,&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_CONCAT( &#xA;&#x9;&#x9;&#x9;&#x9;  $record, &#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getLabelText, ARRAY_FIRST($record), ARRAY_INDEX($record, 2)),&#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getReadAccess, ARRAY_FIRST($record), ARRAY_INDEX($record, 2))&#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;&#x9;  )&#xA;&#x9;  )); &#xA;&#xA;&#x9;  LET $hash :=  &#xA;&#x9;  HASH_MERGE(&#xA;&#x9;&#x9;  IF( $parent &lt;&gt; NULL, HASH(&quot;parent&quot;, &#x9;$parent)),&#xA;&#x9;&#x9;  IF( $gParent &lt;&gt; NULL, HASH(&quot;gparent&quot;, &#x9;$gParent))&#xA;&#x9;  );&#xA;&#xA;&#x9;  LET $parentStructure := &#x9;//2nd instance&#xA;&#x9;  IF( &#xA;&#x9;&#x9;  ARRAY_LENGTH(HASH_KEYS($hash)) &gt;0, $hash, NULL&#xA;&#x9;  );&#xA;&#xA;&#x9;  LET $parentData:= &#xA;&#x9;  ARRAY_WHERE(&#xA;&#x9;&#x9;ARRAY(&#xA;&#x9;&#x9;&#x9;$gParent, &#xA;&#x9;&#x9;&#x9;$parent, &#xA;&#x9;&#x9;&#x9;ARRAY_CONCAT($current, $currentDes, $currentAccess),&#xA;&#x9;&#x9;), $(i,item) $item &lt;&gt; NULL&#xA;&#x9;   );&#xA;  &#xA;&#xA;&#x9;  LET $parentChain:=&#xA;&#x9;&#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;&#x9;  $parentData, $(i, item)&#xA;&#x9;&#x9;&#x9;  ARRAY_TAKE($item, 2)&#xA;&#x9;   );&#xA;&#xA;&#xA;&#x9;  LET $parentLinks :=&#xA;&#x9;  ARRAY_SELECT(&#xA;&#x9;&#x9;  $parentData, $(i, item) &#xA;&#x9;&#x9;&#x9;  LET $eFormType &#x9;&#x9;:= ARRAY_FIRST($item);&#xA;&#x9;&#x9;&#x9;  LET $recordID &#x9;&#x9;:= ARRAY_INDEX($item, 2);&#xA;&#x9;&#x9;&#x9;  LET $descriptiveLabel := ARRAY_INDEX($item, 3);&#xA;&#x9;&#x9;&#x9;  LET $hasReadAccess&#x9;:= ARRAY_INDEX($item, 4);&#xA;&#x9;&#x9;&#x9;  LET $URL&#x9;:= &quot;records/&quot; &amp; URLENCODE($eFormType) &amp; &quot;/&quot; &amp; $recordID ;&#xA;&#x9;&#x9;&#x9;  LET $showEFormType := $eFormType &lt;&gt; &quot;Vendor&quot;;&#xA;&#xA;&#x9;&#x9;&#x9;  LET $labelColour := &#xA;&#x9;&#x9;&#x9;&#x9;  IF(&#xA;&#x9;&#x9;&#x9;&#x9;   AND($eFormType = [EFormType], $recordID = [RecordID]),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #5D5D5D;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9; $hasReadAccess = TRUE,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #4D87B7;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #5D5D5D;&quot;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;  );&#xA;&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;  LET $labeltext:= &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  IF( $showEFormType == TRUE, &quot; &quot; &amp; COALESCE(HASH_GET($altFormName, $eFormType), $eFormType) ) &amp;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  IF(NOT(ISBLANK($descriptiveLabel)), &quot; &quot; &amp; $descriptiveLabel);&#xA;&#xA;&#x9;&#x9;&#x9;  LET $label :=  &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;span style=&quot;&quot;margin-left: 5px;&quot; &amp; $labelColour &amp; &quot;&quot;&quot;&gt;&quot; &amp;&#xA;&#x9;&#x9;&#x9;&#x9;  HTMLENCODE($labeltext) &amp; &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;/span&gt;&quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF( &#xA;&#x9;&#x9;&#x9;&#x9;  $hasReadAccess == TRUE, &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;a style=&quot;&quot;text-decoration-line: none;&quot;&quot; href=&quot; &amp; HTMLENCODE($URL) &amp; &quot;&gt;&quot; &amp; $label &amp; &quot;&lt;/a&gt;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;  $label &#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;  );&#xA;&#xA;&#x9;   LET $separator :=   &quot;&lt;svg style=&quot;&quot;vertical-align: bottom; margin-left: 5px; height: 18px;&quot;&quot; xmlns=&quot;&quot;http://www.w3.org/2000/svg&quot;&quot; viewBox=&quot;&quot;0 0 256 512&quot;&quot;&gt;&lt;path fill=&quot;&quot;#5D5D5D&quot;&quot; d=&quot;&quot;M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z&quot;&quot;/&gt;&lt;/svg&gt;&quot;;&#xA;&#x9;  &#xA;&#x9;  LET $breadcrumb := &quot;&lt;div style=&quot;&quot;height: 23px; padding-left: 5px; font-size: 10pt; color: #5D5D5D; &quot;&quot;&gt;You are here:&quot; &amp; ARRAY_JOIN($parentLinks, $separator) &amp; &quot;&lt;/div&gt;&quot;;&#xA;&#xA;&#x9;  RETURN &#xA;&#x9;  HASH(&#xA;&#x9;&#x9;  &quot;Parent Structure&quot;,&#x9;$parentStructure,&#xA;&#x9;&#x9;  &quot;Parent Data&quot;, &#x9;&#x9;$parentData,&#xA;&#x9;&#x9;  &quot;Parent Chain&quot;,&#x9;&#x9;$parentChain,&#xA;&#x9;&#x9;  &quot;Breadcrumb&quot;,&#x9;&#x9;$breadcrumb&#xA;&#x9;&#x9;)&#xA;&#x9; )&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Parent Chain" DataType="Any" Guid="122bd878-9f7e-4be1-857b-369bbc3b8f85" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="HASH_GET([Parent Structure], &quot;Parent Chain&quot;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Test" DataType="Any" Guid="d7852704-cac0-46cd-9960-dac72a1b778e" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Selected Item" DataType="String" Guid="4dd91389-8fc7-4ddc-888d-07ffbb1dc5f6" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Menu Items" DataType="Any" Guid="43d717b2-c704-4f0b-9260-708546c3339c" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="ARRAY(&#xA;  &quot;London&quot;, &#xA;  &quot;Paris&quot;, &#xA;  &quot;Tokyo&quot;, &#xA;  &quot;Melbourne&quot;, &#xA;  &quot;Egypt&quot;, &#xA;  &quot;Dubai&quot;&#xA;)" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Thing" DataType="String" Guid="7b1b17fb-e9c9-473e-b978-3432a5ba5645" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+    </Columns>
+    <ReferenceGroups>
+      <Group Name="Ref">
+        <ReferencedEForm>sys.Users</ReferencedEForm>
+        <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <Mappings>
+          <Mapping LocalColumnName="Example" ReferencedColumnName="Username" ReferencedDisplayColumn="" FilterBy="false" />
+        </Mappings>
+        <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReferentialIntegrityMode>Never</ReferentialIntegrityMode>
+        <AutoFillBehaviour>OnUserInput</AutoFillBehaviour>
+      </Group>
+    </ReferenceGroups>
+    <Kpis />
+    <MergeFields />
+  </DataDefinition>
+  <Views>
+    <ViewEntry Name="Default">
+      <View BackColor="0,0,0,0">
+        <PdfSettings>
+          <PageNumberMode>None</PageNumberMode>
+          <FooterTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </PdfSettings>
+        <HidePageTitle>true</HidePageTitle>
+        <SidebarMode>Lock</SidebarMode>
+        <HorizontalAlign>Default</HorizontalAlign>
+        <ShowNewButton>false</ShowNewButton>
+        <Security>
+          <Roles>
+            <RoleEntry Use="true">
+              <Role>Everyone</Role>
+            </RoleEntry>
+          </Roles>
+        </Security>
+        <Sections>
+          <Section ColumnCount="1" Margin="36" BlockSpacing="0" PageWidth="800" PageHeight="1169">
+            <Name xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            <Notes></Notes>
+            <Blocks>
+              <Block IsReadOnly="false" ID="Block3">
+                <Controls>
+                  <RichLabel Text="" ID="Control1" IsReadOnly="false" LineNumber="1" Left="1" Top="22" Width="34" Height="4" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Event>
+                      <Tasks>
+                        <ChangeFieldValues>
+                          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <FieldEntries>
+                            <FieldEntry>
+                              <ColumnName>Selected Item</ColumnName>
+                              <AssignWholeColumn>false</AssignWholeColumn>
+                              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <Formula>$clickid</Formula>
+                            </FieldEntry>
+                          </FieldEntries>
+                          <UpdateRecordFormulas>false</UpdateRecordFormulas>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </ChangeFieldValues>
+                      </Tasks>
+                    </Event>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="LET $items := [Menu Items];&#xA;&#xA;LET $items := &#xA;ARRAY_SELECT(&#xA;  $items, $(i, item) &#xA;  LET $selected := $item = [Selected Item]; &#xA;  RETURN&#xA;  &quot;&lt;div style='display: none;' data-clickid='&quot; &amp; $item &amp; &quot;' data-state='selected' class='core-tabfile-item'&gt;&quot; &amp; $item &amp; &quot;&lt;/div&gt;&quot; &amp; &#xA;  &quot;&lt;div style='display: none;' data-clickid='&quot; &amp; $item &amp; &quot;' data-state='notselected' class='core-tabfile-item'&gt;&quot; &amp; $item &amp; &quot;&lt;/div&gt;&quot;&#xA;);&#xA;&#xA;RETURN &quot;&lt;div class='core-tabfile-bar'&gt;&quot; &amp; ARRAY_JOIN($items, &quot;&quot;) &amp; &quot;&lt;/div&gt;&quot;&#xA;&#xA;" />
+                    </FormulaBindings>
+                  </RichLabel>
+                  <RichLabel Text="" ID="Control2" IsReadOnly="false" LineNumber="1" Left="11" Top="15" Width="10" Height="3" TabIndex="2" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="LET $styles := &#xA;ARRAY_SELECT(&#xA;  [Menu Items], $(i, item) &#xA;  &#xA;  LET $selected := [Selected Item] = $item; &#xA;    &#xA;  LET $css := &#xA;  IF( &#xA;&#x9;$selected = TRUE, &#xA;&#x9;&quot;.core-tabfile-bar &gt; [data-clickid='&quot; &amp; $item &amp; &quot;'][data-state='selected'] {display: inline-block !important;}&quot;,&#xA;&#x9;&#xA;&#x9;&quot;.core-tabfile-bar &gt; [data-clickid='&quot; &amp; $item &amp; &quot;'][data-state='notselected'] {display: inline-block !important;}&quot;&#xA;  );&#xA;  &#xA;  RETURN $css&#xA;  &#xA;); &#xA;&#xA;RETURN &quot;&lt;style&gt;&quot; &amp; ARRAY_JOIN($styles) &amp; &quot;&lt;/style&gt;&quot;" />
+                    </FormulaBindings>
+                  </RichLabel>
+                  <Label Text="Dynamic Css" ID="Control3" IsReadOnly="false" LineNumber="1" Left="1" Top="15" Width="10" Height="3" TabIndex="3" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <RichLabel Text="" ID="Control4" IsReadOnly="false" LineNumber="1" Left="11" Top="12" Width="10" Height="3" TabIndex="4" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="&quot;&#xA;&lt;style&gt;&#xA;.core-tabfile-item {&#xA;    padding: 8px 0px 8px 0px;&#xA;    text-align: center;&#xA;    cursor: pointer;&#xA;&#x9;flex: 100%;&#xA;}&#xA;.core-tabfile-bar &#xA; {&#xA;    width: 100%;&#xA;    background: #F3F4F6;&#xA;    overflow: hidden;&#xA;    font-weight: 600;&#xA;    flex: 100%;&#xA;&#x9;display: flex;&#xA;&#x9;font-size: 11pt;&#xA;}&#xA;.core-tabfile-bar &gt; [data-state='selected'] {&#xA;&#x9;background-color: white;&#xA;    border: 2px solid #e2e2e2;&#xA;    border-bottom: 2px solid white;&#xA;    border-radius: 5px 5px 0px 0px;&#xA;    color: #1E70B5;&#xA;}&#xA;.core-tabfile-bar &gt; [data-state='notselected'] {&#xA;    border: 0px solid #F3F4F6;&#xA;    border-bottom: 2px solid #e2e2e2;&#xA;    padding-top: 10px;&#xA;    padding-left: 2px;&#xA;    padding-right: 2px;&#xA;}&#xA;&lt;/style&gt;&#xA;&quot;" />
+                    </FormulaBindings>
+                  </RichLabel>
+                  <Label Text="Static Css" ID="Control5" IsReadOnly="false" LineNumber="1" Left="1" Top="12" Width="10" Height="3" TabIndex="5" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Result" ID="Control6" IsReadOnly="false" LineNumber="1" Left="1" Top="19" Width="10" Height="3" TabIndex="6" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <DropDown ID="Control7" IsReadOnly="false" LineNumber="1" Left="11" Top="9" Width="10" Height="3" TabIndex="7" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Values />
+                    <ReferencedDataColumn>Selected Item</ReferencedDataColumn>
+                    <Event>
+                      <Tasks />
+                    </Event>
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Values" Expression="ARRAY(&#xA;  &quot;London&quot;, &#xA;  &quot;Paris&quot;, &#xA;  &quot;Tokyo&quot;&#xA;)" />
+                    </FormulaBindings>
+                  </DropDown>
+                  <Label Text="Menu items" ID="Control8" IsReadOnly="false" LineNumber="1" Left="1" Top="6" Width="10" Height="3" TabIndex="8" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <TextBox ID="Control9" IsReadOnly="true" LineNumber="1" Left="11" Top="6" Width="10" Height="3" TabIndex="9" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <ReferencedDataColumn>Menu Items</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <Label Text="File tab menu that doesn't redraw on interaction" ID="Control10" IsReadOnly="false" LineNumber="1" Left="1" Top="1" Width="34" Height="3" TabIndex="10" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>12</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Selected Item" ID="Control17" IsReadOnly="false" LineNumber="1" Left="1" Top="9" Width="10" Height="3" TabIndex="11" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <TabStrip ID="Control24" IsReadOnly="false" LineNumber="1" Left="1" Top="33" Width="15" Height="6" TabIndex="12" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Values>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <String>Item A</String>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <String>Item B</String>
+                        </Value>
+                      </Value>
+                    </Values>
+                    <ReferencedDataColumn>Thing</ReferencedDataColumn>
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <HighlightedTextColor>255,255,255,255</HighlightedTextColor>
+                    <EnableHighlightEffect>false</EnableHighlightEffect>
+                    <HighlightedBackgroundColor>70,130,180,255</HighlightedBackgroundColor>
+                    <BorderColor>103,103,103,255</BorderColor>
+                    <BoldSelectedItem>false</BoldSelectedItem>
+                    <BackColor>224,224,224,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>12</FontSize>
+                    <FormulaBindings />
+                  </TabStrip>
+                </Controls>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>50</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,255,255,255</BackColor>
+                <HeadingBackColor>128,128,128,255</HeadingBackColor>
+                <HeadingTextColor>255,255,255,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>100,100,100,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block4">
+                <Controls>
+                  <Label Text="London" ID="Control11" IsReadOnly="false" LineNumber="1" Left="2" Top="1" Width="32" Height="3" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>12</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="London is an amazing city with a long and fairytale-like history that reveals itself in everyday life in its architectural masterpieces, cultural and social diversity, and unbelievable stories1. Did you know that what you think of London is actually just a small urban area part of the Greater London region? The city of London covers only 1.2 square miles and has a population of around 7,500 residents. As such, the city of London is actually the smallest city in England1." ID="Control14" IsReadOnly="false" LineNumber="1" Left="2" Top="4" Width="32" Height="9" TabIndex="2" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                </Controls>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>20</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,255,255,255</BackColor>
+                <HeadingBackColor>128,128,128,255</HeadingBackColor>
+                <HeadingTextColor>255,255,255,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>100,100,100,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings>
+                  <Binding PropertyName="Visible" Expression="[Selected Item] = &quot;London&quot;" />
+                </FormulaBindings>
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block5">
+                <Controls>
+                  <Label Text="Paris" ID="Control12" IsReadOnly="false" LineNumber="1" Left="2" Top="1" Width="32" Height="3" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>12</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Paris is the capital and most populous city of France1. It is known for its rich history, culture, and architecture. The city is home to many famous landmarks such as the Eiffel Tower, the Louvre Museum, and Notre-Dame Cathedral2. Paris is also famous for its food, fashion, and art. The city has a population of over 2 million people1 and is located in the north-central part of France3. Did you know that Paris plans to make the Seine the centerpiece of the 2024 Olympic Games? Long-term efforts to clean up the river will allow swimming events to take place in its waters4." ID="Control15" IsReadOnly="false" LineNumber="1" Left="2" Top="4" Width="32" Height="10" TabIndex="2" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                </Controls>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>20</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,255,255,255</BackColor>
+                <HeadingBackColor>128,128,128,255</HeadingBackColor>
+                <HeadingTextColor>255,255,255,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>100,100,100,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings>
+                  <Binding PropertyName="Visible" Expression="[Selected Item] = &quot;Paris&quot;" />
+                </FormulaBindings>
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block6">
+                <Controls>
+                  <Label Text="Tokyo" ID="Control13" IsReadOnly="false" LineNumber="1" Left="2" Top="1" Width="32" Height="3" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>12</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Tokyo is the capital and most populous city of Japan1. It is also one of the world’s most populous cities, with a population of over 13 million people2. Tokyo is known for its rich history, culture, and architecture. The city is home to many famous landmarks such as the Tokyo Skytree, the Imperial Palace, and the Meiji Shrine2. Tokyo is also famous for its food, fashion, and art. The city has a lot of museums, including the Tokyo National Museum and the Edo-Tokyo Museum2. Did you know that Tokyo is actually made up of 23 central city wards and multiple cities, towns and villages west of the city center? The Izu and Ogasawara Islands are also part of Tokyo2." ID="Control16" IsReadOnly="false" LineNumber="1" Left="2" Top="4" Width="32" Height="11" TabIndex="2" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                </Controls>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>20</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,255,255,255</BackColor>
+                <HeadingBackColor>128,128,128,255</HeadingBackColor>
+                <HeadingTextColor>255,255,255,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>100,100,100,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings>
+                  <Binding PropertyName="Visible" Expression="[Selected Item] = &quot;Tokyo&quot;" />
+                </FormulaBindings>
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block7">
+                <Controls>
+                  <Label Text="Melbourne" ID="Control18" IsReadOnly="false" LineNumber="1" Left="2" Top="1" Width="32" Height="3" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>12</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Melbourne is the capital and most populous city of the Australian state of Victoria1. It was founded on the Yarra River in 1835 after an abortive bid in 1803 to establish a settlement inside the Port Phillip Bay heads near Sorrento2. The Port Phillip District gained independence from New South Wales in 18502. Melbourne boomed in the 1850s as a result of the gold rush in the region to the north2 and became a town in 1842 and a city in 18473. Melbourne’s history is rich and diverse, with many landmarks such as the Royal Exhibition Building, Flinders Street Station, and Federation Square4. Melbourne is also known for its food, fashion, and art. The city has a population of over 5 million people1. " ID="Control19" IsReadOnly="false" LineNumber="1" Left="2" Top="4" Width="32" Height="12" TabIndex="2" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                </Controls>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>20</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,255,255,255</BackColor>
+                <HeadingBackColor>128,128,128,255</HeadingBackColor>
+                <HeadingTextColor>255,255,255,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>100,100,100,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings>
+                  <Binding PropertyName="Visible" Expression="[Selected Item] = &quot;Melbourne&quot;" />
+                </FormulaBindings>
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block8">
+                <Controls>
+                  <Label Text="Egypt" ID="Control20" IsReadOnly="false" LineNumber="1" Left="2" Top="1" Width="32" Height="3" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>12</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Egypt is a country in northeastern Africa with a long and rich history that dates back to the 6th-4th millennia BCE1. It is considered a cradle of civilization and saw some of the earliest developments of writing, agriculture, urbanization, organized religion, and central government2. Ancient Egyptian civilization coalesced around 3150 BC with the political unification of Upper and Lower Egypt under the first king of the First Dynasty, Narmer1. The Nile River has played a significant role in Egypt’s history, providing fertile banks and delta for agriculture and transportation1. Today, Egypt is known for its pyramids, temples, and tombs that have fascinated people for centuries3." ID="Control21" IsReadOnly="false" LineNumber="1" Left="2" Top="4" Width="32" Height="11" TabIndex="2" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                </Controls>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>20</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,255,255,255</BackColor>
+                <HeadingBackColor>128,128,128,255</HeadingBackColor>
+                <HeadingTextColor>255,255,255,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>100,100,100,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings>
+                  <Binding PropertyName="Visible" Expression="[Selected Item] = &quot;Egypt&quot;" />
+                </FormulaBindings>
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block9">
+                <Controls>
+                  <Label Text="Dubai" ID="Control22" IsReadOnly="false" LineNumber="1" Left="2" Top="1" Width="32" Height="3" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>12</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Dubai is a city in the United Arab Emirates (UAE) and the capital of the Emirate of Dubai. It is known for its luxurious lifestyle, modern architecture, and vibrant nightlife1. Dubai is home to many famous landmarks such as the Burj Khalifa, the world’s tallest building2, and the Palm Jumeirah, an artificial island that is shaped like a palm tree2. The city is also famous for its shopping malls, including the Dubai Mall, which is one of the largest malls in the world2. Dubai has a lot of attractions and activities to offer, such as desert safaris, water parks, and indoor skiing3. The city has a population of over 3 million people1. " ID="Control23" IsReadOnly="false" LineNumber="1" Left="2" Top="4" Width="32" Height="11" TabIndex="2" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                </Controls>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>20</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,255,255,255</BackColor>
+                <HeadingBackColor>128,128,128,255</HeadingBackColor>
+                <HeadingTextColor>255,255,255,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>100,100,100,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings>
+                  <Binding PropertyName="Visible" Expression="[Selected Item] = &quot;Dubai&quot;" />
+                </FormulaBindings>
+                <Visible>true</Visible>
+              </Block>
+            </Blocks>
+          </Section>
+        </Sections>
+        <EnableSquash>false</EnableSquash>
+        <BannerHtmlTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </View>
+    </ViewEntry>
+    <ViewEntry Name="EditingFoldersBug">
+      <View BackColor="255,255,255,255">
+        <PdfSettings>
+          <PageNumberMode>None</PageNumberMode>
+          <FooterTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </PdfSettings>
+        <HorizontalAlign>Default</HorizontalAlign>
+        <Security>
+          <Roles>
+            <RoleEntry Use="true">
+              <Role>Everyone</Role>
+            </RoleEntry>
+          </Roles>
+        </Security>
+        <Sections>
+          <Section ColumnCount="1" Margin="36" BlockSpacing="20" PageWidth="826" PageHeight="1169">
+            <Name xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            <Notes></Notes>
+            <Blocks>
+              <Block IsReadOnly="false" ID="2bf7d6c0-bc8b-4b35-b751-e7f87cfa96c2">
+                <Controls>
+                  <Logo Which="Default" ID="Control1" IsReadOnly="false" LineNumber="1" Left="0" Top="0" Width="4" Height="4" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <FormulaBindings />
+                  </Logo>
+                  <Title ID="Control2" IsReadOnly="false" LineNumber="1" Left="6" Top="1" Width="25" Height="2" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Text></Text>
+                    <UseEFormNameAsText>true</UseEFormNameAsText>
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>12</FontSize>
+                    <FormulaBindings />
+                  </Title>
+                  <Label Text="#" ID="Control3" IsReadOnly="false" LineNumber="1" Left="32" Top="1" Width="1" Height="2" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Right</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>8</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <NumericTextBox ID="Control4" IsReadOnly="false" LineNumber="1" Left="33" Top="1" Width="4" Height="2" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <ReferencedDataColumn>RecordID</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>8</FontSize>
+                    <FormulaBindings />
+                  </NumericTextBox>
+                </Controls>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>4</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>128,128,128,255</HeadingBackColor>
+                <HeadingTextColor>255,255,255,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>100,100,100,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="8f6e32dd-35ed-4600-9421-d99132a70da6">
+                <Controls>
+                  <ManageAttachedDocumentsButton Text="Read documents" Path="" ShowAttachmentCount="true" ID="Control5" IsReadOnly="true" LineNumber="1" Left="2" Top="2" Width="7" Height="16" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="false">
+                    <TypeOfButton>Custom</TypeOfButton>
+                    <BorderColor>180,180,180,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </ManageAttachedDocumentsButton>
+                </Controls>
+                <HeadingText>Body</HeadingText>
+                <HeadingHeight>2</HeadingHeight>
+                <BodyHeight>20</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>128,128,128,255</HeadingBackColor>
+                <HeadingTextColor>255,255,255,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>100,100,100,255</BorderColor>
+                <BorderWidth>1</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+            </Blocks>
+          </Section>
+        </Sections>
+        <EnableSquash>false</EnableSquash>
+        <BannerHtmlTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </View>
+    </ViewEntry>
+    <ViewEntry Name="Test">
+      <View BackColor="0,0,0,0">
+        <PdfSettings>
+          <PageNumberMode>None</PageNumberMode>
+          <FooterTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </PdfSettings>
+        <SidebarMode>Lock</SidebarMode>
+        <HorizontalAlign>Default</HorizontalAlign>
+        <ShowNewButton>false</ShowNewButton>
+        <Security>
+          <Roles>
+            <RoleEntry Use="true">
+              <Role>Everyone</Role>
+            </RoleEntry>
+          </Roles>
+        </Security>
+        <Sections>
+          <Section ColumnCount="1" Margin="0" BlockSpacing="0" PageWidth="1000" PageHeight="1169">
+            <Name xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            <Notes></Notes>
+            <Blocks>
+              <Block IsReadOnly="false" ID="c6cf5d0c-9bae-4467-824b-538d2eaec3d2">
+                <Controls>
+                  <Button ID="Control5" IsReadOnly="false" LineNumber="1" Left="1" Top="2" Width="13" Height="5" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="false">
+                    <Text>Create question</Text>
+                    <CausesValidation>false</CausesValidation>
+                    <ValidationTag xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <FormulaDrivenRaiseLinkedEForm>
+                          <EFormTypeFormula>"Standard Question"</EFormTypeFormula>
+                          <NewRecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <NewRecordCountFormula>1</NewRecordCountFormula>
+                          <FieldValuesFormula>HASH(
+  	"Scoring Axis",			ARRAY("Single Axis"),
+  	"Answer Type",			ARRAY("Yes / No"),
+  	"Answer",				ARRAY("Yes", "No"),
+  	"Type",					ARRAY("Gateway Criteria")
+)</FieldValuesFormula>
+                          <MakeChildOfContextRecordFormula>TRUE</MakeChildOfContextRecordFormula>
+                          <AlternativeParentRecord xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <PushCreatedRecordIDIntoColumn>Temp</PushCreatedRecordIDIntoColumn>
+                          <RunInUI>true</RunInUI>
+                          <UISaveImmediatelyFormula>FALSE</UISaveImmediatelyFormula>
+                          <UIOpenModeFormula>"popup"</UIOpenModeFormula>
+                          <UITargetViewFormula>"Gateway Criteria"</UITargetViewFormula>
+                          <PopupEventTriggerDataFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <DialogUIElementsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </FormulaDrivenRaiseLinkedEForm>
+                      </Tasks>
+                    </Event>
+                    <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <TypeOfButton>Custom</TypeOfButton>
+                    <BorderColor>180,180,180,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>20</FontSize>
+                    <FormulaBindings />
+                  </Button>
+                </Controls>
+                <HeadingText>Normal block</HeadingText>
+                <HeadingHeight>3</HeadingHeight>
+                <BodyHeight>10</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,255,255,255</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>14</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>1</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings>
+                  <Binding PropertyName="Visible" Expression="TRUE" />
+                </FormulaBindings>
+                <Visible>true</Visible>
+              </Block>
+              <RepeaterBlock IsReadOnly="false" ID="Block16">
+                <HeaderControls />
+                <FooterControls />
+                <ItemTemplate>
+                  <Button ID="Control6" IsReadOnly="false" LineNumber="1" Left="1" Top="1" Width="13" Height="5" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="false">
+                    <Text>Create question</Text>
+                    <CausesValidation>false</CausesValidation>
+                    <ValidationTag xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <FormulaDrivenRaiseLinkedEForm>
+                          <EFormTypeFormula>"Standard Question"</EFormTypeFormula>
+                          <NewRecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <NewRecordCountFormula>1</NewRecordCountFormula>
+                          <FieldValuesFormula>HASH(
+  	"Scoring Axis",			ARRAY("Single Axis"),
+  	"Answer Type",			ARRAY("Yes / No"),
+  	"Answer",				ARRAY("Yes", "No"),
+  	"Type",					ARRAY("Gateway Criteria")
+)</FieldValuesFormula>
+                          <MakeChildOfContextRecordFormula>TRUE</MakeChildOfContextRecordFormula>
+                          <AlternativeParentRecord xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <PushCreatedRecordIDIntoColumn>Temp</PushCreatedRecordIDIntoColumn>
+                          <RunInUI>true</RunInUI>
+                          <UISaveImmediatelyFormula>FALSE</UISaveImmediatelyFormula>
+                          <UIOpenModeFormula>"popup"</UIOpenModeFormula>
+                          <UITargetViewFormula>"Gateway Criteria"</UITargetViewFormula>
+                          <PopupEventTriggerDataFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <DialogUIElementsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </FormulaDrivenRaiseLinkedEForm>
+                      </Tasks>
+                    </Event>
+                    <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <TypeOfButton>Custom</TypeOfButton>
+                    <BorderColor>180,180,180,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>20</FontSize>
+                    <FormulaBindings />
+                  </Button>
+                </ItemTemplate>
+                <InitialRowCount>1</InitialRowCount>
+                <MaxHeight xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <EnableRepeaterControls>true</EnableRepeaterControls>
+                <HeaderHeight>2</HeaderHeight>
+                <FooterHeight>0</FooterHeight>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Repeater block</HeadingText>
+                <HeadingHeight>3</HeadingHeight>
+                <BodyHeight>9</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,255,255,255</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>14</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>100,100,100,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings>
+                  <Binding PropertyName="IsCollapsed" Expression="FALSE" />
+                  <Binding PropertyName="Visible" Expression="TRUE" />
+                </FormulaBindings>
+                <Visible>true</Visible>
+              </RepeaterBlock>
+            </Blocks>
+          </Section>
+        </Sections>
+        <EnableSquash>false</EnableSquash>
+        <BannerHtmlTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </View>
+    </ViewEntry>
+  </Views>
+  <Security>
+    <PermissionSetName>Custom</PermissionSetName>
+    <Roles>
+      <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+    </Roles>
+    <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+    <RecordReadAccessFilter>
+      <GroupingExpression Operator="And">
+        <Children />
+      </GroupingExpression>
+    </RecordReadAccessFilter>
+    <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ComponentAccessControlGroups />
+  </Security>
+  <SecurityParts>
+    <Security>
+      <PermissionSetName>Custom</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Boroondara</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Department Level Access</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - CoGD</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Open Access</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Cenitex</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Ombudsman</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Obsolete - Open Set</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Stonnington</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - CompareCoOps</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Obsolete - Implementation Set</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RecordReadAccessFilter>
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+  </SecurityParts>
+  <Categories />
+  <Workflow>
+    <EnableAutomatedWorkflow>false</EnableAutomatedWorkflow>
+    <AllowManualOverride>true</AllowManualOverride>
+    <PromptUserOnWorkflowChange>false</PromptUserOnWorkflowChange>
+    <States>
+      <State Name="Start" Left="100" Top="100">
+        <Transitions />
+        <NotificationTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <SendNotification>false</SendNotification>
+        <ForceAssigneeTo xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </State>
+      <State Name="Closed" Left="100" Top="200">
+        <Transitions />
+        <NotificationTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <SendNotification>false</SendNotification>
+        <ForceAssigneeTo xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </State>
+    </States>
+  </Workflow>
+  <Settings>
+    <DefaultView>Default</DefaultView>
+    <LandingViewFormula></LandingViewFormula>
+    <NotifyOnSave>Never</NotifyOnSave>
+    <DefaultToNotifyOnSave>false</DefaultToNotifyOnSave>
+    <NotifyOnSaveTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <NotifyOnCreate>false</NotifyOnCreate>
+    <NotifyOnCreateRecordTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <IncludeRenderedViewInCreateRecordNotification>false</IncludeRenderedViewInCreateRecordNotification>
+    <NotifyOnWorkflowChange>false</NotifyOnWorkflowChange>
+    <NotifyOnWorkflowChangeTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <NotifyOnClosed>false</NotifyOnClosed>
+    <NotifyOnClosedTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <AllowUserToPreviewNotifications>false</AllowUserToPreviewNotifications>
+    <DefaultUserToPreviewNotifications>false</DefaultUserToPreviewNotifications>
+    <DeleteWithParent>true</DeleteWithParent>
+    <EnableManualLinkedEFormRecordsManagement>false</EnableManualLinkedEFormRecordsManagement>
+    <IsQuickSearchable>true</IsQuickSearchable>
+    <AssignNewRecordsToCurrentUser>false</AssignNewRecordsToCurrentUser>
+    <EnableDuplicatingRecords>true</EnableDuplicatingRecords>
+    <EnableDeleteFromTabularView>false</EnableDeleteFromTabularView>
+    <EnableAddFromTabularView>true</EnableAddFromTabularView>
+    <PromptUserBeforeNavigatingAway>true</PromptUserBeforeNavigatingAway>
+  </Settings>
+  <Attachments>
+    <Folders>
+      <Folder>
+        <Path>Test</Path>
+        <Guid>bbb71166-d00a-4bad-8baa-bc643be93b63</Guid>
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+      </Folder>
+    </Folders>
+  </Attachments>
+  <Dependants>
+    <Selectors />
+  </Dependants>
+  <Credentials>
+    <Credentials>
+      <Credential>
+        <Username>system</Username>
+        <Purpose xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <IsVerified>false</IsVerified>
+        <Token>7d7443fc-ec1e-4fb3-8b7b-1290076cc2bd</Token>
+      </Credential>
+    </Credentials>
+  </Credentials>
+  <CustomEvents />
+</EForm>

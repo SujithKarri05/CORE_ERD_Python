@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Contract</EForm>
+  <Name>Vendor Insurance Expiry Notification</Name>
+  <Description>Insurance Expiry Notification to Contract Recipients</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{
+ARRAY_INDEX([Notification Data], 1)
+}</ToAddressesTemplate>
+    <CcAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>{ARRAY_INDEX([Notification Data], 2)}</SubjectTemplate>
+    <BodyTemplate>Hello there,
+
+A compliance is about to expire.
+{
+ARRAY_INDEX([Notification Data], 3)
+}
+Type of Compliance: {ARRAY_INDEX([Notification Data], 4)}
+Start Date: {ARRAY_INDEX([Notification Data], 5)}
+Expiry Date: {ARRAY_INDEX([Notification Data], 6)}
+ 
+Click this link to view the record for this item: {ARRAY_INDEX([Notification Data], 7)}
+
+
+Thanks,
+{LET $sign := DB_LOOKUP("Signature","Global Settings","[LineNumber]=1");
+RETURN
+IF($sign = NULL, "The VendorPanel Team",$sign)}</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

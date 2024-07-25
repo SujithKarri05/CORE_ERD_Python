@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Questionnaire</EForm>
+  <Name>Invitation</Name>
+  <Description></Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{[Invitee Email Address]}</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate>role:"{[Invited by]}"</ReplyToAddressesTemplate>
+    <SubjectTemplate>Invited to complete a questionnaire</SubjectTemplate>
+    <BodyTemplate>Hello {COALESCE(HASH_GET($eventargs, "Name"), [Invitee])},
+
+You have been invited to complete a questionnaire. 
+Type: {[Standard Questionnaire Name]}
+{IF([Invite Note] &lt;&gt; NULL(), "Note with invitation: " &amp; [Invite Note])}
+
+Click the link below to complete the questionnaire. 
+
+{
+IF(
+  $eventargs = NULL, 
+  EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]),
+  
+  "Link: " &amp; EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) &amp; "
+  Username: " &amp; HASH_GET($eventargs, "Username") &amp; "
+  Password: " &amp; HASH_GET($eventargs, "Password") 
+  )  
+)}
+
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

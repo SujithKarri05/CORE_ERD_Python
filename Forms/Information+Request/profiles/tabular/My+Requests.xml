@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="File No." Alias="" Aggregate="None" Width="123" />
+    <Column Name="Date Received" Alias="" Aggregate="None" Width="169" />
+    <Column Name="Applicant Name" Alias="" Aggregate="None" Width="163" />
+    <Column Name="On Behalf Of" Alias="" Aggregate="None" Width="186" />
+    <Column Name="Plain Text Scope of Request" Alias="" Aggregate="None" Width="276" />
+    <Column Name="Status Description" Alias="Status" Aggregate="None" Width="100" />
+    <Column Name="Due Date" Alias="" Aggregate="None" Width="186" />
+    <Column Name="Assigned Officer Name" Alias="" Aggregate="None" Width="212" />
+    <Column Name="Deposit Amount Requested" Alias="" Aggregate="None" Width="100" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="EqualTo">
+              <Left>
+                <CurrentUserCriterion>
+                  <Mode>Authority</Mode>
+                </CurrentUserCriterion>
+              </Left>
+              <Right>
+                <SourceEFormColumnReferenceCriterion ColumnName="Assigned Officer" />
+              </Right>
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] DESC</OrderBy>
+  <GroupBy>[Request Type] ASC</GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Type" Alias="" Aggregate="None" Width="253" />
+    <Column Name="Status" Alias="" Aggregate="None" Width="106" />
+    <Column Name="Date Submitted" Alias="" Aggregate="None" Width="130" />
+    <Column Name="Date Approved" Alias="" Aggregate="None" Width="157" />
+    <Column Name="Assignee" Alias="Waiting on" Aggregate="None" Width="106" />
+    <Column Name="Submission Value" Alias="" Aggregate="None" Width="144" />
+    <Column Name="Days in Process" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Department" Alias="" Aggregate="None" Width="136" />
+    <Column Name="Assignee(s)" Alias="" Aggregate="None" Width="141" />
+    <Column Name="Approved By Name" Alias="" Aggregate="None" Width="173" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules>
+    <Rule>
+      <Condition>
+        <ComparisonCriterion Operator="EqualTo">
+          <Left>
+            <SourceEFormColumnReferenceCriterion ColumnName="Status" />
+          </Left>
+          <Right>
+            <ConstantCriterion>
+              <Value>
+                <String>Approved</String>
+              </Value>
+            </ConstantCriterion>
+          </Right>
+        </ComparisonCriterion>
+      </Condition>
+      <Colour>
+        <ConstantCriterion>
+          <Value>
+            <String>#81ff81</String>
+          </Value>
+        </ConstantCriterion>
+      </Colour>
+    </Rule>
+  </BackgroundColourRules>
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children />
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] DESC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>200</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>true</Enabled>
+  <Description>AUTOMATION - Update Statuses</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Automation - Status Update</EFormRef>
+  <RecordFilter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[Enabled] = TRUE AND [Target EForm] &lt;&gt; NULL AND [New Status] &lt;&gt; NULL</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </RecordFilter>
+  <Tasks>
+    <TriggerCustomEvent>
+      <EventNameTemplate>Find Matches</EventNameTemplate>
+      <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RetainLastResultOnly>false</RetainLastResultOnly>
+      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ShowWarningIfNoMatchingEvent>true</ShowWarningIfNoMatchingEvent>
+      <RunInsideDataLayer>false</RunInsideDataLayer>
+      <Description>Find Matches</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </TriggerCustomEvent>
+    <TriggerCustomEvent>
+      <EventNameTemplate>Update Remote Statuses</EventNameTemplate>
+      <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RetainLastResultOnly>false</RetainLastResultOnly>
+      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ShowWarningIfNoMatchingEvent>true</ShowWarningIfNoMatchingEvent>
+      <RunInsideDataLayer>false</RunInsideDataLayer>
+      <Description>Update Remote Statuses</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </TriggerCustomEvent>
+  </Tasks>
+  <Timing>
+    <DailyWeekly>
+      <Days>
+        <Day>Monday</Day>
+        <Day>Tuesday</Day>
+        <Day>Wednesday</Day>
+        <Day>Thursday</Day>
+        <Day>Friday</Day>
+        <Day>Saturday</Day>
+        <Day>Sunday</Day>
+      </Days>
+    </DailyWeekly>
+  </Timing>
+  <StartAfterDate>2020-06-24T01:32:00.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T00:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T00:00:00.0000000Z</EndTime>
+  <RepeatHours>6</RepeatHours>
+  <LastRun>2024-06-05T23:08:18.0280000Z</LastRun>
+  <Role>system</Role>
+  <SaveRecordOnCompletion>true</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

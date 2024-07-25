@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>false</Enabled>
+  <Description>INITIAL SYSTEM SETUP - Update sentence builder to point at .net</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Home - Sentence Builder</EFormRef>
+  <RecordFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <Tasks>
+    <ChangeFieldValues>
+      <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <FieldEntries>
+        <FieldEntry>
+          <ColumnName>Prompt URL</ColumnName>
+          <AssignWholeColumn>false</AssignWholeColumn>
+          <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Formula>REGEX_REPLACE(
+  [Prompt URL], 
+  "\.com\.au|\.net|\.ca|\.nz", $(item)
+  ".net"
+)</Formula>
+        </FieldEntry>
+      </FieldEntries>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </ChangeFieldValues>
+  </Tasks>
+  <Timing>
+    <Never />
+  </Timing>
+  <StartAfterDate>2023-10-11T01:35:51.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T00:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T00:00:00.0000000Z</EndTime>
+  <RepeatHours xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <LastRun xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <Role>system</Role>
+  <SaveRecordOnCompletion>true</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>true</Enabled>
+  <Description>CENTRAL REPORTING - Post data to Client Central Reporting</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Global Settings</EFormRef>
+  <RecordFilter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[RecordID] = 1 AND [LineNumber] = 1</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </RecordFilter>
+  <Tasks>
+    <TriggerCustomEvent>
+      <EventNameTemplate>CENTRAL REPORTING - Post data to Client Central Reporting</EventNameTemplate>
+      <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RetainLastResultOnly>false</RetainLastResultOnly>
+      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+      <RunInsideDataLayer>false</RunInsideDataLayer>
+      <Description>CENTRAL REPORTING - Post data to Client Central Reporting</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </TriggerCustomEvent>
+  </Tasks>
+  <Timing>
+    <DailyWeekly>
+      <Days>
+        <Day>Monday</Day>
+        <Day>Tuesday</Day>
+        <Day>Wednesday</Day>
+        <Day>Thursday</Day>
+        <Day>Friday</Day>
+        <Day>Saturday</Day>
+        <Day>Sunday</Day>
+      </Days>
+    </DailyWeekly>
+  </Timing>
+  <StartAfterDate>2023-04-20T05:18:05.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T00:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T00:00:00.0000000Z</EndTime>
+  <RepeatHours xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <LastRun>2024-06-05T14:08:10.0300000Z</LastRun>
+  <Role>system</Role>
+  <SaveRecordOnCompletion>false</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

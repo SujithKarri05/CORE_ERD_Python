@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Vendor</EForm>
+  <Name>Vendor Account Created</Name>
+  <Description>To: Vendor</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{[Email Address]}</ToAddressesTemplate>
+    <CcAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>VendorPanel - Organisation Account Created</SubjectTemplate>
+    <BodyTemplate>Hello {[Company Name]},
+
+An account has been generated for you in the VendorPanel System.
+
+Here are your login details:
+Login link: {EBMS_GET_BASE_URL()}
+Username: {[Username]}
+Password: {[Password]}
+
+
+Thanks,
+{LET $sign := DB_LOOKUP("Signature","Global Settings","[LineNumber]=1");
+RETURN
+IF($sign = NULL, "The VendorPanel Team",$sign)}</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

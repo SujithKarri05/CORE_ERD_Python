@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Sign Document</EForm>
+  <Name>DocuSign AutoResponse</Name>
+  <Description></Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>role:"{[Originator]}"</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>DocuSign returned autoresponse</SubjectTemplate>
+    <BodyTemplate>Hello {EBMS_GET_ROLE_DISPLAYNAME([Originator])},
+
+An DocuSign record has come back with an autoreponse
+
+Please access the record below
+
+{ EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+
+
+Thanks,
+The VendorPanel Team
+
+*** THIS IS A SYSTEM GENERATED EMAIL. PLEASE DO NOT REPLY. ***</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

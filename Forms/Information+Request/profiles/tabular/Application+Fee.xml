@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="File No." Alias="" Aggregate="None" Width="70" />
+    <Column Name="Category" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Assigned Officer Name" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Applicant Name" Alias="" Aggregate="None" Width="150" />
+    <Column Name="On Behalf Of" Alias="" Aggregate="None" Width="150" />
+    <Column Name="Due Date" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Status" Alias="" Aggregate="None" Width="150" />
+    <Column Name="Application Fee Status" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Payment Method" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Amount" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Customer No." Alias="" Aggregate="None" Width="100" />
+    <Column Name="Tax Inv No." Alias="" Aggregate="None" Width="100" />
+    <Column Name="Receipt No." Alias="" Aggregate="None" Width="100" />
+    <Column Name="Date Received" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Migrated Data" Alias="" Aggregate="None" Width="100" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="Not">
+              <Left>
+                <ComparisonCriterion Operator="FastEqualTo">
+                  <Left>
+                    <SourceEFormColumnReferenceCriterion ColumnName="Status" />
+                  </Left>
+                  <Right>
+                    <ConstantCriterion>
+                      <Value>
+                        <String>14. Closed</String>
+                      </Value>
+                    </ConstantCriterion>
+                  </Right>
+                </ComparisonCriterion>
+              </Left>
+              <Right xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="IsNull">
+              <Left>
+                <SourceEFormColumnReferenceCriterion ColumnName="Receipt No." />
+              </Left>
+              <Right xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="IsNull">
+              <Left>
+                <SourceEFormColumnReferenceCriterion ColumnName="Tax Inv No." />
+              </Left>
+              <Right xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="IsNull">
+              <Left>
+                <SourceEFormColumnReferenceCriterion ColumnName="Customer No." />
+              </Left>
+              <Right xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="NotEqualTo">
+              <Left>
+                <SourceEFormColumnReferenceCriterion ColumnName="Migrated Data" />
+              </Left>
+              <Right>
+                <ConstantCriterion>
+                  <Value>
+                    <Boolean>true</Boolean>
+                  </Value>
+                </ConstantCriterion>
+              </Right>
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] DESC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>20</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

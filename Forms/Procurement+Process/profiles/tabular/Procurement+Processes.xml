@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Stage" Alias="" Aggregate="None" Width="200" />
+    <Column Name="Process" Alias="" Aggregate="None" Width="408" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <GroupingExpression Operator="And">
+          <Children>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="EqualTo">
+                  <Left>
+                    <SourceEFormColumnReferenceCriterion ColumnName="Process Enabled" />
+                  </Left>
+                  <Right>
+                    <ConstantCriterion>
+                      <Value>
+                        <Boolean>true</Boolean>
+                      </Value>
+                    </ConstantCriterion>
+                  </Right>
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+          </Children>
+        </GroupingExpression>
+        <GroupingExpression Operator="And">
+          <Children>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="IsNotEmpty">
+                  <Left>
+                    <SourceEFormColumnReferenceCriterion ColumnName="Process" />
+                  </Left>
+                  <Right>
+                    <ConstantCriterion>
+                      <Value>
+                        <String></String>
+                      </Value>
+                    </ConstantCriterion>
+                  </Right>
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+          </Children>
+        </GroupingExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>false</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] ASC, [LineNumber] ASC</OrderBy>
+  <GroupBy>[Procurement Process] ASC</GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>2000</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

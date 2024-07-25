@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Meeting</EForm>
+  <Name>Upcoming Meeting</Name>
+  <Description></Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{LET $targetUsers := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Target Form"
+); 
+
+LET $systemRoles := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "System Roles"
+);
+
+LET $staticEmailAddresses := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Static Email Addresses"
+);
+
+LET $extractEmailAddressesfromArray := $(array)
+(
+	ARRAY_JOIN(
+		ARRAY_SELECT(
+			$array, $(i, item) 
+			EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($item))
+		), "," 
+	)
+);
+
+LET $targetEmails := 
+ARRAY_SELECT(
+    $targetUsers,	$(i, item)
+	
+	LET $user := IFERROR(EVALUATE("[" &amp; $item &amp; "]"), NULL()); 
+			
+	LET $email :=
+	IF(
+	  $user &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($user))
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($user), 
+		CALL($extractEmailAddressesfromArray, $user),
+		$email
+	)
+); 
+
+LET $roleEmails := 
+ARRAY_SELECT(
+    $systemRoles, $(i, item)
+
+	LET $email :=
+	IF(
+	  $item &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES($item)
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($item), 
+		CALL($extractEmailAddressesfromArray, $item),
+		$item
+	)
+); 
+
+LET $combined := 
+ARRAY_CONCAT(
+	$targetEmails,
+	$roleEmails
+);
+
+RETURN 
+ARRAY_JOIN(
+	ARRAY_WHERE($combined, $(i, item) $item &lt;&gt; NULL())
+  , ", " &amp; $staticEmailAddresses
+)}</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate>{EBMS_GET_ROLE_EMAIL_ADDRESSES([Reply to Address])}</ReplyToAddressesTemplate>
+    <SubjectTemplate>Upcoming Meeting - {[Meeting Title]} - {[Meeting Date]}</SubjectTemplate>
+    <BodyTemplate>&lt;style&gt;
+.nimblex-core-css-table {{color: black; background: white; border: 1px solid grey; font-size: 12pt;  border-collapse: collapse;}}
+.nimblex-core-css-table th {{background: #efefef;text-align:left; padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-table td {{padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-h3 {{color: #007db4;}}
+.nimblex-core-css-h2 {{color: #007db4;}}
+&lt;/style&gt;
+Hello there,&lt;br /&gt;&lt;br /&gt;
+A meeting is scheduled to happen today. The agenda is below.&lt;br&gt;
+&lt;h2 class="nimblex-core-css-h2" style="margin-bottom: 0.1em;"&gt;{[Meeting Title]}&lt;/h2&gt;
+&lt;p&gt;{DATEFORMAT([Meeting Date], "dd MMMM yyyy hh:mm tt")} AEST&lt;p&gt;
+&lt;h3 class="nimblex-core-css-h3"&gt;Invitees&lt;/h3&gt;
+&lt;table class="nimblex-core-css-table"&gt;
+	&lt;tr&gt;
+	  &lt;th&gt;Invitee&lt;/th&gt;
+	&lt;/tr&gt;
+  {
+	ARRAY_JOIN(
+	  ARRAY_SELECT(
+		EACH [Invitee Name], $(i,item) 
+		"&lt;tr&gt;&lt;td&gt;" &amp; $item &amp; "&lt;/td&gt;&lt;/tr&gt;"
+	  )
+	)
+  }
+&lt;/table&gt;
+&lt;h3 class="nimblex-core-css-h3"&gt;Agenda&lt;/h3&gt;
+{(
+	LET $data := 
+	ARRAY_TRANSPOSE(
+	  ARRAY(
+	  	EACH [Agenda - Topic],
+	  	EACH [Agenda - Speaker], 
+		EACH [Agenda Item - Duration String], 
+		EACH [Agenda - Topic Context]
+	  )
+	); 
+	
+    LET $data := ARRAY_WHERE($data, $(i, item) ARRAY_INDEX($item, 1) &lt;&gt; NULL());
+  
+	LET $columnHTML := 
+		"&lt;thead&gt;" &amp;
+			"&lt;th&gt;" &amp; "Topic" &amp; "&lt;/th&gt;" &amp;
+			"&lt;th&gt;" &amp; "Description" &amp; "&lt;/th&gt;" &amp;
+			"&lt;th&gt;" &amp; "Speaker" &amp; "&lt;/th&gt;" &amp;
+			"&lt;th&gt;" &amp; "Duration" &amp; "&lt;/th&gt;" &amp;
+		"&lt;/thead&gt;";
+	
+	LET $tableHTML := 
+	ARRAY_JOIN(
+		ARRAY_SELECT(
+			$data, $(i, item) 
+			LET $topic := ARRAY_INDEX($item, 1);
+			LET $speaker := ARRAY_INDEX($item, 2);
+			LET $time := ARRAY_INDEX($item, 3);
+			LET $context := ARRAY_INDEX($item, 4);
+			
+			RETURN 
+			"&lt;tr&gt;" &amp;
+				"&lt;td style=""padding: .5em;
+  border: 1px solid lightgrey;""&gt;" &amp; $topic &amp; "&lt;/td&gt;" &amp;
+				"&lt;td style=""padding: .5em;
+  border: 1px solid lightgrey;""&gt;" &amp; COALESCE($context, "Not specified") &amp; "&lt;/td&gt;" &amp;
+				"&lt;td style=""padding: .5em;
+  border: 1px solid lightgrey;""&gt;" &amp; COALESCE($speaker, "Not specified") &amp; "&lt;/td&gt;" &amp;				"&lt;td style=""padding: .5em;
+  border: 1px solid lightgrey;""&gt;" &amp; COALESCE($time, "Not specified") &amp; "&lt;/td&gt;" &amp;
+			"&lt;/tr&gt;"
+		)
+	);
+	
+	RETURN 
+	"&lt;table class=""nimblex-core-css-table""&gt;" &amp; 
+		$columnHTML &amp; 
+		$tableHTML &amp; 
+	"&lt;/table&gt;"
+)}
+&lt;p&gt; 
+&lt;br&gt;
+&lt;a href="{EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }"&gt;Click here&lt;/a&gt; to view the Meeting record.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+Thanks,&lt;br&gt;
+{LET $sign := DB_LOOKUP("Signature","Global Settings","[LineNumber]=1");
+RETURN
+IF($sign = NULL, "The VendorPanel Team",$sign)}&lt;/p&gt;</BodyTemplate>
+    <IsBodyHtml>true</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators>
+    <RecordFile>
+      <ResultFilenameTemplate
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <WholeFolder>true</WholeFolder>
+      <TargetFileTemplate
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EFormType
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EFormTypeTemplate
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordIDFormula
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PathTemplate>Agenda Documents</PathTemplate>
+    </RecordFile>
+  </AttachedFileGenerators>
+</PredefinedEmailTemplate>

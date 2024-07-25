@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Vendor RecordID" Alias="" Aggregate="None" Width="167" />
+    <Column Name="RecordID" Alias="" Aggregate="None" Width="150" />
+    <Column Name="Vendor Name" Alias="" Aggregate="None" Width="165" />
+    <Column Name="Item" Alias="" Aggregate="None" Width="458" />
+    <Column Name="Value" Alias="" Aggregate="None" Width="120" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="EqualTo">
+              <Left>
+                <SourceEFormColumnReferenceCriterion ColumnName="Parent EFormType" />
+              </Left>
+              <Right>
+                <ConstantCriterion>
+                  <Value>
+                    <String>Vendor</String>
+                  </Value>
+                </ConstantCriterion>
+              </Right>
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>false</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] ASC, [Vendor RecordID] ASC</OrderBy>
+  <GroupBy>[Vendor RecordID] DESC</GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>true</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

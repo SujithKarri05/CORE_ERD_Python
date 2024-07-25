@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Evaluation</EForm>
+  <Name>Individual Evaluations Due</Name>
+  <Description></Description>
+  <ContentTemplate>
+    <ToAddressesTemplate></ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate>{ARRAY_JOIN(
+  ARRAY_SELECTMANY(
+    DB_REPORT(
+      "[Assessor]", 
+      "Questionnaire", 
+      "[Status] IN ('In Progress', 'Not Started')", 
+      HASH("parent", ARRAY(EFormType, RecordID))
+    ), $(i, item) $item
+  ), ","
+)}</BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>Evaluation - Individual Scoring Due</SubjectTemplate>
+    <BodyTemplate>Hello,
+
+You have previously been invited to participate in an evaluation process for the Procurement - '{[Title]}'. The due date for individual scoring completion is {[Individual Evaluations Due Date]} at {DATEFORMAT([Individual Evaluations Due Date], "h:mm tt")}.
+
+You can complete your scoring here: { EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+
+Thanks,
+{LET $sign := DB_LOOKUP("Signature","Global Settings","[LineNumber]=1"); 
+RETURN IF($sign = NULL, "The VendorPanel Team",$sign)}</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

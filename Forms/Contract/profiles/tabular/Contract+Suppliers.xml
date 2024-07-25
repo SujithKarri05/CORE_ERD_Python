@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Contract Number" Alias="" Aggregate="None" Width="309" />
+    <Column Name="Vendor Name" Alias="Vendor" Aggregate="None" Width="165" />
+    <Column Name="Status" Alias="" Aggregate="None" Width="95" />
+    <RemoteColumn Name="Vendors" ShowViewLink="true">
+      <RelationshipChain>
+        <Remote Type="Arbitrary" RemoteEFormType="Vendor" ReferenceGroupName="">
+          <Filter>
+            <GroupingExpression Operator="And">
+              <Children>
+                <CriterionExpression>
+                  <Criterion>
+                    <ComparisonCriterion Operator="EqualTo">
+                      <Left>
+                        <NextEFormFieldReferenceCriterion ColumnName="LineNumber" />
+                      </Left>
+                      <Right>
+                        <ConstantCriterion>
+                          <Value>
+                            <Number>1</Number>
+                          </Value>
+                        </ConstantCriterion>
+                      </Right>
+                    </ComparisonCriterion>
+                  </Criterion>
+                </CriterionExpression>
+                <CriterionExpression>
+                  <Criterion>
+                    <ComparisonCriterion Operator="EqualTo">
+                      <Left>
+                        <SourceEFormColumnReferenceCriterion ColumnName="Vendor RecordID" />
+                      </Left>
+                      <Right>
+                        <NextEFormFieldReferenceCriterion ColumnName="RecordID" />
+                      </Right>
+                    </ComparisonCriterion>
+                  </Criterion>
+                </CriterionExpression>
+              </Children>
+            </GroupingExpression>
+          </Filter>
+        </Remote>
+      </RelationshipChain>
+      <OrderBy></OrderBy>
+      <DataSelection ShowOnlyAggregates="false">
+        <Columns>
+          <Column Name="Description" Alias="" Width="400" Aggregate="None" />
+        </Columns>
+      </DataSelection>
+    </RemoteColumn>
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[LineNumber] = 1</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[Start Date] ASC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Vendor Accounts</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

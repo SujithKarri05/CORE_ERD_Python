@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="RecordID" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Type" Alias="" Aggregate="None" Width="253" />
+    <Column Name="Status" Alias="" Aggregate="None" Width="106" />
+    <Column Name="Decision Maker Username" Alias="Person" Aggregate="None" Width="209" />
+    <Column Name="Approver Decision" Alias="Decision" Aggregate="None" Width="167" />
+    <Column Name="Approver Decision Date" Alias="Decision Date" Aggregate="None" Width="190" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules>
+    <Rule>
+      <Condition>
+        <ComparisonCriterion Operator="EqualTo">
+          <Left>
+            <SourceEFormColumnReferenceCriterion ColumnName="Status" />
+          </Left>
+          <Right>
+            <ConstantCriterion>
+              <Value>
+                <String>Approved</String>
+              </Value>
+            </ConstantCriterion>
+          </Right>
+        </ComparisonCriterion>
+      </Condition>
+      <Colour>
+        <ConstantCriterion>
+          <Value>
+            <String>#81ff81</String>
+          </Value>
+        </ConstantCriterion>
+      </Colour>
+    </Rule>
+  </BackgroundColourRules>
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <GroupingExpression Operator="And">
+          <Children>
+            <GroupingExpression Operator="And">
+              <Children>
+                <CriterionExpression>
+                  <Criterion>
+                    <ComparisonCriterion Operator="IsNotEmpty">
+                      <Left>
+                        <SourceEFormColumnReferenceCriterion ColumnName="Decision Maker" />
+                      </Left>
+                      <Right>
+                        <ConstantCriterion>
+                          <Value>
+                            <String></String>
+                          </Value>
+                        </ConstantCriterion>
+                      </Right>
+                    </ComparisonCriterion>
+                  </Criterion>
+                </CriterionExpression>
+              </Children>
+            </GroupingExpression>
+            <GroupingExpression Operator="And">
+              <Children>
+                <CriterionExpression>
+                  <Criterion>
+                    <ComparisonCriterion Operator="NotEqualTo">
+                      <Left>
+                        <SourceEFormColumnReferenceCriterion ColumnName="Approver Decision" />
+                      </Left>
+                      <Right>
+                        <ConstantCriterion>
+                          <Value>
+                            <String>Pending</String>
+                          </Value>
+                        </ConstantCriterion>
+                      </Right>
+                    </ComparisonCriterion>
+                  </Criterion>
+                </CriterionExpression>
+              </Children>
+            </GroupingExpression>
+          </Children>
+        </GroupingExpression>
+        <GroupingExpression Operator="And">
+          <Children>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="NotEqualTo">
+                  <Left>
+                    <SourceEFormColumnReferenceCriterion ColumnName="Approver Decision" />
+                  </Left>
+                  <Right>
+                    <ConstantCriterion>
+                      <Value>
+                        <String>In Progress</String>
+                      </Value>
+                    </ConstantCriterion>
+                  </Right>
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+          </Children>
+        </GroupingExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>false</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] DESC, [LineNumber] ASC</OrderBy>
+  <GroupBy>[Decision Maker] ASC</GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>200</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

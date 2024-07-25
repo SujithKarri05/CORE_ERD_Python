@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>false</Enabled>
+  <Description>STANDARD DEPLOYMENT - Reminder Updates</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Reminder</EFormRef>
+  <RecordFilter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[LineNumber] = 1</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </RecordFilter>
+  <Tasks>
+    <ChangeFieldValues>
+      <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <FieldEntries>
+        <FieldEntry>
+          <ColumnName>Reminder GUID</ColumnName>
+          <AssignWholeColumn>false</AssignWholeColumn>
+          <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Formula>IF( 
+  [Reminder Purpose]="Systems logins in last week",
+	"7e28bfb5-2a16-4b5d-a012-a4d6d77d6e25",
+  [Reminder Purpose]="Deleted records",
+	"d9eaf7bd-bef1-44c7-87ab-2a1607df4755",
+  [Reminder Purpose]="Questionnaire Evaluation Due",
+	"b01e16a6-2991-4987-9ab3-7291b2ce6121",
+  [Reminder Purpose]="Vendor Insurance Expiry - Vendor Notification",
+	"6703447f-dc17-402d-96cc-43811fd14708",
+  [Reminder Purpose]="Vendor Insurance Expiry",
+	"d8986355-1433-4611-8578-5ec1730d3dbe",
+  [Reminder Purpose]="Upcoming Meeting",
+	"5aebbed6-b488-47cd-915d-2d000afd2583",
+  [Reminder Purpose]="Security - Bank Guarantee Expiry",
+	"0a29da54-e620-4f69-99e6-f3ebb634e625",
+  [Reminder Purpose]="Price Review",
+	"bd7ef0d1-b784-44a9-8b9f-e6bff3df9613",
+  [Reminder Purpose]="Voting poll period finished",
+	"482343d7-cb3b-42fc-bde0-660ddc1c0ede",
+  [Reminder Purpose]="All Overdue Actions",
+	"b1fc6d01-3a36-40c3-9d0d-d4f44cb37d5e",
+  [Reminder Purpose]="All Assigned Actions",
+	"7cc68735-8ee9-4b3e-a6e4-ee3a6c7e7c03",
+  [Reminder Purpose]="Time in Procurement",
+	"f7205c59-6f99-48ec-ae4c-a64841a7f8d6",
+  [Reminder Purpose]="My Submissions",
+	"ce1e09bd-994a-4455-a180-4fcf955ef6db",
+  [Reminder Purpose]="Pending Approvals",
+	"d0deed44-8287-4e63-97db-eea6febd4841",
+  [Reminder Purpose]="Active Contracts",
+	"6b30b334-9194-4ef8-a242-488265451e7a",
+  [Reminder Purpose]="Approval",
+	"9550a743-6458-4f3d-9270-4f96f24cba2e",
+  [Reminder Purpose]="Recurring Action Created",
+	"c432474a-361a-4e9b-b23f-7f2d372f0f4d",
+  [Reminder Purpose]="Upcoming Milestone in 7 days",
+	"b9d59ca4-2e2e-405d-bbe7-cc4983dcbf3f",
+  [Reminder Purpose]="Warranty Expiry in 7 days",
+	"4a2cfd8c-aef2-41a9-a896-db8754ee2ac8",
+  [Reminder Purpose]="KPI Performance Due in 7 days",
+	"5c25ae37-0fa6-4e25-977f-070b207586c4",
+  [Reminder Purpose]="SLA Expiry",
+	"d93b4ca9-aa76-4331-a364-8b8746dbf8c7",
+  [Reminder Purpose]="Action Due",
+	"fabf4804-895f-4f39-b469-062c92135520",
+  [Reminder Purpose]="Contract Expiring",
+	"836463fa-9cdb-4613-9040-50fab6c2037f",
+  NEWUUID()
+)</Formula>
+        </FieldEntry>
+        <FieldEntry>
+          <ColumnName>VendorPanel Reminder</ColumnName>
+          <AssignWholeColumn>false</AssignWholeColumn>
+          <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Formula>ARRAY_INDEXOF(
+  ARRAY(
+    "7e28bfb5-2a16-4b5d-a012-a4d6d77d6e25",
+    "d9eaf7bd-bef1-44c7-87ab-2a1607df4755",
+    "b01e16a6-2991-4987-9ab3-7291b2ce6121",
+    "6703447f-dc17-402d-96cc-43811fd14708",
+    "d8986355-1433-4611-8578-5ec1730d3dbe",
+    "5aebbed6-b488-47cd-915d-2d000afd2583",
+    "0a29da54-e620-4f69-99e6-f3ebb634e625",
+    "bd7ef0d1-b784-44a9-8b9f-e6bff3df9613",
+    "482343d7-cb3b-42fc-bde0-660ddc1c0ede",
+    "b1fc6d01-3a36-40c3-9d0d-d4f44cb37d5e",
+    "7cc68735-8ee9-4b3e-a6e4-ee3a6c7e7c03",
+    "f7205c59-6f99-48ec-ae4c-a64841a7f8d6",
+    "ce1e09bd-994a-4455-a180-4fcf955ef6db",
+    "d0deed44-8287-4e63-97db-eea6febd4841",
+    "6b30b334-9194-4ef8-a242-488265451e7a",
+    "9550a743-6458-4f3d-9270-4f96f24cba2e",
+    "c432474a-361a-4e9b-b23f-7f2d372f0f4d",
+    "b9d59ca4-2e2e-405d-bbe7-cc4983dcbf3f",
+    "4a2cfd8c-aef2-41a9-a896-db8754ee2ac8",
+    "5c25ae37-0fa6-4e25-977f-070b207586c4",
+    "d93b4ca9-aa76-4331-a364-8b8746dbf8c7",
+    "fabf4804-895f-4f39-b469-062c92135520",
+    "836463fa-9cdb-4613-9040-50fab6c2037f"
+  ), 
+  [Reminder GUID]
+) &gt; 0</Formula>
+        </FieldEntry>
+      </FieldEntries>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Apply GUIDs to all VP provided reminders</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </ChangeFieldValues>
+  </Tasks>
+  <Timing>
+    <RunOnce />
+  </Timing>
+  <StartAfterDate>2022-12-21T22:14:34.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T00:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T00:00:00.0000000Z</EndTime>
+  <RepeatHours xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <LastRun xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <Role>system</Role>
+  <SaveRecordOnCompletion>true</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

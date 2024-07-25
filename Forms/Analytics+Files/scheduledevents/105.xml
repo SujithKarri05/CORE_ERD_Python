@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>false</Enabled>
+  <Description>ANALYTICS REPORTING - Delete Archived CSV Files</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Analytics Files</EFormRef>
+  <RecordFilter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[RecordID] = 1</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </RecordFilter>
+  <Tasks>
+    <TriggerCustomEvent>
+      <EventNameTemplate>Delete Old CSVs</EventNameTemplate>
+      <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <TargetRecordsFormula>LET $attachments := EBMS_GET_ATTACHMENTS("Analytics Files", 1, "Archived");
+LET $targetRecord := ARRAY_SELECT(
+  					ARRAY_WHERE(
+					  $attachments, $(i, item) 
+					  D(ARRAY_FIRST(SPLIT(HASH_GET($item, "FileName"), " "))) &lt;= DATEADD("day", -14, TODAY()), 
+  					), $(j, jtem) 
+  					NULL()
+  					);
+  				
+
+RETURN $targetRecord</TargetRecordsFormula>
+      <EventArgumentsFormula>LET $attachments := EBMS_GET_ATTACHMENTS("Analytics Files", 1, "Archived");
+LET $fileNames := ARRAY_SELECT(
+  					ARRAY_WHERE(
+					  $attachments, $(i, item) 
+					  D(ARRAY_FIRST(SPLIT(HASH_GET($item, "FileName"), " "))) &lt;= DATEADD("day", -14, TODAY()), 
+  					), $(j, jtem) 
+  					HASH_GET($jtem, "FileName")
+  					);
+  				
+
+RETURN $fileNames</EventArgumentsFormula>
+      <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RetainLastResultOnly>false</RetainLastResultOnly>
+      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+      <RunInsideDataLayer>false</RunInsideDataLayer>
+      <Description>Call: Delete Old CSVs</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </TriggerCustomEvent>
+  </Tasks>
+  <Timing>
+    <DailyWeekly>
+      <Days>
+        <Day>Sunday</Day>
+      </Days>
+    </DailyWeekly>
+  </Timing>
+  <StartAfterDate>2023-04-13T01:38:54.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T00:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T08:00:00.0000000Z</EndTime>
+  <RepeatHours xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <LastRun>2023-12-11T00:22:12.7560000Z</LastRun>
+  <Role>system</Role>
+  <SaveRecordOnCompletion>true</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

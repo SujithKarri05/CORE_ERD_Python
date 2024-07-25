@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Meeting</EForm>
+  <Name>Meeting Minutes</Name>
+  <Description></Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{[Notify Internal Email Addresses]}</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>Test Meeting Minutes - {[Meeting Title]} - {[Meeting Date]}</SubjectTemplate>
+    <BodyTemplate>&lt;style&gt;
+.nimblex-core-css-table {{color: #333; background: white; border: 1px solid grey; font-size: 12pt;  border-collapse: collapse;}}
+.nimblex-core-css-table thead {{background: #efefef;}}
+.nimblex-core-css-table th {{text-align:left; padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-table td {{padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-h2 {{color: #007db4;}}
+&lt;/style&gt;
+&lt;p&gt;
+{IF(NOT(ISBLANK([Minutes - Custom Message])), 
+  "&lt;div style=""white-space: pre-wrap""&gt;" &amp; [Minutes - Custom Message] &amp; "&lt;/div&gt;&lt;br&gt;--&lt;br&gt;")}
+--Start of Meeting Minutes--&lt;br&gt; 
+&lt;h2 class="nimblex-core-css-h2" style="margin-bottom: 0.1em;"&gt;Meeting - {[Meeting Title]}&lt;/h2&gt;
+&lt;p&gt;{DATEFORMAT([Meeting Date], "dd MMMM yyyy hh:mm tt")} AEST&lt;p&gt;
+&lt;table class="nimblex-core-css-table"&gt;
+  &lt;thead&gt;
+	&lt;tr&gt;
+	  &lt;th&gt;Invitee&lt;/th&gt;
+	  &lt;th&gt;Attended&lt;/th&gt;
+	&lt;/tr&gt;
+  &lt;/thead&gt;
+
+  {
+	ARRAY_JOIN(
+	  ARRAY_SELECT(
+		EACH [Attendee], $(i,item) 
+		"&lt;tr&gt;&lt;td&gt;" &amp; $item &amp; "&lt;/td&gt;" &amp; 
+		"&lt;td&gt;" &amp; 
+		  (
+			LET $attended := [Attended]#$i;
+
+			RETURN 
+			IF(
+			  $attended = TRUE, 
+			  "Yes", 
+			  "No - " &amp; COALESCE([Apology Reason]#$i, "Reason not provided")
+			  )
+
+		  ) &amp;
+		"&lt;/td&gt;" &amp; 
+	  "&lt;/tr&gt;"
+	  )
+	)
+  }
+  &lt;/table&gt;
+&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 class="nimblex-core-css-h2"&gt;Minutes&lt;/h2&gt;
+{
+LET $set := 
+ARRAY_TRANSPOSE(
+  ARRAY(
+  	EACH [Agenda - Topic],
+  	EACH [Minutes], 
+	EACH [Exclude from Minutes]
+  )
+); 
+
+LET $set := 
+ARRAY_WHERE(
+  $set, 
+  $(i, item)
+  ARRAY_INDEX($item, 3) &lt;&gt; TRUE
+);
+
+RETURN 
+ARRAY_JOIN(
+  ARRAY_SELECT(
+  $set, $(i,item) 
+  "&lt;h3 style=""margin-bottom: 0.1em;""&gt;" &amp; TRIM(ARRAY_INDEX($item, 1)) &amp; "&lt;/h3&gt;" &amp;  
+  COALESCE(TRIM(ARRAY_INDEX($item, 2)), "&lt;p&gt;No notes provided&lt;/p&gt;")
+	
+  )
+)
+}
+{
+LET $actionData :=
+DB_LOOKUPALL(
+	ARRAY(
+		"RecordID", 
+		"Responsible Text",
+		"Date Due",
+		"Action",
+		"Project RecordID",
+		"Action Number"
+	), 
+	"Action",
+	"[LineNumber] = 1 AND [Action] IS NOT EMPTY",
+	HASH("sort", "[DateCreated] ASC", "parent", ARRAY(EFormType, RecordID))
+);
+
+
+
+LET $numberOfActions := ARRAY_LENGTH($actionData); 
+
+RETURN 
+	IF(
+		AND(
+		  $numberOfActions &gt; 0, 
+		  [Exclude Actions from Minutes] &lt;&gt; TRUE
+		),
+	(
+		LET $columnHTML := 
+			"&lt;thead&gt;" &amp;
+				"&lt;th&gt;" &amp; "ID" &amp; "&lt;/th&gt;" &amp;
+				"&lt;th&gt;" &amp; "View" &amp; "&lt;/th&gt;" &amp;
+				"&lt;th&gt;" &amp; "Responsible" &amp; "&lt;/th&gt;" &amp;
+				"&lt;th&gt;" &amp; "Date Due" &amp; "&lt;/th&gt;" &amp;
+				"&lt;th&gt;" &amp; "Description" &amp; "&lt;/th&gt;" &amp;
+			"&lt;/thead&gt;";
+		
+		LET $tableHTML := 
+		ARRAY_JOIN(
+			ARRAY_SELECT(
+				$actionData, $(i, item) 
+				LET $link := EBMS_GET_EFORMRECORD_URL("Action", ARRAY_INDEX($item, 1));
+				LET $responsiblePerson := ARRAY_INDEX($item, 2);
+				LET $dateDue := ARRAY_INDEX($item, 3);
+				LET $action := ARRAY_INDEX($item, 4);
+
+			    LET $actionNumber := 
+				IF(
+		  			ARRAY_INDEX($item, 5) = NULL(), 
+		  			$i, 
+		  			COALESCE(ARRAY_INDEX($item, 6), $i)
+				); 
+	  
+			  
+				RETURN 
+				"&lt;tr&gt;" &amp;
+					"&lt;td&gt;" &amp; $actionNumber &amp; "&lt;/td&gt;" &amp;
+					"&lt;td&gt;&lt;a href=""" &amp; $link &amp; """&gt;View&lt;/a&gt;&lt;/td&gt;" &amp;
+					"&lt;td&gt;" &amp; COALESCE($responsiblePerson, "None") &amp; "&lt;/td&gt;" &amp;
+					"&lt;td&gt;" &amp; $dateDue &amp; "&lt;/td&gt;" &amp;
+					"&lt;td&gt;" &amp; $action &amp; "&lt;/td&gt;" &amp;
+				"&lt;/tr&gt;"
+			)
+		);
+		
+		RETURN 
+		"&lt;h2 class=""nimblex-core-css-h2"" style=""margin-bottom: 0.1em;""&gt;Actions Raised&lt;/h2&gt;" &amp;  
+		"&lt;table class=""nimblex-core-css-table""&gt;" &amp; 
+			$columnHTML &amp; 
+			$tableHTML &amp; 
+		"&lt;/table&gt;"
+	)
+)}
+
+{
+LET $decisionData :=
+DB_LOOKUPALL(
+	ARRAY(
+		"RecordID", 
+		"Decision"
+	), 
+	"Decision",
+	"[LineNumber] = 1 AND [Decision] IS NOT EMPTY",
+	HASH("sort", "[DateCreated] ASC", "parent", ARRAY(EFormType, RecordID))
+);
+
+LET $numberOfDecisions := ARRAY_LENGTH($decisionData); 
+
+RETURN 
+	IF(
+		AND(
+		  $numberOfDecisions &gt; 0
+	    ),
+	(
+		LET $columnHTML := 
+			"&lt;thead&gt;" &amp;
+				"&lt;th&gt;" &amp; "#" &amp; "&lt;/th&gt;" &amp;
+				"&lt;th&gt;" &amp; "View" &amp; "&lt;/th&gt;" &amp;
+				"&lt;th&gt;" &amp; "Decision" &amp; "&lt;/th&gt;" &amp;
+			"&lt;/thead&gt;";
+		
+		LET $tableHTML := 
+		ARRAY_JOIN(
+			ARRAY_SELECT(
+				$decisionData, $(i, item) 
+				LET $link := EBMS_GET_EFORMRECORD_URL("Decision", ARRAY_INDEX($item, 1));
+				LET $decision := ARRAY_INDEX($item, 2);
+
+			    LET $decisionNumber := $i; 
+	  
+			  
+				RETURN 
+				"&lt;tr&gt;" &amp;
+					"&lt;td&gt;" &amp; $decisionNumber &amp; "&lt;/td&gt;" &amp;
+					"&lt;td&gt;&lt;a href=""" &amp; $link &amp; """&gt;View&lt;/a&gt;&lt;/td&gt;" &amp;
+					"&lt;td&gt;" &amp; $decision &amp; "&lt;/td&gt;" &amp;
+				"&lt;/tr&gt;"
+			)
+		);
+		
+		RETURN 
+		"&lt;h2 class=""nimblex-core-css-h2"" style=""margin-bottom: 0.1em;""&gt;Decisions Raised&lt;/h2&gt;" &amp;  
+		"&lt;table class=""nimblex-core-css-table""&gt;" &amp; 
+			$columnHTML &amp; 
+			$tableHTML &amp; 
+		"&lt;/table&gt;"
+	)
+)}
+
+&lt;p&gt; 
+&lt;br&gt;
+&lt;a href="{EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }"&gt;Click here&lt;/a&gt; to view the Meeting record.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+Thanks,&lt;br&gt;
+The VendorPanel Team&lt;/p&gt;</BodyTemplate>
+    <IsBodyHtml>true</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators>
+    <RecordFile>
+      <ResultFilenameTemplate
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <WholeFolder>true</WholeFolder>
+      <TargetFileTemplate
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EFormType
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EFormTypeTemplate
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordIDFormula
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PathTemplate>Meeting Documents</PathTemplate>
+    </RecordFile>
+    <RecordFile>
+      <ResultFilenameTemplate
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <WholeFolder>true</WholeFolder>
+      <TargetFileTemplate
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EFormType
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EFormTypeTemplate
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordIDFormula
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PathTemplate>Email Attachments</PathTemplate>
+    </RecordFile>
+  </AttachedFileGenerators>
+</PredefinedEmailTemplate>

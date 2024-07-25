@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Email</EForm>
+  <Name>Email</Name>
+  <Description></Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{[To]}</ToAddressesTemplate>
+    <CcAddressesTemplate>{[CC]}</CcAddressesTemplate>
+    <BccAddressesTemplate>{[BCC]}</BccAddressesTemplate>
+    <ReplyToAddressesTemplate>{[Reply-to]}</ReplyToAddressesTemplate>
+    <SubjectTemplate>{[Subject]}</SubjectTemplate>
+    <BodyTemplate>{[Body]}</BodyTemplate>
+    <IsBodyHtml>true</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

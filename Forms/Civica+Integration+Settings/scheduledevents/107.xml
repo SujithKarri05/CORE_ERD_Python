@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>false</Enabled>
+  <Description>INTEGRATION - Civica Integration</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Civica Integration Settings</EFormRef>
+  <RecordFilter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[RecordID] = 1 AND [Integration Enabled] = TRUE</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </RecordFilter>
+  <Tasks>
+    <FormulaDrivenRaiseLinkedEForm>
+      <EFormTypeFormula>"Civica Integration Data"</EFormTypeFormula>
+      <NewRecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <NewRecordCountFormula>ARRAY_LENGTH(ARRAY_WHERE(ARRAY_TRANSPOSE(ARRAY(EACH [Integration Workflow], EACH [Integration Enabled])), $(i, item) ARRAY_LAST($item) = TRUE))</NewRecordCountFormula>
+      <FieldValuesFormula>LET $data := ARRAY_TRANSPOSE(ARRAY(EACH [Integration Workflow], EACH [Integration Enabled]));
+
+LET $integrationWorkflow := 
+	ARRAY_FIRST(ARRAY_INDEX(ARRAY_WHERE($data, $(i, item) ARRAY_LAST($item) = TRUE), $count));
+
+RETURN 
+  HASH(
+	  "Integration Workflow", $integrationWorkflow,
+	  "Data Needs Processing", TRUE
+  )</FieldValuesFormula>
+      <MakeChildOfContextRecordFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <AlternativeParentRecord xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PushCreatedRecordIDIntoColumn>Temp RecordIDs</PushCreatedRecordIDIntoColumn>
+      <RunInUI>false</RunInUI>
+      <UISaveImmediatelyFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <UIOpenModeFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <UITargetViewFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PopupEventTriggerDataFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <DialogUIElementsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Description>Create Civica Integration Data records to initiate integration</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </FormulaDrivenRaiseLinkedEForm>
+    <TriggerCustomEvent>
+      <EventNameTemplate>Initialise Integration</EventNameTemplate>
+      <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <TargetRecordsFormula>ARRAY_SELECT([Temp RecordIDs], $(i, item) ARRAY("Civica Integration Data", $item))</TargetRecordsFormula>
+      <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RetainLastResultOnly>false</RetainLastResultOnly>
+      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+      <RunInsideDataLayer>false</RunInsideDataLayer>
+      <Description>Call: Initialise Integration</Description>
+      <RunOnlyWhen>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RunOnlyWhen>
+    </TriggerCustomEvent>
+    <Notification>
+      <AttachRecordViewAsPdf>false</AttachRecordViewAsPdf>
+      <SendEmailImmediately>true</SendEmailImmediately>
+      <AttachLogo>false</AttachLogo>
+      <AttachRecordViewName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <AttachedRecordViewFilenameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Attachments />
+      <DontSendToCurrentRole>false</DontSendToCurrentRole>
+      <Template>
+        <ToAddressesTemplate>{[Integration Alert Recipient]}</ToAddressesTemplate>
+        <CcAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <BccAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReplyToAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <SubjectTemplate>WARNING! Failures with integration</SubjectTemplate>
+        <BodyTemplate>{
+LET $columns :=
+	ARRAY(
+	  	"Integration Workflow",
+	  	"Errors"
+	);
+
+
+LET $data := 
+	 DB_LOOKUPALL(
+	  	$columns,
+	  	"Civica Integration Data",
+	  	"[LineNumber] = 1 AND [Errors] IS NOT NULL AND [RecordID] IN " &amp; DB_ENCODECONSTANT([Temp RecordIDs])
+	);
+
+RETURN 
+	"The following errors were received: " &amp;
+	ARRAY_JOIN(ARRAY_SELECT($data, $(i, item) "Integration workflow: " &amp; ARRAY_FIRST($item) &amp; " failed with this error - " &amp; ARRAY_LAST($item)), NEWLINE())
+}</BodyTemplate>
+        <IsBodyHtml>false</IsBodyHtml>
+        <UseDefaultFrame>true</UseDefaultFrame>
+      </Template>
+      <LibraryEmailTemplateNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Location>Inline</Location>
+      <DisplayLogMessages>true</DisplayLogMessages>
+      <SendFromTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Description>Send error message (if return status is not 2XX)</Description>
+      <RunOnlyWhen>
+        <GroupingExpression Operator="And">
+          <Children>
+            <CriterionExpression>
+              <Criterion>
+                <FormulaCriterion>
+                  <Formula>LET $errors := DB_LOOKUPALL(
+  "Errors",
+  "Civica Integration Data",
+  "[Errors] &lt;&gt; NULL &amp; [RecordID] IN " &amp; DB_ENCODECONSTANT([Temp RecordIDs]));
+
+RETURN ARRAY_LENGTH($errors) &gt; 0</Formula>
+                </FormulaCriterion>
+              </Criterion>
+            </CriterionExpression>
+          </Children>
+        </GroupingExpression>
+      </RunOnlyWhen>
+    </Notification>
+    <DeleteEFormRecordsTask>
+      <EFormRef>Civica Integration Data</EFormRef>
+      <RecordFilter>
+        <GroupingExpression Operator="And">
+          <Children>
+            <CriterionExpression>
+              <Criterion>
+                <TextCriterion>
+                  <Text>(TO_DAY([DateCreated]) &lt; (CURRENT_DATE - 14) AND [Data Processed] = TRUE) OR (TO_DAY([DateCreated]) &lt; (CURRENT_DATE - 56) AND [Data Processed] &lt;&gt; TRUE)</Text>
+                </TextCriterion>
+              </Criterion>
+            </CriterionExpression>
+          </Children>
+        </GroupingExpression>
+      </RecordFilter>
+      <Description>Delete old or unprocessed Civica Integration Data</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </DeleteEFormRecordsTask>
+  </Tasks>
+  <Timing>
+    <DailyWeekly>
+      <Days>
+        <Day>Monday</Day>
+        <Day>Tuesday</Day>
+        <Day>Wednesday</Day>
+        <Day>Thursday</Day>
+        <Day>Friday</Day>
+        <Day>Saturday</Day>
+        <Day>Sunday</Day>
+      </Days>
+    </DailyWeekly>
+  </Timing>
+  <StartAfterDate>2022-10-25T05:38:38.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T00:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T06:00:00.0000000Z</EndTime>
+  <RepeatHours>1</RepeatHours>
+  <LastRun>2023-11-08T03:14:45.4340000Z</LastRun>
+  <Role>system</Role>
+  <SaveRecordOnCompletion>true</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

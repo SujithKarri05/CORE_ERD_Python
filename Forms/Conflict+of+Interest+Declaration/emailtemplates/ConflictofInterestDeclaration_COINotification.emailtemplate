@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Conflict of Interest Declaration</EForm>
+  <Name>COI Notification</Name>
+  <Description>To: Assignee</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>role:"{Assignee}"</ToAddressesTemplate>
+    <CcAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>Conflict of Interest Declaration</SubjectTemplate>
+    <BodyTemplate>Hello {[Name of User]},
+
+A Conflict of Interest Declaration has been assigned to you for signing.
+
+This relates to the following procurement: {[Procurement Number]}  -  {[Procurement Title]}
+
+Follow this link to action the request: 
+{IF(
+	AND(EBMS_GET_USER_TYPE([Assignee])== "GUEST", [Guest Assignee Password] &lt;&gt; NULL()),
+		EBMS_GET_BASE_URL()&amp; "/AutoLogin.aspx?Username="
+		&amp; URLENCODE([Assignee]) &amp; "&amp;password=" &amp; URLENCODE([Guest Assignee Password]) 
+		&amp; "&amp;redir=" &amp; URLENCODE("EFormRecord.aspx?EFormType=" &amp; [EFormType] &amp; "&amp;RecordID=" &amp;[RecordID]),
+		
+		EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID])
+)}
+{IF(
+	AND(EBMS_GET_USER_TYPE([Assignee])== "GUEST", [Guest Assignee Password] &lt;&gt; NULL()),
+		"Here is your login details: " &amp; NEWLINE() &amp;
+		"Username: " &amp; [Assignee] &amp; NEWLINE() &amp;
+		"Password: " &amp; [Guest Assignee Password]  &amp; NEWLINE() ,
+		
+		""
+)}
+
+
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

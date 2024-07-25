@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EForm xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Description></Description>
+  <DataDefinition>
+    <MinimumRows>1</MinimumRows>
+    <Columns>
+      <SystemColumn Which="EFormType" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="RecordID" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes>
+          <Pipe>
+            <EForm>Monthly Privacy Incident Report</EForm>
+            <ColumnName>Privacy Incidents Report RecordID</ColumnName>
+            <UpdateOnSave>true</UpdateOnSave>
+          </Pipe>
+        </EFormRecordPipes>
+      </SystemColumn>
+      <SystemColumn Which="LineNumber" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateCreated" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateLastUpdated" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateDue" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateClosed" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Priority" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="0-Unassigned" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Status" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="Draft" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Assignee" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Sender" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Originator" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Description" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="WasRejected" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <Column Name="Date Incident Closed" DataType="DateTime" Guid="b5d073c5-7bbb-4da6-b50e-a130ab5357e4" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Reporting Month" DataType="DateTime" Guid="99bb1789-672a-49d7-ac02-bae6fba64e1d" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="COALESCE([Reporting Month], DATE(YEAR(NOW()), MONTH(NOW())))" DefaultValue="" DefaultValueFormula="DATE(YEAR(NOW()), MONTH(NOW()))" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="MMM-yy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes>
+          <Pipe>
+            <EForm>Monthly Privacy Incident Report</EForm>
+            <ColumnName>Reporting Month</ColumnName>
+            <UpdateOnSave>true</UpdateOnSave>
+          </Pipe>
+        </EFormRecordPipes>
+      </Column>
+      <Column Name="Month" DataType="Number" Guid="46de521e-5c93-47fe-b289-ba23195bf2b4" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="MONTH([Reporting Month])" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="UserText" DataType="String" Guid="add2af18-fb71-4804-a28f-e5323304219b" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="End Date" DataType="DateTime" Guid="ee11c4a7-9f43-440c-819c-21cc8904f377" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="DATEADD(&quot;month&quot;,-12,[Reporting Month])" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Year" DataType="Number" Guid="790d5a48-4fbe-4def-83eb-63ceaec270b0" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="YEAR([Reporting Month])" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Current Month" DataType="DateTime" Guid="3656d157-1c30-4d24-b3c7-44be31210563" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="DATEADD(&quot;month&quot;,0,[Reporting Month])" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="MMM-yy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Next Month" DataType="DateTime" Guid="412dc9d8-f432-4302-891b-20568145b042" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="DATEADD(&quot;month&quot;,1,[Current Month])" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="MMM-yy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Total Incident" DataType="Number" Guid="55118199-1ddc-4f1c-9297-28cbdaf8b1d7" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="LET $date := [Current Month Year];&#xA;LET $data := DB_REPORT(&#xA;    ARRAY(&#xA;        &quot;COUNT([RecordID])&quot;&#xA;    ),&#xA;    &quot;Privacy Incident&quot;,&#xA;    &quot;[LineNumber] = 1&#x9;AND [Month Reported] = &quot; &amp; DB_ENCODECONSTANT($date)&#xA;&#xA;);&#xA;RETURN ARRAY_FIRST(ARRAY_FIRST($data))" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Current Month Year" DataType="String" Guid="543d18d7-d2bd-4ad7-9fb3-83dc7ed2eea2" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="ARRAY_JOIN(ARRAY_CONCAT(YEAR([Reporting Month]),MONTH([Reporting Month])),&quot;,&quot;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Month Format" DataType="String" Guid="e5bc4e28-54b5-419e-a92b-f3a2c8c3fa4f" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="IF(&#xA;&#x9;[Month] = 1, &quot;January&quot;,&#xA;&#x9;[Month] = 2, &quot;Febuary&quot;,&#xA;&#x9;[Month] = 3, &quot;March&quot;,&#xA;&#x9;[Month] = 4, &quot;April&quot;,&#xA;&#x9;[Month] = 5, &quot;May&quot;,&#xA;&#x9;[Month] = 6, &quot;June&quot;,&#xA;&#x9;[Month] = 7, &quot;July&quot;,&#xA;&#x9;[Month] = 8, &quot;August&quot;,&#xA;&#x9;[Month] = 9, &quot;September&quot;,&#xA;&#x9;[Month] = 10, &quot;October&quot;,&#xA;&#x9;[Month] = 11, &quot;November&quot;,&#xA;&#x9;[Month] = 12, &quot;December&quot;,&#xA;&#x9;&quot;&quot;&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Finding" DataType="Number" Guid="823a6e60-7efe-4cae-8d8b-96e823e6a562" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="LET $date := [Current Month Year];&#xA;LET $data := DB_REPORT(&#xA;    ARRAY(&#xA;        &quot;COUNT([RecordID])&quot;&#xA;    ),&#xA;    &quot;Privacy Incident&quot;,&#xA;    &quot;[LineNumber] = 1 AND [Finding] = 'Substantiated' AND [Month Reported] = &quot; &amp; DB_ENCODECONSTANT($date)&#xA; &#xA;);&#xA;RETURN ARRAY_FIRST(ARRAY_FIRST($data))" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="EmailID" DataType="Number" Guid="1452fab1-2043-40f7-8739-b3f07d2ff78d" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="PDF Visible" DataType="Boolean" Guid="3bba4c77-d1f6-42d1-8729-db4686a4b908" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="FALSE" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Last Month Report RecordID" DataType="Number" Guid="3f9e7cae-439d-4cb5-9a43-5873d1294b59" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Organisation Files Created" DataType="Boolean" Guid="32395649-630e-4e0a-ba04-482589228bf7" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="IF(&#xA;  &#x9;AND(&#xA;&#x9;  &#x9;[RecordID] &gt; 0,&#xA;&#x9;  &#x9;ARRAY_LENGTH(EBMS_GET_ATTACHMENTS([EFormType], [RecordID], &quot;Organisation&quot;)) &gt; 0&#xA;&#x9;),&#xA;&#x9;  &#x9;TRUE,&#xA;&#x9;  &#x9;FALSE&#xA;  )&#xA;" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Agent Files Created" DataType="Boolean" Guid="ecf2043d-86d4-47f7-805f-f04e190f2967" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="IF(&#xA;  &#x9;AND(&#xA;&#x9;  &#x9;[RecordID] &gt; 0,&#xA;&#x9;  &#x9;ARRAY_LENGTH(EBMS_GET_ATTACHMENTS([EFormType], [RecordID], &quot;Agent&quot;)) &gt; 0&#xA;&#x9;),&#xA;  &#x9;TRUE,&#xA;  &#x9;FALSE&#xA;)&#xA;" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="AgentEmailID" DataType="Number" Guid="c1c61aca-46a6-4604-ade8-53c4e7b12dbe" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Report Status" DataType="String" Guid="18d36b92-4db0-4491-a00d-27d27a7be809" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="Draft" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Starting Month" DataType="DateTime" Guid="6c6c2a06-c343-444c-a6aa-37fa409f9f2b" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="DATEADD(&quot;month&quot;,-11,[Reporting Month])" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Organisation Email Populated" DataType="Boolean" Guid="9b59e2bd-8533-4876-a5ad-567421b8a053" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="FALSE" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Agent Email Populated" DataType="Boolean" Guid="d54f3146-0d8b-429d-a014-5ad55ff93019" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="FALSE" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Signer" DataType="String" Guid="7c1c281d-084f-437f-b9df-74e8bfa6dadc" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="EBMS_GET_ROLE_DISPLAYNAME(EBMS_GET_CURRENT_USER())" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Signer Position" DataType="String" Guid="6d3439c7-e1d5-4f2d-80a7-0852045d3448" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="EBMS_GET_USER_POSITION(EBMS_GET_CURRENT_USER())" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Signer Email" DataType="String" Guid="326561d5-0586-4ac7-b925-89b8dc4e18b4" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="EBMS_GET_ROLE_EMAIL_ADDRESSES(&#xA;&#x9;EBMS_GET_CURRENT_USER(), TRUE)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Icons" DataType="Any" Guid="20c5cc22-f29d-4834-9a9e-cefa147ad155" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="LET $iconColour := &quot;#2f4f4f&quot;; &#xA;LET $containerColour := &quot;white&quot;;&#xA;LET $themeColour := &quot;#4682B4&quot;; //blue&#xA;//height: 100%; &#xA;&#xA;LET $filledStar := &#xA;&quot;&lt;svg &quot; &amp;&#xA;&quot; style = &quot;&quot;width: 20px; height: 100%;&quot;&quot;&quot; &amp; &#xA;&quot; xmlns=&quot;&quot;http://www.w3.org/2000/svg&quot;&quot; aria-hidden=&quot;&quot;true&quot;&quot; focusable=&quot;&quot;false&quot;&quot; data-prefix=&quot;&quot;fas&quot;&quot; data-icon=&quot;&quot;truck&quot;&quot; class=&quot;&quot;svg-inline--fa fa-truck&quot;&quot; role=&quot;&quot;img&quot;&quot; viewBox=&quot;&quot;0 0 640 512&quot;&quot;&gt;&lt;path fill=&quot;&quot;&quot; &amp; $iconColour &amp; &quot;&quot;&quot; d=&quot;&quot;M287.9 0C297.1 0 305.5 5.25 309.5 13.52L378.1 154.8L531.4 177.5C540.4 178.8 547.8 185.1 550.7 193.7C553.5 202.4 551.2 211.9 544.8 218.2L433.6 328.4L459.9 483.9C461.4 492.9 457.7 502.1 450.2 507.4C442.8 512.7 432.1 513.4 424.9 509.1L287.9 435.9L150.1 509.1C142.9 513.4 133.1 512.7 125.6 507.4C118.2 502.1 114.5 492.9 115.1 483.9L142.2 328.4L31.11 218.2C24.65 211.9 22.36 202.4 25.2 193.7C28.03 185.1 35.5 178.8 44.49 177.5L197.7 154.8L266.3 13.52C270.4 5.249 278.7 0 287.9 0L287.9 0zM287.9 78.95L235.4 187.2C231.9 194.3 225.1 199.3 217.3 200.5L98.98 217.9L184.9 303C190.4 308.5 192.9 316.4 191.6 324.1L171.4 443.7L276.6 387.5C283.7 383.7 292.2 383.7 299.2 387.5L404.4 443.7L384.2 324.1C382.9 316.4 385.5 308.5 391 303L476.9 217.9L358.6 200.5C350.7 199.3 343.9 194.3 340.5 187.2L287.9 78.95z&quot;&quot;/&gt;&lt;/svg&gt;&quot;;&#xA;&#xA;LET $unfilledStar := &#xA;&quot;&lt;svg &quot; &amp;&#xA;&quot; style = &quot;&quot;width: 20px; height: 100%;&quot;&quot;&quot; &amp; &#xA;&quot; xmlns=&quot;&quot;http://www.w3.org/2000/svg&quot;&quot; aria-hidden=&quot;&quot;true&quot;&quot; focusable=&quot;&quot;false&quot;&quot; data-prefix=&quot;&quot;fas&quot;&quot; data-icon=&quot;&quot;truck&quot;&quot; class=&quot;&quot;svg-inline--fa fa-truck&quot;&quot; role=&quot;&quot;img&quot;&quot; viewBox=&quot;&quot;0 0 640 512&quot;&quot;&gt;&lt;path fill=&quot;&quot;&quot; &amp; $iconColour &amp; &quot;&quot;&quot; d=&quot;&quot;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&quot;&quot;/&gt;&lt;/svg&gt;&quot;;&#xA;&#xA;&#xA;LET $leftArrow := &#xA;&quot;&lt;svg &quot; &amp;&#xA;&quot; style = &quot;&quot;&quot;&quot;&quot; &amp; &#xA;&quot; xmlns=&quot;&quot;http://www.w3.org/2000/svg&quot;&quot; aria-hidden=&quot;&quot;true&quot;&quot; focusable=&quot;&quot;false&quot;&quot; data-prefix=&quot;&quot;fas&quot;&quot; data-icon=&quot;&quot;leftArrow&quot;&quot; class=&quot;&quot;svg-inline--fa fa-truck&quot;&quot; role=&quot;&quot;img&quot;&quot; viewBox=&quot;&quot;0 0 640 512&quot;&quot;&gt;&lt;path fill=&quot;&quot;&quot; &amp; $themeColour &amp; &quot;&quot;&quot; d=&quot;&quot;M512 256C512 273.7 497.7 288 480 288H160.1l0 72c0 9.547-5.66 18.19-14.42 22c-8.754 3.812-18.95 2.077-25.94-4.407l-112.1-104c-10.24-9.5-10.24-25.69 0-35.19l112.1-104c6.992-6.484 17.18-8.218 25.94-4.406C154.4 133.8 160.1 142.5 160.1 151.1L160.1 224H480C497.7 224 512 238.3 512 256z&quot;&quot;/&gt;&lt;/svg&gt;&quot;;&#xA;&#xA;LET $containedFilledStar := &quot;&lt;span style=&quot;&quot;background: &quot; &amp; $containerColour &amp; &quot;; width: 100%; height: 100%;&quot;&quot;&gt;&quot; &amp; $filledStar &amp; &quot;&lt;/span&gt;&quot;;&#xA;&#xA;LET $uncontainedFilledStar := &quot;&lt;span style=&quot;&quot;background: &quot; &amp; $containerColour &amp; &quot;; width: 100%; height: 100%;&quot;&quot;&gt;&quot; &amp; $unfilledStar &amp; &quot;&lt;/span&gt;&quot;;&#xA;&#xA;LET $containedLeftArrow := &quot;&lt;span style=&quot;&quot;background: &quot; &amp; $containerColour &amp; &quot;; width: 100%; height: 100%;&quot;&quot;&gt;&quot; &amp; $leftArrow &amp; &quot;&lt;/span&gt;&quot;;&#xA;&#xA;&#xA;RETURN &#xA;HASH(&#xA;  &quot;filledStar&quot;, $containedFilledStar,&#xA;  &quot;unfilledStar&quot;, $uncontainedFilledStar,&#xA;  &quot;leftArrow&quot;, $leftArrow&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Parent Structure" DataType="Any" Guid="dd525840-c306-4ae1-bd2d-dd8504da5b57" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="LET $current := ARRAY([EFormType], [RecordID]);&#xA;LET $descriptionColumns := &#xA;HASH(&#xA;&#x9;&quot;Contract&quot;,  &#x9;&#x9;&#x9;&#x9;&#x9;&quot;Contract Number&quot;, &#xA;&#x9;&quot;Vendor&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;Company Name&quot;,&#xA;&#x9;&quot;Procurement&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&quot;Procurement Number&quot;,&#xA;&#x9;&quot;Project&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;Project Number&quot;,&#xA;    &quot;Evaluation&quot;, &#x9;&#x9;    &#x9;&#x9;&quot;Description&quot;,&#xA;  &#x9;&quot;Information Request&quot;,  &#x9;&#x9;&quot;File No.&quot;, &#xA;&#x9;&quot;Subpoena&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&quot;File No.&quot;,&#xA;&#x9;&quot;Privacy Incident&quot;, &#x9;&#x9;&#x9;&quot;File No.&quot;&#xA;); &#xA;&#xA;LET $altFormName:= HASH(&#xA;  &#x9;&quot;Insurance&quot;,&#x9;&quot;Compliance&quot;&#xA;  );&#xA;&#xA;LET $getLabelText := $(eFormType, recordID)&#xA;(&#xA;  &#x9;LET $targetColumn := HASH_GET($descriptionColumns, $eFormType);&#xA;  &#x9;RETURN &#xA;  &#x9;IF( $targetColumn = NULL, NULL,&#xA;&#x9;&#x9;LET $isthisRecord := ARRAY($eFormType, $recordID) = $current;&#xA;&#x9;&#x9;LET $title:= &#xA;&#x9;&#x9;IF( $isthisRecord = TRUE, &#xA;&#x9;&#x9;&#x9;CURRENT_VALUE($targetColumn),&#xA;&#x9;&#x9;&#x9;ARRAY_FIRST(DB_LOOKUP(&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY($targetColumn),&#xA;&#x9;&#x9;&#x9;&#x9;$eFormType, &#xA;&#x9;&#x9;&#x9;&#x9;&quot;[RecordID] FAST_EQUAL_TO &quot; &amp; $recordID&#xA;&#x9;&#x9;&#x9;))&#xA;&#x9;&#x9;  );&#xA;&#x9;&#x9;//shortern the descriptive label/ title&#xA;&#x9;&#x9;LET $charCount := LEN($title);&#xA;&#x9;&#x9;LET $titleArray := SPLIT($title, &quot; &quot;);&#xA;&#x9;&#x9;LET $wordCount := ARRAY_LENGTH($titleArray);&#xA;&#xA;&#x9;&#x9;LET $charLimit := 30; &#xA;&#x9;&#x9;LET $wordLimit := ARRAY_LENGTH( SPLIT( LEFT($title, $charLimit), &quot; &quot;) );&#xA;&#xA;&#x9;  RETURN //ARRAY_TAKE($titleArray, $wordLimit)&#xA;&#x9;&#x9;IF(&#xA;&#x9;&#x9;&#x9;$wordCount &lt;= $wordLimit, $title,&#xA;&#x9;&#x9;&#x9;ARRAY_JOIN(&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_TAKE($titleArray, $wordLimit), &quot; &quot;&#xA;&#x9;&#x9;&#x9;)&amp; &quot; ...&quot;&#xA;&#x9;&#x9;)&#xA;&#x9;  )&#xA; &#xA;); &#xA;&#xA;LET $getReadAccess := $(eFormType, recordID)&#xA;( EBMS_GET_EFORMRECORD_PERMISSION($eFormType, $recordID, &quot;read&quot;));&#xA;&#xA;LET $currentDes := CALL($getLabelText, [EFormType], [RecordID]);&#xA;LET $currentAccess := FALSE;&#xA;&#xA;RETURN&#xA;IF(&#xA;&#x9;[Parent Structure] &lt;&gt; NULL, [Parent Structure],&#xA;  &#x9;(&#xA;&#xA;&#x9;  LET $parent := &#xA;&#x9;  IF( &#xA;&#x9;&#x9;[RecordID] &gt; 0, &#xA;&#x9;&#x9;(&#xA;&#x9;&#x9;  LET $record := EBMS_GET_PARENT_RECORD(ARRAY_FIRST($current), ARRAY_INDEX($current, 2));&#xA;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF(  ARRAY_FIRST($record) == NULL, NULL,&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_CONCAT( &#xA;&#x9;&#x9;&#x9;&#x9;  $record, &#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getLabelText, ARRAY_FIRST($record), ARRAY_INDEX($record, 2)),&#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getReadAccess, ARRAY_FIRST($record), ARRAY_INDEX($record, 2))&#xA;&#x9;&#x9;&#x9;&#x9;  )&#xA;&#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;  )); &#xA;&#xA;&#x9;  LET $gParent := &#xA;&#x9;  IF( &#xA;&#x9;&#x9; $parent &lt;&gt; NULL, &#xA;&#x9;&#x9;(&#xA;&#x9;&#x9;  LET $record := EBMS_GET_PARENT_RECORD(ARRAY_FIRST($parent), ARRAY_INDEX($parent, 2));&#xA;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF(  ARRAY_FIRST($record) == NULL, NULL,&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_CONCAT( &#xA;&#x9;&#x9;&#x9;&#x9;  $record, &#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getLabelText, ARRAY_FIRST($record), ARRAY_INDEX($record, 2)),&#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getReadAccess, ARRAY_FIRST($record), ARRAY_INDEX($record, 2))&#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;&#x9;  )&#xA;&#x9;  )); &#xA;&#xA;&#x9;  LET $hash :=  &#xA;&#x9;  HASH_MERGE(&#xA;&#x9;&#x9;  IF( $parent &lt;&gt; NULL, HASH(&quot;parent&quot;, &#x9;$parent)),&#xA;&#x9;&#x9;  IF( $gParent &lt;&gt; NULL, HASH(&quot;gparent&quot;, &#x9;$gParent))&#xA;&#x9;  );&#xA;&#xA;&#x9;  LET $parentStructure := &#x9;//2nd instance&#xA;&#x9;  IF( &#xA;&#x9;&#x9;  ARRAY_LENGTH(HASH_KEYS($hash)) &gt;0, $hash, NULL&#xA;&#x9;  );&#xA;&#xA;&#x9;  LET $parentData:= &#xA;&#x9;  ARRAY_WHERE(&#xA;&#x9;&#x9;ARRAY(&#xA;&#x9;&#x9;&#x9;$gParent, &#xA;&#x9;&#x9;&#x9;$parent, &#xA;&#x9;&#x9;&#x9;ARRAY_CONCAT($current, $currentDes, $currentAccess),&#xA;&#x9;&#x9;), $(i,item) $item &lt;&gt; NULL&#xA;&#x9;   );&#xA;  &#xA;&#xA;&#x9;  LET $parentChain:=&#xA;&#x9;&#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;&#x9;  $parentData, $(i, item)&#xA;&#x9;&#x9;&#x9;  ARRAY_TAKE($item, 2)&#xA;&#x9;   );&#xA;&#xA;&#xA;&#x9;  LET $parentLinks :=&#xA;&#x9;  ARRAY_SELECT(&#xA;&#x9;&#x9;  $parentData, $(i, item) &#xA;&#x9;&#x9;&#x9;  LET $eFormType &#x9;&#x9;:= ARRAY_FIRST($item);&#xA;&#x9;&#x9;&#x9;  LET $recordID &#x9;&#x9;:= ARRAY_INDEX($item, 2);&#xA;&#x9;&#x9;&#x9;  LET $descriptiveLabel := ARRAY_INDEX($item, 3);&#xA;&#x9;&#x9;&#x9;  LET $hasReadAccess&#x9;:= ARRAY_INDEX($item, 4);&#xA;&#x9;&#x9;&#x9;  LET $URL&#x9;:= &quot;records/&quot; &amp; URLENCODE($eFormType) &amp; &quot;/&quot; &amp; $recordID ;&#xA;&#x9;&#x9;&#x9;  LET $showEFormType := $eFormType &lt;&gt; &quot;Vendor&quot;;&#xA;&#xA;&#x9;&#x9;&#x9;  LET $labelColour := &#xA;&#x9;&#x9;&#x9;&#x9;  IF(&#xA;&#x9;&#x9;&#x9;&#x9;   AND($eFormType = [EFormType], $recordID = [RecordID]),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #5D5D5D;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9; $hasReadAccess = TRUE,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #4D87B7;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #5D5D5D;&quot;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;  );&#xA;&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;  LET $labeltext:= &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  IF( $showEFormType == TRUE, &quot; &quot; &amp; COALESCE(HASH_GET($altFormName, $eFormType), $eFormType) ) &amp;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  IF(NOT(ISBLANK($descriptiveLabel)), &quot; &quot; &amp; $descriptiveLabel);&#xA;&#xA;&#x9;&#x9;&#x9;  LET $label :=  &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;span style=&quot;&quot;margin-left: 5px;&quot; &amp; $labelColour &amp; &quot;&quot;&quot;&gt;&quot; &amp;&#xA;&#x9;&#x9;&#x9;&#x9;  HTMLENCODE($labeltext) &amp; &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;/span&gt;&quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF( &#xA;&#x9;&#x9;&#x9;&#x9;  $hasReadAccess == TRUE, &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;a style=&quot;&quot;text-decoration-line: none;&quot;&quot; href=&quot; &amp; HTMLENCODE($URL) &amp; &quot;&gt;&quot; &amp; $label &amp; &quot;&lt;/a&gt;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;  $label &#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;  );&#xA;&#xA;&#x9;   LET $separator :=   &quot;&lt;svg style=&quot;&quot;vertical-align: bottom; margin-left: 5px; height: 18px;&quot;&quot; xmlns=&quot;&quot;http://www.w3.org/2000/svg&quot;&quot; viewBox=&quot;&quot;0 0 256 512&quot;&quot;&gt;&lt;path fill=&quot;&quot;#5D5D5D&quot;&quot; d=&quot;&quot;M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z&quot;&quot;/&gt;&lt;/svg&gt;&quot;;&#xA;&#x9;  &#xA;&#x9;  LET $breadcrumb := &quot;&lt;div style=&quot;&quot;height: 23px; padding-left: 5px; font-size: 10pt; color: #5D5D5D; &quot;&quot;&gt;You are here:&quot; &amp; ARRAY_JOIN($parentLinks, $separator) &amp; &quot;&lt;/div&gt;&quot;;&#xA;&#xA;&#x9;  RETURN &#xA;&#x9;  HASH(&#xA;&#x9;&#x9;  &quot;Parent Structure&quot;,&#x9;$parentStructure,&#xA;&#x9;&#x9;  &quot;Parent Data&quot;, &#x9;&#x9;$parentData,&#xA;&#x9;&#x9;  &quot;Parent Chain&quot;,&#x9;&#x9;$parentChain,&#xA;&#x9;&#x9;  &quot;Breadcrumb&quot;,&#x9;&#x9;$breadcrumb&#xA;&#x9;&#x9;)&#xA;&#x9; )&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Parent Chain" DataType="Any" Guid="122bd878-9f7e-4be1-857b-369bbc3b8f85" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="HASH_GET([Parent Structure], &quot;Parent Chain&quot;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+    </Columns>
+    <ReferenceGroups />
+    <Kpis />
+    <MergeFields />
+  </DataDefinition>
+  <Views>
+    <ViewEntry Name="Default">
+      <View BackColor="0,0,0,0">
+        <PdfSettings>
+          <PageNumberMode>None</PageNumberMode>
+          <FooterTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </PdfSettings>
+        <SidebarMode>Lock</SidebarMode>
+        <HorizontalAlign>Default</HorizontalAlign>
+        <Security>
+          <Roles>
+            <RoleEntry Use="true">
+              <Role>Everyone</Role>
+            </RoleEntry>
+          </Roles>
+        </Security>
+        <Sections>
+          <Section ColumnCount="1" Margin="36" BlockSpacing="20" PageWidth="1020" PageHeight="1169">
+            <Name xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            <Notes></Notes>
+            <Blocks>
+              <Block IsReadOnly="false" ID="Block2">
+                <Controls>
+                  <RichLabel Text="" ID="Control139" IsReadOnly="false" LineNumber="1" Left="0" Top="1" Width="6" Height="2" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Event>
+                      <Tasks>
+                        <Navigate>
+                          <UrlTemplate>records/Dashboard%20-%20Information%20Requests/new?view=Default</UrlTemplate>
+                          <OpenNewWindow>false</OpenNewWindow>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </Navigate>
+                      </Tasks>
+                    </Event>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="&quot;&lt;div data-clickid='action' style='cursor: pointer;'&gt;&quot; &amp; &#xA;&quot;&lt;span style='color:red;'&gt;&quot; &amp; HASH_GET([Icons], &quot;leftArrow&quot;) &amp; &quot;&lt;/span&gt;&quot; &amp; &#xA;&quot;&lt;span style='font-weight: 400; color: #4682B4;'&gt;Back to dashboard&lt;/span&gt;&quot; &amp; &#xA;&quot;&lt;div&gt;&quot;" />
+                    </FormulaBindings>
+                  </RichLabel>
+                  <RichLabel Text="" ID="Control140" IsReadOnly="false" LineNumber="1" Left="7" Top="1" Width="7" Height="2" TabIndex="2" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Event>
+                      <Tasks>
+                        <Navigate>
+                          <UrlTemplate>records/Dashboard%20-%20Information%20Requests/new?view=Default&amp;$Navigation=Reports</UrlTemplate>
+                          <OpenNewWindow>false</OpenNewWindow>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </Navigate>
+                      </Tasks>
+                    </Event>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="&quot;&lt;div data-clickid='action' style='cursor: pointer;'&gt;&quot; &amp; &#xA;&quot;&lt;span style='margin-left: 5px; font-weight: 400; color: #4682B4;'&gt;View other report types&lt;/span&gt;&quot; &amp; &#xA;&quot;&lt;div&gt;&quot;" />
+                    </FormulaBindings>
+                  </RichLabel>
+                  <RichLabel Text="" ID="Control141" IsReadOnly="false" LineNumber="6" Left="6" Top="1" Width="1" Height="2" TabIndex="3" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="&quot;&lt;div style=&quot;&quot;margin-left: 50%; border-left: 1px solid #D5D1D1; height: 15px;&quot;&quot;&gt;&lt;/div&gt;&quot;" />
+                    </FormulaBindings>
+                  </RichLabel>
+                </Controls>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>5</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>1</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block1">
+                <Controls>
+                  <Title ID="Control138" IsReadOnly="false" LineNumber="1" Left="0" Top="2" Width="47" Height="6" TabIndex="102" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Text></Text>
+                    <UseEFormNameAsText>false</UseEFormNameAsText>
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>20</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="[EFormType]" />
+                    </FormulaBindings>
+                  </Title>
+                </Controls>
+                <HeadingText></HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>10</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,255,255,255</BackColor>
+                <HeadingBackColor>64,64,64,255</HeadingBackColor>
+                <HeadingTextColor>224,224,224,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>64,64,64,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>InheritFromView</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="(1)">
+                <Controls>
+                  <Label Text="Reporting Month:" ID="Control37" IsReadOnly="false" LineNumber="1" Left="1" Top="5" Width="7" Height="3" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>246,246,246,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <DatePicker ID="Control45" IsReadOnly="false" LineNumber="1" Left="8" Top="5" Width="6" Height="3" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <ReferencedDataColumn>Reporting Month</ReferencedDataColumn>
+                    <ShowDatePopup>true</ShowDatePopup>
+                    <ShowTimePopup>false</ShowTimePopup>
+                    <TimeStartOffset>0</TimeStartOffset>
+                    <TimeInterval>60</TimeInterval>
+                    <Use24HourTime>false</Use24HourTime>
+                    <YearStart>1950</YearStart>
+                    <YearEnd>2050</YearEnd>
+                    <Event>
+                      <Tasks>
+                        <ChangeFieldValues>
+                          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <FieldEntries>
+                            <FieldEntry>
+                              <ColumnName>Reporting Month</ColumnName>
+                              <AssignWholeColumn>false</AssignWholeColumn>
+                              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <Formula>COALESCE([Reporting Month], DATE(YEAR(NOW()), MONTH(NOW())))</Formula>
+                            </FieldEntry>
+                          </FieldEntries>
+                          <UpdateRecordFormulas>false</UpdateRecordFormulas>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </ChangeFieldValues>
+                      </Tasks>
+                    </Event>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </DatePicker>
+                  <Label Text="Recorded" ID="Control3" IsReadOnly="false" LineNumber="1" Left="1" Top="1" Width="3" Height="3" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="false">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <ReportingBarChart Title="" LegendPosition="Top" ShowLegend="true" ShowLegendBorders="true" ShowPaneBorders="false" ID="Control107" IsReadOnly="false" LineNumber="1" Left="1" Top="9" Width="45" Height="32" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="false" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm>Privacy Incident</ReferencedEForm>
+                      <CategoryColumn>
+                        <ColumnName>Date Reported</ColumnName>
+                        <UseContiguousDatePeriod>true</UseContiguousDatePeriod>
+                        <ContiguousFieldRange>true</ContiguousFieldRange>
+                        <FromField>Starting Month</FromField>
+                        <ToField>Reporting Month</ToField>
+                        <EndDate>2020-05-05T00:02:43.0000000Z</EndDate>
+                        <EndAlwaysNow>true</EndAlwaysNow>
+                        <Unit>Month</Unit>
+                        <NumberOfUnits>12</NumberOfUnits>
+                        <UseLocalTime>true</UseLocalTime>
+                      </CategoryColumn>
+                      <Pivot>true</Pivot>
+                      <SplitColumn>Category</SplitColumn>
+                      <OrderIndex>0</OrderIndex>
+                      <PivotOrderValue>
+                        <Null />
+                      </PivotOrderValue>
+                      <ValueFormat DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+                      <Columns>
+                        <Column Type="Bar">
+                          <ReportingColumn>
+                            <Column>
+                              <ColumnName>RecordID</ColumnName>
+                              <Aggregate>Count</Aggregate>
+                              <Label>Substantiated Incidents</Label>
+                              <TotallingAggregate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                            </Column>
+                          </ReportingColumn>
+                        </Column>
+                      </Columns>
+                      <Filter>
+                        <GroupingExpression Operator="And">
+                          <Children>
+                            <CriterionExpression>
+                              <Criterion>
+                                <ComparisonCriterion Operator="EqualTo">
+                                  <Left>
+                                    <SourceEFormColumnReferenceCriterion ColumnName="LineNumber" />
+                                  </Left>
+                                  <Right>
+                                    <ConstantCriterion>
+                                      <Value>
+                                        <Number>1</Number>
+                                      </Value>
+                                    </ConstantCriterion>
+                                  </Right>
+                                </ComparisonCriterion>
+                              </Criterion>
+                            </CriterionExpression>
+                            <CriterionExpression>
+                              <Criterion>
+                                <ComparisonCriterion Operator="EqualTo">
+                                  <Left>
+                                    <SourceEFormColumnReferenceCriterion ColumnName="Finding" />
+                                  </Left>
+                                  <Right>
+                                    <ConstantCriterion>
+                                      <Value>
+                                        <String>Substantiated</String>
+                                      </Value>
+                                    </ConstantCriterion>
+                                  </Right>
+                                </ComparisonCriterion>
+                              </Criterion>
+                            </CriterionExpression>
+                          </Children>
+                        </GroupingExpression>
+                      </Filter>
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <GenerateDrillDownLinks>true</GenerateDrillDownLinks>
+                      <GeneratedDrillDownLinkProfile>Details</GeneratedDrillDownLinkProfile>
+                    </Data>
+                    <ShowHorizontalGridLines>false</ShowHorizontalGridLines>
+                    <ShowLinePoints>true</ShowLinePoints>
+                    <ShowVerticalGridLines>false</ShowVerticalGridLines>
+                    <ShowTicksBetweenLabels>true</ShowTicksBetweenLabels>
+                    <BarStackMode>Stacked</BarStackMode>
+                    <BarClusterGap>0</BarClusterGap>
+                    <FormulaBindings />
+                  </ReportingBarChart>
+                  <ReportingTable ID="Control7" IsReadOnly="false" LineNumber="1" Left="1" Top="43" Width="45" Height="27" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="false" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm>Privacy Incident</ReferencedEForm>
+                      <CategoryColumns>
+                        <Column>
+                          <ReportingColumn>
+                            <Column>
+                              <ColumnName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <Aggregate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <Label xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <TotallingAggregate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                            </Column>
+                          </ReportingColumn>
+                          <Formats>
+                            <DateTimeFormat FormatString="dd-MMM-yyyy" />
+                            <NumberFormat DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+                          </Formats>
+                          <Width>100</Width>
+                        </Column>
+                      </CategoryColumns>
+                      <DataColumns>
+                        <Column>
+                          <ReportingColumn>
+                            <Column>
+                              <ColumnName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <Aggregate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <Label xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                              <TotallingAggregate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                            </Column>
+                          </ReportingColumn>
+                          <Formats>
+                            <DateTimeFormat FormatString="dd-MMM-yyyy" />
+                            <NumberFormat DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+                          </Formats>
+                          <Width>60</Width>
+                        </Column>
+                      </DataColumns>
+                      <ShowHeadings>true</ShowHeadings>
+                      <ShowOther>false</ShowOther>
+                      <ShowTotal>true</ShowTotal>
+                      <RowLimit xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <Order>Ascending</Order>
+                      <Filter>
+                        <GroupingExpression Operator="And">
+                          <Children>
+                            <CriterionExpression>
+                              <Criterion>
+                                <ComparisonCriterion Operator="GreaterThan">
+                                  <Left>
+                                    <SourceEFormColumnReferenceCriterion ColumnName="Date Reported" />
+                                  </Left>
+                                  <Right>
+                                    <CurrentEFormFieldReferenceCriterion ColumnName="Current Month">
+                                      <LineNumber>1</LineNumber>
+                                    </CurrentEFormFieldReferenceCriterion>
+                                  </Right>
+                                </ComparisonCriterion>
+                              </Criterion>
+                            </CriterionExpression>
+                            <CriterionExpression>
+                              <Criterion>
+                                <ComparisonCriterion Operator="LessThan">
+                                  <Left>
+                                    <SourceEFormColumnReferenceCriterion ColumnName="Date Reported" />
+                                  </Left>
+                                  <Right>
+                                    <CurrentEFormFieldReferenceCriterion ColumnName="Next Month">
+                                      <LineNumber>1</LineNumber>
+                                    </CurrentEFormFieldReferenceCriterion>
+                                  </Right>
+                                </ComparisonCriterion>
+                              </Criterion>
+                            </CriterionExpression>
+                          </Children>
+                        </GroupingExpression>
+                      </Filter>
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <FreezeColumnCount>0</FreezeColumnCount>
+                    <LimitSize>true</LimitSize>
+                    <HighlightColor>217,233,255,255</HighlightColor>
+                    <FontSize>10</FontSize>
+                    <EnableSort>false</EnableSort>
+                    <EnableFiltering>false</EnableFiltering>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression=" LET $month := [Current Month Year];&#xA; &#xA; LET $data := DB_REPORT(&#xA;    ARRAY(&#xA;        &quot;[Type and Method of Alleged Breach]&quot;,&#xA;        &quot;COUNT([RecordID])&quot;&#xA;    ),&#xA;    &quot;Privacy Incident&quot;,&#xA;    &quot;[LineNumber] = 1 AND [Finding] = 'Substantiated' AND [Month Reported] = &quot; &amp; DB_ENCODECONSTANT($month)&#xA;);&#xA;&#xA;&#xA;LET $sorted := ARRAY_SORT($data, $(item) ARRAY_INDEX($item, 1));&#xA;&#xA;&#xA;LET $row := ARRAY_SELECT(&#xA;&#x9;$sorted, $(i, item)&#xA;&#xA;LET $url := &quot;TabularReport.aspx?EFormType=Privacy+Incident&amp;profile=Details&amp;where=&quot;&amp; URLENCODE(&quot;[Month Reported]=&quot;)&amp; DB_ENCODECONSTANT($month)&amp;&quot; AND &quot;&amp;URLENCODE(&quot;[Finding] = 'Substantiated'&quot; );&#xA;&#xA;//&quot;TabularReport.aspx?EFormType=Freedom+of+Information+Request&amp;profile=Freedom+of+Information+Officer&amp;where=&quot;&amp; URLENCODE(&quot;[Status]=&quot; )&amp; DB_ENCODECONSTANT(ARRAY_INDEX($item,1));&#xA;&#xA;RETURN &#x9;&#xA;&#x9;ARRAY(&#xA;&#x9;&#x9;HASH(&quot;value&quot;, &#x9;ARRAY_INDEX($item, 1)), &#x9;&#x9;&#xA;&#x9;&#x9;HASH(&quot;value&quot;, &#x9;ARRAY_INDEX($item, 2))&#xA;&#x9;)&#xA;);&#xA; &#xA;LET $total := SUM(ARRAY_SELECT($data, $(i, item) ARRAY_INDEX($item, 2)));&#xA;&#xA; &#xA;LET $headings := ARRAY(&#xA;    HASH(&quot;heading&quot;, &quot;Cause/Type of Substantiated Incidents&quot;,    &quot;width&quot;, 800),&#xA;    HASH(&quot;heading&quot;, &quot;Number&quot;,     &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;width&quot;, 80)&#xA;);    &#xA;&#xA;&#xA;&#xA; &#xA;RETURN HASH(&#xA;    &quot;columns&quot;, $headings, &#xA;    &quot;rows&quot;,    $row,&#xA;    &quot;totals&quot;, ARRAY(&#xA;        ARRAY(&quot;Total&quot;, $total)&#xA;    )&#xA;)" />
+                    </FormulaBindings>
+                  </ReportingTable>
+                  <ReportingTable ID="Control11" IsReadOnly="false" LineNumber="1" Left="1" Top="80" Width="45" Height="34" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="false" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CategoryColumns />
+                      <DataColumns />
+                      <ShowHeadings>true</ShowHeadings>
+                      <ShowOther>false</ShowOther>
+                      <ShowTotal>false</ShowTotal>
+                      <RowLimit xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <Order>Ascending</Order>
+                      <Filter>
+                        <GroupingExpression Operator="And">
+                          <Children />
+                        </GroupingExpression>
+                      </Filter>
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <FreezeColumnCount>1</FreezeColumnCount>
+                    <LimitSize>true</LimitSize>
+                    <HighlightColor>217,233,255,255</HighlightColor>
+                    <FontSize>10</FontSize>
+                    <EnableSort>false</EnableSort>
+                    <EnableFiltering>false</EnableFiltering>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression="LET $user := EBMS_GET_CURRENT_USER();&#xA;LET $endDate := [End Date];&#xA;&#xA; LET $data := DB_REPORT(&#xA;    ARRAY(&#xA;        &quot;[Category]&quot;,&#xA;&#x9;&#x9;&quot;[Date Reported]&quot;,&#xA;        &quot;COUNT([RecordID])&quot;&#xA;    ),&#xA;    &quot;Privacy Incident&quot;,&#xA;    &quot;[LineNumber] = 1 AND [Category] IS NOT NULL AND [Finding] = 'Substantiated' AND [Date Reported] &gt; &quot; &amp;DB_ENCODECONSTANT($endDate)&#xA;);&#xA;&#xA;&#xA;LET $hash := ARRAY_TO_HASH_GROUPED($data, $(k, key) ARRAY(ARRAY_INDEX($key, 1), DATEFORMAT(ARRAY_INDEX($key, 2), &quot;yyyy-MM&quot;)), $(v, value) ARRAY_INDEX($value, 3));&#xA;&#xA;LET $months := ARRAY_SELECT(RANGE(1, 12), $(i, item) DATEFORMAT(DATEADD(&quot;month&quot;, $item, [End Date]), &quot;yyyy-MM&quot;));&#xA;&#xA;&#xA;LET $companies := ARRAY_DISTINCT(ARRAY_SELECT($data, $(i, item) ARRAY_INDEX($item, 1)));&#xA;&#xA;LET $rowsWithTotals := ARRAY_SELECT($companies, $(c, company)&#xA;&#x9;LET $cells := ARRAY_SELECT($months, $(m, month)&#xA;&#x9;&#x9;LET $url := &quot;TabularReport.aspx?EFormType=Privacy+Incident&amp;profile=Details&amp;where=&quot;&amp;URLENCODE(&quot;[Category]=&quot; )&amp; DB_ENCODECONSTANT($company) &amp; &quot; AND &quot;&amp;URLENCODE(&quot;[Date Reported]=&quot; ) &amp; DB_ENCODECONSTANT($month);&#xA;&#x9;&#x9;RETURN HASH(&quot;value&quot;, SUM(HASH_GET($hash, ARRAY($company, $month))))&#xA;&#x9;);&#xA;&#x9;LET $monthlyTotals := ARRAY_SELECT($cells, $(c, cell) HASH_GET($cell, &quot;value&quot;));&#xA;&#x9;RETURN ARRAY(ARRAY_CONCAT(ARRAY($company), $cells), $monthlyTotals)&#xA;);&#xA;&#xA;LET $rows := ARRAY_SELECT($rowsWithTotals, $(i, item) ARRAY_INDEX($item, 1));&#xA;&#xA;LET $rowsTotal := ARRAY_SELECT($rows, $(i, item) SUM($item));&#xA;&#xA;LET $rowsWithTotal := ARRAY_SELECT($rows,$(i,row)ARRAY_CONCAT($row,ARRAY(ARRAY_INDEX($rowsTotal,$i))));&#xA;&#xA;&#xA;LET $monthlyTotals := ARRAY_SELECT($rowsWithTotals, $(i, item) ARRAY_INDEX($item, 2));&#xA;&#xA;LET $transposeMonthlyTotals := ARRAY_SELECT(ARRAY_TRANSPOSE($monthlyTotals), $(i, item) SUM($item));&#xA;&#xA;LET $grandTotal := SUM($rowsTotal);  &#xA;&#xA;LET $totalsRow := ARRAY_CONCAT(ARRAY(&quot;Total&quot;), $transposeMonthlyTotals, $grandTotal);&#xA;&#xA;&#xA;LET $headings := ARRAY_SELECT(ARRAY_CONCAT(ARRAY(&quot;Notifier&quot;), $months, &quot;Total&quot;), $(h, heading)&#xA;&#x9;HASH(&quot;heading&quot;, $heading, &quot;width&quot;,65)&#xA;);&#xA;&#xA; &#xA;RETURN  HASH(&#xA;    &quot;columns&quot;, $headings, &#xA;    &quot;rows&quot;,    $rowsWithTotal,&#xA;&#x9;&quot;totals&quot;, $totalsRow&#xA;    )" />
+                    </FormulaBindings>
+                  </ReportingTable>
+                  <Title ID="Control12" IsReadOnly="false" LineNumber="1" Left="2" Top="72" Width="6" Height="2" TabIndex="2" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Text>Open &gt; 28 Days:</Text>
+                    <UseEFormNameAsText>false</UseEFormNameAsText>
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Title>
+                  <Title ID="Control14" IsReadOnly="false" LineNumber="1" Left="1" Top="77" Width="45" Height="3" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Text>Numbers of Substantiated Incidents</Text>
+                    <UseEFormNameAsText>false</UseEFormNameAsText>
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>246,246,246,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>true</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Title>
+                  <Box ID="Control32" IsReadOnly="false" LineNumber="1" Left="1" Top="71" Width="11" Height="4" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BackColor>246,246,246,255</BackColor>
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <Radius>4</Radius>
+                    <FormulaBindings />
+                  </Box>
+                  <WebLink Url="http://" Text="Link" OpenInNewWindow="false" ID="Control114" IsReadOnly="false" LineNumber="1" Left="8" Top="72" Width="3" Height="2" TabIndex="3" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>true</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="LET $data := DB_REPORT(&#xA;    ARRAY(&#xA;        &quot;COUNT([RecordID])&quot;&#xA;    ),&#xA;    &quot;Privacy Incident&quot;,&#xA;    &quot;([Date Reported] + 28) &lt; CURRENT_DATE AND [LineNumber] = 1 AND [Category] IS NOT NULL AND [Status] = 'Open'&quot;&#xA;);&#xA;RETURN ARRAY_FIRST(ARRAY_FIRST($data))" />
+                      <Binding PropertyName="Url" Expression="LET $date := NOW();&#xA;LET $status := &quot;Open&quot;;&#xA;&#xA; &#xA;&#xA;&#xA;LET $url := &quot;TabularReport.aspx?EFormType=Privacy+Incident&amp;profile=Details&amp;where=&quot;&amp;URLENCODE(&quot;([Date Reported] + 28) &lt; &quot; &amp; DB_ENCODECONSTANT($date)&#xA; &amp; &quot; AND &quot; &amp; &quot;[Status]=&quot; &amp; DB_ENCODECONSTANT($status));&#xA; &#xA;RETURN $url" />
+                    </FormulaBindings>
+                    <ObservesBlockReadOnly>false</ObservesBlockReadOnly>
+                  </WebLink>
+                  <WebLink Url="http://" Text="Link" OpenInNewWindow="false" ID="Control115" IsReadOnly="false" LineNumber="1" Left="4" Top="1" Width="2" Height="3" TabIndex="4" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="false">
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>true</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="[Total Incident]" />
+                      <Binding PropertyName="Url" Expression="LET $date := [Current Month Year];&#xA;&#xA;LET $url := &quot;TabularReport.aspx?EFormType=Privacy+Incident&amp;profile=Details&amp;where=&quot;&amp;URLENCODE(&quot;[Month Reported] = &quot; &amp; DB_ENCODECONSTANT($date));&#xA; &#xA;RETURN $url" />
+                    </FormulaBindings>
+                    <ObservesBlockReadOnly>false</ObservesBlockReadOnly>
+                  </WebLink>
+                  <Label Text="incidents during &lt;month&gt; with" ID="Control117" IsReadOnly="false" LineNumber="1" Left="6" Top="1" Width="10" Height="3" TabIndex="6" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="false">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="&quot;incidents during &quot; &amp; [Month Format] &amp; &quot; with&quot;" />
+                    </FormulaBindings>
+                  </Label>
+                  <WebLink Url="http://" Text="Link" OpenInNewWindow="false" ID="Control119" IsReadOnly="false" LineNumber="1" Left="16" Top="1" Width="2" Height="3" TabIndex="8" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="false">
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>true</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="[Finding]" />
+                      <Binding PropertyName="Url" Expression="LET $date := [Current Month Year];&#xA;LET $value := &quot;Substantiated&quot;;&#xA;&#xA;LET $url := &quot;TabularReport.aspx?EFormType=Privacy+Incident&amp;profile=Details&amp;where=&quot;&amp;URLENCODE(&quot;[Month Reported] = &quot;) &amp; DB_ENCODECONSTANT($date) &amp; &quot; AND &quot; &amp;URLENCODE(&quot;[Finding]=&quot; )&amp; DB_ENCODECONSTANT($value);&#xA; &#xA;RETURN $url" />
+                    </FormulaBindings>
+                    <ObservesBlockReadOnly>false</ObservesBlockReadOnly>
+                  </WebLink>
+                  <Label Text="being considered substantiated" ID="Control121" IsReadOnly="false" LineNumber="1" Left="18" Top="1" Width="10" Height="3" TabIndex="10" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="false">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                </Controls>
+                <HeadingText>Body</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>116</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>246,246,246,255</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>14</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>49,55,61,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>InheritFromView</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+            </Blocks>
+          </Section>
+        </Sections>
+        <AutoBreak>true</AutoBreak>
+        <EnableSquash>false</EnableSquash>
+        <BannerHtmlTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </View>
+    </ViewEntry>
+  </Views>
+  <Security>
+    <PermissionSetName>Custom</PermissionSetName>
+    <Roles>
+      <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+    </Roles>
+    <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+    <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ComponentAccessControlGroups />
+  </Security>
+  <SecurityParts>
+    <Security>
+      <PermissionSetName>Custom</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Open Access</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Department Level Access</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Boroondara</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - CompareCoOps</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Cenitex</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - CoGD</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Ombudsman</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Obsolete - Open Set</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Obsolete - Implementation Set</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Stonnington</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+  </SecurityParts>
+  <Categories>
+    <CategoryRef>Information Request Management</CategoryRef>
+  </Categories>
+  <Workflow>
+    <EnableAutomatedWorkflow>false</EnableAutomatedWorkflow>
+    <AllowManualOverride>true</AllowManualOverride>
+    <PromptUserOnWorkflowChange>false</PromptUserOnWorkflowChange>
+    <States>
+      <State Name="Draft" Left="84" Top="81">
+        <Transitions />
+        <NotificationTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <SendNotification>false</SendNotification>
+        <ForceAssigneeTo xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </State>
+      <State Name="" Left="100" Top="200">
+        <Transitions />
+        <NotificationTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <SendNotification>false</SendNotification>
+        <ForceAssigneeTo xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </State>
+    </States>
+  </Workflow>
+  <Settings>
+    <DefaultView>Default</DefaultView>
+    <NotifyOnSave>Never</NotifyOnSave>
+    <DefaultToNotifyOnSave>false</DefaultToNotifyOnSave>
+    <NotifyOnSaveTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <NotifyOnCreate>false</NotifyOnCreate>
+    <NotifyOnCreateRecordTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <IncludeRenderedViewInCreateRecordNotification>false</IncludeRenderedViewInCreateRecordNotification>
+    <NotifyOnWorkflowChange>false</NotifyOnWorkflowChange>
+    <NotifyOnWorkflowChangeTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <NotifyOnClosed>false</NotifyOnClosed>
+    <NotifyOnClosedTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <AllowUserToPreviewNotifications>false</AllowUserToPreviewNotifications>
+    <DefaultUserToPreviewNotifications>false</DefaultUserToPreviewNotifications>
+    <DeleteWithParent>true</DeleteWithParent>
+    <EnableManualLinkedEFormRecordsManagement>false</EnableManualLinkedEFormRecordsManagement>
+    <IsQuickSearchable>true</IsQuickSearchable>
+    <AssignNewRecordsToCurrentUser>false</AssignNewRecordsToCurrentUser>
+    <EnableDuplicatingRecords>false</EnableDuplicatingRecords>
+    <EnableDeleteFromTabularView>false</EnableDeleteFromTabularView>
+    <EnableAddFromTabularView>false</EnableAddFromTabularView>
+    <PromptUserBeforeNavigatingAway>true</PromptUserBeforeNavigatingAway>
+  </Settings>
+  <Attachments>
+    <Folders>
+      <Folder>
+        <Path>Agent</Path>
+        <Guid>964dd7c9-f9c6-4c48-9a4f-6ee81369c561</Guid>
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+      </Folder>
+      <Folder>
+        <Path>Organisation</Path>
+        <Guid>db952314-0305-41c2-9ad7-880e4a35f2c6</Guid>
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+      </Folder>
+    </Folders>
+  </Attachments>
+  <Dependants>
+    <Selectors />
+  </Dependants>
+  <Credentials>
+    <Credentials />
+  </Credentials>
+  <CustomEvents>
+    <Event>
+      <Name>Generate Agent Reports</Name>
+      <Guid>e06b22e9-f251-42d4-941d-613c5b94a0fe</Guid>
+      <Description></Description>
+      <Tasks>
+        <AttachFiles>
+          <Attachments>
+            <RenderedView>
+              <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <RecordIDFormula></RecordIDFormula>
+              <ResultFileNameTemplate>Privacy Incidents Report.pdf</ResultFileNameTemplate>
+              <ExpandAllBlocks>true</ExpandAllBlocks>
+            </RenderedView>
+          </Attachments>
+          <EFormRef>Privacy Incidents Report</EFormRef>
+          <RecordIDFormula>[RecordID]</RecordIDFormula>
+          <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <TargetPathTemplate>Agent</TargetPathTemplate>
+          <UpdateTargetRecord>false</UpdateTargetRecord>
+          <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <PushCreatedFilesIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Description>generate current form pdf</Description>
+          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </AttachFiles>
+      </Tasks>
+    </Event>
+    <Event>
+      <Name>Generate Organisation Reports</Name>
+      <Guid>5a8e764d-5a50-4f7f-b7fa-f6a78a1d290f</Guid>
+      <Description></Description>
+      <Tasks>
+        <AttachFiles>
+          <Attachments>
+            <RenderedView>
+              <EFormRef>Monthly Privacy Incident Report</EFormRef>
+              <RecordIDFormula>[Last Month Report RecordID]</RecordIDFormula>
+              <ResultFileNameTemplate>Monthly Privacy Incident Report.pdf</ResultFileNameTemplate>
+              <ExpandAllBlocks>false</ExpandAllBlocks>
+            </RenderedView>
+          </Attachments>
+          <EFormRef>Privacy Incidents Report</EFormRef>
+          <RecordIDFormula>[RecordID]</RecordIDFormula>
+          <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <TargetPathTemplate>Organisation</TargetPathTemplate>
+          <UpdateTargetRecord>false</UpdateTargetRecord>
+          <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <PushCreatedFilesIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Description>generate tabular report pdf</Description>
+          <RunOnlyWhen>
+            <GroupingExpression Operator="And">
+              <Children />
+            </GroupingExpression>
+          </RunOnlyWhen>
+        </AttachFiles>
+        <AttachFiles>
+          <Attachments>
+            <RenderedView>
+              <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <ResultFileNameTemplate>Privacy Incidents Report.pdf</ResultFileNameTemplate>
+              <ExpandAllBlocks>false</ExpandAllBlocks>
+            </RenderedView>
+          </Attachments>
+          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <TargetPathTemplate>Organisation</TargetPathTemplate>
+          <UpdateTargetRecord>false</UpdateTargetRecord>
+          <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <PushCreatedFilesIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Description>generate current form pdf</Description>
+          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </AttachFiles>
+      </Tasks>
+    </Event>
+  </CustomEvents>
+</EForm>

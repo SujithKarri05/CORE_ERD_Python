@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Submission</EForm>
+  <Name>Submission Rejected</Name>
+  <Description>To: Originator</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>role:"{Originator}"</ToAddressesTemplate>
+    <CcAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>Submission rejected</SubjectTemplate>
+    <BodyTemplate>&lt;style&gt;
+.nimblex-core-css-table {{color: #333; background: white; border: 1px solid grey; font-size: 12pt;  border-collapse: collapse; width: 100%;margin-bottom: .5em;}}
+.nimblex-core-css-table th {{background: #efefef; text-align:left; padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-table td {{padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-h2 {{color: #F5EDE5;}}
+&lt;/style&gt;
+
+&lt;div align="center" style="margin:0cm;margin-bottom:.0001pt;font-size:15px;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;"&gt;
+		&lt;table border="0" cellpadding="0" cellspacing="0" style="width:100.0%;background:#F5EDE5;border-collapse:collapse;" width="100%"&gt;
+			&lt;tbody&gt;
+				&lt;tr&gt;
+					&lt;td style="width:467.5pt;padding:1.0cm 1.0cm 1.0cm 1.0cm;" width="100%"&gt;
+						&lt;div align="center" style="margin:0cm;margin-bottom:.0001pt;font-size:15px;font-family:&amp;quot;Calibri&amp;quot;,sans-serif;"&gt;
+							&lt;table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="background:white;border-collapse:collapse;border:none"&gt;
+								&lt;tr&gt;
+									&lt;td style="width:601.0pt;border:solid #F5EDE5 1.0pt;border-bottom:solid #EBEBEB 1.0pt;padding:7.1pt 0cm 7.1pt 0cm" width="801"&gt;
+									&lt;/td&gt;
+								&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width="801" style="width:601.0pt;border-top:none;border-left:solid #F5EDE5 1.0pt;border-bottom:none;border-right:solid #F5EDE5 1.0pt;background:#4A33AB;padding:14.2pt 1.0cm 14.2pt 1.0cm"&gt;
+							&lt;p class="MsoNormal" align="center" style="text-align:center"&gt;
+								&lt;span style="font-size:20.0pt;font-family:'Arial',sans-serif;color:white"&gt;Your submission has been rejected
+									&lt;o:p&gt;&lt;/o:p&gt;
+								&lt;/span&gt;
+							&lt;/p&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td width=801 style="width:601.0pt;border-top:none;border-left:solid #F5EDE5 1.0pt;border-bottom:none;border-right:solid #F5EDE5 1.0pt;padding:1.0cm 1.0cm 0cm 1.0cm"&gt;
+							&lt;p class="MsoNormal" align="center" style="margin-bottom:12.0pt;text-align:center;line-height:115%"&gt;
+								&lt;span style="font-size:12.0pt;line-height:115%;font-family:'Arial',sans-serif;color:#6E6E6E"&gt;
+
+&lt;table class="nimblex-core-css-table"&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Rejected by&lt;/th&gt;
+	  &lt;td&gt;{
+HTMLENCODE(
+	LET $guid := HASH_GET($eventargs, "guid");
+	LET $line := ARRAY_INDEXOF(EACH [Approval GUID], $guid);
+	LET $approverName :=  [Approver Audit Name]#$line;
+	
+	RETURN $approverName
+)
+}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Rejecter position&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE(
+	  LET $guid := HASH_GET($eventargs, "guid");
+	  LET $line := ARRAY_INDEXOF(EACH [Approval GUID], $guid);
+	  RETURN [Approver Job-Title]#$line
+)}&lt;/td&gt;
+  &lt;/tr&gt;
+  {
+  IF( 
+  	COALESCE([Contract Number]) &lt;&gt; NULL(),
+    "&lt;tr&gt;" &amp; 
+	  "&lt;th&gt;Related entity&lt;/th&gt;" &amp; 
+	  "&lt;td&gt;"
+	  &amp;
+ 		IF(
+		  [Contract Number] &lt;&gt; NULL(), HTMLENCODE("Contract " &amp; [Contract Number])
+	    )
+	  &amp;
+	  "&lt;/td&gt;" &amp; 
+  "&lt;/tr&gt;"
+  )
+  }
+  &lt;tr&gt;
+	  &lt;th&gt;Submission type&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE([Type])}&lt;/td&gt;
+  &lt;/tr&gt;
+  {
+  IF( 
+  	[Type] = "Variation",
+    "&lt;tr&gt;" &amp; 
+	  "&lt;th&gt;Variation #&lt;/th&gt;" &amp;
+	  "&lt;td&gt;" &amp; HTMLENCODE(DB_LOOKUP("Variation Number", "Variation", HASH("RecordID", [Parent RecordID]))) &amp; "&lt;/td&gt;" &amp;
+    "&lt;/tr&gt;"
+  )
+  }
+  &lt;tr&gt;
+	  &lt;th&gt;Value&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE(NUMBERFORMAT([Submission Value], "C"))}&lt;/td&gt;
+  &lt;/tr&gt;  
+  {
+  IF( 
+  	[Submission Duration] &lt;&gt; NULL(),
+    "&lt;tr&gt;" &amp; 
+	    "&lt;th&gt;Duration&lt;/th&gt;" &amp; 
+	    "&lt;td&gt;" &amp; HTMLENCODE([Submission Duration]) &amp; "&lt;/td&gt;" &amp; 
+    "&lt;/tr&gt;"
+  )
+  }
+  &lt;tr&gt;
+	  &lt;th&gt;Rejection notes&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE(COALESCE([Approver Notes], "None provided"))}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+			&lt;/span&gt;
+		&lt;/p&gt;								
+		&lt;/td&gt;&lt;br/&gt;
+							&lt;/tr&gt;			
+							&lt;tr&gt;
+								&lt;td width=801 style="width:601.0pt;border-top:none;border-left:solid #F5EDE5 1.0pt;border-bottom:none;border-right:solid #F5EDE5 1.0pt;background:#EBEBEB;padding:5.65pt 0cm 5.65pt 0cm"&gt;
+									&lt;p class="MsoNormal" align="center" style="text-align:center"&gt;
+										&lt;span style="font-size:14.0pt;color:#4A33AB"&gt;								
+											&lt;a href="{HTMLENCODE(EBMS_GET_BASE_URL() &amp; "/EFormRecord.aspx?EFormType=Submission&amp;RecordID=" &amp; [RecordID])}"&gt;
+												&lt;span style="color:#4A33AB;text-decoration:none"&gt;Click here to view Submission record.&lt;/span&gt;
+											&lt;/a&gt;
+											&lt;o:p&gt;&lt;/o:p&gt;
+										&lt;/span&gt;
+									&lt;/p&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td width=801 style="width:601.0pt;border:solid #F5EDE5 1.0pt;border-top:none;padding:14.2pt 0cm 14.2pt 0cm"&gt;
+									&lt;p class="MsoNormal" align="center" style="text-align:center"&gt;
+										&lt;span class=e24kjd&gt;
+											&lt;span style="color:#6E6E6E"&gt;&lt;/span&gt;
+										&lt;/span&gt;
+										&lt;span style="color:#6E6E6E"&gt; &lt;/span&gt;
+										&lt;o:p&gt;&lt;/o:p&gt;
+									&lt;/p&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+													&lt;/table&gt;
+						&lt;/div&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/tbody&gt;
+		&lt;/table&gt;
+	&lt;/div&gt;</BodyTemplate>
+    <IsBodyHtml>true</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

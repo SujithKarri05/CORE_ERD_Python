@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="File No." Alias="" Aggregate="None" Width="282" />
+    <Column Name="Date Received" Alias="" Aggregate="None" Width="340" />
+    <Column Name="Section Transfer" Alias="" Aggregate="None" Width="247" />
+    <Column Name="Transfer In/Out" Alias="" Aggregate="None" Width="327" />
+    <Column Name="Request Type" Alias="" Aggregate="None" Width="317" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="NotEqualTo">
+              <Left>
+                <SourceEFormColumnReferenceCriterion ColumnName="Status" />
+              </Left>
+              <Right>
+                <ConstantCriterion>
+                  <Value>
+                    <String>Closed </String>
+                  </Value>
+                </ConstantCriterion>
+              </Right>
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="FastEqualTo">
+              <Left>
+                <SourceEFormColumnReferenceCriterion ColumnName="Request Type" />
+              </Left>
+              <Right>
+                <ConstantCriterion>
+                  <Value>
+                    <String>Freedom of Information</String>
+                  </Value>
+                </ConstantCriterion>
+              </Right>
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="ContainsInsensitive">
+              <Left>
+                <SourceEFormColumnReferenceCriterion ColumnName="Section Transfer" />
+              </Left>
+              <Right>
+                <ConstantCriterion>
+                  <Value>
+                    <String>Yes</String>
+                  </Value>
+                </ConstantCriterion>
+              </Right>
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] DESC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Status" Alias="" Aggregate="None" Width="158" />
+    <Column Name="Submission Value" Alias="" Aggregate="None" Width="144" />
+    <Column Name="Type" Alias="" Aggregate="None" Width="166" />
+    <Column Name="Parent Reference" Alias="Related Entity" Aggregate="None" Width="278" />
+    <AdvancedColumn Name="Created By" Width="150" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>STEP TO [sys.Roles] 
+ON    [To].[Username]=[Originator] 
+GET   [DisplayName]</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <Column Name="Submitter Display Name" Alias="Submitted by" Aggregate="None" Width="138" />
+    <Column Name="Date Submitted" Alias="" Aggregate="None" Width="167" />
+    <AdvancedColumn Name="Waiting on" Width="166" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>CASE
+    WHEN [Status] = 'Submitted' THEN [Found Approver Name]
+    ELSE ''
+END</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <AdvancedColumn Name="Final Decision by" Width="128" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>CASE
+    WHEN [Status] = 'Approved' THEN [Approved By Name]
+    WHEN [Status] = 'Rejected' THEN [Rejected By Name]
+    ELSE NULL
+END</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <AdvancedColumn Name="Date of Final Decision" Width="152" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>CASE
+    WHEN [Status] = 'Approved' THEN [Date Approved]
+    WHEN [Status] = 'Rejected' THEN [Date Rejected]
+    ELSE NULL
+END</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <AdvancedColumn Name="Days in process" Width="161" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>CASE
+    WHEN [Status] = 'Approved' THEN ROUND([Date Approved] - [Date Submitted], 1)
+    WHEN [Status] = 'Rejected' THEN ROUND([Date Rejected] - [Date Submitted], 1)
+    ELSE NULL
+END</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules>
+    <Rule>
+      <Condition>
+        <TextCriterion>
+          <Text>TRUE</Text>
+        </TextCriterion>
+      </Condition>
+      <Colour>
+        <TextCriterion>
+          <Text>CASE
+	WHEN [Status] = 'Rejected' THEN '#acacac'
+	WHEN [Status] = 'Approved' THEN '#c8f3a0'
+	WHEN [Status] = 'Draft' THEN '#ffedaa'
+	WHEN [Status] = 'Submitted' THEN '#ffd741'
+	ELSE NULL
+END</Text>
+        </TextCriterion>
+      </Colour>
+    </Rule>
+  </BackgroundColourRules>
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>CURRENT_USER IN ROLE [Approver] AND [Approver Decision] FAST_EQUAL_TO 'In Progress'</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>false</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[Sort Order] ASC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>200</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>true</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

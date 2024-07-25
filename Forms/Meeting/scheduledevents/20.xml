@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>true</Enabled>
+  <Description>Raise Recurring Meetings</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Meeting</EFormRef>
+  <RecordFilter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>([Frequency Type] = 'Follow-up Meeting'
+OR 
+[Frequency Type] = 'Recurrence') 
+AND 
+[Recurring Meeting Created] &lt;&gt; TRUE
+AND [Frequency - Next Meeting Date] &gt; CURRENT_DATE</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[LineNumber] = 1</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[Meeting Date] &lt;= CURRENT_DATE</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </RecordFilter>
+  <Tasks>
+    <TriggerCustomEvent>
+      <EventNameTemplate>Create next meeting</EventNameTemplate>
+      <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RetainLastResultOnly>false</RetainLastResultOnly>
+      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+      <RunInsideDataLayer>false</RunInsideDataLayer>
+      <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </TriggerCustomEvent>
+  </Tasks>
+  <Timing>
+    <DailyWeekly>
+      <Days>
+        <Day>Monday</Day>
+        <Day>Tuesday</Day>
+        <Day>Wednesday</Day>
+        <Day>Thursday</Day>
+        <Day>Friday</Day>
+        <Day>Saturday</Day>
+        <Day>Sunday</Day>
+      </Days>
+    </DailyWeekly>
+  </Timing>
+  <StartAfterDate>2020-08-05T02:02:38.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T20:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T00:00:00.0000000Z</EndTime>
+  <RepeatHours xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <LastRun>2024-06-05T10:08:52.3520000Z</LastRun>
+  <Role>system</Role>
+  <SaveRecordOnCompletion>true</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

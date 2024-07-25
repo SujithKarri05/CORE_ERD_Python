@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <AdvancedColumn Name="Procurement Plan Reference" Width="194" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>STEP TO PARENT [Procurement] 
+ON [TO].[LineNumber] = 1
+GET FIRST([Procurement Number])</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <Column Name="Title" Alias="Procurement Title" Aggregate="None" Width="324" />
+    <Column Name="Gateway Criteria Name" Alias="Mandatory Requirement" Aggregate="None" Width="178" />
+    <RemoteColumn Name="Question(s)" ShowViewLink="false">
+      <RelationshipChain>
+        <Remote Type="Child" RemoteEFormType="Standard Question" ReferenceGroupName="">
+          <Filter>
+            <GroupingExpression Operator="And">
+              <Children>
+                <CriterionExpression>
+                  <Criterion>
+                    <TextCriterion>
+                      <Text>[Gateway Criteria UUID] = [To].[Unique Reference] AND [To].[Status] &lt;&gt; 'Deleted' AND [To].[LineNumber] = 1</Text>
+                    </TextCriterion>
+                  </Criterion>
+                </CriterionExpression>
+              </Children>
+            </GroupingExpression>
+          </Filter>
+        </Remote>
+      </RelationshipChain>
+      <OrderBy></OrderBy>
+      <DataSelection ShowOnlyAggregates="false">
+        <Columns>
+          <Column Name="Question" Alias="" Width="400" Aggregate="None" />
+        </Columns>
+      </DataSelection>
+    </RemoteColumn>
+    <Column Name="Criteria Name" Alias="" Aggregate="None" Width="100" />
+    <RemoteColumn Name="Question(s) " ShowViewLink="false">
+      <RelationshipChain>
+        <Remote Type="Child" RemoteEFormType="Standard Question" ReferenceGroupName="">
+          <Filter>
+            <GroupingExpression Operator="And">
+              <Children>
+                <CriterionExpression>
+                  <Criterion>
+                    <TextCriterion>
+                      <Text>[Criteria UUID] = [To].[Unique Reference] AND [To].[Status] &lt;&gt; 'Deleted' AND [To].[LineNumber] = 1</Text>
+                    </TextCriterion>
+                  </Criterion>
+                </CriterionExpression>
+              </Children>
+            </GroupingExpression>
+          </Filter>
+        </Remote>
+      </RelationshipChain>
+      <OrderBy></OrderBy>
+      <DataSelection ShowOnlyAggregates="false">
+        <Columns>
+          <Column Name="Question" Alias="" Width="400" Aggregate="None" />
+        </Columns>
+      </DataSelection>
+    </RemoteColumn>
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[Gateway Criteria Name] &lt;&gt; NULL OR [Criteria Name] &lt;&gt; NULL</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+        <CriterionExpression>
+          <Criterion>
+            <ComparisonCriterion Operator="IsNotNull">
+              <Left>
+                <SourceEFormColumnReferenceCriterion ColumnName="Procurement Plan Reference" />
+              </Left>
+              <Right xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            </ComparisonCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>false</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[# of Responses] DESC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

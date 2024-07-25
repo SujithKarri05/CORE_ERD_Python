@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Sign Document</EForm>
+  <Name>Document Signed</Name>
+  <Description></Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>role:"{[Originator]}"</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>Document Signed</SubjectTemplate>
+    <BodyTemplate>Hello {EBMS_GET_ROLE_DISPLAYNAME([Originator])},
+
+The Document has been signed
+
+{ EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+
+
+Thanks,
+The VendorPanel Team
+
+
+*** THIS IS A SYSTEM GENERATED EMAIL. PLEASE DO NOT REPLY. ***</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

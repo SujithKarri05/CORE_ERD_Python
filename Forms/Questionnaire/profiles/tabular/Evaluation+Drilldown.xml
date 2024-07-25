@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Question Category" Alias="" Aggregate="None" Width="185" />
+    <Column Name="Question" Alias="" Aggregate="None" Width="464" />
+    <Column Name="Answer" Alias="" Aggregate="None" Width="145" />
+    <Column Name="Score" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Answer Score" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Answer Score Percentage" Alias="" Aggregate="None" Width="78" />
+    <Column Name="Comments" Alias="" Aggregate="None" Width="200" />
+    <Column Name="Evaluated Party" Alias="Respondent" Aggregate="None" Width="153" />
+    <Column Name="Evaluated Party UUID" Alias="Reference ID" Aggregate="None" Width="111" />
+    <Column Name="Assessor Name" Alias="Assessor" Aggregate="None" Width="119" />
+    <Column Name="Linked Entity RecordID" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Linked Entity EFormType" Alias="" Aggregate="None" Width="100" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[Type] = 'Evaluation' AND [Question] &lt;&gt; NULL</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>false</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[Evaluated Party] ASC, [Assessor Name] ASC, [Category Name] ASC</OrderBy>
+  <GroupBy>[Evaluated Party UUID] DESC, [Assessor Name] DESC</GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

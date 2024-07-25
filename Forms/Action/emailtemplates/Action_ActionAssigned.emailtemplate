@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Action</EForm>
+  <Name>Action Assigned</Name>
+  <Description>To: Responsible people</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{
+ARRAY_JOIN(ARRAY_SELECT(
+  [Responsible], $(i,item) 
+  EBMS_GET_ROLE_EMAIL_ADDRESSES($item)
+), ",")}</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>Action Assigned</SubjectTemplate>
+    <BodyTemplate>&lt;style&gt;
+.nimblex-core-css-table {{color: #333; background: white; border: 1px solid grey; font-size: 12pt;  border-collapse: collapse;}}
+.nimblex-core-css-table th {{background: #efefef; text-align:left; padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-table td {{padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-h2 {{color: #007db4;}}
+&lt;/style&gt;
+Hello there,&lt;br /&gt;&lt;br /&gt;
+An action has been assigned to you. &lt;br /&gt;
+&lt;br /&gt;
+&lt;table class="nimblex-core-css-table"&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Action&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE([Action])}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Date Due&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE([Date Due])}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Responsible&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE([Responsible Text])}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Details&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE([Details])}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;br /&gt;
+&lt;a href="{HTMLENCODE(EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) )}"&gt;Click here&lt;/a&gt; to view the Action record.&lt;br&gt;
+&lt;h2 class="nimblex-core-css-h2"&gt;What to do next&lt;/h2&gt;
+Once the action has been completed change the status on the record to &amp;#39;Complete&amp;#39; and no further reminders will be sent. If the action cannot be completed and needs to be delayed then a new due date can be specified which will also delay any further reminders.&lt;br /&gt;
+&lt;br&gt;
+&lt;br&gt;
+Thanks,&lt;br&gt;
+The VendorPanel Team&lt;/p&gt;</BodyTemplate>
+    <IsBodyHtml>true</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

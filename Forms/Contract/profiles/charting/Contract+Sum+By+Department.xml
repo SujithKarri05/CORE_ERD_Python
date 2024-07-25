@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChartingReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <UseSplitAsSeries>true</UseSplitAsSeries>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[LineNumber] = 1</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ChartType>Area</ChartType>
+  <DataColumns>
+    <Column Name="Total Contract Value" Aggregate="Sum" />
+  </DataColumns>
+  <XAxis>
+    <ColumnName>Department</ColumnName>
+    <UseContiguousDatePeriod>true</UseContiguousDatePeriod>
+    <ContiguousFieldRange>false</ContiguousFieldRange>
+    <FromField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ToField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <EndDate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <EndAlwaysNow>true</EndAlwaysNow>
+    <Unit>Day</Unit>
+    <NumberOfUnits>14</NumberOfUnits>
+    <UseLocalTime>true</UseLocalTime>
+  </XAxis>
+  <Split>Department</Split>
+  <Title xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <Width>800</Width>
+  <Height>600</Height>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ChartingReportProfile>

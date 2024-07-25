@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>false</Enabled>
+  <Description>INITIAL SYSTEM SETUP - Update system + create emailapproval accounts</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Global Settings</EFormRef>
+  <RecordFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <Tasks>
+    <UpdateUser>
+      <ParentRolesToAdd>"System Builders"</ParentRolesToAdd>
+      <ParentRolesToRemove xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <UserNameFormula>"system"</UserNameFormula>
+      <DisplayNameFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EmailAddressFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PhoneFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PasswordFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <UserMustChangePasswordFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PushPasswordIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <UpdatePassword>false</UpdatePassword>
+      <ExpiryDateFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <DepartmentFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Description>Put system account in System Builders</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </UpdateUser>
+    <CreateRole>
+      <ParentRolesFormula></ParentRolesFormula>
+      <UserNameFormula>"emailapproval"</UserNameFormula>
+      <UseApproximateUsername>false</UseApproximateUsername>
+      <EmailAddressFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PhoneFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <DisplayNameFormula>"emailapproval"</DisplayNameFormula>
+      <PasswordFormula>"Externalaccess!123"</PasswordFormula>
+      <UserMustChangePasswordFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ExpiryDateFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <DepartmentFormula></DepartmentFormula>
+      <PushPasswordIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PushUsernameIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <InstanceRoleType>Guest</InstanceRoleType>
+      <Description>Create emailapproval account
+Run only if account doesn't exist
+(This task required a record context)</Description>
+      <RunOnlyWhen>
+        <GroupingExpression Operator="And">
+          <Children>
+            <CriterionExpression>
+              <Criterion>
+                <FormulaCriterion>
+                  <Formula>DB_LOOKUP(
+  "Username", 
+  "sys.Roles", 
+  "[Username] = 'emailapproval'"
+) = NULL</Formula>
+                </FormulaCriterion>
+              </Criterion>
+            </CriterionExpression>
+          </Children>
+        </GroupingExpression>
+      </RunOnlyWhen>
+    </CreateRole>
+    <UpdateUser>
+      <ParentRolesToAdd>"External Approvers"</ParentRolesToAdd>
+      <ParentRolesToRemove xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <UserNameFormula>"emailapproval"</UserNameFormula>
+      <DisplayNameFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EmailAddressFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PhoneFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PasswordFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <UserMustChangePasswordFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <PushPasswordIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <UpdatePassword>false</UpdatePassword>
+      <ExpiryDateFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <DepartmentFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Description>Put emailapproval account in External Approvers group</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </UpdateUser>
+    <Notification>
+      <AttachRecordViewAsPdf>false</AttachRecordViewAsPdf>
+      <SendEmailImmediately>true</SendEmailImmediately>
+      <AttachLogo>false</AttachLogo>
+      <AttachRecordViewName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <AttachedRecordViewFilenameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Attachments />
+      <DontSendToCurrentRole>false</DontSendToCurrentRole>
+      <Template>
+        <ToAddressesTemplate>team-core-aaaafwbso7zcabnsxrpdayxh6q@vendorpanelgroup.slack.com, team-implementation-a-aaaaiotdyc6kkxinmewvhanijq@vendorpanelgroup.slack.com</ToAddressesTemplate>
+        <CcAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <BccAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReplyToAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <SubjectTemplate>[{ARRAY_LAST(SPLIT(EBMS_GET_BASE_URL(), "/"))}] - New Core system created</SubjectTemplate>
+        <BodyTemplate>To the Core Team,
+
+A new Core instace has been created. 
+
+Instance URL: {EBMS_GET_BASE_URL()}
+Instance Name: {ARRAY_LAST(SPLIT(EBMS_GET_BASE_URL(), "/"))}
+
+Regards</BodyTemplate>
+        <IsBodyHtml>false</IsBodyHtml>
+        <UseDefaultFrame>true</UseDefaultFrame>
+      </Template>
+      <LibraryEmailTemplateNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Location>Inline</Location>
+      <DisplayLogMessages>true</DisplayLogMessages>
+      <SendFromTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Description>Notify Core team of instance creation</Description>
+      <RunOnlyWhen>
+        <GroupingExpression Operator="And">
+          <Children>
+            <CriterionExpression>
+              <Criterion>
+                <FormulaCriterion>
+                  <Formula>[Temp] &lt;&gt; NULL</Formula>
+                </FormulaCriterion>
+              </Criterion>
+            </CriterionExpression>
+          </Children>
+        </GroupingExpression>
+      </RunOnlyWhen>
+    </Notification>
+    <ChangeFieldValues>
+      <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <FieldEntries>
+        <FieldEntry>
+          <ColumnName>Central Reporting Enabled</ColumnName>
+          <AssignWholeColumn>false</AssignWholeColumn>
+          <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Formula>TRUE</Formula>
+        </FieldEntry>
+        <FieldEntry>
+          <ColumnName>Reporting System URL</ColumnName>
+          <AssignWholeColumn>false</AssignWholeColumn>
+          <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Formula>HASH_GET(JSONDECODE("{""Reporting System URL"":""https://app.vendorpanel.com.au/CoreCentralReporting/invokeWebEvent?_event=Process%20Incoming%20Data&amp;_key=9CKvmZR02qgcD3u6DJDmSbMsFmvnJblcUKBCcODMjMq834DtavyFLha3MHtHcugc"",""Central Reporting Fields"":[""Owns Integrated Module - Purchase Orders"",""Owns Integrated Module - Procurement Planning"",""Owns Integrated Module - Meetings and Actions"",""Owns Integrated Module - Information Requests"",""Owns Integrated Module - Go To Market"",""Owns Integrated Module - Evaluations"",""Owns Integrated Module - Contracts"",""Users in Admin Group"",""User Logins in Last Month"",""Count of Distinct User Logins in Last Month"",""Number of Submissions Approved"",""Total Value of Active Evaluations"",""Number of Active Evaluations"",""Total Value of Completed Evaluations"",""Number of Completed Evaluations"",""Estimated Value of Active Procurements"",""Number of Active Procurements"",""Estimated Value of Completed Procurements"",""Number of Completed Procurements"",""Total Value of Closed or Expired Contracts"",""Number of Closed or Expired Contracts"",""Total Value of Active Contracts"",""Number of Active Contracts"",""Total Value of Submissions Approved""]}"), "Reporting System URL")</Formula>
+        </FieldEntry>
+        <FieldEntry>
+          <ColumnName>Central Reporting Fields</ColumnName>
+          <AssignWholeColumn>false</AssignWholeColumn>
+          <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Formula>HASH_GET(JSONDECODE("{""Reporting System URL"":""https://app.vendorpanel.com.au/CoreCentralReporting/invokeWebEvent?_event=Process%20Incoming%20Data&amp;_key=9CKvmZR02qgcD3u6DJDmSbMsFmvnJblcUKBCcODMjMq834DtavyFLha3MHtHcugc"",""Central Reporting Fields"":[""Owns Integrated Module - Purchase Orders"",""Owns Integrated Module - Procurement Planning"",""Owns Integrated Module - Meetings and Actions"",""Owns Integrated Module - Information Requests"",""Owns Integrated Module - Go To Market"",""Owns Integrated Module - Evaluations"",""Owns Integrated Module - Contracts"",""Users in Admin Group"",""User Logins in Last Month"",""Count of Distinct User Logins in Last Month"",""Number of Submissions Approved"",""Total Value of Active Evaluations"",""Number of Active Evaluations"",""Total Value of Completed Evaluations"",""Number of Completed Evaluations"",""Estimated Value of Active Procurements"",""Number of Active Procurements"",""Estimated Value of Completed Procurements"",""Number of Completed Procurements"",""Total Value of Closed or Expired Contracts"",""Number of Closed or Expired Contracts"",""Total Value of Active Contracts"",""Number of Active Contracts"",""Total Value of Submissions Approved""]}"), "Central Reporting Fields")</Formula>
+        </FieldEntry>
+      </FieldEntries>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Turn on central reporting</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </ChangeFieldValues>
+  </Tasks>
+  <Timing>
+    <DailyWeekly>
+      <Days>
+        <Day>Monday</Day>
+        <Day>Tuesday</Day>
+        <Day>Wednesday</Day>
+        <Day>Thursday</Day>
+        <Day>Friday</Day>
+        <Day>Saturday</Day>
+        <Day>Sunday</Day>
+      </Days>
+    </DailyWeekly>
+  </Timing>
+  <StartAfterDate>2023-08-24T04:55:59.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T00:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T00:00:00.0000000Z</EndTime>
+  <RepeatHours xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <LastRun xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <Role>system</Role>
+  <SaveRecordOnCompletion>false</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

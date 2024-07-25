@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>true</Enabled>
+  <Description>DAILY REFRESH - Evaluation Questionnaires</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Questionnaire</EFormRef>
+  <RecordFilter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>(
+  [Status] = 'In Progress' 
+  OR 
+  [Status] = 'Not Started'
+) 
+AND [Type] FAST_EQUAL_TO 'Evaluation' 
+
+AND 
+(
+  STEP TO PARENT [Evaluation]
+  ON [To].[LineNumber] = 1 
+  AND [Due Date] &lt;&gt; [To].[Individual Evaluations Due Date]
+  AND [To].[RecordID] FAST_EQUAL_TO [Linked Entity RecordID]
+  GET COUNT(1)
+) &gt; 0</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </RecordFilter>
+  <Tasks>
+    <ChangeFieldValues>
+      <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <FieldEntries>
+        <FieldEntry>
+          <ColumnName>Due Date</ColumnName>
+          <AssignWholeColumn>false</AssignWholeColumn>
+          <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Formula>DB_LOOKUP(
+  "Individual Evaluations Due Date", 
+  "Evaluation", 
+  HASH("RecordID", [Linked Entity RecordID])
+)</Formula>
+        </FieldEntry>
+      </FieldEntries>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Get due date</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </ChangeFieldValues>
+  </Tasks>
+  <Timing>
+    <DailyWeekly>
+      <Days>
+        <Day>Monday</Day>
+        <Day>Tuesday</Day>
+        <Day>Wednesday</Day>
+        <Day>Thursday</Day>
+        <Day>Friday</Day>
+        <Day>Saturday</Day>
+        <Day>Sunday</Day>
+      </Days>
+    </DailyWeekly>
+  </Timing>
+  <StartAfterDate>2023-10-11T04:57:01.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T00:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T00:00:00.0000000Z</EndTime>
+  <RepeatHours xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <LastRun>2024-06-05T14:08:10.0300000Z</LastRun>
+  <Role>system</Role>
+  <SaveRecordOnCompletion>true</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

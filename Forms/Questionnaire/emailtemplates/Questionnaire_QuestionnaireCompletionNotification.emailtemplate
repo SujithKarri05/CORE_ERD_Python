@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Questionnaire</EForm>
+  <Name>Questionnaire Completion Notification</Name>
+  <Description>Notify Users/ Groups</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{[Recipient Email Addresses]}</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>A Questionnaire has been Submitted</SubjectTemplate>
+    <BodyTemplate>Hello there, 
+
+A user has completed {[Standard Questionnaire Name]} Questionnaire, please click the link below to see the result.
+{IF([Scored]= TRUE, [Assessor Name] &amp;" has scored "&amp;[Total Score Percentage]&amp;"% for this questionnaire.", NULL())}
+
+{EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID])&amp;"?$View=Results"}
+
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

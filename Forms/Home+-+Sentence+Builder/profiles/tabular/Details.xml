@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Prompt ID" Alias="" Aggregate="None" Width="113" />
+    <AdvancedColumn Name="Prompt" Width="320" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>[Prompt 1]&amp;' '&amp;[Prompt 2]</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <AdvancedColumn Name="Editable by" Width="116" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>CASE
+  WHEN [Prompt Locked] = TRUE THEN 'System Builders '
+  ELSE 'Administrators'
+END</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <AdvancedColumn Name="Enabled" Width="100" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>CASE
+  WHEN [Prompt Enabled] = TRUE THEN 'Yes'
+  ELSE 'No'
+END</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <Column Name="Prompt URL" Alias="URL" Aggregate="None" Width="336" />
+    <Column Name="Prompt Navigation" Alias="Open in" Aggregate="None" Width="117" />
+    <AdvancedColumn Name="Access Type" Width="139" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>CASE
+WHEN [Prompt Module Dependent] = TRUE THEN 'Based on module'
+ELSE 'Based on role'
+END</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <Column Name="Prompt Module" Alias="Access Module" Aggregate="None" Width="143" />
+    <Column Name="Prompt Access" Alias="Access Role" Aggregate="None" Width="171" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children />
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] DESC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>true</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

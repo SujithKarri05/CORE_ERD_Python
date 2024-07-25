@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Meeting</EForm>
+  <Name>Actions Assigned</Name>
+  <Description></Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{HASH_GET($eventargs, "Email Address")}</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>Actions assigned to you in a meeting</SubjectTemplate>
+    <BodyTemplate>&lt;style&gt;
+.nimblex-core-css-table {{color: #333; background: white; border: 1px solid grey; font-size: 12pt;  border-collapse: collapse; width: 100%;margin-bottom: .5em;}}
+.nimblex-core-css-table th {{background: #efefef; text-align:left; padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-table td {{padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-h2 {{color: #007db4;}}
+&lt;/style&gt;
+
+&lt;p&gt;Hello there, &lt;/p&gt;
+
+&lt;p&gt;Actions have been assigned to you during a meeting. &lt;/p&gt;
+
+&lt;p&gt;This was the meeting: { EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }&lt;/p&gt;
+
+&lt;p&gt;Here are the actions that have been assigned to you:&lt;/p&gt;
+
+&lt;table class="nimblex-core-css-table"&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Due date&lt;/th&gt;
+	  &lt;th&gt;Action&lt;/th&gt;
+	  &lt;th&gt;Assigned to&lt;/th&gt;
+  &lt;/tr&gt;
+  {
+ARRAY_JOIN(ARRAY_SELECT(
+  HASH_GET($eventargs, "Action data"), $(i, item)
+  "&lt;tr&gt;" &amp; 
+  	"&lt;td&gt;" &amp; HASH_GET($item, "Date Due") &amp; "&lt;/td&gt;" &amp; 
+  	"&lt;td&gt;" &amp; HASH_GET($item, "Action") &amp; "&lt;/td&gt;" &amp; 
+    "&lt;td&gt;" &amp; HASH_GET($item, "Responsible Text") &amp; "&lt;/td&gt;" &amp; 
+  "&lt;/tr&gt;"
+), "")}
+&lt;/table&gt;
+
+
+Thanks,&lt;br&gt;
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>true</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

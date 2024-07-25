@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="File No." Alias="" Aggregate="None" Width="80" />
+    <Column Name="Status" Alias="" Aggregate="None" Width="80" />
+    <Column Name="Date Reported" Alias="" Aggregate="None" Width="115" />
+    <Column Name="Date of Alleged Incident or Received by Agent" Alias="" Aggregate="None" Width="126" />
+    <Column Name="Alleged Incident Raised by" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Category of Notifier" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Allegations Made Against" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Description of Alleged Incident" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Allegations Made Against" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Primary Root Cause of Alleged Incident" Alias="" Aggregate="None" Width="150" />
+    <Column Name="Type and Method of Alleged Breach" Alias="" Aggregate="None" Width="150" />
+    <Column Name="Finding" Alias="" Aggregate="None" Width="155" />
+    <Column Name="Data Requested" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Data Recovered and/or Destroyed" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Explanation and/or Apology" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Awareness/ Training Provided" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Corrective Action Taken/ Mitigation Plan" Alias="" Aggregate="None" Width="200" />
+    <Column Name="Date Incident Closed" Alias="" Aggregate="None" Width="100" />
+    <Column Name="No. of Days Taken to Close Incident" Alias="" Aggregate="None" Width="100" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children />
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>false</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] DESC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>20</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

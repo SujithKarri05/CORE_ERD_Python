@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Request for Information</EForm>
+  <Name>Request for Information Raised</Name>
+  <Description>To: Contract manager</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>role:"{[Contract Manager]}"</ToAddressesTemplate>
+    <CcAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>Request for Information Raised</SubjectTemplate>
+    <BodyTemplate>Hello {EBMS_GET_ROLE_DISPLAYNAME([Contract Manager])},
+
+A new Request for Information has been raised: 
+{ EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Question GUID" Alias="Unique ID" Aggregate="None" Width="127" />
+    <Column Name="Question" Alias="" Aggregate="None" Width="274" />
+    <Column Name="Question Category" Alias="Category" Aggregate="None" Width="181" />
+    <Column Name="Axis Name" Alias="Axis" Aggregate="None" Width="100" />
+    <Column Name="Participant Document Upload" Alias="Document Upload" Aggregate="None" Width="202" />
+    <Column Name="Answer Type" Alias="" Aggregate="None" Width="101" />
+    <Column Name="Answer1" Alias="Dropdown - Answer 1" Aggregate="None" Width="90" />
+    <Column Name="Score1" Alias="Dropdown - Score 1" Aggregate="None" Width="90" />
+    <Column Name="Answer2" Alias="Dropdown - Answer 2" Aggregate="None" Width="90" />
+    <Column Name="Score2" Alias="Dropdown - Score 2" Aggregate="None" Width="90" />
+    <Column Name="Answer3" Alias="Dropdown - Answer 3" Aggregate="None" Width="90" />
+    <Column Name="Score3" Alias="Dropdown - Score 3" Aggregate="None" Width="90" />
+    <Column Name="Answer4" Alias="Dropdown - Answer 4" Aggregate="None" Width="90" />
+    <Column Name="Score4" Alias="Dropdown - Score 4" Aggregate="None" Width="90" />
+    <Column Name="Answer - Lower Limit" Alias="Range - Lower Limit" Aggregate="None" Width="100" />
+    <Column Name="Answer - Upper Limit" Alias="Range - Upper Limit" Aggregate="None" Width="100" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children />
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] ASC, [LineNumber] ASC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>true</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

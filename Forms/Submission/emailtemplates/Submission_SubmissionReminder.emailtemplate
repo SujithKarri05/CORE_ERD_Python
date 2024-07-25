@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Submission</EForm>
+  <Name>Submission Reminder</Name>
+  <Description>Triggered by Settings - Automation - To Approver </Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{LET $targetUsers := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Target Form"
+); 
+
+LET $systemRoles := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "System Roles"
+);
+
+LET $staticEmailAddresses := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Static Email Addresses"
+);
+
+LET $extractEmailAddressesfromArray := $(array)
+(
+	ARRAY_JOIN(
+		ARRAY_SELECT(
+			$array, $(i, item) 
+			EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($item))
+		), "," 
+	)
+);
+
+LET $targetEmails := 
+ARRAY_SELECT(
+    $targetUsers,	$(i, item)
+	
+	LET $user := IFERROR(EVALUATE("[" &amp; $item &amp; "]"), NULL()); 
+			
+	LET $email :=
+	IF(
+	  $user &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($user))
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($user), 
+		CALL($extractEmailAddressesfromArray, $user),
+		$email
+	)
+); 
+
+LET $roleEmails := 
+ARRAY_SELECT(
+    $systemRoles, $(i, item)
+
+	LET $email :=
+	IF(
+	  $item &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES($item)
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($item), 
+		CALL($extractEmailAddressesfromArray, $item),
+		$email
+	)
+); 
+
+LET $combined := 
+ARRAY_CONCAT(
+$targetEmails,
+$roleEmails,
+ARRAY($staticEmailAddresses)
+);
+
+RETURN 
+ARRAY_JOIN(
+ARRAY_WHERE($combined, $(i, item) $item &lt;&gt; NULL())
+ , ", "
+)}</ToAddressesTemplate>
+    <CcAddressesTemplate>{LET $targetUsers := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Cc Target Form"
+); 
+
+LET $systemRoles := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Cc System Roles"
+);
+
+LET $staticEmailAddresses := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Cc Static Email Addresses"
+);
+
+LET $extractEmailAddressesfromArray := $(array)
+(
+	ARRAY_JOIN(
+		ARRAY_SELECT(
+			$array, $(i, item) 
+			EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($item))
+		), "," 
+	)
+);
+
+LET $targetEmails := 
+ARRAY_SELECT(
+    $targetUsers,	$(i, item)
+	
+	LET $user := IFERROR(EVALUATE("[" &amp; $item &amp; "]"), NULL()); 
+			
+	LET $email :=
+	IF(
+	  $user &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($user))
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($user), 
+		CALL($extractEmailAddressesfromArray, $user),
+		$email
+	)
+); 
+
+LET $roleEmails := 
+ARRAY_SELECT(
+    $systemRoles, $(i, item)
+
+	LET $email :=
+	IF(
+	  $item &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES($item)
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($item), 
+		CALL($extractEmailAddressesfromArray, $item),
+		$email
+	)
+); 
+
+LET $combined := 
+ARRAY_CONCAT(
+$targetEmails,
+$roleEmails,
+ARRAY($staticEmailAddresses)
+);
+
+RETURN 
+ARRAY_JOIN(
+ARRAY_WHERE($combined, $(i, item) $item &lt;&gt; NULL())
+ , ", "
+)}</CcAddressesTemplate>
+    <BccAddressesTemplate>{LET $targetUsers := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Bcc Target Form"
+); 
+
+LET $systemRoles := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Bcc System Roles"
+);
+
+LET $staticEmailAddresses := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Bcc Static Email Addresses"
+);
+
+LET $extractEmailAddressesfromArray := $(array)
+(
+	ARRAY_JOIN(
+		ARRAY_SELECT(
+			$array, $(i, item) 
+			EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($item))
+		), "," 
+	)
+);
+
+LET $targetEmails := 
+ARRAY_SELECT(
+    $targetUsers,	$(i, item)
+	
+	LET $user := IFERROR(EVALUATE("[" &amp; $item &amp; "]"), NULL()); 
+			
+	LET $email :=
+	IF(
+	  $user &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($user))
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($user), 
+		CALL($extractEmailAddressesfromArray, $user),
+		$email
+	)
+); 
+
+LET $roleEmails := 
+ARRAY_SELECT(
+    $systemRoles, $(i, item)
+
+	LET $email :=
+	IF(
+	  $item &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES($item)
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($item), 
+		CALL($extractEmailAddressesfromArray, $item),
+		$email
+	)
+); 
+
+LET $combined := 
+ARRAY_CONCAT(
+$targetEmails,
+$roleEmails,
+ARRAY($staticEmailAddresses)
+);
+
+RETURN 
+ARRAY_JOIN(
+ARRAY_WHERE($combined, $(i, item) $item &lt;&gt; NULL())
+ , ", "
+)}</BccAddressesTemplate>
+    <ReplyToAddressesTemplate>{LET $targetUsers := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "ReplyTo Target Form"
+); 
+
+LET $systemRoles := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "ReplyTo System Roles"
+);
+
+LET $staticEmailAddresses := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "ReplyTo Static Email Addresses"
+);
+
+LET $extractEmailAddressesfromArray := $(array)
+(
+	ARRAY_JOIN(
+		ARRAY_SELECT(
+			$array, $(i, item) 
+			EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($item))
+		), "," 
+	)
+);
+
+LET $targetEmails := 
+ARRAY_SELECT(
+    $targetUsers,	$(i, item)
+	
+	LET $user := IFERROR(EVALUATE("[" &amp; $item &amp; "]"), NULL()); 
+			
+	LET $email :=
+	IF(
+	  $user &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($user))
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($user), 
+		CALL($extractEmailAddressesfromArray, $user),
+		$email
+	)
+); 
+
+LET $roleEmails := 
+ARRAY_SELECT(
+    $systemRoles, $(i, item)
+
+	LET $email :=
+	IF(
+	  $item &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES($item)
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($item), 
+		CALL($extractEmailAddressesfromArray, $item),
+		$email
+	)
+); 
+
+LET $combined := 
+ARRAY_CONCAT(
+$targetEmails,
+$roleEmails,
+ARRAY($staticEmailAddresses)
+);
+
+RETURN 
+ARRAY_JOIN(
+ARRAY_WHERE($combined, $(i, item) $item &lt;&gt; NULL())
+ , ", "
+)}</ReplyToAddressesTemplate>
+    <SubjectTemplate>{
+LET $submissiontext :=
+IF(
+	AND([Parent Reference] &lt;&gt; " - ", [Parent Reference] &lt;&gt; NULL()), [Parent Reference],
+	[Parent EFormType] &lt;&gt; NULL(), [Parent EFormType] &amp; " - " &amp; [Parent RecordID],
+	[Type]
+);
+//LET $days := FLOOR( TODAY(NOW()) - TODAY([Date Submitted]));
+//LET $length := IF(OR($days = 1, $days = -1), "day", "days"); 
+//LET $subject := $days &amp; " " &amp; $length &amp; " since " &amp; [Parent EFormType] &amp; " Approval Submitted for " &amp; $submissiontext;  //$days &amp; " " &amp; $length &amp; " since " &amp; [EFormType] &amp; " - """ &amp; [Parent EFormType] &amp; """ Submitted" ; 
+//RETURN $subject 
+RETURN
+"Reminder: Approval requested for " &amp; $submissiontext
+}</SubjectTemplate>
+    <BodyTemplate>&lt;style&gt;
+.nimblex-core-css-table {{color: #333; background: white; border: 1px solid grey; font-size: 12pt;  border-collapse: collapse; width: 100%;margin-bottom: .5em;}}
+.nimblex-core-css-table th {{background: #efefef; text-align:left; padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-table td {{padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-h2 {{color: #F5EDE5;}}
+&lt;/style&gt;
+
+&lt;div&gt;
+Hello there,
+&lt;br /&gt;
+This is a reminder that an approval request for "{ 
+IF(
+	AND([Parent Reference] &lt;&gt; " - ", [Parent Reference] &lt;&gt; NULL()), [Parent Reference],
+	[Parent EFormType] &lt;&gt; NULL(), [Parent EFormType] &amp; " - " &amp; [Parent RecordID],
+	[Type]
+)
+}" has been submitted and is awaiting your action.
+&lt;/div&gt;
+&lt;br /&gt;
+&lt;table class="nimblex-core-css-table"&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Submitter&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE(EBMS_GET_ROLE_DISPLAYNAME([Submitted By]))}&lt;/td&gt;
+  &lt;/tr&gt;
+
+  {
+  IF( 
+  	COALESCE([Contract Number]) &lt;&gt; NULL(),
+    "&lt;tr&gt;" &amp; 
+	  "&lt;th&gt;Related entity&lt;/th&gt;" &amp; 
+	  "&lt;td&gt;"
+	  &amp;
+ 		IF(
+		  [Contract Number] &lt;&gt; NULL(), HTMLENCODE("Contract " &amp; [Contract Number])
+	    )
+	  &amp;
+	  "&lt;/td&gt;" &amp; 
+  "&lt;/tr&gt;"
+  )
+  }
+  &lt;tr&gt;
+	  &lt;th&gt;Submission type&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE([Type])}&lt;/td&gt;
+  &lt;/tr&gt;
+  {
+  IF( 
+  	[Type] = "Variation",
+    "&lt;tr&gt;" &amp; 
+	  "&lt;th&gt;Variation #&lt;/th&gt;" &amp;
+	  "&lt;td&gt;" &amp; HTMLENCODE(DB_LOOKUP("Variation Number", "Variation", HASH("RecordID", [Parent RecordID]))) &amp; "&lt;/td&gt;" &amp;
+    "&lt;/tr&gt;"
+  )
+  }
+  &lt;tr&gt;
+	  &lt;th&gt;Value&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE(NUMBERFORMAT([Submission Value], "C"))}&lt;/td&gt;
+  &lt;/tr&gt;  
+  {
+  IF( 
+  	[Submission Duration] &lt;&gt; NULL(),
+    "&lt;tr&gt;" &amp; 
+	    "&lt;th&gt;Duration&lt;/th&gt;" &amp; 
+	    "&lt;td&gt;" &amp; HTMLENCODE([Submission Duration]) &amp; "&lt;/td&gt;" &amp; 
+    "&lt;/tr&gt;"
+  )
+  }
+  &lt;tr&gt;
+	  &lt;th&gt;Date submitted&lt;/th&gt;
+	  &lt;td&gt;{[Date Submitted]}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;div&gt;
+&lt;a href='{EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID])}'&gt;Click here to view the submission record.&lt;/a&gt; 
+&lt;br /&gt;&lt;br /&gt;
+Thanks,
+&lt;br /&gt;
+{LET $sign := DB_LOOKUP("Signature","Global Settings","[LineNumber]=1");
+RETURN
+IF($sign = NULL, "The VendorPanel Team",$sign)}
+&lt;/div&gt;</BodyTemplate>
+    <IsBodyHtml>true</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

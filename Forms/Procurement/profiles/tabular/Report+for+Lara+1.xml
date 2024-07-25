@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Procurement Number" Alias="Procurement Plan Reference" Aggregate="None" Width="195" />
+    <Column Name="Procurement Title" Alias="" Aggregate="None" Width="276" />
+    <RemoteColumn Name="Mandatory Requirements" ShowViewLink="false">
+      <RelationshipChain>
+        <Remote Type="Child" RemoteEFormType="Evaluation" ReferenceGroupName="">
+          <Filter>
+            <GroupingExpression Operator="And">
+              <Children>
+                <CriterionExpression>
+                  <Criterion>
+                    <TextCriterion>
+                      <Text>[To].[Gateway Criteria Name] &lt;&gt; NULL</Text>
+                    </TextCriterion>
+                  </Criterion>
+                </CriterionExpression>
+              </Children>
+            </GroupingExpression>
+          </Filter>
+        </Remote>
+      </RelationshipChain>
+      <OrderBy></OrderBy>
+      <DataSelection ShowOnlyAggregates="false">
+        <Columns>
+          <Column Name="Gateway Criteria Name" Alias="Mandatory Requirements" Width="200" Aggregate="None" />
+          <AdvancedColumn Name="Question(s)" Width="400" Aggregate="None">
+            <Criterion>
+              <TextCriterion>
+                <Text>STEP TO CHILD [Standard Question] 
+ON [Gateway Criteria UUID] = [To].[Unique Reference] AND [To].[Status] &lt;&gt; 'Deleted' AND [To].[LineNumber] = 1
+GET 
+STRING_AGG(
+  'QUESTION: ' &amp; [Question], 
+  ' '
+)</Text>
+              </TextCriterion>
+            </Criterion>
+          </AdvancedColumn>
+          <AdvancedColumn Name="Mandatory Requirements - Supplier Response" Width="300" Aggregate="None">
+            <Criterion>
+              <TextCriterion>
+                <Text>''</Text>
+              </TextCriterion>
+            </Criterion>
+          </AdvancedColumn>
+        </Columns>
+      </DataSelection>
+    </RemoteColumn>
+    <RemoteColumn Name="Evaluation Criteria" ShowViewLink="false">
+      <RelationshipChain>
+        <Remote Type="Child" RemoteEFormType="Evaluation" ReferenceGroupName="">
+          <Filter>
+            <GroupingExpression Operator="And">
+              <Children>
+                <CriterionExpression>
+                  <Criterion>
+                    <TextCriterion>
+                      <Text>[To].[Criteria Name] &lt;&gt; NULL</Text>
+                    </TextCriterion>
+                  </Criterion>
+                </CriterionExpression>
+              </Children>
+            </GroupingExpression>
+          </Filter>
+        </Remote>
+      </RelationshipChain>
+      <OrderBy></OrderBy>
+      <DataSelection ShowOnlyAggregates="false">
+        <Columns>
+          <AdvancedColumn Name="Evaluation Criteria" Width="200" Aggregate="None">
+            <Criterion>
+              <TextCriterion>
+                <Text>[Criteria Name] &amp; ' (' &amp; [Weighting] &amp; '%)'</Text>
+              </TextCriterion>
+            </Criterion>
+          </AdvancedColumn>
+          <AdvancedColumn Name="Question(s)" Width="400" Aggregate="None">
+            <Criterion>
+              <TextCriterion>
+                <Text>STEP TO CHILD [Standard Question] 
+ON [Criteria UUID] = [To].[Unique Reference] AND [To].[Status] &lt;&gt; 'Deleted' AND [To].[LineNumber] = 1
+GET 
+STRING_AGG(
+  'QUESTION: ' &amp; [Question], 
+  ' '
+)</Text>
+              </TextCriterion>
+            </Criterion>
+          </AdvancedColumn>
+          <AdvancedColumn Name="Evaluation Criteria - Supplier Response" Width="300" Aggregate="None">
+            <Criterion>
+              <TextCriterion>
+                <Text>''</Text>
+              </TextCriterion>
+            </Criterion>
+          </AdvancedColumn>
+        </Columns>
+      </DataSelection>
+    </RemoteColumn>
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules>
+    <Rule>
+      <Condition>
+        <ComparisonCriterion Operator="EqualTo">
+          <Left>
+            <SourceEFormColumnReferenceCriterion ColumnName="Status" />
+          </Left>
+          <Right>
+            <ConstantCriterion>
+              <Value>
+                <String>Awarded</String>
+              </Value>
+            </ConstantCriterion>
+          </Right>
+        </ComparisonCriterion>
+      </Condition>
+      <Colour>
+        <ConstantCriterion>
+          <Value>
+            <String>#81ff81</String>
+          </Value>
+        </ConstantCriterion>
+      </Colour>
+    </Rule>
+  </BackgroundColourRules>
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[Evaluation RecordIDs] &lt;&gt; NULL</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] DESC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>100</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>KPI Performance</EForm>
+  <Name>KPI Performance Submission</Name>
+  <Description>To: Contract manager</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>role:"{[Contract Manager]}"</ToAddressesTemplate>
+    <CcAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>KPI Performance Result Submitted</SubjectTemplate>
+    <BodyTemplate>Hello {[Contract Manager Displayname]},
+
+A Vendor has submitted a KPI Performance Result. 
+
+Here are some details:
+Description: {[Description]}
+Target: {[Target]}
+Achieved Value: {[Achieved Value]}
+Date of Result: {[Date of Result]}
+Date Submitted: {[Date Submitted]}
+Vendor: {DB_LOOKUP("Company Name", "Vendor", HASH("RecordID", [Vendor RecordID]))}
+
+Click this link to see the record: { EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

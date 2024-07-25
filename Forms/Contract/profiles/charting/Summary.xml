@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChartingReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <UseSplitAsSeries>true</UseSplitAsSeries>
+  <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <ChartType>Bar</ChartType>
+  <DataColumns>
+    <Column Name="RecordID" Aggregate="Count" />
+  </DataColumns>
+  <XAxis>
+    <ColumnName>Status</ColumnName>
+    <UseContiguousDatePeriod>false</UseContiguousDatePeriod>
+    <ContiguousFieldRange>false</ContiguousFieldRange>
+    <FromField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ToField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <EndDate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <EndAlwaysNow>false</EndAlwaysNow>
+    <Unit>Month</Unit>
+    <NumberOfUnits>12</NumberOfUnits>
+    <UseLocalTime>false</UseLocalTime>
+  </XAxis>
+  <Split>Status</Split>
+  <Title xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <Width>600</Width>
+  <Height>600</Height>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ChartingReportProfile>

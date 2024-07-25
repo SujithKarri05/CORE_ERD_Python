@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Evaluation</EForm>
+  <Name>Individual Evaluation Complete</Name>
+  <Description></Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{[Procurement Officer]}</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>An individual evaluation has been Completed</SubjectTemplate>
+    <BodyTemplate>Hello {EBMS_GET_ROLE_DISPLAYNAME([Procurement Officer])}, 
+
+A user has completed an individual evaluation. 
+
+Date Invited: {HASH_GET($eventargs, "Date Invited")}
+Date Completed: {NOW()}
+Evaluator: {HASH_GET($eventargs, "Assessor DisplayName")}
+Evaluated Party: {HASH_GET($eventargs, "Evaluated Party")} ({HASH_GET($eventargs, "Evaluated Party UUID")})
+
+The results will be available on the Individual Scoring section on of the Evaluation.
+{ EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

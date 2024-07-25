@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Work Order</EForm>
+  <Name>Vendor Notification of Work Order</Name>
+  <Description>To: Vendor</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{[Vendor Email Address]}</ToAddressesTemplate>
+    <CcAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <BccAddressesTemplate>role:"{[Contract Manager]}"</BccAddressesTemplate>
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>Work Order</SubjectTemplate>
+    <BodyTemplate>Hello there,
+
+A new work order has been issued. 
+
+Contract: {[Contract Title]} 
+Contract Manager: {EBMS_GET_ROLE_DISPLAYNAME([Contract Manager])}
+Work Order: {[Work Order Description]}
+ 
+The Work Order record can be seen here: 
+{ EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+
+Thanks,
+{LET $sign := DB_LOOKUP("Signature","Global Settings","[LineNumber]=1");
+RETURN
+IF($sign = NULL, "The VendorPanel Team",$sign)}</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

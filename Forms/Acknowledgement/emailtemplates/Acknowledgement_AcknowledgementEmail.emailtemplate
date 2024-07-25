@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Acknowledgement</EForm>
+  <Name>Acknowledgement Email</Name>
+  <Description></Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{EBMS_GET_ROLE_EMAIL_ADDRESSES([Assignee])}</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>Request to acknowledge a document</SubjectTemplate>
+    <BodyTemplate>Hello {[Assignee Name]},
+
+You have been requested to read and acknowledge a document. 
+
+Document: {
+LET $parent := EBMS_GET_PARENT_RECORD([EFormType], [RecordID]); 
+
+RETURN 
+DB_LOOKUP(
+  "Document", 
+  ARRAY_INDEX($parent, 1), 
+  "[RecordID] = " &amp; DB_ENCODECONSTANT(ARRAY_INDEX($parent, 2))
+)}
+Date requested: {DATEFORMAT(NOW(), "dd-MMM-yyyy")}
+Message with request: {[Message to Assignee]} 
+
+You can review the document, and complete acknowledgement on this record:
+{ LET $parent := EBMS_GET_PARENT_RECORD([EFormType], [RecordID]); 
+RETURN EBMS_GET_EFORMRECORD_URL(ARRAY_INDEX($parent, 1), ARRAY_INDEX($parent, 2)) }
+	
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

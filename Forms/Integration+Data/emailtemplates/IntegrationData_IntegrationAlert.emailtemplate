@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Integration Data</EForm>
+  <Name>Integration Alert</Name>
+  <Description>To: Alert Recipient</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{[Integration Alert Recipient]}</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>Integration Alert for {[Integration Workflow]}</SubjectTemplate>
+    <BodyTemplate>{[Email Content]}</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

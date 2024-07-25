@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Evaluation</EForm>
+  <Name>Evaluation Access</Name>
+  <Description>To: Evaluator on selected line</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{
+LET $lineNumber := HASH_GET($eventargs, "LineNumber"); 
+RETURN [Panel Member Email]#$lineNumber
+}</ToAddressesTemplate>
+    <CcAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>Individual Evaluation Ready{
+IF( 
+  HASH_GET($eventargs, "Resending Invitation") = TRUE, 
+  " [Reminder]"
+)}</SubjectTemplate>
+    <BodyTemplate>Hello {[Panel Member Name]#HASH_GET($eventargs, "LineNumber")},
+
+You have been invited to conduct an individual evaluation for the Procurement - '{[Title]}'
+
+Click here to go to the Evaluation record:
+{IF(
+  	AND(
+	  	EBMS_GET_USER_TYPE([Panel Member Username]#HASH_GET($eventargs, "LineNumber")) == "GUEST",
+	  	[External Panel Member Password]#HASH_GET($eventargs, "LineNumber") &lt;&gt; NULL(),
+	  	HASH_GET($eventargs, "Resending Invitation") &lt;&gt; TRUE
+  	),
+  	EBMS_GET_BASE_URL()&amp; "/AutoLogin.aspx?Username="
+  	&amp; URLENCODE([Panel Member Username]#HASH_GET($eventargs, "LineNumber")) &amp; "&amp;password=" &amp; URLENCODE([External Panel Member Password]#HASH_GET($eventargs, "LineNumber")) 
+  	&amp; "&amp;redir=" &amp; URLENCODE("EFormRecord.aspx?EFormType=" &amp; [EFormType] &amp; "&amp;RecordID=" &amp; [RecordID] &amp; "&amp;view=Evaluator%20View"),
+
+  	EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) &amp; "?view=Evaluator%20View"
+)}
+{IF(
+	
+    //The first time a guest user is invited - password isn't blank, resending = false
+    AND(
+	  EBMS_GET_USER_TYPE([Panel Member Username]#HASH_GET($eventargs, "LineNumber")) == "GUEST", 
+	  [External Panel Member Password]#HASH_GET($eventargs, "LineNumber") &lt;&gt; NULL(),
+	  HASH_GET($eventargs, "Resending Invitation") &lt;&gt; TRUE
+    ),
+	NEWLINE() &amp; 
+    "Here are your login details: " &amp; NEWLINE() &amp;
+	"Username: " &amp; [Panel Member Username]#HASH_GET($eventargs, "LineNumber") &amp; NEWLINE() &amp;
+	"Password: " &amp; [External Panel Member Password]#HASH_GET($eventargs, "LineNumber") &amp; NEWLINE() ,
+	
+    //Anytime the guest is sent an email that isn't the initial account creation email
+    AND(
+	  EBMS_GET_USER_TYPE([Panel Member Username]#HASH_GET($eventargs, "LineNumber")) == "GUEST", 
+	  OR(
+        [External Panel Member Password]#HASH_GET($eventargs, "LineNumber") = NULL(),
+	    HASH_GET($eventargs, "Resending Invitation") = TRUE		
+	  )
+    ),
+  
+	NEWLINE() &amp; 
+  "Here are your login details: " &amp; NEWLINE() &amp;
+	"Username: " &amp; [Panel Member Username]#HASH_GET($eventargs, "LineNumber") &amp; NEWLINE() &amp;
+	"Password: &lt;Your password was provided in a previous email, if that is lost you can use the 'Forgot Password' on the system login screen&gt;" &amp; NEWLINE(),
+  
+	""
+)}{
+IF( 
+  [Individual Evaluations Due Date] &lt;&gt; NULL,
+  NEWLINE() &amp; 
+  "The due date for evaluation completion is: " &amp; [Individual Evaluations Due Date] &amp; 
+  NEWLINE()
+)
+}{
+IF( 
+  NOT(ISBLANK([Custom Email Message])), 
+  NEWLINE() &amp; 
+  "A message has been included with the invitation: " &amp; 
+  NEWLINE() &amp; 
+  "------" &amp;
+  NEWLINE() &amp; 
+  [Custom Email Message] &amp; 
+  NEWLINE() &amp; 
+  "------" &amp; 
+  NEWLINE()
+)}
+
+
+Thanks,
+{LET $sign := DB_LOOKUP("Signature","Global Settings","[LineNumber]=1");
+RETURN
+IF($sign = NULL, "The VendorPanel Team",$sign)}</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Communication</EForm>
+  <Name>Communication</Name>
+  <Description>To: Initiator / Recipient (depending on sender)</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>role:"{IF( 
+	EBMS_GET_CURRENT_USER() = [Initiator], [Recipient],
+	EBMS_GET_CURRENT_USER() = [Recipient], [Initiator]
+)}"</ToAddressesTemplate>
+    <CcAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>New Comment on Communication Record{IF([Type] &lt;&gt; NULL(), " for " &amp; [Type])}</SubjectTemplate>
+    <BodyTemplate>Hello {
+IF( 
+	EBMS_GET_CURRENT_USER() = [Initiator], EBMS_GET_ROLE_DISPLAYNAME([Recipient]),
+	EBMS_GET_CURRENT_USER() = [Recipient], EBMS_GET_ROLE_DISPLAYNAME([Initiator])
+)},
+
+A new comment has been added to a {IF([Type] &lt;&gt; NULL(), "request for " &amp; [Type], "Communication record")} where you are listed as the {
+IF( 
+	EBMS_GET_CURRENT_USER() = [Initiator], [Recipient Role],
+	EBMS_GET_CURRENT_USER() = [Recipient], [Initiator Role]
+)}.
+
+Click here to go to the Communication record: 
+{ EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+
+Thanks,
+{
+LET $sign := IF(
+  //check if the email recipient is an external user &amp; if so lookup the custom signature
+  OR(
+	AND(EBMS_GET_CURRENT_USER() = [Initiator], EBMS_GET_USER_TYPE([Recipient]) == "GUEST"),
+	AND(EBMS_GET_CURRENT_USER() = [Recipient], EBMS_GET_USER_TYPE([Initiator]) == "GUEST")
+  ),
+  DB_LOOKUP("Signature","Global Settings","[LineNumber] FAST_EQUAL_TO 1"),
+  NULL
+);
+
+RETURN
+IF($sign = NULL, "The VendorPanel Team", $sign)
+}</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

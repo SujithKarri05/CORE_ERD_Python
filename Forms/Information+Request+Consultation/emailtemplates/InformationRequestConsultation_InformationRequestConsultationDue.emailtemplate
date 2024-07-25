@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Information Request Consultation</EForm>
+  <Name>Information Request Consultation Due</Name>
+  <Description>Information Request Consultation Due</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{LET $targetUsers := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Target Form"
+); 
+
+LET $systemRoles := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "System Roles"
+);
+
+LET $staticEmailAddresses := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Static Email Addresses"
+);
+
+LET $extractEmailAddressesfromArray := $(array)
+(
+	ARRAY_JOIN(
+		ARRAY_SELECT(
+			$array, $(i, item) 
+			EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($item))
+		), "," 
+	)
+);
+
+LET $targetEmails := 
+ARRAY_SELECT(
+    $targetUsers,	$(i, item)
+	
+	LET $user := IFERROR(EVALUATE("[" &amp; $item &amp; "]"), NULL()); 
+			
+	LET $email :=
+	IF(
+	  $user &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($user))
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($user), 
+		CALL($extractEmailAddressesfromArray, $user),
+		$email
+	)
+); 
+
+LET $roleEmails := 
+ARRAY_SELECT(
+    $systemRoles, $(i, item)
+
+	LET $email :=
+	IF(
+	  $item &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES($item)
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($item), 
+		CALL($extractEmailAddressesfromArray, $item),
+		$email
+	)
+); 
+
+LET $combined := 
+ARRAY_CONCAT(
+$targetEmails,
+$roleEmails,
+ARRAY($staticEmailAddresses)
+);
+
+RETURN 
+ARRAY_JOIN(
+ARRAY_WHERE($combined, $(i, item) $item &lt;&gt; NULL())
+ , ", "
+)}</ToAddressesTemplate>
+    <CcAddressesTemplate>{LET $targetUsers := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Cc Target Form"
+); 
+
+LET $systemRoles := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Cc System Roles"
+);
+
+LET $staticEmailAddresses := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Cc Static Email Addresses"
+);
+
+LET $extractEmailAddressesfromArray := $(array)
+(
+	ARRAY_JOIN(
+		ARRAY_SELECT(
+			$array, $(i, item) 
+			EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($item))
+		), "," 
+	)
+);
+
+LET $targetEmails := 
+ARRAY_SELECT(
+    $targetUsers,	$(i, item)
+	
+	LET $user := IFERROR(EVALUATE("[" &amp; $item &amp; "]"), NULL()); 
+			
+	LET $email :=
+	IF(
+	  $user &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($user))
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($user), 
+		CALL($extractEmailAddressesfromArray, $user),
+		$email
+	)
+); 
+
+LET $roleEmails := 
+ARRAY_SELECT(
+    $systemRoles, $(i, item)
+
+	LET $email :=
+	IF(
+	  $item &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES($item)
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($item), 
+		CALL($extractEmailAddressesfromArray, $item),
+		$email
+	)
+); 
+
+LET $combined := 
+ARRAY_CONCAT(
+$targetEmails,
+$roleEmails,
+ARRAY($staticEmailAddresses)
+);
+
+RETURN 
+ARRAY_JOIN(
+ARRAY_WHERE($combined, $(i, item) $item &lt;&gt; NULL())
+ , ", "
+)}</CcAddressesTemplate>
+    <BccAddressesTemplate>{LET $targetUsers := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Bcc Target Form"
+); 
+
+LET $systemRoles := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Bcc System Roles"
+);
+
+LET $staticEmailAddresses := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "Bcc Static Email Addresses"
+);
+
+LET $extractEmailAddressesfromArray := $(array)
+(
+	ARRAY_JOIN(
+		ARRAY_SELECT(
+			$array, $(i, item) 
+			EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($item))
+		), "," 
+	)
+);
+
+LET $targetEmails := 
+ARRAY_SELECT(
+    $targetUsers,	$(i, item)
+	
+	LET $user := IFERROR(EVALUATE("[" &amp; $item &amp; "]"), NULL()); 
+			
+	LET $email :=
+	IF(
+	  $user &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($user))
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($user), 
+		CALL($extractEmailAddressesfromArray, $user),
+		$email
+	)
+); 
+
+LET $roleEmails := 
+ARRAY_SELECT(
+    $systemRoles, $(i, item)
+
+	LET $email :=
+	IF(
+	  $item &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES($item)
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($item), 
+		CALL($extractEmailAddressesfromArray, $item),
+		$email
+	)
+); 
+
+LET $combined := 
+ARRAY_CONCAT(
+$targetEmails,
+$roleEmails,
+ARRAY($staticEmailAddresses)
+);
+
+RETURN 
+ARRAY_JOIN(
+ARRAY_WHERE($combined, $(i, item) $item &lt;&gt; NULL())
+ , ", "
+)}</BccAddressesTemplate>
+    <ReplyToAddressesTemplate>{LET $targetUsers := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "ReplyTo Target Form"
+); 
+
+LET $systemRoles := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "ReplyTo System Roles"
+);
+
+LET $staticEmailAddresses := 
+HASH_GET(
+  ARRAY_INDEX($eventargs, 2), 
+  "ReplyTo Static Email Addresses"
+);
+
+LET $extractEmailAddressesfromArray := $(array)
+(
+	ARRAY_JOIN(
+		ARRAY_SELECT(
+			$array, $(i, item) 
+			EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($item))
+		), "," 
+	)
+);
+
+LET $targetEmails := 
+ARRAY_SELECT(
+    $targetUsers,	$(i, item)
+	
+	LET $user := IFERROR(EVALUATE("[" &amp; $item &amp; "]"), NULL()); 
+			
+	LET $email :=
+	IF(
+	  $user &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES(ROLE($user))
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($user), 
+		CALL($extractEmailAddressesfromArray, $user),
+		$email
+	)
+); 
+
+LET $roleEmails := 
+ARRAY_SELECT(
+    $systemRoles, $(i, item)
+
+	LET $email :=
+	IF(
+	  $item &lt;&gt; NULL(), 
+	  EBMS_GET_ROLE_EMAIL_ADDRESSES($item)
+	);
+	
+	RETURN 
+	IF(
+		ISARRAY($item), 
+		CALL($extractEmailAddressesfromArray, $item),
+		$email
+	)
+); 
+
+LET $combined := 
+ARRAY_CONCAT(
+$targetEmails,
+$roleEmails,
+ARRAY($staticEmailAddresses)
+);
+
+RETURN 
+ARRAY_JOIN(
+ARRAY_WHERE($combined, $(i, item) $item &lt;&gt; NULL())
+ , ", "
+)}</ReplyToAddressesTemplate>
+    <SubjectTemplate>{ LET $days := ARRAY_INDEX(DATEDIFF_PARTS([Consultation Due Date], TODAY()), 3); LET $length := IF(OR($days = 1, $days = -1), "day", "days"); LET $subject := IF( 	[Consultation Due Date] &gt; NOW(), 		[EFormType] &amp; " for File No. """ &amp; [File No.] &amp; """ Due to Expire in " &amp; $days &amp; " " &amp; $length, 		 	[Consultation Due Date] &lt; NOW(), 		$days &amp; " " &amp; $length &amp; " since " &amp; [EFormType] &amp; " for Fil No. """ &amp; [File No.] &amp; """ Expiry" );  RETURN $subject }</SubjectTemplate>
+    <BodyTemplate>Hello there,
+
+The following {[EFormType]} for File No. "{[File No.]}" - {
+
+LET $days := ARRAY_INDEX(DATEDIFF_PARTS([Consultation Due Date], TODAY()), 3);
+LET $length := IF(OR($days = 1, $days = -1), "day", "days");
+
+LET $due :=
+IF(
+  [Consultation Due Date] &gt; TODAY(),
+		CONCATENATE([File No.] &amp; " is due in " &amp; $days &amp; " " &amp; $length &amp; "."),
+		
+	[Consultation Due Date] &lt; TODAY(),
+		CONCATENATE([File No.] &amp; " was due " &amp; $days &amp; " "  &amp; $length &amp; " ago.")
+);
+
+RETURN
+$due
+}
+ 
+Consultation due date: {[Consultation Due Date]}
+ 
+Click this link  to view the record for this item: {EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+
+
+Thanks,
+{LET $sign := DB_LOOKUP("Signature","Global Settings","[LineNumber]=1");
+RETURN
+IF($sign = NULL, "The VendorPanel Team",$sign)}</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

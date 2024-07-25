@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Request for Information</EForm>
+  <Name>Request for Information Response</Name>
+  <Description>To: Submitter</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>role:"{Submitter}"</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>Request for Information - Response Provided</SubjectTemplate>
+    <BodyTemplate>Hello {EBMS_GET_ROLE_DISPLAYNAME(Submitter)},
+
+A Request for Information that you previously raised has been responded to, log into the system to see the response: 
+{ EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

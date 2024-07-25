@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Contract</EForm>
+  <Name>Vendor Insurance Update Notification</Name>
+  <Description>Insurance Update Notification to Contract Recipients</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{EBMS_GET_ROLE_EMAIL_ADDRESSES([Contract Manager])}</ToAddressesTemplate>
+    <CcAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>{ARRAY_INDEX($eventargs, 1)}</SubjectTemplate>
+    <BodyTemplate>Hello {EBMS_GET_ROLE_DISPLAYNAME([Contract Manager])},
+
+A Compliance has been updated.
+
+Type of Compliance: {ARRAY_INDEX($eventargs, 2)}
+Issuer: {ARRAY_INDEX($eventargs, 6)}
+Start Date: {ARRAY_INDEX($eventargs, 3)}
+Expiry Date: {ARRAY_INDEX($eventargs, 4)}
+Notes: {ARRAY_INDEX($eventargs, 7)}
+ 
+Click this link to view the record for this item: {ARRAY_INDEX($eventargs, 5)}
+
+
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Status" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Risk" Alias="" Aggregate="None" Width="228" />
+    <Column Name="Risk Description" Alias="" Aggregate="None" Width="390" />
+    <Column Name="Likelihood" Alias="" Aggregate="None" Width="123" />
+    <Column Name="Consequence" Alias="" Aggregate="None" Width="143" />
+    <Column Name="Risk Value" Alias="Risk Score" Aggregate="None" Width="134" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules>
+    <Rule>
+      <Condition>
+        <TextCriterion>
+          <Text>[Risk Value] &gt;= 80</Text>
+        </TextCriterion>
+      </Condition>
+      <Colour>
+        <ConstantCriterion>
+          <Value>
+            <String>#ffb4b4</String>
+          </Value>
+        </ConstantCriterion>
+      </Colour>
+    </Rule>
+    <Rule>
+      <Condition>
+        <TextCriterion>
+          <Text>[Risk Value] &gt;= 60</Text>
+        </TextCriterion>
+      </Condition>
+      <Colour>
+        <ConstantCriterion>
+          <Value>
+            <String>#ffdbb4</String>
+          </Value>
+        </ConstantCriterion>
+      </Colour>
+    </Rule>
+    <Rule>
+      <Condition>
+        <TextCriterion>
+          <Text>[Risk Value] &gt;= 40</Text>
+        </TextCriterion>
+      </Condition>
+      <Colour>
+        <ConstantCriterion>
+          <Value>
+            <String>#ffedb4</String>
+          </Value>
+        </ConstantCriterion>
+      </Colour>
+    </Rule>
+    <Rule>
+      <Condition>
+        <TextCriterion>
+          <Text>[Risk Value] &gt;= 20</Text>
+        </TextCriterion>
+      </Condition>
+      <Colour>
+        <ConstantCriterion>
+          <Value>
+            <String>#e4ffb4</String>
+          </Value>
+        </ConstantCriterion>
+      </Colour>
+    </Rule>
+    <Rule>
+      <Condition>
+        <TextCriterion>
+          <Text>[Risk Value] &gt;= 0</Text>
+        </TextCriterion>
+      </Condition>
+      <Colour>
+        <ConstantCriterion>
+          <Value>
+            <String>#ccffb4</String>
+          </Value>
+        </ConstantCriterion>
+      </Colour>
+    </Rule>
+  </BackgroundColourRules>
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[Status] &lt;&gt; 'Resolved'</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[Risk Value] DESC</OrderBy>
+  <GroupBy>[Department] ASC</GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>100</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

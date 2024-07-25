@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Information Request</EForm>
+  <Name>Send Acknowledgement Letter to Applicant</Name>
+  <Description></Description>
+  <ContentTemplate>
+    <ToAddressesTemplate></ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>Freedom of Information  |  Acknowledgement Letter</SubjectTemplate>
+    <BodyTemplate>Our ref: {HTMLENCODE([File No.])}&lt;br /&gt;
+&lt;br /&gt;
+Applicant name:{HTMLENCODE([Applicant Name])}&lt;br /&gt;
+&lt;br /&gt;
+Hello there,&lt;br /&gt;
+&lt;br /&gt;
+Freedom of Information Request&lt;br /&gt;
+&lt;br /&gt;
+{IF(
+  [On Behalf Of] &lt;&gt; NULL,
+  "Your Client: " &amp; {HTMLENCODE([On Behalf Of]) &amp; "&lt;br/&gt;"
+)}
+&lt;br /&gt;
+I refer to your request dated XX 2020, which was received on {HTMLENCODE([Date Received])} seeking access to XXXX.&lt;br /&gt;
+&lt;br /&gt;
+Your request is currently being considered in accordance with the Freedom of Information Act, and you will be notified by the Authority of its decision in relation to your request within 30 days from the date it was received.&lt;br /&gt;
+&lt;br /&gt;
+If you have any queries, feel free to contact me at the email address below.&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img width="183" border="0" src="cid:1"/&gt;
+&lt;br /&gt;
+Thanks,&lt;br /&gt;
+&lt;br /&gt;
+{HTMLENCODE([Assigned Officer Name])}
+&lt;br /&gt;
+email: {HTMLENCODE(EBMS_GET_ROLE_EMAIL_ADDRESSES([Assigned Officer]))}
+
+</BodyTemplate>
+    <IsBodyHtml>true</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators>
+    <RenderedView>
+      <EFormRef
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordIDFormula
+        xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ResultFileNameTemplate>Result.pdf</ResultFileNameTemplate>
+      <ExpandAllBlocks>false</ExpandAllBlocks>
+    </RenderedView>
+  </AttachedFileGenerators>
+</PredefinedEmailTemplate>

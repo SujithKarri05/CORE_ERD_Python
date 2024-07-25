@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="RecordID" Alias="" Aggregate="None" Width="150" />
+    <Column Name="LineNumber" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Date of Decision" Alias="" Aggregate="None" Width="130" />
+    <Column Name="Date Received" Alias="" Aggregate="None" Width="300" />
+    <Column Name="Date Valid" Alias="" Aggregate="None" Width="120" />
+    <Column Name="Deposit Date Received" Alias="" Aggregate="None" Width="120" />
+    <Column Name="Access Charge Date Received" Alias="" Aggregate="None" Width="120" />
+    <Column Name="Request Type" Alias="" Aggregate="None" Width="120" />
+    <Column Name="Decision Type" Alias="" Aggregate="None" Width="150" />
+    <Column Name="Personal or Non-Personal" Alias="" Aggregate="None" Width="120" />
+    <Column Name="Section 18 transfer" Alias="" Aggregate="None" Width="150" />
+    <Column Name="Application Fee Status" Alias="" Aggregate="None" Width="150" />
+    <Column Name="Deposit Collected?" Alias="" Aggregate="None" Width="120" />
+    <Column Name="Fee Collected?" Alias="" Aggregate="None" Width="120" />
+    <Column Name="Status" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Sub-state" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Workload Issue" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Exemptions Applied" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Deposit Amount Requested" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Amount" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Access Charge" Alias="" Aggregate="None" Width="100" />
+    <Column Name="Deposit Required?" Alias="" Aggregate="None" Width="100" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children />
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[RecordID] DESC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

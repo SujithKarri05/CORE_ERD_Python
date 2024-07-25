@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>true</Enabled>
+  <Description>EMAIL INTEGRATION - Delete Email Attachments</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Email</EFormRef>
+  <RecordFilter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>( 
+  STEP TO [Global Settings] 
+  ON [To].[RecordID] = 1 
+  AND [To].[Email Scraping Enabled] = 'Yes' 
+  AND [To].[Automatically Delete Email Form Attachments] = 'Yes' 
+  AND [To].[Email Attachment Deletion Period] + [DateCreated] &lt;= CURRENT_DATE
+  GET COUNT(1)
+) &gt; 0</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </RecordFilter>
+  <Tasks>
+    <ChangeFieldValues>
+      <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <FieldEntries>
+        <FieldEntry>
+          <ColumnName>Attachment Deleted Data</ColumnName>
+          <AssignWholeColumn>false</AssignWholeColumn>
+          <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Formula>LET $attachments := 
+ARRAY_SELECT(
+  EBMS_GET_ATTACHMENTS(EFormType, RecordID, "Email Attachments"), $(i, item) 
+  HASH_MERGE($item, HASH("Deleted Date", NOW()))
+);
+
+LET $result := 
+ARRAY_WHERE(
+  ARRAY_DISTINCT(ARRAY_CONCAT($attachments, [Attachment Deleted Data])), 
+  $(i, item) 
+  AND($item &lt;&gt; NULL, $item &lt;&gt; ARRAY())
+);
+
+RETURN 
+IF(
+  OR(
+	$result = ARRAY(), 
+    $result = ARRAY(NULL())
+  ), NULL, 
+  
+  $result
+)</Formula>
+        </FieldEntry>
+      </FieldEntries>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Store log of deleted attachments</Description>
+      <RunOnlyWhen>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RunOnlyWhen>
+    </ChangeFieldValues>
+    <DeleteAttachments>
+      <TargetFileTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <WholeFolder>true</WholeFolder>
+      <TargetPathTemplate>Email Attachments</TargetPathTemplate>
+      <TargetRecord xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RunOnlyWhen>
+        <GroupingExpression Operator="And">
+          <Children />
+        </GroupingExpression>
+      </RunOnlyWhen>
+    </DeleteAttachments>
+    <Save>
+      <WorkflowNotesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <DisplaySuccessMessage>false</DisplaySuccessMessage>
+      <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </Save>
+  </Tasks>
+  <Timing>
+    <DailyWeekly>
+      <Days>
+        <Day>Monday</Day>
+        <Day>Tuesday</Day>
+        <Day>Wednesday</Day>
+        <Day>Thursday</Day>
+        <Day>Friday</Day>
+        <Day>Saturday</Day>
+        <Day>Sunday</Day>
+      </Days>
+    </DailyWeekly>
+  </Timing>
+  <StartAfterDate>2022-06-15T06:50:58.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T00:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T00:00:00.0000000Z</EndTime>
+  <RepeatHours xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <LastRun>2024-06-05T14:08:10.0300000Z</LastRun>
+  <Role>system</Role>
+  <SaveRecordOnCompletion>true</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Status" Alias="" Aggregate="None" Width="99" />
+    <Column Name="Contract Number" Alias="" Aggregate="None" Width="204" />
+    <Column Name="Contract Title" Alias="" Aggregate="None" Width="296" />
+    <Column Name="Vendor Name" Alias="Vendor" Aggregate="None" Width="200" />
+    <Column Name="Total Contract Value" Alias="" Aggregate="Sum" Width="160" />
+    <RemoteColumn Name="Related Contracts" ShowViewLink="true">
+      <RelationshipChain>
+        <Remote Type="Arbitrary" RemoteEFormType="Record Relation" ReferenceGroupName="">
+          <Filter>
+            <GroupingExpression Operator="And">
+              <Children>
+                <CriterionExpression>
+                  <Criterion>
+                    <TextCriterion>
+                      <Text>([To].[EFormType A] = 'Contract' AND [To].[RecordID A] = [RecordID]) OR ([To].[EFormType B] = 'Contract' AND [To].[RecordID B] = [RecordID]) AND [To].[Status] = 'Active'</Text>
+                    </TextCriterion>
+                  </Criterion>
+                </CriterionExpression>
+              </Children>
+            </GroupingExpression>
+          </Filter>
+        </Remote>
+        <Remote Type="Arbitrary" RemoteEFormType="Contract" ReferenceGroupName="">
+          <Filter>
+            <GroupingExpression Operator="And">
+              <Children>
+                <CriterionExpression>
+                  <Criterion>
+                    <TextCriterion>
+                      <Text>([EFormType A] = 'Contract' AND [RecordID A] = [To].[RecordID]) 
+OR 
+([EFormType B] = 'Contract' AND [RecordID B] = [To].[RecordID])</Text>
+                    </TextCriterion>
+                  </Criterion>
+                </CriterionExpression>
+                <CriterionExpression>
+                  <Criterion>
+                    <TextCriterion>
+                      <Text>[To].[LineNumber] = 1</Text>
+                    </TextCriterion>
+                  </Criterion>
+                </CriterionExpression>
+              </Children>
+            </GroupingExpression>
+          </Filter>
+        </Remote>
+      </RelationshipChain>
+      <OrderBy></OrderBy>
+      <DataSelection ShowOnlyAggregates="false">
+        <Columns>
+          <Column Name="Contract Title and Number " Alias="" Width="500" Aggregate="None" />
+        </Columns>
+      </DataSelection>
+    </RemoteColumn>
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules>
+    <Rule>
+      <Condition>
+        <TextCriterion>
+          <Text>TRUE</Text>
+        </TextCriterion>
+      </Condition>
+      <Colour>
+        <TextCriterion>
+          <Text>CASE 
+	WHEN [Type] = 'Head Agreement' THEN '#6699CC'
+	WHEN [Type] = 'Subcontract' THEN '#CADBE9'
+	ELSE '#FFFFFF'
+END</Text>
+        </TextCriterion>
+      </Colour>
+    </Rule>
+  </BackgroundColourRules>
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules>
+    <Rule>
+      <Condition>
+        <TextCriterion>
+          <Text>TRUE</Text>
+        </TextCriterion>
+      </Condition>
+      <Colour>
+        <TextCriterion>
+          <Text>CASE 
+	WHEN [Type] = 'Head Agreement' THEN '#010202'
+	WHEN [Type] = 'Subcontract' THEN 'black'
+	ELSE 'black'
+END</Text>
+        </TextCriterion>
+      </Colour>
+    </Rule>
+  </TextColourRules>
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[LineNumber] = 1</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[Sort Number] ASC, [Subcontract Number] ASC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>System Builders</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Vendor Accounts</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

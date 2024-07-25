@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Action</EForm>
+  <Name>Action Status Changed</Name>
+  <Description>To: Interested parties</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>{
+ARRAY_JOIN(ARRAY_SELECT([Interested Parties], $(i, item) EBMS_GET_ROLE_EMAIL_ADDRESSES($item)
+  ), "," )}</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>Action Status Changed from '{COALESCE([Last Status], "None")}' to '{[Status]}'</SubjectTemplate>
+    <BodyTemplate>&lt;style&gt;
+.nimblex-core-css-table {{color: #333; background: white; border: 1px solid grey; font-size: 12pt;  border-collapse: collapse;}}
+.nimblex-core-css-table th {{background: #efefef; text-align:left; padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-table td {{padding: .5em; border: 1px solid lightgrey;}}
+.nimblex-core-css-h2 {{color: #007db4;}}
+&lt;/style&gt;
+Hello there,&lt;br /&gt;&lt;br /&gt;
+An action has changed status. &lt;br/&gt; 
+&lt;br/&gt;
+&lt;table class="nimblex-core-css-table"&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Action&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE([Action])}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Status&lt;/th&gt;
+	  &lt;td&gt;{COALESCE([Last Status], "None")} -&gt; {[Status]}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Date Due&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE([Date Due])}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Responsible&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE([Responsible Text])}&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+	  &lt;th&gt;Details&lt;/th&gt;
+	  &lt;td&gt;{HTMLENCODE([Details])}&lt;/td&gt;
+  &lt;/tr&gt;
+{
+  IF( 
+    OR([Status] = "Complete", [Status] = "Cancelled"), 
+    "&lt;tr&gt;" &amp; 
+	  "&lt;th&gt;Closure Notes&lt;/th&gt;" &amp;
+	  "&lt;td&gt;" &amp; HTMLENCODE(COALESCE([Closure Notes], "None provided")) &amp; "&lt;/td&gt;" &amp; 
+	"&lt;/tr&gt;"
+  )
+}
+&lt;/table&gt;
+&lt;br /&gt;
+You are being notified of this change because you are listed as an interested party. If you do not want to get notifications related to this action you can remove yourself as an interested party on the Action record. &lt;br/&gt;
+&lt;br /&gt;
+&lt;a href="{HTMLENCODE(EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) )}"&gt;Click here&lt;/a&gt; to view the Action record.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Thanks,&lt;br&gt;
+The VendorPanel Team&lt;/p&gt;</BodyTemplate>
+    <IsBodyHtml>true</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

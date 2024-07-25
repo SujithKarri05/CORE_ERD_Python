@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>false</Enabled>
+  <Description>STANDARD DEPLOYMENT - Settings forms - Inject standard report links</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Global Settings</EFormRef>
+  <RecordFilter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[LineNumber] = 1</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </RecordFilter>
+  <Tasks>
+    <FormulaDrivenChangeFieldValues>
+      <TargetRecordsFormula>ARRAY(ARRAY("Settings - Evaluation", 1))</TargetRecordsFormula>
+      <FieldValuesFormula>LET $columns := 
+ARRAY(
+  "Report Enabled", 
+  "Report Name", 
+  "Report Visibility", 
+  "Report EFormType", 
+  "Report Profile Name", 
+  "Report Type"
+); 
+
+//if a report already exists it does not get injected
+LET $injectReportsHash := 
+ARRAY(
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"All Evaluations",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Evaluation", 
+    "Report Profile Name",  "Evaluations", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Evaluation Panel Members",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Evaluation", 
+    "Report Profile Name",  "Evaluation Panel Members", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Conflict of Interest Declarations",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Conflict of Interest Declaration", 
+    "Report Profile Name",  "Details - Evaluation", 
+    "Report Type",			"Link and Export"
+  )
+); 
+
+LET $existingReports := 
+DB_LOOKUPALL(
+  $columns, 
+  "Settings - Evaluation",
+  "[Report Name] IS NOT EMPTY"
+); 
+
+LET $existingReportsHashed := 
+ARRAY_SELECT(
+  $existingReports, $(i, item) 
+  INDEXES_TO_KEYS($item, $columns)
+);
+
+LET $removeReports := 
+//Names of reports to remove
+ARRAY(
+  ""
+); 
+
+LET $transformedExistingReports := 
+ARRAY_SELECT(
+  $existingReportsHashed, $(i, existingReport)
+  LET $existingReportName := HASH_GET($existingReport, "Report Name");
+  LET $matchingInjectedReport := ARRAY_FIRST(ARRAY_WHERE($injectReportsHash, $(i, injectedReport) HASH_GET($injectedReport, "Report Name") = $existingReportName)); 
+  RETURN 
+  //how to prioritiseany updates to existing reports
+  HASH(
+    "Report Enabled", 		COALESCE(HASH_GET($existingReport, "Report Enabled"), 				HASH_GET($matchingInjectedReport, "Report Enabled")),
+    "Report Name", 			COALESCE(HASH_GET($existingReport, "Report Name"), 					HASH_GET($matchingInjectedReport, "Report Name")),		
+    "Report Visibility", 	COALESCE(HASH_GET($existingReport, "Report Visibility"), 			HASH_GET($matchingInjectedReport, "Report Visibility")),	
+    "Report EFormType",    	COALESCE(HASH_GET($matchingInjectedReport, "Report EFormType"), 	HASH_GET($existingReport, "Report EFormType")), 
+    "Report Profile Name", 	COALESCE(HASH_GET($matchingInjectedReport, "Report Profile Name"), 	HASH_GET($existingReport, "Report Profile Name")), 
+    "Report Type",			COALESCE(HASH_GET($matchingInjectedReport, "Report Type"), 			HASH_GET($existingReport, "Report Type"))	
+  )
+);
+
+LET $existingReportNames := ARRAY_SELECT($existingReportsHashed, $(i, item) HASH_GET($item, "Report Name"));
+
+LET $newReportsToInject := 
+ARRAY_WHERE(
+  $injectReportsHash, $(i, item) 
+  ARRAY_INDEXOF($existingReportNames, HASH_GET($item, "Report Name")) = NULL
+); 
+
+LET $combined := 
+ARRAY_WHERE(
+  ARRAY_CONCAT($transformedExistingReports, $newReportsToInject), $(i, item) 
+  ARRAY_INDEXOF($removeReports, HASH_GET($item, "Report Name")) = NULL
+);
+
+LET $values := 
+ARRAY_SELECT(
+  $combined, $(i, item) 
+  ARRAY_SELECT(
+	HASH_KEYS($item), $(k, key)
+	HASH_GET($item, $key)
+  )
+); 
+
+RETURN INDEXES_TO_KEYS(ARRAY_TRANSPOSE($values), $columns)</FieldValuesFormula>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Settings - Evaluation</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </FormulaDrivenChangeFieldValues>
+    <FormulaDrivenChangeFieldValues>
+      <TargetRecordsFormula>ARRAY(ARRAY("Settings - Contract", 1))</TargetRecordsFormula>
+      <FieldValuesFormula>LET $columns := 
+ARRAY(
+  "Report Enabled", 
+  "Report Name", 
+  "Report Visibility", 
+  "Report EFormType", 
+  "Report Profile Name", 
+  "Report Type"
+); 
+
+//if a report already exists it does not get injected
+LET $injectReportsHash := 
+ARRAY(
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Contract Initiation Approvals",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Contract", 
+    "Report Profile Name",  "Contract Approvals", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Contract Financials",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Contract", 
+    "Report Profile Name",  "Contract Financials", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Contracts by Contract Manager",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Contract", 
+    "Report Profile Name",  "Grouped by Contract Manager", 
+    "Report Type",			"Link and Export"
+  ),
+   HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Head Agreement Report",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Contract", 
+    "Report Profile Name",  "Head Agreement Report", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Contract Variations and Extensions",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Contract", 
+    "Report Profile Name",  "Variations and Extensions", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Financial Summary Report",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Summary Report - Contract", 
+    "Report Profile Name",  NULL, 
+    "Report Type",			"EForm"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Variation Approvals",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Variation", 
+    "Report Profile Name",  "Variation Approvals", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Extension Approvals",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Extension", 
+    "Report Profile Name",  "Extension Approvals", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Contract Budget v Spend",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Contract", 
+    "Report Profile Name",  "Contract Budget v Spend", 
+    "Report Type",			"Link and Export"
+  )
+); 
+
+LET $existingReports := 
+DB_LOOKUPALL(
+  $columns, 
+  "Settings - Contract",
+  "[Report Name] IS NOT EMPTY"
+); 
+
+LET $existingReportsHashed := 
+ARRAY_SELECT(
+  $existingReports, $(i, item) 
+  INDEXES_TO_KEYS($item, $columns)
+);
+
+LET $removeReports := 
+//Names of reports to remove
+ARRAY(
+  "Contracts sorted by value",
+  "Contract Approvals",
+  "Variations and Extensions"  
+); 
+
+LET $transformedExistingReports := 
+ARRAY_SELECT(
+  $existingReportsHashed, $(i, existingReport)
+  LET $existingReportName := HASH_GET($existingReport, "Report Name");
+  LET $matchingInjectedReport := ARRAY_FIRST(ARRAY_WHERE($injectReportsHash, $(i, injectedReport) HASH_GET($injectedReport, "Report Name") = $existingReportName)); 
+  RETURN 
+  //how to prioritise any updates to existing reports
+  HASH(
+    "Report Enabled", 		COALESCE(HASH_GET($existingReport, "Report Enabled"), 				HASH_GET($matchingInjectedReport, "Report Enabled")),
+    "Report Name", 			COALESCE(HASH_GET($existingReport, "Report Name"), 					HASH_GET($matchingInjectedReport, "Report Name")),		
+    "Report Visibility", 	COALESCE(HASH_GET($existingReport, "Report Visibility"), 			HASH_GET($matchingInjectedReport, "Report Visibility")),	
+    "Report EFormType",    	COALESCE(HASH_GET($matchingInjectedReport, "Report EFormType"), 	HASH_GET($existingReport, "Report EFormType")), 
+    "Report Profile Name", 	COALESCE(HASH_GET($matchingInjectedReport, "Report Profile Name"), 	HASH_GET($existingReport, "Report Profile Name")), 
+    "Report Type",			COALESCE(HASH_GET($matchingInjectedReport, "Report Type"), 			HASH_GET($existingReport, "Report Type"))	
+  )
+);
+
+LET $existingReportNames := ARRAY_SELECT($existingReportsHashed, $(i, item) HASH_GET($item, "Report Name"));
+
+LET $newReportsToInject := 
+ARRAY_WHERE(
+  $injectReportsHash, $(i, item) 
+  ARRAY_INDEXOF($existingReportNames, HASH_GET($item, "Report Name")) = NULL
+); 
+
+LET $combined := 
+ARRAY_WHERE(
+  ARRAY_CONCAT($transformedExistingReports, $newReportsToInject), $(i, item) 
+  ARRAY_INDEXOF($removeReports, HASH_GET($item, "Report Name")) = NULL
+);
+
+LET $values := 
+ARRAY_SELECT(
+  $combined, $(i, item) 
+  ARRAY_SELECT(
+	HASH_KEYS($item), $(k, key)
+	HASH_GET($item, $key)
+  )
+); 
+
+RETURN INDEXES_TO_KEYS(ARRAY_TRANSPOSE($values), $columns)</FieldValuesFormula>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Settings - Contract</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </FormulaDrivenChangeFieldValues>
+    <FormulaDrivenChangeFieldValues>
+      <TargetRecordsFormula>ARRAY(ARRAY("Settings - Procurement", 1))</TargetRecordsFormula>
+      <FieldValuesFormula>LET $columns := 
+ARRAY(
+  "Report Enabled", 
+  "Report Name", 
+  "Report Visibility", 
+  "Report EFormType", 
+  "Report Profile Name", 
+  "Report Type"
+); 
+
+//if a report already exists it does not get injected
+LET $injectReportsHash := 
+ARRAY(
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"All Procurements",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Procurement", 
+    "Report Profile Name",  "Details", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Procurements grouped by Status",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Procurement", 
+    "Report Profile Name",  "Grouped by Status", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Procurements grouped by Procurement Officer",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Procurement", 
+    "Report Profile Name",  "Grouped by Procurement Officer", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Plan Approvals",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Procurement", 
+    "Report Profile Name",  "Plan Approvals", 
+    "Report Type",			"Link and Export"
+  )
+); 
+
+LET $existingReports := 
+DB_LOOKUPALL(
+  $columns, 
+  "Settings - Procurement",
+  "[Report Name] IS NOT EMPTY"
+); 
+
+LET $existingReportsHashed := 
+ARRAY_SELECT(
+  $existingReports, $(i, item) 
+  INDEXES_TO_KEYS($item, $columns)
+);
+
+LET $removeReports := 
+//Names of reports to remove
+ARRAY(
+  ""
+); 
+
+LET $transformedExistingReports := 
+ARRAY_SELECT(
+  $existingReportsHashed, $(i, existingReport)
+  LET $existingReportName := HASH_GET($existingReport, "Report Name");
+  LET $matchingInjectedReport := ARRAY_FIRST(ARRAY_WHERE($injectReportsHash, $(i, injectedReport) HASH_GET($injectedReport, "Report Name") = $existingReportName)); 
+  RETURN 
+  //how to prioritiseany updates to existing reports
+  HASH(
+    "Report Enabled", 		COALESCE(HASH_GET($existingReport, "Report Enabled"), 				HASH_GET($matchingInjectedReport, "Report Enabled")),
+    "Report Name", 			COALESCE(HASH_GET($existingReport, "Report Name"), 					HASH_GET($matchingInjectedReport, "Report Name")),		
+    "Report Visibility", 	COALESCE(HASH_GET($existingReport, "Report Visibility"), 			HASH_GET($matchingInjectedReport, "Report Visibility")),	
+    "Report EFormType",    	COALESCE(HASH_GET($matchingInjectedReport, "Report EFormType"), 	HASH_GET($existingReport, "Report EFormType")), 
+    "Report Profile Name", 	COALESCE(HASH_GET($matchingInjectedReport, "Report Profile Name"), 	HASH_GET($existingReport, "Report Profile Name")), 
+    "Report Type",			COALESCE(HASH_GET($matchingInjectedReport, "Report Type"), 			HASH_GET($existingReport, "Report Type"))	
+  )
+);
+
+LET $existingReportNames := ARRAY_SELECT($existingReportsHashed, $(i, item) HASH_GET($item, "Report Name"));
+
+LET $newReportsToInject := 
+ARRAY_WHERE(
+  $injectReportsHash, $(i, item) 
+  ARRAY_INDEXOF($existingReportNames, HASH_GET($item, "Report Name")) = NULL
+); 
+
+LET $combined := 
+ARRAY_WHERE(
+  ARRAY_CONCAT($transformedExistingReports, $newReportsToInject), $(i, item) 
+  ARRAY_INDEXOF($removeReports, HASH_GET($item, "Report Name")) = NULL
+);
+
+LET $values := 
+ARRAY_SELECT(
+  $combined, $(i, item) 
+  ARRAY_SELECT(
+	HASH_KEYS($item), $(k, key)
+	HASH_GET($item, $key)
+  )
+); 
+
+RETURN INDEXES_TO_KEYS(ARRAY_TRANSPOSE($values), $columns)</FieldValuesFormula>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Settings - Procurement</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </FormulaDrivenChangeFieldValues>
+    <FormulaDrivenChangeFieldValues>
+      <TargetRecordsFormula>ARRAY(ARRAY("Settings - Purchase Order", 1))</TargetRecordsFormula>
+      <FieldValuesFormula>LET $columns := 
+ARRAY(
+  "Report Enabled", 
+  "Report Name", 
+  "Report Visibility", 
+  "Report EFormType", 
+  "Report Profile Name", 
+  "Report Type"
+); 
+
+//if a report already exists it does not get injected
+LET $injectReportsHash := 
+ARRAY(
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"All Purchase Orders",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Purchase Order", 
+    "Report Profile Name",  "Purchase Orders", 
+    "Report Type",			"Link and Export"
+  )
+); 
+
+LET $existingReports := 
+DB_LOOKUPALL(
+  $columns, 
+  "Settings - Purchase Order",
+  "[Report Name] IS NOT EMPTY"
+); 
+
+LET $existingReportsHashed := 
+ARRAY_SELECT(
+  $existingReports, $(i, item) 
+  INDEXES_TO_KEYS($item, $columns)
+);
+
+LET $removeReports := 
+//Names of reports to remove
+ARRAY(
+  ""
+); 
+
+LET $transformedExistingReports := 
+ARRAY_SELECT(
+  $existingReportsHashed, $(i, existingReport)
+  LET $existingReportName := HASH_GET($existingReport, "Report Name");
+  LET $matchingInjectedReport := ARRAY_FIRST(ARRAY_WHERE($injectReportsHash, $(i, injectedReport) HASH_GET($injectedReport, "Report Name") = $existingReportName)); 
+  RETURN 
+  //how to prioritiseany updates to existing reports
+  HASH(
+    "Report Enabled", 		COALESCE(HASH_GET($existingReport, "Report Enabled"), 				HASH_GET($matchingInjectedReport, "Report Enabled")),
+    "Report Name", 			COALESCE(HASH_GET($existingReport, "Report Name"), 					HASH_GET($matchingInjectedReport, "Report Name")),		
+    "Report Visibility", 	COALESCE(HASH_GET($existingReport, "Report Visibility"), 			HASH_GET($matchingInjectedReport, "Report Visibility")),	
+    "Report EFormType",    	COALESCE(HASH_GET($matchingInjectedReport, "Report EFormType"), 	HASH_GET($existingReport, "Report EFormType")), 
+    "Report Profile Name", 	COALESCE(HASH_GET($matchingInjectedReport, "Report Profile Name"), 	HASH_GET($existingReport, "Report Profile Name")), 
+    "Report Type",			COALESCE(HASH_GET($matchingInjectedReport, "Report Type"), 			HASH_GET($existingReport, "Report Type"))	
+  )
+);
+
+LET $existingReportNames := ARRAY_SELECT($existingReportsHashed, $(i, item) HASH_GET($item, "Report Name"));
+
+LET $newReportsToInject := 
+ARRAY_WHERE(
+  $injectReportsHash, $(i, item) 
+  ARRAY_INDEXOF($existingReportNames, HASH_GET($item, "Report Name")) = NULL
+); 
+
+LET $combined := 
+ARRAY_WHERE(
+  ARRAY_CONCAT($transformedExistingReports, $newReportsToInject), $(i, item) 
+  ARRAY_INDEXOF($removeReports, HASH_GET($item, "Report Name")) = NULL
+);
+
+LET $values := 
+ARRAY_SELECT(
+  $combined, $(i, item) 
+  ARRAY_SELECT(
+	HASH_KEYS($item), $(k, key)
+	HASH_GET($item, $key)
+  )
+); 
+
+RETURN INDEXES_TO_KEYS(ARRAY_TRANSPOSE($values), $columns)</FieldValuesFormula>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Settings - Purchase Orders</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </FormulaDrivenChangeFieldValues>
+    <FormulaDrivenChangeFieldValues>
+      <TargetRecordsFormula>ARRAY(ARRAY("Settings - Information Requests", 1))</TargetRecordsFormula>
+      <FieldValuesFormula>LET $columns := 
+ARRAY(
+  "Report Enabled", 
+  "Report Name", 
+  "Report Visibility", 
+  "Report EFormType", 
+  "Report Profile Name", 
+  "Report Type"
+); 
+
+//if a report already exists it does not get injected
+LET $injectReportsHash := 
+ARRAY(
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"All Information Requests",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Information Request", 
+    "Report Profile Name",  "Details", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"All Privacy Incidents",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Privacy Incident", 
+    "Report Profile Name",  "Details", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Ombudsman Report",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Ombudsman Report", 
+    "Report Profile Name",  NULL, 
+    "Report Type",			"EForm"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Monthly Privacy Incident Report",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Monthly Privacy Incident Report", 
+    "Report Profile Name",  NULL, 
+    "Report Type",			"EForm"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Privacy Incidents Report",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Privacy Incidents Report", 
+    "Report Profile Name",  NULL, 
+    "Report Type",			"EForm"
+  )
+); 
+
+LET $existingReports := 
+DB_LOOKUPALL(
+  $columns, 
+  "Settings - Information Requests",
+  "[Report Name] IS NOT EMPTY"
+); 
+
+LET $existingReportsHashed := 
+ARRAY_SELECT(
+  $existingReports, $(i, item) 
+  INDEXES_TO_KEYS($item, $columns)
+);
+
+LET $removeReports := 
+//Names of reports to remove
+ARRAY(
+  ""
+); 
+
+LET $transformedExistingReports := 
+ARRAY_SELECT(
+  $existingReportsHashed, $(i, existingReport)
+  LET $existingReportName := HASH_GET($existingReport, "Report Name");
+  LET $matchingInjectedReport := ARRAY_FIRST(ARRAY_WHERE($injectReportsHash, $(i, injectedReport) HASH_GET($injectedReport, "Report Name") = $existingReportName)); 
+  RETURN 
+  //how to prioritiseany updates to existing reports
+  HASH(
+    "Report Enabled", 		COALESCE(HASH_GET($existingReport, "Report Enabled"), 				HASH_GET($matchingInjectedReport, "Report Enabled")),
+    "Report Name", 			COALESCE(HASH_GET($existingReport, "Report Name"), 					HASH_GET($matchingInjectedReport, "Report Name")),		
+    "Report Visibility", 	COALESCE(HASH_GET($existingReport, "Report Visibility"), 			HASH_GET($matchingInjectedReport, "Report Visibility")),	
+    "Report EFormType",    	COALESCE(HASH_GET($matchingInjectedReport, "Report EFormType"), 	HASH_GET($existingReport, "Report EFormType")), 
+    "Report Profile Name", 	COALESCE(HASH_GET($matchingInjectedReport, "Report Profile Name"), 	HASH_GET($existingReport, "Report Profile Name")), 
+    "Report Type",			COALESCE(HASH_GET($matchingInjectedReport, "Report Type"), 			HASH_GET($existingReport, "Report Type"))	
+  )
+);
+
+LET $existingReportNames := ARRAY_SELECT($existingReportsHashed, $(i, item) HASH_GET($item, "Report Name"));
+
+LET $newReportsToInject := 
+ARRAY_WHERE(
+  $injectReportsHash, $(i, item) 
+  ARRAY_INDEXOF($existingReportNames, HASH_GET($item, "Report Name")) = NULL
+); 
+
+LET $combined := 
+ARRAY_WHERE(
+  ARRAY_CONCAT($transformedExistingReports, $newReportsToInject), $(i, item) 
+  ARRAY_INDEXOF($removeReports, HASH_GET($item, "Report Name")) = NULL
+);
+
+LET $values := 
+ARRAY_SELECT(
+  $combined, $(i, item) 
+  ARRAY_SELECT(
+	HASH_KEYS($item), $(k, key)
+	HASH_GET($item, $key)
+  )
+); 
+
+RETURN INDEXES_TO_KEYS(ARRAY_TRANSPOSE($values), $columns)</FieldValuesFormula>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Settings - Information Requests</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </FormulaDrivenChangeFieldValues>
+    <FormulaDrivenChangeFieldValues>
+      <TargetRecordsFormula>ARRAY(ARRAY("Settings - Approval", 1))</TargetRecordsFormula>
+      <FieldValuesFormula>LET $columns := 
+ARRAY(
+  "Report Enabled", 
+  "Report Name", 
+  "Report Visibility", 
+  "Report EFormType", 
+  "Report Profile Name", 
+  "Report Type"
+); 
+
+//if a report already exists it does not get injected
+LET $injectReportsHash := 
+ARRAY(
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Approvals Grouped by Status",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Submission", 
+    "Report Profile Name",  "Grouped by Status", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Approvals Grouped by Approver",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Submission", 
+    "Report Profile Name",  "Grouped by Approved By", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Approvals Grouped by Submitter",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Submission", 
+    "Report Profile Name",  "Grouped by Submitted By", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Pending Approvals",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Submission", 
+    "Report Profile Name",  "Pending approval", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Actioned By Me",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Submission", 
+    "Report Profile Name",  "Actioned by me", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"All Approvals",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Submission", 
+    "Report Profile Name",  "Approvals", 
+    "Report Type",			"Link and Export"
+  )
+); 
+
+LET $existingReports := 
+DB_LOOKUPALL(
+  $columns, 
+  "Settings - Approval",
+  "[Report Name] IS NOT EMPTY"
+); 
+
+LET $existingReportsHashed := 
+ARRAY_SELECT(
+  $existingReports, $(i, item) 
+  INDEXES_TO_KEYS($item, $columns)
+);
+
+LET $removeReports := 
+//Names of reports to remove
+ARRAY(
+  ""
+); 
+
+LET $transformedExistingReports := 
+ARRAY_SELECT(
+  $existingReportsHashed, $(i, existingReport)
+  LET $existingReportName := HASH_GET($existingReport, "Report Name");
+  LET $matchingInjectedReport := ARRAY_FIRST(ARRAY_WHERE($injectReportsHash, $(i, injectedReport) HASH_GET($injectedReport, "Report Name") = $existingReportName)); 
+  RETURN 
+  //how to prioritiseany updates to existing reports
+  HASH(
+    "Report Enabled", 		COALESCE(HASH_GET($existingReport, "Report Enabled"), 				HASH_GET($matchingInjectedReport, "Report Enabled")),
+    "Report Name", 			COALESCE(HASH_GET($existingReport, "Report Name"), 					HASH_GET($matchingInjectedReport, "Report Name")),		
+    "Report Visibility", 	COALESCE(HASH_GET($existingReport, "Report Visibility"), 			HASH_GET($matchingInjectedReport, "Report Visibility")),	
+    "Report EFormType",    	COALESCE(HASH_GET($matchingInjectedReport, "Report EFormType"), 	HASH_GET($existingReport, "Report EFormType")), 
+    "Report Profile Name", 	COALESCE(HASH_GET($matchingInjectedReport, "Report Profile Name"), 	HASH_GET($existingReport, "Report Profile Name")), 
+    "Report Type",			COALESCE(HASH_GET($matchingInjectedReport, "Report Type"), 			HASH_GET($existingReport, "Report Type"))	
+  )
+);
+
+LET $existingReportNames := ARRAY_SELECT($existingReportsHashed, $(i, item) HASH_GET($item, "Report Name"));
+
+LET $newReportsToInject := 
+ARRAY_WHERE(
+  $injectReportsHash, $(i, item) 
+  ARRAY_INDEXOF($existingReportNames, HASH_GET($item, "Report Name")) = NULL
+); 
+
+LET $combined := 
+ARRAY_WHERE(
+  ARRAY_CONCAT($transformedExistingReports, $newReportsToInject), $(i, item) 
+  ARRAY_INDEXOF($removeReports, HASH_GET($item, "Report Name")) = NULL
+);
+
+LET $values := 
+ARRAY_SELECT(
+  $combined, $(i, item) 
+  ARRAY_SELECT(
+	HASH_KEYS($item), $(k, key)
+	HASH_GET($item, $key)
+  )
+); 
+
+RETURN INDEXES_TO_KEYS(ARRAY_TRANSPOSE($values), $columns)</FieldValuesFormula>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Settings - Approval</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </FormulaDrivenChangeFieldValues>
+    <FormulaDrivenChangeFieldValues>
+      <TargetRecordsFormula>ARRAY(ARRAY("Settings - Meetings and Actions", 1))</TargetRecordsFormula>
+      <FieldValuesFormula>LET $columns := 
+ARRAY(
+  "Report Enabled", 
+  "Report Name", 
+  "Report Visibility", 
+  "Report EFormType", 
+  "Report Profile Name", 
+  "Report Type"
+); 
+
+//if a report already exists it does not get injected
+LET $injectReportsHash := 
+ARRAY(
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Future Meetings",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Meeting", 
+    "Report Profile Name",  "Future meetings", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Todays Meetings",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Meeting", 
+    "Report Profile Name",  "Todays meetings", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Past Meetings",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Meeting", 
+    "Report Profile Name",  "Past meetings", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"All My Meetings",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Meeting", 
+    "Report Profile Name",  "My meetings", 
+    "Report Type",			"Link and Export"
+  ),
+  
+  //------------------
+  
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Outstanding Actions",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Action", 
+    "Report Profile Name",  "Outstanding actions", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Recurring Actions",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Action", 
+    "Report Profile Name",  "Recurring actions", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"My Actions",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Action", 
+    "Report Profile Name",  "My actions", 
+    "Report Type",			"Link and Export"
+  ),
+  HASH(
+    "Report Enabled", 		TRUE,
+    "Report Name", 			"Templated Actions",
+    "Report Visibility", 	ROLE("Everyone"),
+    "Report EFormType",     "Action", 
+    "Report Profile Name",  "Template actions", 
+    "Report Type",			"Link and Export"
+  )
+); 
+
+LET $existingReports := 
+DB_LOOKUPALL(
+  $columns, 
+  "Settings - Meetings and Actions",
+  "[Report Name] IS NOT EMPTY"
+); 
+
+LET $existingReportsHashed := 
+ARRAY_SELECT(
+  $existingReports, $(i, item) 
+  INDEXES_TO_KEYS($item, $columns)
+);
+
+LET $removeReports := 
+//Names of reports to remove
+ARRAY(
+  ""
+); 
+
+LET $transformedExistingReports := 
+ARRAY_SELECT(
+  $existingReportsHashed, $(i, existingReport)
+  LET $existingReportName := HASH_GET($existingReport, "Report Name");
+  LET $matchingInjectedReport := ARRAY_FIRST(ARRAY_WHERE($injectReportsHash, $(i, injectedReport) HASH_GET($injectedReport, "Report Name") = $existingReportName)); 
+  RETURN 
+  //how to prioritiseany updates to existing reports
+  HASH(
+    "Report Enabled", 		COALESCE(HASH_GET($existingReport, "Report Enabled"), 				HASH_GET($matchingInjectedReport, "Report Enabled")),
+    "Report Name", 			COALESCE(HASH_GET($existingReport, "Report Name"), 					HASH_GET($matchingInjectedReport, "Report Name")),		
+    "Report Visibility", 	COALESCE(HASH_GET($existingReport, "Report Visibility"), 			HASH_GET($matchingInjectedReport, "Report Visibility")),	
+    "Report EFormType",    	COALESCE(HASH_GET($matchingInjectedReport, "Report EFormType"), 	HASH_GET($existingReport, "Report EFormType")), 
+    "Report Profile Name", 	COALESCE(HASH_GET($matchingInjectedReport, "Report Profile Name"), 	HASH_GET($existingReport, "Report Profile Name")), 
+    "Report Type",			COALESCE(HASH_GET($matchingInjectedReport, "Report Type"), 			HASH_GET($existingReport, "Report Type"))	
+  )
+);
+
+LET $existingReportNames := ARRAY_SELECT($existingReportsHashed, $(i, item) HASH_GET($item, "Report Name"));
+
+LET $newReportsToInject := 
+ARRAY_WHERE(
+  $injectReportsHash, $(i, item) 
+  ARRAY_INDEXOF($existingReportNames, HASH_GET($item, "Report Name")) = NULL
+); 
+
+LET $combined := 
+ARRAY_WHERE(
+  ARRAY_CONCAT($transformedExistingReports, $newReportsToInject), $(i, item) 
+  ARRAY_INDEXOF($removeReports, HASH_GET($item, "Report Name")) = NULL
+);
+
+LET $values := 
+ARRAY_SELECT(
+  $combined, $(i, item) 
+  ARRAY_SELECT(
+	HASH_KEYS($item), $(k, key)
+	HASH_GET($item, $key)
+  )
+); 
+
+RETURN INDEXES_TO_KEYS(ARRAY_TRANSPOSE($values), $columns)</FieldValuesFormula>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Settings - Meetings and Actions</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </FormulaDrivenChangeFieldValues>
+    <ChangeFieldValues>
+      <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <FieldEntries>
+        <FieldEntry>
+          <ColumnName>Central Reporting Fields</ColumnName>
+          <AssignWholeColumn>false</AssignWholeColumn>
+          <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Formula>ARRAY(
+  "Owns Integrated Module - Purchase Orders",
+  "Owns Integrated Module - Procurement Planning",
+  "Owns Integrated Module - Meetings and Actions",
+  "Owns Integrated Module - Information Requests",
+  "Owns Integrated Module - Go To Market",
+  "Owns Integrated Module - Evaluations",
+  "Owns Integrated Module - Contracts",
+  "Users in Admin Group",
+  "User Logins in Last Month",
+  "Count of Distinct User Logins in Last Month",
+  "Number of Submissions Approved",
+  "Total Value of Active Evaluations",
+  "Number of Active Evaluations",
+  "Total Value of Completed Evaluations",
+  "Number of Completed Evaluations",
+  "Estimated Value of Active Procurements",
+  "Number of Active Procurements",
+  "Estimated Value of Completed Procurements",
+  "Number of Completed Procurements",
+  "Total Value of Contracts",
+  "Number of Contracts",
+  "Total Value of Active Contracts",
+  "Number of Active Contracts",
+  "Total Value of Submissions Approved",
+  "Total Number of Contract Custom Fields",
+  "Number of Custom Contract Fields Updated in Last 6 Months",
+  "Number of Contracts with Custom Field Data",
+  "Number of Contracts with all Custom Fields Complete",
+  "Total Number of Vendor Custom Fields",
+  "Number of Custom Vendor Fields Updated in Last 6 Months",
+  "Number of Vendors with Custom Field Data",
+  "Number of Vendors with all Custom Fields Complete",
+  "Login Counts Per Day",
+  "System Version",
+  "Product Type",
+  "Street Address",
+  "Suburb",
+  "Post code",
+  "Country",
+  "Contracts Profile",
+  "Timezone",
+  "System Type"
+)</Formula>
+        </FieldEntry>
+      </FieldEntries>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Update Internal Central Reporting fields</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </ChangeFieldValues>
+  </Tasks>
+  <Timing>
+    <DailyWeekly>
+      <Days>
+        <Day>Monday</Day>
+        <Day>Tuesday</Day>
+        <Day>Wednesday</Day>
+        <Day>Thursday</Day>
+        <Day>Friday</Day>
+        <Day>Saturday</Day>
+        <Day>Sunday</Day>
+      </Days>
+    </DailyWeekly>
+  </Timing>
+  <StartAfterDate>2022-10-05T05:30:12.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T00:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T00:00:00.0000000Z</EndTime>
+  <RepeatHours xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <LastRun>2023-12-19T00:30:10.2160000Z</LastRun>
+  <Role>system</Role>
+  <SaveRecordOnCompletion>true</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

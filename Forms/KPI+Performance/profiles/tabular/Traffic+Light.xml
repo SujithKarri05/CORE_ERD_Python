@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <AdvancedColumn Name="Contract" Width="277" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>STEP TO [Contract] 
+ON (
+  	[To].[RecordID] FAST_EQUAL_TO [Contract RecordID]
+	AND [To].[LineNumber] FAST_EQUAL_TO 1
+)
+GET FIRST([Description])</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <AdvancedColumn Name="Vendor" Width="199" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>STEP TO [Contract] 
+ON (
+	[To].[RecordID] FAST_EQUAL_TO [Contract RecordID]
+	AND [To].[LineNumber] FAST_EQUAL_TO 1
+)
+GET FIRST([Vendor Name])</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <Column Name="KPI Description" Alias="" Aggregate="None" Width="434" />
+    <Column Name="Target" Alias="" Aggregate="None" Width="114" />
+    <Column Name="Achieved Value" Alias="" Aggregate="None" Width="120" />
+    <Column Name="Date of Result" Alias="" Aggregate="None" Width="139" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules>
+    <Rule>
+      <Condition>
+        <ComparisonCriterion Operator="EqualTo">
+          <Left>
+            <SourceEFormColumnReferenceCriterion ColumnName="Result" />
+          </Left>
+          <Right>
+            <ConstantCriterion>
+              <Value>
+                <String>Pending</String>
+              </Value>
+            </ConstantCriterion>
+          </Right>
+        </ComparisonCriterion>
+      </Condition>
+      <Colour>
+        <ConstantCriterion>
+          <Value>
+            <String>#B2B2B2</String>
+          </Value>
+        </ConstantCriterion>
+      </Colour>
+    </Rule>
+    <Rule>
+      <Condition>
+        <ComparisonCriterion Operator="EqualTo">
+          <Left>
+            <SourceEFormColumnReferenceCriterion ColumnName="Result" />
+          </Left>
+          <Right>
+            <ConstantCriterion>
+              <Value>
+                <String>Achieved</String>
+              </Value>
+            </ConstantCriterion>
+          </Right>
+        </ComparisonCriterion>
+      </Condition>
+      <Colour>
+        <ConstantCriterion>
+          <Value>
+            <String>#92D050</String>
+          </Value>
+        </ConstantCriterion>
+      </Colour>
+    </Rule>
+    <Rule>
+      <Condition>
+        <ComparisonCriterion Operator="EqualTo">
+          <Left>
+            <SourceEFormColumnReferenceCriterion ColumnName="Result" />
+          </Left>
+          <Right>
+            <ConstantCriterion>
+              <Value>
+                <String>Not Achieved</String>
+              </Value>
+            </ConstantCriterion>
+          </Right>
+        </ComparisonCriterion>
+      </Condition>
+      <Colour>
+        <ConstantCriterion>
+          <Value>
+            <String>#FF5050</String>
+          </Value>
+        </ConstantCriterion>
+      </Colour>
+    </Rule>
+  </BackgroundColourRules>
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children />
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[Start Date] DESC</OrderBy>
+  <GroupBy>[Contract] DESC, [Description] ASC</GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

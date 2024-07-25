@@ -1,0 +1,2361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EForm xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Description>Contract</Description>
+  <DataDefinition>
+    <MinimumRows>1</MinimumRows>
+    <Columns>
+      <SystemColumn Which="EFormType" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="RecordID" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="LineNumber" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateCreated" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateLastUpdated" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateDue" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="DateClosed" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Priority" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="0-Unassigned" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Status" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="Start" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Assignee" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Sender" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Originator" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="Description" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <SystemColumn Which="WasRejected" Behaviour="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </SystemColumn>
+      <Column Name="Next Generation Date" DataType="DateTime" Guid="aa81ef86-b63d-4b65-851c-43109f8555c9" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="COALESCE([Next Generation Date], TODAY())" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Last Generation Date" DataType="DateTime" Guid="b8010b64-5661-4e16-af10-3391fc745489" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Generate" DataType="Boolean" Guid="34c7d6d9-94fd-4634-ab88-1fe0f1187368" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="LET $today := NOW();&#xA;LET $day := DAY($today);&#xA;LET $month := MONTH($today);&#xA;&#xA;RETURN&#xA;//Generate quarterly&#xA;OR(&#xA;&#x9;AND($day = 31, $month = 3),&#xA;&#x9;AND($day = 30, $month = 6),&#xA;&#x9;AND($day = 30, $month = 9),&#xA;&#x9;AND($day = 31, $month = 12)&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Data" DataType="Any" Guid="66bdac75-15e1-4737-ba82-6cfe701e8c5d" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="LET $targetEForm := &quot;Contract&quot;;&#xA;&#xA;LET $targetData := &#xA;ARRAY(&#xA;  &quot;RecordID&quot;, &#xA;  &quot;Status&quot;, &#xA;  &quot;DateCreated&quot;,&#xA;  &quot;Contract Number&quot;,&#xA;  &quot;Contract Type&quot;,&#xA;  &quot;Total Contract Value&quot;,&#xA;  &quot;Department&quot;, &#xA;  &quot;Cost Center&quot;, &#xA;  &quot;Contract Type&quot;, &#xA;  &quot;Start Date&quot;, &#xA;  &quot;Current End Date&quot;, &#xA;  &quot;Approved Variation Value&quot;, &#xA;  &quot;Initial Contract Value Incl. Tax&quot;&#xA;);&#xA;&#xA;LET $filter := &quot;[LineNumber] = 1&quot;;&#xA;&#xA;LET $data := &#xA;DB_LOOKUPALL(&#xA;  $targetData,&#xA;  $targetEForm,&#xA;  $filter&#xA;);&#xA;&#xA;RETURN &#xA;ARRAY_SELECT(&#xA;  $data, $(i, item) &#xA;  INDEXES_TO_KEYS(&#xA;&#x9;$item, &#xA;&#x9;$targetData&#xA;  )&#xA;)" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Financial Quarter" DataType="Number" Guid="64ebd5b1-2c13-4d26-828b-599e04d97932" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="0" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Date From" DataType="DateTime" Guid="6bd3c2e7-f1ff-47b8-beee-91dd2936e7b1" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="LET $FYfirstHalf := MONTH(NOW()) &gt; 6;&#xA;&#xA;LET $date := &#xA;IF( &#xA;  $FYfirstHalf = TRUE,&#xA;  DATE(YEAR(NOW()), 7), &#xA;  DATE(YEAR(NOW()) - 1, 7)&#xA;);&#xA;&#xA;RETURN $date" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy hh:mm tt" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Date To" DataType="DateTime" Guid="1348e571-add1-496b-a4f3-2794f33d743b" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="LET $FYfirstHalf := MONTH(NOW()) &gt; 6;&#xA;&#xA;LET $date := &#xA;IF( &#xA;  $FYfirstHalf = TRUE,&#xA;  DATE(YEAR(NOW()) + 1, 7), &#xA;  DATE(YEAR(NOW()), 7)&#xA;);&#xA;&#xA;RETURN DATEADD(&quot;second&quot;, -1, $date)" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <DateTime FormatString="dd-MMM-yyyy hh:mm tt" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Financial Year" DataType="Number" Guid="73b73af6-8923-458c-abd4-4b60da8f2a06" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="COALESCE([Financial Year], YEAR(NOW()) - 7)" DefaultValue="" DefaultValueFormula="LET $FYfirstHalf := MONTH(NOW()) &gt; 6;&#xA;&#xA;LET $fy := &#xA;IF( &#xA;  $FYfirstHalf = TRUE,&#xA;  LEFT(YEAR(NOW()), 2), &#xA;  LEFT(YEAR(NOW()) - 1, 2)&#xA;);&#xA;&#xA;LET $value := &#xA;IF( &#xA;  $FYfirstHalf = TRUE,&#xA;  YEAR(NOW()), &#xA;  YEAR(NOW()) - 1&#xA;);&#xA;&#xA;RETURN &#xA;$value" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Number of Periods" DataType="Number" Guid="18564012-2235-40a3-b2d3-d2be6b18998e" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="IF(&#xA;  [Grouping Period] = &quot;day&quot;, &#xA;  &#x9;FLOOR([Date To] - [Date From]), &#xA;  &#xA;  [Grouping Period] = &quot;week&quot;, &#xA;  &#x9;CEILING(([Date To] - [Date From]) / 7), &#xA;  &#xA;  [Grouping Period] = &quot;month&quot;, &#xA;  (&#xA;&#x9;LET $result := DATEDIFF_PARTS([Date From], [Date To]);&#xA;    RETURN  ARRAY_INDEX($result, 1) * 12 + ARRAY_INDEX($result, 2) + IF(ARRAY_INDEX($result, 3) &gt; 0, 1)&#xA;  ),&#xA;  &#xA;  [Grouping Period] = &quot;quarter&quot;, &#xA;  (&#xA;&#x9;LET $result := DATEDIFF_PARTS([Date From], [Date To]);&#xA;    RETURN  CEILING((ARRAY_INDEX($result, 1) * 12 + ARRAY_INDEX($result, 2) + IF(ARRAY_INDEX($result, 3) &gt; 0, 1)) / 3)&#xA;  ),&#xA;  &#xA;  [Grouping Period] = &quot;year&quot;, &#xA;  (&#xA;&#x9;LET $result := DATEDIFF_PARTS([Date From], [Date To]);&#xA;    RETURN  CEILING((ARRAY_INDEX($result, 1) * 12 + ARRAY_INDEX($result, 2)) / 12)&#xA;  )&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Period List" DataType="Any" Guid="202eff4c-9564-4b65-9482-969f64847c41" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="ARRAY_SELECT(&#xA;  RANGE(0, [Number of Periods]), $(i, item)&#xA;  IF( &#xA;&#x9;[Grouping Period] = &quot;day&quot;,&#x9;&#x9;DATEADD(&quot;day&quot;,&#x9; $item, &#x9;[Date From]),&#xA;&#x9;[Grouping Period] = &quot;week&quot;, &#x9;DATEADD(&quot;day&quot;,   7 * $item, [Date From]),&#xA;&#x9;[Grouping Period] = &quot;month&quot;, &#x9;DATEADD(&quot;month&quot;, $item, &#x9;[Date From]),&#xA;&#x9;[Grouping Period] = &quot;quarter&quot;, &#x9;DATEADD(&quot;month&quot;, 3 * $item, [Date From]),&#xA;&#x9;[Grouping Period] = &quot;year&quot;, &#x9;DATEADD(&quot;year&quot;,  $item, &#x9;[Date From])&#xA;  )&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Date Selection" DataType="String" Guid="080b3ce9-1360-4506-aba6-e73902b7731e" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="FY Quarters" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Theme Colours" DataType="Any" Guid="69453032-a21b-4577-a237-bc2900fadc10" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="ARRAY(&#xA;&#x9;&quot;#31265c&quot;,&#xA;//&#x9;&quot;#5f2b6a&quot;,&#xA;&#x9;&quot;#8c2d6e&quot;,&#xA;&#x9;&quot;#b63369&quot;,&#xA;&#x9;&quot;#d9425d&quot;,&#xA;&#x9;&quot;#f25d49&quot;,&#xA;&#x9;&quot;#ff8030&quot;,&#xA;&#x9;&quot;#ffa600&quot;&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Grouping Period" DataType="String" Guid="9866d393-b0bc-4e58-8ce4-40268e517887" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="month" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Temp" DataType="Any" Guid="a3cf0ab2-2ebc-4dd0-8de6-a38901b1736e" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Contracts By Value - Limit" DataType="Number" Guid="199a7faf-b491-4ed2-994c-3fbc30f8c32a" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="COALESCE([Contracts By Value - Limit], 999)" DefaultValue="20" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Earliest Year of Data" DataType="Number" Guid="01ce2630-425d-4d22-b228-e493784eab50" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="GREATEST(&#xA;  YEAR(LEAST(ARRAY_SELECT(&#xA;  &#x9;[Data], $(i, item) &#xA;  &#x9;HASH_GET($item, &quot;Start Date&quot;)&#xA;  ))), &#xA;  2015&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Latest Year of Data" DataType="Number" Guid="1f309173-db10-4936-b87b-505f1a19f1c6" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="&#xA;YEAR(GREATEST(ARRAY_SELECT(&#xA;  [Data], $(i, item) &#xA;  HASH_GET($item, &quot;Current End Date&quot;)&#xA;)))" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format>
+          <Number DecimalPlaces="" Prefix="" Suffix="" ThousandsSeparator="false" ScientificNotation="false" />
+        </Format>
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Type - Value or Count" DataType="String" Guid="86e0b5b4-f333-44a8-aac0-589de3733685" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="COALESCE(&#xA;  [Type - Value or Count],&#xA;  &quot;Value&quot;&#xA;)" DefaultValue="Value" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Department - Value or Count" DataType="String" Guid="78c5e421-1737-4291-a1f6-b32853ccc7c9" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="COALESCE(&#xA;  [Department - Value or Count],&#xA;  &quot;Value&quot;&#xA;)" DefaultValue="Value" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Report Data" DataType="Any" Guid="127e5842-a51b-479e-b745-59d6040516f2" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="//----Full Data Set----&#xA;LET $data := [Data];&#xA;&#xA;//----Filtered Data Set----&#xA;LET $buildTargetData := $(targetDate)&#xA;ARRAY_WHERE(&#xA;  $data, $(i, item)&#xA;  LET $date := HASH_GET($item, $targetDate);&#xA;  RETURN &#xA;  AND(&#xA;&#x9;$date &gt;= [Date From],&#xA;    $date &lt;  [Date To]&#xA;  )&#xA;);&#xA;&#xA;//----These variables must be the same length&#xA;LET $seriesNames := &#xA;ARRAY(&#xA;  &quot;Contracts Starting&quot;, &#xA;  &quot;Contracts Expiring&quot;&#xA;); &#xA;&#xA;LET $targetDates := &#xA;ARRAY(&#xA;  &quot;Start Date&quot;, &#xA;  &quot;Current End Date&quot;&#xA;); &#xA;&#xA;//----Chart Customisation----&#xA;LET $split := [Period List];&#xA;LET $labels := [Period List]; &#xA;&#xA;&#xA;&#xA;//----Group data based on period----&#xA;LET $period := [Grouping Period];&#xA;&#xA;LET $groupedData := &#xA;ARRAY_SELECT(&#xA;  $seriesNames, $(seriesNumber, series)&#xA;&#xA;&#x9;ARRAY_SELECT(&#xA;&#x9;  $split, $(s, startOfPeriod) &#xA;&#x9;  (&#x9;&#xA;&#x9;&#x9;LET $targetDate := ARRAY_INDEX($targetDates, $seriesNumber);&#xA;&#x9;&#x9;LET $targetData := CALL($buildTargetData, $targetDate);&#xA;&#xA;&#x9;&#x9;LET $matches := &#xA;&#x9;&#x9;  ARRAY_WHERE(&#xA;&#x9;&#x9;&#x9;$targetData, $(i, item)&#xA;&#x9;&#x9;&#x9;LET $contextDate := HASH_GET($item, $targetDate);&#xA;&#x9;&#x9;&#x9;LET $periodEnd := &#xA;&#x9;&#x9;&#x9;IF( &#xA;&#x9;&#x9;&#x9;&#x9;$period = &quot;day&quot;, &#x9;&#x9; DATEADD(&quot;day&quot;, &#x9;1, $startOfPeriod),&#xA;&#x9;&#x9;&#x9;&#x9;$period = &quot;week&quot;, &#x9; DATEADD(&quot;day&quot;, &#x9;7, $startOfPeriod),&#xA;&#x9;&#x9;&#x9;&#x9;$period = &quot;month&quot;,&#x9; DATEADD(&quot;month&quot;, &#x9;1, $startOfPeriod),&#xA;&#x9;&#x9;&#x9;&#x9;$period = &quot;quarter&quot;, &#x9; DATEADD(&quot;month&quot;, &#x9;3, $startOfPeriod),&#xA;&#x9;&#x9;&#x9;&#x9;$period = &quot;year&quot;, &#x9; DATEADD(&quot;year&quot;,&#x9;1, $startOfPeriod),&#xA;&#x9;&#x9;&#x9;);&#xA;&#xA;&#x9;&#x9;&#x9;RETURN&#xA;&#x9;&#x9;&#x9;AND(&#xA;&#x9;&#x9;&#x9;  $contextDate &gt;= $startOfPeriod,&#xA;&#x9;&#x9;&#x9;  $contextDate &lt; $periodEnd&#xA;&#x9;&#x9;&#x9;)&#xA;&#x9;&#x9;  );&#xA;&#xA;&#x9;&#x9;RETURN $matches&#xA;&#x9;&#x9;//ARRAY_LENGTH($matches)&#xA;&#x9;  )&#xA;&#x9;)&#xA;);&#xA;&#xA;RETURN $groupedData" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Report Data 2" DataType="Any" Guid="f5d9fbb7-c0b3-4fe3-8b42-a1cecca67654" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="//----Full Data Set----&#xA;LET $data := [Data];&#xA;&#xA;//----Filtered Data Set----&#xA;LET $filteredData :=&#xA;ARRAY_WHERE(&#xA;  $data, $(i, item)&#xA;  LET $startDate := HASH_GET($item, &quot;Start Date&quot;);&#xA;  LET $endDate := HASH_GET($item, &quot;Current End Date&quot;);&#xA;  LET $value := HASH_GET($item, &quot;Total Contract Value&quot;);&#xA;  &#xA;  RETURN&#xA;  AND(&#xA;&#x9;$value &gt; 0,&#xA;&#x9;OR(&#xA;&#x9;  AND(&#xA;&#x9;&#x9;  $startDate &lt;= [Date From],&#xA;&#x9;&#x9;  $endDate &gt; [Date From]&#xA;&#x9;  ),&#xA;&#x9;  AND(&#xA;&#x9;&#x9;  $startDate &gt;= [Date From],&#xA;&#x9;&#x9;  $endDate &lt; [Date To]&#xA;&#x9;  ),&#xA;&#x9;  AND(&#xA;&#x9;&#x9;  $startDate &lt; [Date To],&#xA;&#x9;&#x9;  $endDate &gt;= [Date To]&#xA;&#x9;  ),&#xA;&#x9;)&#xA;  )&#xA;);&#xA;&#xA;LET $sorted := &#xA;ARRAY_TAKE(&#xA;  ARRAY_SORTDESC(&#xA;&#x9;  $filteredData, $(item)&#xA;&#x9;  HASH_GET($item, &quot;Total Contract Value&quot;)&#xA;  ),&#xA;  COALESCE([Contracts By Value - Limit], 100)&#xA;);&#xA;&#xA;RETURN $sorted" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Report Data 3" DataType="Any" Guid="ff2e605f-cb70-4ea1-89a4-86c32e19e4f7" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="//----Full Data Set----&#xA;LET $data := [Data];&#xA;&#xA;//----Filtered Data Set----&#xA;LET $filteredData :=&#xA;ARRAY_WHERE(&#xA;  $data, $(i, item)&#xA;  LET $startDate := HASH_GET($item, &quot;Start Date&quot;);&#xA;  LET $endDate := HASH_GET($item, &quot;Current End Date&quot;);&#xA;  &#xA;  RETURN&#xA;  AND(&#xA;&#x9;OR(&#xA;&#x9;  AND(&#xA;&#x9;&#x9;  $startDate &lt;= [Date From],&#xA;&#x9;&#x9;  $endDate &gt; [Date From]&#xA;&#x9;  ),&#xA;&#x9;  AND(&#xA;&#x9;&#x9;  $startDate &gt;= [Date From],&#xA;&#x9;&#x9;  $endDate &lt; [Date To]&#xA;&#x9;  ),&#xA;&#x9;  AND(&#xA;&#x9;&#x9;  $startDate &lt; [Date To],&#xA;&#x9;&#x9;  $endDate &gt;= [Date To]&#xA;&#x9;  ),&#xA;&#x9;)&#xA;  )&#xA;);&#xA;&#xA;LET $sorted := &#xA;ARRAY_SORTDESC(&#xA;  $filteredData, $(item)&#xA;  HASH_GET($item, &quot;Contract Type&quot;)&#xA;);&#xA;&#xA;RETURN $sorted" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Report Data 4" DataType="Any" Guid="6a48a713-deb6-4a06-be26-e300026908c8" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="//----Full Data Set----&#xA;LET $data := [Data];&#xA;&#xA;//----Filtered Data Set----&#xA;LET $filteredData :=&#xA;ARRAY_WHERE(&#xA;  $data, $(i, item)&#xA;  LET $startDate := HASH_GET($item, &quot;Start Date&quot;);&#xA;  LET $endDate := HASH_GET($item, &quot;Current End Date&quot;);&#xA;  &#xA;  RETURN&#xA;  AND(&#xA;&#x9;OR(&#xA;&#x9;  AND(&#xA;&#x9;&#x9;  $startDate &lt;= [Date From],&#xA;&#x9;&#x9;  $endDate &gt; [Date From]&#xA;&#x9;  ),&#xA;&#x9;  AND(&#xA;&#x9;&#x9;  $startDate &gt;= [Date From],&#xA;&#x9;&#x9;  $endDate &lt; [Date To]&#xA;&#x9;  ),&#xA;&#x9;  AND(&#xA;&#x9;&#x9;  $startDate &lt; [Date To],&#xA;&#x9;&#x9;  $endDate &gt;= [Date To]&#xA;&#x9;  ),&#xA;&#x9;)&#xA;  )&#xA;);&#xA;&#xA;LET $sorted := &#xA;ARRAY_SORTDESC(&#xA;  $filteredData, $(item)&#xA;  HASH_GET($item, &quot;Department&quot;)&#xA;);&#xA;&#xA;RETURN $sorted" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Icons" DataType="Any" Guid="e7916cb8-850e-45d4-94a0-b82e7895dc47" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="LET $iconColour := &quot;#2f4f4f&quot;; &#xA;LET $containerColour := &quot;white&quot;;&#xA;LET $themeColour := &quot;#4682B4&quot;; //blue&#xA;//height: 100%; &#xA;&#xA;LET $filledStar := &#xA;&quot;&lt;svg &quot; &amp;&#xA;&quot; style = &quot;&quot;width: 20px; height: 100%;&quot;&quot;&quot; &amp; &#xA;&quot; xmlns=&quot;&quot;http://www.w3.org/2000/svg&quot;&quot; aria-hidden=&quot;&quot;true&quot;&quot; focusable=&quot;&quot;false&quot;&quot; data-prefix=&quot;&quot;fas&quot;&quot; data-icon=&quot;&quot;truck&quot;&quot; class=&quot;&quot;svg-inline--fa fa-truck&quot;&quot; role=&quot;&quot;img&quot;&quot; viewBox=&quot;&quot;0 0 640 512&quot;&quot;&gt;&lt;path fill=&quot;&quot;&quot; &amp; $iconColour &amp; &quot;&quot;&quot; d=&quot;&quot;M287.9 0C297.1 0 305.5 5.25 309.5 13.52L378.1 154.8L531.4 177.5C540.4 178.8 547.8 185.1 550.7 193.7C553.5 202.4 551.2 211.9 544.8 218.2L433.6 328.4L459.9 483.9C461.4 492.9 457.7 502.1 450.2 507.4C442.8 512.7 432.1 513.4 424.9 509.1L287.9 435.9L150.1 509.1C142.9 513.4 133.1 512.7 125.6 507.4C118.2 502.1 114.5 492.9 115.1 483.9L142.2 328.4L31.11 218.2C24.65 211.9 22.36 202.4 25.2 193.7C28.03 185.1 35.5 178.8 44.49 177.5L197.7 154.8L266.3 13.52C270.4 5.249 278.7 0 287.9 0L287.9 0zM287.9 78.95L235.4 187.2C231.9 194.3 225.1 199.3 217.3 200.5L98.98 217.9L184.9 303C190.4 308.5 192.9 316.4 191.6 324.1L171.4 443.7L276.6 387.5C283.7 383.7 292.2 383.7 299.2 387.5L404.4 443.7L384.2 324.1C382.9 316.4 385.5 308.5 391 303L476.9 217.9L358.6 200.5C350.7 199.3 343.9 194.3 340.5 187.2L287.9 78.95z&quot;&quot;/&gt;&lt;/svg&gt;&quot;;&#xA;&#xA;LET $unfilledStar := &#xA;&quot;&lt;svg &quot; &amp;&#xA;&quot; style = &quot;&quot;width: 20px; height: 100%;&quot;&quot;&quot; &amp; &#xA;&quot; xmlns=&quot;&quot;http://www.w3.org/2000/svg&quot;&quot; aria-hidden=&quot;&quot;true&quot;&quot; focusable=&quot;&quot;false&quot;&quot; data-prefix=&quot;&quot;fas&quot;&quot; data-icon=&quot;&quot;truck&quot;&quot; class=&quot;&quot;svg-inline--fa fa-truck&quot;&quot; role=&quot;&quot;img&quot;&quot; viewBox=&quot;&quot;0 0 640 512&quot;&quot;&gt;&lt;path fill=&quot;&quot;&quot; &amp; $iconColour &amp; &quot;&quot;&quot; d=&quot;&quot;M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z&quot;&quot;/&gt;&lt;/svg&gt;&quot;;&#xA;&#xA;&#xA;LET $leftArrow := &#xA;&quot;&lt;svg &quot; &amp;&#xA;&quot; style = &quot;&quot;&quot;&quot;&quot; &amp; &#xA;&quot; xmlns=&quot;&quot;http://www.w3.org/2000/svg&quot;&quot; aria-hidden=&quot;&quot;true&quot;&quot; focusable=&quot;&quot;false&quot;&quot; data-prefix=&quot;&quot;fas&quot;&quot; data-icon=&quot;&quot;leftArrow&quot;&quot; class=&quot;&quot;svg-inline--fa fa-truck&quot;&quot; role=&quot;&quot;img&quot;&quot; viewBox=&quot;&quot;0 0 640 512&quot;&quot;&gt;&lt;path fill=&quot;&quot;&quot; &amp; $themeColour &amp; &quot;&quot;&quot; d=&quot;&quot;M512 256C512 273.7 497.7 288 480 288H160.1l0 72c0 9.547-5.66 18.19-14.42 22c-8.754 3.812-18.95 2.077-25.94-4.407l-112.1-104c-10.24-9.5-10.24-25.69 0-35.19l112.1-104c6.992-6.484 17.18-8.218 25.94-4.406C154.4 133.8 160.1 142.5 160.1 151.1L160.1 224H480C497.7 224 512 238.3 512 256z&quot;&quot;/&gt;&lt;/svg&gt;&quot;;&#xA;&#xA;LET $containedFilledStar := &quot;&lt;span style=&quot;&quot;background: &quot; &amp; $containerColour &amp; &quot;; width: 100%; height: 100%;&quot;&quot;&gt;&quot; &amp; $filledStar &amp; &quot;&lt;/span&gt;&quot;;&#xA;&#xA;LET $uncontainedFilledStar := &quot;&lt;span style=&quot;&quot;background: &quot; &amp; $containerColour &amp; &quot;; width: 100%; height: 100%;&quot;&quot;&gt;&quot; &amp; $unfilledStar &amp; &quot;&lt;/span&gt;&quot;;&#xA;&#xA;LET $containedLeftArrow := &quot;&lt;span style=&quot;&quot;background: &quot; &amp; $containerColour &amp; &quot;; width: 100%; height: 100%;&quot;&quot;&gt;&quot; &amp; $leftArrow &amp; &quot;&lt;/span&gt;&quot;;&#xA;&#xA;&#xA;RETURN &#xA;HASH(&#xA;  &quot;filledStar&quot;, $containedFilledStar,&#xA;  &quot;unfilledStar&quot;, $uncontainedFilledStar,&#xA;  &quot;leftArrow&quot;, $leftArrow&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Parent Structure" DataType="Any" Guid="dd525840-c306-4ae1-bd2d-dd8504da5b57" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="false" ValidationFormula="" ValidationTags="" Formula="LET $current := ARRAY([EFormType], [RecordID]);&#xA;LET $descriptionColumns := &#xA;HASH(&#xA;&#x9;&quot;Contract&quot;,  &#x9;&#x9;&#x9;&#x9;&#x9;&quot;Contract Number&quot;, &#xA;&#x9;&quot;Vendor&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;Company Name&quot;,&#xA;&#x9;&quot;Procurement&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&quot;Procurement Number&quot;,&#xA;&#x9;&quot;Project&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;Project Number&quot;,&#xA;    &quot;Evaluation&quot;, &#x9;&#x9;    &#x9;&#x9;&quot;Description&quot;,&#xA;  &#x9;&quot;Information Request&quot;,  &#x9;&#x9;&quot;File No.&quot;, &#xA;&#x9;&quot;Subpoena&quot;, &#x9;&#x9;&#x9;&#x9;&#x9;&quot;File No.&quot;,&#xA;&#x9;&quot;Privacy Incident&quot;, &#x9;&#x9;&#x9;&quot;File No.&quot;&#xA;); &#xA;&#xA;LET $altFormName:= HASH(&#xA;  &#x9;&quot;Insurance&quot;,&#x9;&quot;Compliance&quot;&#xA;  );&#xA;&#xA;LET $getLabelText := $(eFormType, recordID)&#xA;(&#xA;  &#x9;LET $targetColumn := HASH_GET($descriptionColumns, $eFormType);&#xA;  &#x9;RETURN &#xA;  &#x9;IF( $targetColumn = NULL, NULL,&#xA;&#x9;&#x9;LET $isthisRecord := ARRAY($eFormType, $recordID) = $current;&#xA;&#x9;&#x9;LET $title:= &#xA;&#x9;&#x9;IF( $isthisRecord = TRUE, &#xA;&#x9;&#x9;&#x9;CURRENT_VALUE($targetColumn),&#xA;&#x9;&#x9;&#x9;ARRAY_FIRST(DB_LOOKUP(&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY($targetColumn),&#xA;&#x9;&#x9;&#x9;&#x9;$eFormType, &#xA;&#x9;&#x9;&#x9;&#x9;&quot;[RecordID] FAST_EQUAL_TO &quot; &amp; $recordID&#xA;&#x9;&#x9;&#x9;))&#xA;&#x9;&#x9;  );&#xA;&#x9;&#x9;//shortern the descriptive label/ title&#xA;&#x9;&#x9;LET $charCount := LEN($title);&#xA;&#x9;&#x9;LET $titleArray := SPLIT($title, &quot; &quot;);&#xA;&#x9;&#x9;LET $wordCount := ARRAY_LENGTH($titleArray);&#xA;&#xA;&#x9;&#x9;LET $charLimit := 30; &#xA;&#x9;&#x9;LET $wordLimit := ARRAY_LENGTH( SPLIT( LEFT($title, $charLimit), &quot; &quot;) );&#xA;&#xA;&#x9;  RETURN //ARRAY_TAKE($titleArray, $wordLimit)&#xA;&#x9;&#x9;IF(&#xA;&#x9;&#x9;&#x9;$wordCount &lt;= $wordLimit, $title,&#xA;&#x9;&#x9;&#x9;ARRAY_JOIN(&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_TAKE($titleArray, $wordLimit), &quot; &quot;&#xA;&#x9;&#x9;&#x9;)&amp; &quot; ...&quot;&#xA;&#x9;&#x9;)&#xA;&#x9;  )&#xA; &#xA;); &#xA;&#xA;LET $getReadAccess := $(eFormType, recordID)&#xA;( EBMS_GET_EFORMRECORD_PERMISSION($eFormType, $recordID, &quot;read&quot;));&#xA;&#xA;LET $currentDes := CALL($getLabelText, [EFormType], [RecordID]);&#xA;LET $currentAccess := FALSE;&#xA;&#xA;RETURN&#xA;IF(&#xA;&#x9;[Parent Structure] &lt;&gt; NULL, [Parent Structure],&#xA;  &#x9;(&#xA;&#xA;&#x9;  LET $parent := &#xA;&#x9;  IF( &#xA;&#x9;&#x9;[RecordID] &gt; 0, &#xA;&#x9;&#x9;(&#xA;&#x9;&#x9;  LET $record := EBMS_GET_PARENT_RECORD(ARRAY_FIRST($current), ARRAY_INDEX($current, 2));&#xA;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF(  ARRAY_FIRST($record) == NULL, NULL,&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_CONCAT( &#xA;&#x9;&#x9;&#x9;&#x9;  $record, &#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getLabelText, ARRAY_FIRST($record), ARRAY_INDEX($record, 2)),&#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getReadAccess, ARRAY_FIRST($record), ARRAY_INDEX($record, 2))&#xA;&#x9;&#x9;&#x9;&#x9;  )&#xA;&#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;  )); &#xA;&#xA;&#x9;  LET $gParent := &#xA;&#x9;  IF( &#xA;&#x9;&#x9; $parent &lt;&gt; NULL, &#xA;&#x9;&#x9;(&#xA;&#x9;&#x9;  LET $record := EBMS_GET_PARENT_RECORD(ARRAY_FIRST($parent), ARRAY_INDEX($parent, 2));&#xA;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF(  ARRAY_FIRST($record) == NULL, NULL,&#xA;&#x9;&#x9;&#x9;&#x9;ARRAY_CONCAT( &#xA;&#x9;&#x9;&#x9;&#x9;  $record, &#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getLabelText, ARRAY_FIRST($record), ARRAY_INDEX($record, 2)),&#xA;&#x9;&#x9;&#x9;&#x9;  CALL($getReadAccess, ARRAY_FIRST($record), ARRAY_INDEX($record, 2))&#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;&#x9;  )&#xA;&#x9;  )); &#xA;&#xA;&#x9;  LET $hash :=  &#xA;&#x9;  HASH_MERGE(&#xA;&#x9;&#x9;  IF( $parent &lt;&gt; NULL, HASH(&quot;parent&quot;, &#x9;$parent)),&#xA;&#x9;&#x9;  IF( $gParent &lt;&gt; NULL, HASH(&quot;gparent&quot;, &#x9;$gParent))&#xA;&#x9;  );&#xA;&#xA;&#x9;  LET $parentStructure := &#x9;//2nd instance&#xA;&#x9;  IF( &#xA;&#x9;&#x9;  ARRAY_LENGTH(HASH_KEYS($hash)) &gt;0, $hash, NULL&#xA;&#x9;  );&#xA;&#xA;&#x9;  LET $parentData:= &#xA;&#x9;  ARRAY_WHERE(&#xA;&#x9;&#x9;ARRAY(&#xA;&#x9;&#x9;&#x9;$gParent, &#xA;&#x9;&#x9;&#x9;$parent, &#xA;&#x9;&#x9;&#x9;ARRAY_CONCAT($current, $currentDes, $currentAccess),&#xA;&#x9;&#x9;), $(i,item) $item &lt;&gt; NULL&#xA;&#x9;   );&#xA;  &#xA;&#xA;&#x9;  LET $parentChain:=&#xA;&#x9;&#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;&#x9;  $parentData, $(i, item)&#xA;&#x9;&#x9;&#x9;  ARRAY_TAKE($item, 2)&#xA;&#x9;   );&#xA;&#xA;&#xA;&#x9;  LET $parentLinks :=&#xA;&#x9;  ARRAY_SELECT(&#xA;&#x9;&#x9;  $parentData, $(i, item) &#xA;&#x9;&#x9;&#x9;  LET $eFormType &#x9;&#x9;:= ARRAY_FIRST($item);&#xA;&#x9;&#x9;&#x9;  LET $recordID &#x9;&#x9;:= ARRAY_INDEX($item, 2);&#xA;&#x9;&#x9;&#x9;  LET $descriptiveLabel := ARRAY_INDEX($item, 3);&#xA;&#x9;&#x9;&#x9;  LET $hasReadAccess&#x9;:= ARRAY_INDEX($item, 4);&#xA;&#x9;&#x9;&#x9;  LET $URL&#x9;:= &quot;records/&quot; &amp; URLENCODE($eFormType) &amp; &quot;/&quot; &amp; $recordID ;&#xA;&#x9;&#x9;&#x9;  LET $showEFormType := $eFormType &lt;&gt; &quot;Vendor&quot;;&#xA;&#xA;&#x9;&#x9;&#x9;  LET $labelColour := &#xA;&#x9;&#x9;&#x9;&#x9;  IF(&#xA;&#x9;&#x9;&#x9;&#x9;   AND($eFormType = [EFormType], $recordID = [RecordID]),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #5D5D5D;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9; $hasReadAccess = TRUE,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #4D87B7;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  &quot;background: #ffffff; color: #5D5D5D;&quot;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;  );&#xA;&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;  LET $labeltext:= &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  IF( $showEFormType == TRUE, &quot; &quot; &amp; COALESCE(HASH_GET($altFormName, $eFormType), $eFormType) ) &amp;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;  IF(NOT(ISBLANK($descriptiveLabel)), &quot; &quot; &amp; $descriptiveLabel);&#xA;&#xA;&#x9;&#x9;&#x9;  LET $label :=  &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;span style=&quot;&quot;margin-left: 5px;&quot; &amp; $labelColour &amp; &quot;&quot;&quot;&gt;&quot; &amp;&#xA;&#x9;&#x9;&#x9;&#x9;  HTMLENCODE($labeltext) &amp; &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;/span&gt;&quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;  RETURN &#xA;&#x9;&#x9;&#x9;  IF( &#xA;&#x9;&#x9;&#x9;&#x9;  $hasReadAccess == TRUE, &#xA;&#x9;&#x9;&#x9;&#x9;  &quot;&lt;a style=&quot;&quot;text-decoration-line: none;&quot;&quot; href=&quot; &amp; HTMLENCODE($URL) &amp; &quot;&gt;&quot; &amp; $label &amp; &quot;&lt;/a&gt;&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;  $label &#xA;&#x9;&#x9;&#x9;  )&#xA;&#x9;  );&#xA;&#xA;&#x9;   LET $separator :=   &quot;&lt;svg style=&quot;&quot;vertical-align: bottom; margin-left: 5px; height: 18px;&quot;&quot; xmlns=&quot;&quot;http://www.w3.org/2000/svg&quot;&quot; viewBox=&quot;&quot;0 0 256 512&quot;&quot;&gt;&lt;path fill=&quot;&quot;#5D5D5D&quot;&quot; d=&quot;&quot;M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z&quot;&quot;/&gt;&lt;/svg&gt;&quot;;&#xA;&#x9;  &#xA;&#x9;  LET $breadcrumb := &quot;&lt;div style=&quot;&quot;height: 23px; padding-left: 5px; font-size: 10pt; color: #5D5D5D; &quot;&quot;&gt;You are here:&quot; &amp; ARRAY_JOIN($parentLinks, $separator) &amp; &quot;&lt;/div&gt;&quot;;&#xA;&#xA;&#x9;  RETURN &#xA;&#x9;  HASH(&#xA;&#x9;&#x9;  &quot;Parent Structure&quot;,&#x9;$parentStructure,&#xA;&#x9;&#x9;  &quot;Parent Data&quot;, &#x9;&#x9;$parentData,&#xA;&#x9;&#x9;  &quot;Parent Chain&quot;,&#x9;&#x9;$parentChain,&#xA;&#x9;&#x9;  &quot;Breadcrumb&quot;,&#x9;&#x9;$breadcrumb&#xA;&#x9;&#x9;)&#xA;&#x9; )&#xA;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+      <Column Name="Parent Chain" DataType="Any" Guid="122bd878-9f7e-4be1-857b-369bbc3b8f85" IsHeader="true" IsMandatory="false" IsPartOfUniqueKey="false" IsPersistent="true" ValidationFormula="" ValidationTags="" Formula="HASH_GET([Parent Structure], &quot;Parent Chain&quot;)" DefaultValue="" DefaultValueFormula="" DefaultValueFormulaAssignWholeColumn="false" IsEditableInReport="false">
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+        <Security OverrideEFormPermissions="false">
+          <Roles />
+        </Security>
+        <IsFullTextIndexed>false</IsFullTextIndexed>
+        <Format xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReportingField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ProtectionReason xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <EFormRecordPipes />
+      </Column>
+    </Columns>
+    <ReferenceGroups />
+    <Kpis />
+    <MergeFields />
+  </DataDefinition>
+  <Views>
+    <ViewEntry Name="Default">
+      <View BackColor="0,0,0,0">
+        <PdfSettings>
+          <PageNumberMode>None</PageNumberMode>
+          <FooterTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </PdfSettings>
+        <HideToolbar>true</HideToolbar>
+        <SidebarMode>Lock</SidebarMode>
+        <HorizontalAlign>Default</HorizontalAlign>
+        <Security>
+          <Roles>
+            <RoleEntry Use="true">
+              <Role>Everyone</Role>
+            </RoleEntry>
+          </Roles>
+        </Security>
+        <Sections>
+          <Section ColumnCount="1" Margin="36" BlockSpacing="20" PageWidth="1169" PageHeight="826">
+            <Name xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+            <Notes></Notes>
+            <Blocks>
+              <Block IsReadOnly="false" ID="Block14">
+                <Controls>
+                  <Button ID="Control259" IsReadOnly="false" LineNumber="1" Left="1" Top="1" Width="12" Height="3" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="false">
+                    <Text>View different report type</Text>
+                    <CausesValidation>false</CausesValidation>
+                    <ValidationTag xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <Navigate>
+                          <UrlTemplate>records/Dashboard%20-%20Contract/new?view=Default&amp;$Navigation=Reports</UrlTemplate>
+                          <OpenNewWindow>false</OpenNewWindow>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </Navigate>
+                      </Tasks>
+                    </Event>
+                    <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <TypeOfButton>Custom</TypeOfButton>
+                    <BorderColor>180,180,180,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>11</FontSize>
+                    <FormulaBindings />
+                  </Button>
+                  <Button ID="Control267" IsReadOnly="false" LineNumber="1" Left="14" Top="1" Width="12" Height="3" TabIndex="2" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="false">
+                    <Text>Return to dashboard</Text>
+                    <CausesValidation>false</CausesValidation>
+                    <ValidationTag xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event>
+                      <Tasks>
+                        <Navigate>
+                          <UrlTemplate>records/Dashboard%20-%20Contract/new?view=Default</UrlTemplate>
+                          <OpenNewWindow>false</OpenNewWindow>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </Navigate>
+                      </Tasks>
+                    </Event>
+                    <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <TypeOfButton>Custom</TypeOfButton>
+                    <BorderColor>180,180,180,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>11</FontSize>
+                    <FormulaBindings />
+                  </Button>
+                </Controls>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>5</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>1</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>false</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block15">
+                <Controls>
+                  <RichLabel Text="" ID="Control268" IsReadOnly="false" LineNumber="1" Left="0" Top="1" Width="6" Height="2" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Event>
+                      <Tasks>
+                        <Navigate>
+                          <UrlTemplate>records/Dashboard%20-%20Contract/new?view=Default&amp;$Navigation=Reports</UrlTemplate>
+                          <OpenNewWindow>false</OpenNewWindow>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </Navigate>
+                      </Tasks>
+                    </Event>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="&quot;&lt;div data-clickid='action' style='cursor: pointer;'&gt;&quot; &amp; &#xA;&quot;&lt;span style='color:red;'&gt;&quot; &amp; HASH_GET([Icons], &quot;leftArrow&quot;) &amp; &quot;&lt;/span&gt;&quot; &amp; &#xA;&quot;&lt;span style='font-weight: 400; color: #4682B4;'&gt;Back to dashboard&lt;/span&gt;&quot; &amp; &#xA;&quot;&lt;div&gt;&quot;" />
+                    </FormulaBindings>
+                  </RichLabel>
+                  <RichLabel Text="" ID="Control269" IsReadOnly="false" LineNumber="1" Left="7" Top="1" Width="7" Height="2" TabIndex="2" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Event>
+                      <Tasks>
+                        <Navigate>
+                          <UrlTemplate>records/Dashboard%20-%20Contract/new?view=Default</UrlTemplate>
+                          <OpenNewWindow>false</OpenNewWindow>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </Navigate>
+                      </Tasks>
+                    </Event>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="&quot;&lt;div data-clickid='action' style='cursor: pointer;'&gt;&quot; &amp; &#xA;&quot;&lt;span style='margin-left: 5px; font-weight: 400; color: #4682B4;'&gt;View other report types&lt;/span&gt;&quot; &amp; &#xA;&quot;&lt;div&gt;&quot;" />
+                    </FormulaBindings>
+                  </RichLabel>
+                  <RichLabel Text="" ID="Control270" IsReadOnly="false" LineNumber="6" Left="6" Top="1" Width="1" Height="2" TabIndex="3" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="&quot;&lt;div style=&quot;&quot;margin-left: 50%; border-left: 1px solid #D5D1D1; height: 15px;&quot;&quot;&gt;&lt;/div&gt;&quot;" />
+                    </FormulaBindings>
+                  </RichLabel>
+                  <TextBox ID="Control271" IsReadOnly="false" LineNumber="1" Left="24" Top="0" Width="8" Height="4" TabIndex="4" Visible="false" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Icons</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,222,245,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                </Controls>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>5</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>1</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings>
+                  <Binding PropertyName="IsCollapsed" Expression="FALSE" />
+                </FormulaBindings>
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block5">
+                <Controls>
+                  <Label Text="FY" ID="Control177" IsReadOnly="false" LineNumber="1" Left="13" Top="2" Width="3" Height="3" TabIndex="1" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Right</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="Quarter" ID="Control178" IsReadOnly="false" LineNumber="1" Left="23" Top="2" Width="3" Height="3" TabIndex="2" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Right</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <DropDown ID="Control181" IsReadOnly="false" LineNumber="1" Left="17" Top="2" Width="6" Height="3" TabIndex="5" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Values />
+                    <ReferencedDataColumn>Financial Year</ReferencedDataColumn>
+                    <Event>
+                      <Tasks>
+                        <TriggerCustomEvent>
+                          <EventNameTemplate>Update Dates</EventNameTemplate>
+                          <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RetainLastResultOnly>false</RetainLastResultOnly>
+                          <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+                          <RunInsideDataLayer>false</RunInsideDataLayer>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </TriggerCustomEvent>
+                      </Tasks>
+                    </Event>
+                    <BorderColor>64,64,64,255</BorderColor>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Values" Expression="LET $earliestYear := [Earliest Year of Data];&#xA;&#xA;LET $latestYear := [Latest Year of Data];&#xA;&#xA;LET $yearsCovered := $latestYear - $earliestYear;&#xA;&#xA;LET $list := &#xA;ARRAY_SELECT(&#xA;&#x9;RANGE($earliestYear, $yearsCovered), $(i, item)&#xA;&#x9;LET $year := [Earliest Year of Data] + $i - 1;&#xA;&#x9;LET $text := RIGHT($year, 2) &amp; &quot;/&quot; &amp; N(RIGHT($year, 2)) + 1;&#xA;&#x9;RETURN &#xA;&#x9;HASH(&#xA;&#x9;  &quot;text&quot;, $text, &#xA;&#x9;  &quot;value&quot;, $year&#xA;&#x9;)&#x9;&#x9;  &#xA;);&#xA;&#xA;RETURN &#xA;ARRAY_CONCAT(&#xA;  ARRAY(HASH(&quot;text&quot;, &quot;All&quot;, &quot;value&quot;, 0)),&#xA;  $list&#xA;)&#xA;&#xA;" />
+                    </FormulaBindings>
+                  </DropDown>
+                  <DropDown ID="Control182" IsReadOnly="false" LineNumber="1" Left="27" Top="2" Width="6" Height="3" TabIndex="6" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Values>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <Number>1</Number>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <Number>2</Number>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <Number>3</Number>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <Number>4</Number>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <String>All</String>
+                        </Text>
+                        <Value>
+                          <Number>0</Number>
+                        </Value>
+                      </Value>
+                    </Values>
+                    <ReferencedDataColumn>Financial Quarter</ReferencedDataColumn>
+                    <Event>
+                      <Tasks>
+                        <TriggerCustomEvent>
+                          <EventNameTemplate>Update Dates</EventNameTemplate>
+                          <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RetainLastResultOnly>false</RetainLastResultOnly>
+                          <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+                          <RunInsideDataLayer>false</RunInsideDataLayer>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </TriggerCustomEvent>
+                      </Tasks>
+                    </Event>
+                    <BorderColor>64,64,64,255</BorderColor>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </DropDown>
+                  <TabStrip ID="Control183" IsReadOnly="false" LineNumber="1" Left="1" Top="2" Width="12" Height="3" TabIndex="7" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Values>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <String>FY Quarters</String>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <String>Custom Period</String>
+                        </Value>
+                      </Value>
+                    </Values>
+                    <ReferencedDataColumn>Date Selection</ReferencedDataColumn>
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <HighlightedTextColor>255,255,255,255</HighlightedTextColor>
+                    <EnableHighlightEffect>true</EnableHighlightEffect>
+                    <HighlightedBackgroundColor>64,64,64,255</HighlightedBackgroundColor>
+                    <BorderColor>64,64,64,255</BorderColor>
+                    <BoldSelectedItem>false</BoldSelectedItem>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </TabStrip>
+                  <Label Text="Quarter" ID="Control257" IsReadOnly="false" LineNumber="1" Left="34" Top="2" Width="10" Height="3" TabIndex="8" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Text" Expression="&quot;(&quot; &amp; [Date From] &amp; &quot; to &quot; &amp; [Date To] &amp; &quot;)&quot;" />
+                    </FormulaBindings>
+                  </Label>
+                  <Box ID="Control260" IsReadOnly="false" LineNumber="1" Left="0" Top="0" Width="54" Height="7" TabIndex="0" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BackColor>246,246,246,255</BackColor>
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <Radius>4</Radius>
+                    <FormulaBindings />
+                  </Box>
+                </Controls>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>7</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>1</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings>
+                  <Binding PropertyName="Visible" Expression="[Date Selection] = &quot;FY Quarters&quot;" />
+                </FormulaBindings>
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block9">
+                <Controls>
+                  <DatePicker ID="Control213" IsReadOnly="false" LineNumber="1" Left="17" Top="2" Width="10" Height="3" TabIndex="8" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>64,64,64,255</BorderColor>
+                    <ReferencedDataColumn>Date From</ReferencedDataColumn>
+                    <ShowDatePopup>true</ShowDatePopup>
+                    <ShowTimePopup>true</ShowTimePopup>
+                    <TimeStartOffset>0</TimeStartOffset>
+                    <TimeInterval>60</TimeInterval>
+                    <Use24HourTime>false</Use24HourTime>
+                    <YearStart>1950</YearStart>
+                    <YearEnd>2050</YearEnd>
+                    <Event>
+                      <Tasks>
+                        <TriggerCustomEvent>
+                          <EventNameTemplate>Swap Dates</EventNameTemplate>
+                          <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RetainLastResultOnly>false</RetainLastResultOnly>
+                          <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+                          <RunInsideDataLayer>false</RunInsideDataLayer>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen>
+                            <GroupingExpression Operator="And">
+                              <Children>
+                                <CriterionExpression>
+                                  <Criterion>
+                                    <FormulaCriterion>
+                                      <Formula>[Date From] &gt; [Date To]</Formula>
+                                    </FormulaCriterion>
+                                  </Criterion>
+                                </CriterionExpression>
+                              </Children>
+                            </GroupingExpression>
+                          </RunOnlyWhen>
+                        </TriggerCustomEvent>
+                      </Tasks>
+                    </Event>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </DatePicker>
+                  <DatePicker ID="Control214" IsReadOnly="false" LineNumber="1" Left="31" Top="2" Width="10" Height="3" TabIndex="9" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>64,64,64,255</BorderColor>
+                    <ReferencedDataColumn>Date To</ReferencedDataColumn>
+                    <ShowDatePopup>true</ShowDatePopup>
+                    <ShowTimePopup>true</ShowTimePopup>
+                    <TimeStartOffset>0</TimeStartOffset>
+                    <TimeInterval>60</TimeInterval>
+                    <Use24HourTime>false</Use24HourTime>
+                    <YearStart>1950</YearStart>
+                    <YearEnd>2050</YearEnd>
+                    <Event>
+                      <Tasks>
+                        <TriggerCustomEvent>
+                          <EventNameTemplate>Swap Dates</EventNameTemplate>
+                          <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RetainLastResultOnly>false</RetainLastResultOnly>
+                          <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+                          <RunInsideDataLayer>false</RunInsideDataLayer>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen>
+                            <GroupingExpression Operator="And">
+                              <Children>
+                                <CriterionExpression>
+                                  <Criterion>
+                                    <FormulaCriterion>
+                                      <Formula>[Date From] &gt; [Date To]</Formula>
+                                    </FormulaCriterion>
+                                  </Criterion>
+                                </CriterionExpression>
+                              </Children>
+                            </GroupingExpression>
+                          </RunOnlyWhen>
+                        </TriggerCustomEvent>
+                      </Tasks>
+                    </Event>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </DatePicker>
+                  <Label Text="From" ID="Control215" IsReadOnly="false" LineNumber="1" Left="13" Top="2" Width="3" Height="3" TabIndex="10" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Right</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <Label Text="To" ID="Control216" IsReadOnly="false" LineNumber="1" Left="27" Top="2" Width="3" Height="3" TabIndex="11" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Right</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <TabStrip ID="Control217" IsReadOnly="false" LineNumber="1" Left="1" Top="2" Width="12" Height="3" TabIndex="12" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Values>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <String>FY Quarters</String>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <String>Custom Period</String>
+                        </Value>
+                      </Value>
+                    </Values>
+                    <ReferencedDataColumn>Date Selection</ReferencedDataColumn>
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <HighlightedTextColor>255,255,255,255</HighlightedTextColor>
+                    <EnableHighlightEffect>true</EnableHighlightEffect>
+                    <HighlightedBackgroundColor>64,64,64,255</HighlightedBackgroundColor>
+                    <BorderColor>64,64,64,255</BorderColor>
+                    <BoldSelectedItem>false</BoldSelectedItem>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </TabStrip>
+                  <Box ID="Control261" IsReadOnly="false" LineNumber="1" Left="0" Top="0" Width="54" Height="7" TabIndex="0" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BackColor>246,246,246,255</BackColor>
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <Radius>4</Radius>
+                    <FormulaBindings />
+                  </Box>
+                </Controls>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>7</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>1</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings>
+                  <Binding PropertyName="Visible" Expression="[Date Selection] = &quot;Custom Period&quot;" />
+                </FormulaBindings>
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block4">
+                <Controls>
+                  <ReportingBarChart Title="" LegendPosition="Top" ShowLegend="true" ShowLegendBorders="false" ShowPaneBorders="false" ID="Control165" IsReadOnly="false" LineNumber="1" Left="1" Top="6" Width="52" Height="30" TabIndex="6" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CategoryColumn>
+                        <ColumnName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <UseContiguousDatePeriod>true</UseContiguousDatePeriod>
+                        <ContiguousFieldRange>false</ContiguousFieldRange>
+                        <FromField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <ToField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <EndDate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <EndAlwaysNow>false</EndAlwaysNow>
+                        <Unit>Month</Unit>
+                        <NumberOfUnits>12</NumberOfUnits>
+                        <UseLocalTime>true</UseLocalTime>
+                      </CategoryColumn>
+                      <Pivot>true</Pivot>
+                      <SplitColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <PivotOrderValue>
+                        <String></String>
+                      </PivotOrderValue>
+                      <ValueFormat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <Columns />
+                      <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <GenerateDrillDownLinks>false</GenerateDrillDownLinks>
+                      <GeneratedDrillDownLinkProfile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <ShowHorizontalGridLines>true</ShowHorizontalGridLines>
+                    <ShowLinePoints>true</ShowLinePoints>
+                    <ShowVerticalGridLines>true</ShowVerticalGridLines>
+                    <ShowTicksBetweenLabels>true</ShowTicksBetweenLabels>
+                    <BarStackMode>Clustered</BarStackMode>
+                    <BarClusterGap>0</BarClusterGap>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression="LET $seriesNames := &#xA;ARRAY(&#xA;  &quot;Contracts Starting&quot;, &#xA;  &quot;Contracts Expiring&quot;&#xA;); &#xA;&#xA;LET $split := [Period List];&#xA;&#xA;LET $labels := &#xA;IF( &#xA;  [Grouping Period] = &quot;quarter&quot;, &#xA;  ARRAY_SELECT(&#xA;&#x9;[Period List], $(p, period)&#xA;&#x9;LET $fy := FINANCIALYEAR($period) - 1;&#xA;&#x9;LET $fyStart := EBMS_GET_FINANCIAL_YEAR_START(DATE($fy + 1)); &#xA;&#x9;LET $quarter := &#xA;&#x9;IF( &#xA;&#x9;&#x9;$period &gt;= DATEADD(&quot;month&quot;, 9, $fyStart), 4, &#xA;&#x9;&#x9;$period &gt;= DATEADD(&quot;month&quot;, 6, $fyStart), 3, &#xA;&#x9;&#x9;$period &gt;= DATEADD(&quot;month&quot;, 3, $fyStart), 2, &#xA;&#x9;&#x9;1&#xA;&#x9;);&#xA;&#x9;RETURN &#xA;&#x9;&quot;FY&quot; &amp; RIGHT($fy, 2) &amp; &quot;-&quot; &amp; RIGHT($fy, 2)+1 &amp; &quot; Q&quot; &amp; $quarter&#xA;&#x9;&#xA;  ), &#xA;  $split&#xA;);&#xA;&#xA;LET $seriesData := &#xA;ARRAY_SELECTMANY(&#xA;  $seriesNames, $(s, series)&#xA;  ARRAY(&#xA;&#x9;  HASH(&#xA;&#x9;    &quot;label&quot;, $series, &#xA;&#x9;&#x9;&quot;color&quot;, ARRAY_INDEX([Theme Colours], $s)&#xA;&#x9;  )&#xA;  )&#xA;);&#xA;&#xA;LET $types := &#xA;ARRAY(&#xA;&#x9;&quot;bar&quot;,&#xA;&#x9;&quot;bar&quot;  &#xA;); &#xA;&#xA;LET $chartData := &#xA;ARRAY_SELECT(&#xA;&#x9;[Report Data], $(i ,item) &#xA;&#x9;HASH(&#xA;&#x9;&#x9;&quot;type&quot;, ARRAY_INDEX($types, $i),&#xA;&#x9;&#x9;&quot;data&quot;, &#xA;&#x9;  &#x9;&#x9;ARRAY_SELECT($item, $(i, item) ARRAY_LENGTH($item))&#xA;&#x9;)&#xA;);&#xA;&#xA;//----Build chart----&#xA;RETURN &#xA;HASH(&#xA;    &quot;series&quot;, $seriesData,&#xA;    &quot;panes&quot;, &#xA;    ARRAY(&#xA;        HASH(&#xA;            &quot;labels&quot;, $labels,&#xA;&#x9;&#x9;&#x9;&quot;layers&quot;, $chartData&#xA;        )&#xA;    )&#xA;)" />
+                    </FormulaBindings>
+                  </ReportingBarChart>
+                  <TextBox ID="Control245" IsReadOnly="false" LineNumber="1" Left="2" Top="8" Width="8" Height="4" TabIndex="10" Visible="false" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Report Data</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,222,245,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <DropDown ID="Control253" IsReadOnly="false" LineNumber="1" Left="5" Top="2" Width="6" Height="3" TabIndex="11" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Values>
+                      <Value>
+                        <Text>
+                          <String>Day</String>
+                        </Text>
+                        <Value>
+                          <String>day</String>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <String>Week</String>
+                        </Text>
+                        <Value>
+                          <String>week</String>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <String>Month</String>
+                        </Text>
+                        <Value>
+                          <String>month</String>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <String>Quarter</String>
+                        </Text>
+                        <Value>
+                          <String>quarter</String>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <String>Year</String>
+                        </Text>
+                        <Value>
+                          <String>year</String>
+                        </Value>
+                      </Value>
+                    </Values>
+                    <ReferencedDataColumn>Grouping Period</ReferencedDataColumn>
+                    <Event>
+                      <Tasks />
+                    </Event>
+                    <BorderColor>64,64,64,255</BorderColor>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </DropDown>
+                  <Label Text="Grouping" ID="Control254" IsReadOnly="false" LineNumber="1" Left="1" Top="2" Width="3" Height="3" TabIndex="12" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Right</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <ReportingTable ID="Control258" IsReadOnly="false" LineNumber="1" Left="1" Top="36" Width="52" Height="20" TabIndex="13" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CategoryColumns />
+                      <DataColumns />
+                      <ShowHeadings>true</ShowHeadings>
+                      <ShowOther>false</ShowOther>
+                      <ShowTotal>false</ShowTotal>
+                      <RowLimit xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <Order>Ascending</Order>
+                      <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <FreezeColumnCount>0</FreezeColumnCount>
+                    <LimitSize>true</LimitSize>
+                    <HighlightColor>0,0,0,0</HighlightColor>
+                    <FontSize>10</FontSize>
+                    <EnableSort>true</EnableSort>
+                    <EnableFiltering>true</EnableFiltering>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression="LET $split := [Period List];&#xA;LET $period := [Grouping Period];&#xA;&#xA;LET $labels := &#xA;IF( &#xA;  [Grouping Period] = &quot;quarter&quot;, &#xA;  ARRAY_SELECT(&#xA;&#x9;[Period List], $(p, period)&#xA;&#x9;LET $fy := FINANCIALYEAR($period) - 1;&#xA;&#x9;LET $fyStart := EBMS_GET_FINANCIAL_YEAR_START(DATE($fy + 1)); &#xA;&#x9;LET $quarter := &#xA;&#x9;IF( &#xA;&#x9;&#x9;$period &gt;= DATEADD(&quot;month&quot;, 9, $fyStart), 4, &#xA;&#x9;&#x9;$period &gt;= DATEADD(&quot;month&quot;, 6, $fyStart), 3, &#xA;&#x9;&#x9;$period &gt;= DATEADD(&quot;month&quot;, 3, $fyStart), 2, &#xA;&#x9;&#x9;1&#xA;&#x9;);&#xA;&#x9;RETURN &#xA;&#x9;&quot;FY&quot; &amp; RIGHT($fy, 2) &amp; &quot;-&quot; &amp; RIGHT($fy, 2)+1 &amp; &quot; Q&quot; &amp; $quarter&#xA;&#x9;&#xA;  ), &#xA;  $split&#xA;);&#xA;&#xA;LET $tableColumns :=&#xA;ARRAY_CONCAT(&#xA;  ARRAY(HASH(&quot;heading&quot;, &quot;Description&quot;, &quot;width&quot;, 150)),&#xA;  ARRAY_SELECT(&#xA;&#x9;$labels, $(i, item) &#xA;&#x9;HASH(&quot;heading&quot;, $item, &quot;width&quot;, 100)&#xA;  )&#xA;);&#xA;&#xA;LET $seriesNames := &#xA;ARRAY(&#xA;  &quot;Contracts Starting&quot;, &#xA;  &quot;Contracts Expiring&quot;&#xA;); &#xA;&#xA;LET $targetDates := &#xA;ARRAY(&#xA;  &quot;Start Date&quot;, &#xA;  &quot;Current End Date&quot;&#xA;); &#xA;&#xA;LET $tableData := &#xA;ARRAY_SELECT(&#xA;&#x9;[Report Data], $(s, series) &#xA;&#x9;&#xA;&#x9;LET $rowData := &#xA;  &#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;$series, $(r, set)&#xA;&#x9;&#x9;LET $value := ARRAY_LENGTH($set);&#xA;&#x9;&#x9;LET $startOfPeriod := ARRAY_INDEX($split, $r); &#xA;&#x9;&#x9;LET $targetDate := ARRAY_INDEX($targetDates, $s);&#xA;&#x9;&#x9;LET $endOfPeriod :=&#xA;&#x9;&#x9;IF( &#xA;&#x9;&#x9;&#x9;$period = &quot;day&quot;, &#x9;&#x9; DATEADD(&quot;day&quot;, &#x9;1, $startOfPeriod),&#xA;&#x9;&#x9;&#x9;$period = &quot;week&quot;, &#x9; &#x9;DATEADD(&quot;day&quot;, &#x9;7, $startOfPeriod),&#xA;&#x9;&#x9;&#x9;$period = &quot;month&quot;,&#x9; DATEADD(&quot;month&quot;, &#x9;1, $startOfPeriod),&#xA;&#x9;&#x9;&#x9;$period = &quot;quarter&quot;, &#x9; DATEADD(&quot;month&quot;, &#x9;3, $startOfPeriod),&#xA;&#x9;&#x9;&#x9;$period = &quot;year&quot;, &#x9; &#x9;DATEADD(&quot;year&quot;,&#x9;1, $startOfPeriod),&#xA;&#x9;&#x9;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;LET $urlFilter := DB_ENCODEIDENTIFIER($targetDate) &amp; &quot; &gt;= &quot; &amp; N($startOfPeriod) &amp; &quot; AND &quot; &amp; DB_ENCODEIDENTIFIER($targetDate) &amp; &quot; &lt; &quot; &amp; N($endOfPeriod);&#xA;&#x9;&#x9;LET $url := &quot;tabularreport/Contract?where=&quot; &amp; URLENCODE($urlFilter); &#xA;&#x9;&#x9;&#xA;&#x9;&#x9;RETURN&#xA;&#x9;&#x9;HASH(&#xA;&#x9;&#x9;&#x9;&quot;value&quot;, $value, &#xA;&#x9;&#x9;&#x9;&quot;url&quot;, $url&#xA;&#x9;&#x9;)&#xA;&#x9;);&#xA;  &#xA;  RETURN &#xA;  ARRAY_CONCAT(&#xA;&#x9;ARRAY(HASH(&quot;value&quot;, ARRAY_INDEX($seriesNames, $s))), &#xA;&#x9;$rowData&#xA;  )&#xA;);&#xA;&#xA;LET $table := &#xA;HASH(&#xA;&#x9;&quot;columns&quot;, $tableColumns,&#xA;&#x9;&quot;rows&quot;, $tableData&#xA;);&#xA;&#xA;RETURN &#xA;$table" />
+                    </FormulaBindings>
+                  </ReportingTable>
+                  <Box ID="Control266" IsReadOnly="false" LineNumber="1" Left="0" Top="0" Width="54" Height="58" TabIndex="0" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BackColor>246,246,246,255</BackColor>
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <Radius>4</Radius>
+                    <FormulaBindings />
+                  </Box>
+                </Controls>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Contracts starting and expiring by period</HeadingText>
+                <HeadingHeight>3</HeadingHeight>
+                <BodyHeight>58</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>14</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>InheritFromView</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block11">
+                <Controls>
+                  <ReportingBarChart Title="" LegendPosition="Top" ShowLegend="true" ShowLegendBorders="false" ShowPaneBorders="false" ID="Control223" IsReadOnly="false" LineNumber="1" Left="1" Top="6" Width="52" Height="30" TabIndex="6" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CategoryColumn>
+                        <ColumnName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <UseContiguousDatePeriod>true</UseContiguousDatePeriod>
+                        <ContiguousFieldRange>false</ContiguousFieldRange>
+                        <FromField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <ToField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <EndDate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <EndAlwaysNow>false</EndAlwaysNow>
+                        <Unit>Month</Unit>
+                        <NumberOfUnits>12</NumberOfUnits>
+                        <UseLocalTime>true</UseLocalTime>
+                      </CategoryColumn>
+                      <Pivot>true</Pivot>
+                      <SplitColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <PivotOrderValue>
+                        <String></String>
+                      </PivotOrderValue>
+                      <ValueFormat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <Columns />
+                      <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <GenerateDrillDownLinks>false</GenerateDrillDownLinks>
+                      <GeneratedDrillDownLinkProfile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <ShowHorizontalGridLines>true</ShowHorizontalGridLines>
+                    <ShowLinePoints>true</ShowLinePoints>
+                    <ShowVerticalGridLines>true</ShowVerticalGridLines>
+                    <ShowTicksBetweenLabels>true</ShowTicksBetweenLabels>
+                    <BarStackMode>Stacked</BarStackMode>
+                    <BarClusterGap>0</BarClusterGap>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression="//----These variables must be the same length&#xA;LET $seriesNames := &#xA;ARRAY(&#xA;  &quot;Contract Value&quot;,&#xA;  &quot;Approved Variation Value&quot;&#xA;); &#xA;&#xA;LET $target := &#xA;ARRAY(&#xA;  &quot;Initial Contract Value Incl. Tax&quot;,&#xA;  &quot;Approved Variation Value&quot;&#xA;); &#xA;&#xA;LET $types := &#xA;ARRAY(&#xA;  &quot;bar&quot;,&#xA;  &quot;bar&quot;&#xA;); &#xA;&#xA;LET $split := &#xA;ARRAY_SELECT(&#xA;  [Report Data 2], $(i, item) &#xA;  HASH_GET($item, &quot;Contract Number&quot;)&#xA;);&#xA;&#xA;LET $labels := $split; &#xA;&#xA;LET $seriesData := &#xA;ARRAY_SELECTMANY(&#xA;  $seriesNames, $(s, series)&#xA;  ARRAY(&#xA;&#x9;  HASH(&#xA;&#x9;    &quot;label&quot;, $series, &#xA;&#x9;&#x9;&quot;color&quot;, ARRAY_INDEX([Theme Colours], $s)&#xA;&#x9;  )&#xA;  )&#xA;);&#xA;&#xA;LET $chartData := &#xA;ARRAY_SELECT(&#xA;&#x9;$seriesNames, $(s, series) &#xA;&#x9;HASH(&#xA;&#x9;&#x9;&quot;type&quot;, ARRAY_INDEX($types, $s),&#xA;&#x9;&#x9;&quot;data&quot;, &#xA;&#x9;  &#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;  [Report Data 2], $(r, reportData) &#xA;&#x9;&#x9;  HASH_GET($reportData, ARRAY_INDEX($target, $s))&#xA;&#x9;&#x9;)&#xA;&#x9;)&#xA;);&#xA;&#xA;//----Build chart----&#xA;RETURN &#xA;HASH(&#xA;    &quot;series&quot;, $seriesData,&#xA;    &quot;panes&quot;, &#xA;    ARRAY(&#xA;        HASH(&#xA;            &quot;labels&quot;, $labels,&#xA;&#x9;&#x9;&#x9;&quot;layers&quot;, $chartData&#xA;        )&#xA;    )&#xA;)" />
+                    </FormulaBindings>
+                  </ReportingBarChart>
+                  <TextBox ID="Control225" IsReadOnly="false" LineNumber="1" Left="9" Top="2" Width="3" Height="3" TabIndex="2" Visible="true" ShowBorder="true" PrintBorder="false" ShowWhenPrinting="false">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <ReferencedDataColumn>Contracts By Value - Limit</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <Label Text="Show top # of results" ID="Control227" IsReadOnly="false" LineNumber="1" Left="2" Top="2" Width="7" Height="3" TabIndex="8" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <TextBox ID="Control246" IsReadOnly="false" LineNumber="1" Left="2" Top="8" Width="8" Height="4" TabIndex="9" Visible="false" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Report Data 2</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,222,245,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <ReportingTable ID="Control247" IsReadOnly="false" LineNumber="1" Left="1" Top="36" Width="52" Height="20" TabIndex="10" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CategoryColumns />
+                      <DataColumns />
+                      <ShowHeadings>true</ShowHeadings>
+                      <ShowOther>false</ShowOther>
+                      <ShowTotal>false</ShowTotal>
+                      <RowLimit xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <Order>Ascending</Order>
+                      <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <FreezeColumnCount>0</FreezeColumnCount>
+                    <LimitSize>true</LimitSize>
+                    <HighlightColor>0,0,0,0</HighlightColor>
+                    <FontSize>10</FontSize>
+                    <EnableSort>true</EnableSort>
+                    <EnableFiltering>true</EnableFiltering>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression="LET $tableColumns :=&#xA;ARRAY(&#xA;  HASH(&quot;heading&quot;, &quot;Contract Number&quot;, &#x9;&#x9;&#x9;&quot;width&quot;, 340, &quot;format&quot;, &quot;&quot;),&#xA;  HASH(&quot;heading&quot;, &quot;Initial Contract Value Incl. Tax&quot;, &#x9;&quot;width&quot;, 340, &quot;format&quot;, &quot;C&quot;),&#xA;  HASH(&quot;heading&quot;, &quot;Approved Variation Value&quot;, &#x9;&quot;width&quot;, 340, &quot;format&quot;, &quot;C&quot;)&#xA;);&#xA;&#xA;LET $columns :=&#xA;ARRAY_SELECT(&#xA;  $tableColumns, $(i, item) &#xA;  HASH_GET($item, &quot;heading&quot;)&#xA;);&#xA;&#xA;LET $formats :=&#xA;ARRAY_SELECT(&#xA;  $tableColumns, $(i, item) &#xA;  HASH_GET($item, &quot;format&quot;)&#xA;);&#xA;&#xA;LET $tableData :=&#xA;ARRAY_SELECT(&#xA;&#x9;[Report Data 2], $(s, set) &#xA;&#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;$columns, $(c, column) &#xA;&#x9;    LET $value := HASH_GET($set, $column);&#xA;&#x9;    LET $format := ARRAY_INDEX($formats, $c);&#xA;&#x9;    RETURN &#xA;&#x9;    HASH(&#xA;&#x9;&#x9;  &quot;value&quot;, $value, &#xA;&#x9;&#x9;  &quot;format&quot;, $format,&#xA;&#x9;&#x9;  &quot;url&quot;, EBMS_GET_EFORMRECORD_URL(&quot;Contract&quot;, HASH_GET($set, &quot;RecordID&quot;))&#xA;&#x9;&#x9;)  &#xA;&#x9;)&#xA;);&#xA;&#xA;RETURN &#xA;HASH(&#xA;  &quot;columns&quot;, $tableColumns, &#xA;  &quot;rows&quot;, $tableData&#xA;)" />
+                    </FormulaBindings>
+                  </ReportingTable>
+                  <Box ID="Control262" IsReadOnly="false" LineNumber="1" Left="0" Top="0" Width="54" Height="58" TabIndex="0" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BackColor>246,246,246,255</BackColor>
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <Radius>4</Radius>
+                    <FormulaBindings />
+                  </Box>
+                </Controls>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Contracts by value - active within period</HeadingText>
+                <HeadingHeight>3</HeadingHeight>
+                <BodyHeight>58</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>14</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>InheritFromView</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block12">
+                <Controls>
+                  <ReportingBarChart Title="" LegendPosition="Top" ShowLegend="true" ShowLegendBorders="false" ShowPaneBorders="false" ID="Control230" IsReadOnly="false" LineNumber="1" Left="1" Top="6" Width="26" Height="30" TabIndex="6" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CategoryColumn>
+                        <ColumnName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <UseContiguousDatePeriod>true</UseContiguousDatePeriod>
+                        <ContiguousFieldRange>false</ContiguousFieldRange>
+                        <FromField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <ToField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <EndDate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <EndAlwaysNow>false</EndAlwaysNow>
+                        <Unit>Month</Unit>
+                        <NumberOfUnits>12</NumberOfUnits>
+                        <UseLocalTime>true</UseLocalTime>
+                      </CategoryColumn>
+                      <Pivot>true</Pivot>
+                      <SplitColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <PivotOrderValue>
+                        <String></String>
+                      </PivotOrderValue>
+                      <ValueFormat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <Columns />
+                      <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <GenerateDrillDownLinks>false</GenerateDrillDownLinks>
+                      <GeneratedDrillDownLinkProfile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <ShowHorizontalGridLines>true</ShowHorizontalGridLines>
+                    <ShowLinePoints>true</ShowLinePoints>
+                    <ShowVerticalGridLines>true</ShowVerticalGridLines>
+                    <ShowTicksBetweenLabels>true</ShowTicksBetweenLabels>
+                    <BarStackMode>Stacked</BarStackMode>
+                    <BarClusterGap>0</BarClusterGap>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression="//----These variables must be the same length&#xA;LET $seriesNames := &#xA;IF(&#xA;  [Type - Value or Count] = &quot;Count&quot;,&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Count&quot;&#xA;&#x9;),&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Contract Value&quot;,&#xA;&#x9;  &quot;Approved Variation Value&quot;&#xA;&#x9;)&#xA;); &#xA;&#xA;LET $target := &#xA;IF(&#xA;  [Type - Value or Count] = &quot;Count&quot;,&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;RecordID&quot;&#xA;&#x9;),&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Initial Contract Value Incl. Tax&quot;,&#xA;&#x9;  &quot;Approved Variation Value&quot;&#xA;&#x9;)&#xA;); &#xA;&#xA;LET $types := &#xA;ARRAY(&#xA;  &quot;bar&quot;,&#xA;  &quot;bar&quot;&#xA;); &#xA;&#xA;LET $split := &#xA;ARRAY_DISTINCT(&#xA;  ARRAY_SELECT(&#xA;    [Report Data 3], $(i, item) &#xA;    COALESCE(HASH_GET($item, &quot;Contract Type&quot;), &quot;None&quot;)&#xA;  )&#xA;);&#xA;&#xA;LET $labels := $split; &#xA;&#xA;LET $seriesData := &#xA;ARRAY_SELECTMANY(&#xA;  $seriesNames, $(s, series)&#xA;  ARRAY(&#xA;&#x9;  HASH(&#xA;&#x9;    &quot;label&quot;, $series, &#xA;&#x9;&#x9;&quot;color&quot;, ARRAY_INDEX([Theme Colours], $s)&#xA;&#x9;  )&#xA;  )&#xA;);&#xA;&#xA;LET $chartData := &#xA;ARRAY_SELECT(&#xA;  $seriesNames, $(seriesNumber, series)&#xA;  HASH(&#xA;&#x9;&quot;type&quot;, ARRAY_INDEX($types, $seriesNumber),&#xA;&#x9;&#xA;&#x9;&quot;data&quot;, &#xA;&#x9;ARRAY_SELECT(&#xA;&#x9;  $split, $(s, type) &#xA;&#x9;  (&#x9;&#xA;&#x9;&#x9;LET $matches := &#xA;&#x9;&#x9;  ARRAY_WHERE(&#xA;&#x9;&#x9;&#x9;[Report Data 3], $(i, item)&#xA;&#x9;&#x9;&#x9;HASH_GET($item, &quot;Contract Type&quot;) = IF($type = &quot;None&quot;, NULL(), $type) &#xA;&#x9;&#x9;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;LET $result := &#xA;&#x9;&#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;  $matches, $(i, item) &#xA;&#x9;&#x9;  HASH_GET($item, ARRAY_INDEX($target, $seriesNumber))&#xA;&#x9;&#x9;);&#xA;&#xA;&#x9;&#x9;RETURN IF([Type - Value or Count] = &quot;Value&quot;, SUM($result), COUNT($result))&#xA;&#x9;  )&#xA;&#x9;)&#xA;  )&#xA;);&#xA;&#xA;//----Build chart----&#xA;RETURN &#xA;HASH(&#xA;    &quot;series&quot;, $seriesData,&#xA;    &quot;panes&quot;, &#xA;    ARRAY(&#xA;        HASH(&#xA;            &quot;labels&quot;, $labels,&#xA;&#x9;&#x9;&#x9;&quot;layers&quot;, $chartData&#xA;        )&#xA;    )&#xA;)" />
+                    </FormulaBindings>
+                  </ReportingBarChart>
+                  <TabStrip ID="Control238" IsReadOnly="false" LineNumber="1" Left="2" Top="2" Width="12" Height="3" TabIndex="8" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Values>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <String>Value</String>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <String>Count</String>
+                        </Value>
+                      </Value>
+                    </Values>
+                    <ReferencedDataColumn>Type - Value or Count</ReferencedDataColumn>
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <HighlightedTextColor>255,255,255,255</HighlightedTextColor>
+                    <EnableHighlightEffect>true</EnableHighlightEffect>
+                    <HighlightedBackgroundColor>64,64,64,255</HighlightedBackgroundColor>
+                    <BorderColor>64,64,64,255</BorderColor>
+                    <BoldSelectedItem>false</BoldSelectedItem>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </TabStrip>
+                  <ReportingTable ID="Control248" IsReadOnly="false" LineNumber="1" Left="1" Top="36" Width="52" Height="20" TabIndex="9" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CategoryColumns />
+                      <DataColumns />
+                      <ShowHeadings>true</ShowHeadings>
+                      <ShowOther>false</ShowOther>
+                      <ShowTotal>false</ShowTotal>
+                      <RowLimit xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <Order>Ascending</Order>
+                      <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <FreezeColumnCount>0</FreezeColumnCount>
+                    <LimitSize>true</LimitSize>
+                    <HighlightColor>0,0,0,0</HighlightColor>
+                    <FontSize>10</FontSize>
+                    <EnableSort>true</EnableSort>
+                    <EnableFiltering>true</EnableFiltering>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression="LET $tableColumns :=&#xA;ARRAY(&#xA;  HASH(&quot;heading&quot;, &quot;Contract Number&quot;, &#x9;&quot;width&quot;, 340, &quot;format&quot;, &quot;&quot;),&#xA;  HASH(&quot;heading&quot;, &quot;Contract Type&quot;, &#x9;&#x9;&quot;width&quot;, 340, &quot;format&quot;, &quot;C&quot;),&#xA;  HASH(&quot;heading&quot;, &quot;Total Contract Value&quot;, &#x9;&quot;width&quot;, 340, &quot;format&quot;, &quot;C&quot;)&#xA;);&#xA;&#xA;LET $columns :=&#xA;ARRAY_SELECT(&#xA;  $tableColumns, $(i, item) &#xA;  HASH_GET($item, &quot;heading&quot;)&#xA;);&#xA;&#xA;LET $formats :=&#xA;ARRAY_SELECT(&#xA;  $tableColumns, $(i, item) &#xA;  HASH_GET($item, &quot;format&quot;)&#xA;);&#xA;&#xA;LET $tableData :=&#xA;ARRAY_SELECT(&#xA;&#x9;[Report Data 3], $(s, set) &#xA;&#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;$columns, $(c, column) &#xA;&#x9;    LET $value := HASH_GET($set, $column);&#xA;&#x9;    LET $format := ARRAY_INDEX($formats, $c);&#xA;&#x9;    RETURN &#xA;&#x9;    HASH(&#xA;&#x9;&#x9;  &quot;value&quot;, $value, &#xA;&#x9;&#x9;  &quot;format&quot;, $format,&#xA;&#x9;&#x9;  &quot;url&quot;, EBMS_GET_EFORMRECORD_URL(&quot;Contract&quot;, HASH_GET($set, &quot;RecordID&quot;))&#xA;&#x9;&#x9;)  &#xA;&#x9;)&#xA;);&#xA;&#xA;RETURN &#xA;HASH(&#xA;  &quot;columns&quot;, $tableColumns, &#xA;  &quot;rows&quot;, $tableData&#xA;)" />
+                    </FormulaBindings>
+                  </ReportingTable>
+                  <TextBox ID="Control249" IsReadOnly="false" LineNumber="1" Left="2" Top="8" Width="8" Height="4" TabIndex="10" Visible="false" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Report Data 3</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,222,245,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <ReportingPieChart Title="" LegendPosition="Top" ShowLegend="true" ShowLegendBorders="false" ShowPaneBorders="false" ID="Control256" IsReadOnly="false" LineNumber="1" Left="27" Top="6" Width="26" Height="30" TabIndex="11" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <ShowValuesOnChart>true</ShowValuesOnChart>
+                    <ShowLabelsOnChart>true</ShowLabelsOnChart>
+                    <Data>
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <ReferencedEForm xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <Pivot>false</Pivot>
+                      <SplitColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <PivotOrderValue>
+                        <String></String>
+                      </PivotOrderValue>
+                      <ValueFormat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <Columns />
+                      <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <GenerateDrillDownLinks>false</GenerateDrillDownLinks>
+                      <GeneratedDrillDownLinkProfile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression="//----These variables must be the same length&#xA;LET $seriesNames := &#xA;IF(&#xA;  [Type - Value or Count] = &quot;Count&quot;,&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Count&quot;&#xA;&#x9;),&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Total Contract Value&quot;&#xA;&#x9;)&#xA;); &#xA;&#xA;LET $target := &#xA;IF(&#xA;  [Type - Value or Count] = &quot;Count&quot;,&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;RecordID&quot;&#xA;&#x9;),&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Total Contract Value&quot;&#xA;&#x9;)&#xA;); &#xA;&#xA;LET $types := &#xA;ARRAY(&#xA;  &quot;bar&quot;,&#xA;  &quot;bar&quot;&#xA;); &#xA;&#xA;LET $split := &#xA;ARRAY_DISTINCT(&#xA;  ARRAY_SELECT(&#xA;    [Report Data 3], $(i, item) &#xA;    COALESCE(HASH_GET($item, &quot;Contract Type&quot;), &quot;None&quot;)&#xA;  )&#xA;);&#xA;&#xA;LET $labels := $split; &#xA;&#xA;LET $seriesData := &#xA;ARRAY_SELECTMANY(&#xA;  $split, $(s, splitItem)&#xA;  ARRAY(&#xA;&#x9;  HASH(&#xA;&#x9;    &quot;label&quot;, $splitItem, &#xA;&#x9;&#x9;&quot;color&quot;, ARRAY_INDEX([Theme Colours], $s)&#xA;&#x9;  )&#xA;  )&#xA;);&#xA;&#xA;LET $chartData := &#xA;ARRAY_SELECT(&#xA;  $split, $(s, type) &#xA;  (&#x9;&#xA;&#x9;LET $matches := &#xA;&#x9;ARRAY_WHERE(&#xA;&#x9;  [Report Data 3], $(i, item)&#xA;&#x9;  HASH_GET($item, &quot;Contract Type&quot;) = IF($type = &quot;None&quot;, NULL(), $type) &#xA;&#x9;);&#xA;&#xA;&#x9;LET $result := &#xA;&#x9;ARRAY_SELECT(&#xA;&#x9;  $matches, $(i, item) &#xA;&#x9;  HASH_GET($item, ARRAY_INDEX($target, 1))&#xA;&#x9;);&#xA;&#xA;&#x9;RETURN &#xA;&#x9;IF([Type - Value or Count] = &quot;Value&quot;, SUM($result), COUNT($result))&#xA;  )&#xA;);&#xA;&#xA;//----Build chart----&#xA;RETURN &#xA;HASH(&#xA;    &quot;series&quot;, $seriesData,&#xA;    &quot;panes&quot;, &#xA;    ARRAY(&#xA;        HASH(&#xA;            &quot;title&quot;, ARRAY_FIRST($seriesNames),&#xA;&#x9;&#x9;&#x9;&quot;data&quot;, $chartData&#xA;        )&#xA;    )&#xA;)" />
+                    </FormulaBindings>
+                  </ReportingPieChart>
+                  <Box ID="Control263" IsReadOnly="false" LineNumber="1" Left="0" Top="0" Width="54" Height="58" TabIndex="0" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BackColor>246,246,246,255</BackColor>
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <Radius>4</Radius>
+                    <FormulaBindings />
+                  </Box>
+                </Controls>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Contracts by contract type - active within period</HeadingText>
+                <HeadingHeight>3</HeadingHeight>
+                <BodyHeight>58</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>14</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>InheritFromView</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block13">
+                <Controls>
+                  <TabStrip ID="Control241" IsReadOnly="false" LineNumber="1" Left="2" Top="2" Width="12" Height="3" TabIndex="8" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Values>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <String>Value</String>
+                        </Value>
+                      </Value>
+                      <Value>
+                        <Text>
+                          <Null />
+                        </Text>
+                        <Value>
+                          <String>Count</String>
+                        </Value>
+                      </Value>
+                    </Values>
+                    <ReferencedDataColumn>Department - Value or Count</ReferencedDataColumn>
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <HighlightedTextColor>255,255,255,255</HighlightedTextColor>
+                    <EnableHighlightEffect>true</EnableHighlightEffect>
+                    <HighlightedBackgroundColor>64,64,64,255</HighlightedBackgroundColor>
+                    <BorderColor>64,64,64,255</BorderColor>
+                    <BoldSelectedItem>false</BoldSelectedItem>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings />
+                  </TabStrip>
+                  <ReportingBarChart Title="" LegendPosition="Top" ShowLegend="true" ShowLegendBorders="false" ShowPaneBorders="false" ID="Control250" IsReadOnly="false" LineNumber="1" Left="1" Top="6" Width="26" Height="30" TabIndex="9" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CategoryColumn>
+                        <ColumnName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <UseContiguousDatePeriod>true</UseContiguousDatePeriod>
+                        <ContiguousFieldRange>false</ContiguousFieldRange>
+                        <FromField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <ToField xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <EndDate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <EndAlwaysNow>false</EndAlwaysNow>
+                        <Unit>Month</Unit>
+                        <NumberOfUnits>12</NumberOfUnits>
+                        <UseLocalTime>true</UseLocalTime>
+                      </CategoryColumn>
+                      <Pivot>true</Pivot>
+                      <SplitColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <PivotOrderValue>
+                        <String></String>
+                      </PivotOrderValue>
+                      <ValueFormat xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <Columns />
+                      <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <GenerateDrillDownLinks>false</GenerateDrillDownLinks>
+                      <GeneratedDrillDownLinkProfile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <ShowHorizontalGridLines>true</ShowHorizontalGridLines>
+                    <ShowLinePoints>true</ShowLinePoints>
+                    <ShowVerticalGridLines>true</ShowVerticalGridLines>
+                    <ShowTicksBetweenLabels>true</ShowTicksBetweenLabels>
+                    <BarStackMode>Stacked</BarStackMode>
+                    <BarClusterGap>0</BarClusterGap>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression="//----These variables must be the same length&#xA;LET $seriesNames := &#xA;IF(&#xA;  [Department - Value or Count] = &quot;Count&quot;,&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Count&quot;&#xA;&#x9;),&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Contract Value&quot;,&#xA;&#x9;  &quot;Approved Variation Value&quot;&#xA;&#x9;)&#xA;); &#xA;&#xA;LET $target := &#xA;IF(&#xA;  [Department - Value or Count] = &quot;Count&quot;,&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;RecordID&quot;&#xA;&#x9;),&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Initial Contract Value Incl. Tax&quot;,&#xA;&#x9;  &quot;Approved Variation Value&quot;&#xA;&#x9;)&#xA;); &#xA;&#xA;LET $types := &#xA;ARRAY(&#xA;  &quot;bar&quot;,&#xA;  &quot;bar&quot;&#xA;); &#xA;&#xA;LET $split := &#xA;ARRAY_DISTINCT(&#xA;  ARRAY_SELECT(&#xA;    [Report Data 4], $(i, item) &#xA;    COALESCE(HASH_GET($item, &quot;Department&quot;), &quot;None&quot;)&#xA;  )&#xA;);&#xA;&#xA;LET $labels := $split; &#xA;&#xA;LET $seriesData := &#xA;ARRAY_SELECTMANY(&#xA;  $seriesNames, $(s, series)&#xA;  ARRAY(&#xA;&#x9;  HASH(&#xA;&#x9;    &quot;label&quot;, $series, &#xA;&#x9;&#x9;&quot;color&quot;, ARRAY_INDEX([Theme Colours], $s)&#xA;&#x9;  )&#xA;  )&#xA;);&#xA;&#xA;LET $chartData := &#xA;ARRAY_SELECT(&#xA;  $seriesNames, $(seriesNumber, series)&#xA;  HASH(&#xA;&#x9;&quot;type&quot;, ARRAY_INDEX($types, $seriesNumber),&#xA;&#x9;&#xA;&#x9;&quot;data&quot;, &#xA;&#x9;ARRAY_SELECT(&#xA;&#x9;  $split, $(s, type) &#xA;&#x9;  (&#x9;&#xA;&#x9;&#x9;LET $matches := &#xA;&#x9;&#x9;  ARRAY_WHERE(&#xA;&#x9;&#x9;&#x9;[Report Data 4], $(i, item)&#xA;&#x9;&#x9;&#x9;HASH_GET($item, &quot;Department&quot;) = IF($type = &quot;None&quot;, NULL(), $type) &#xA;&#x9;&#x9;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;LET $result := &#xA;&#x9;&#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;  $matches, $(i, item) &#xA;&#x9;&#x9;  HASH_GET($item, ARRAY_INDEX($target, $seriesNumber))&#xA;&#x9;&#x9;);&#xA;&#xA;&#x9;&#x9;RETURN IF([Department - Value or Count] = &quot;Value&quot;, SUM($result), COUNT($result))&#xA;&#x9;  )&#xA;&#x9;)&#xA;  )&#xA;);&#xA;&#xA;//----Build chart----&#xA;RETURN &#xA;HASH(&#xA;    &quot;series&quot;, $seriesData,&#xA;    &quot;panes&quot;, &#xA;    ARRAY(&#xA;        HASH(&#xA;            &quot;labels&quot;, $labels,&#xA;&#x9;&#x9;&#x9;&quot;layers&quot;, $chartData&#xA;        )&#xA;    )&#xA;)" />
+                    </FormulaBindings>
+                  </ReportingBarChart>
+                  <ReportingTable ID="Control251" IsReadOnly="false" LineNumber="1" Left="1" Top="36" Width="52" Height="20" TabIndex="10" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CategoryColumns />
+                      <DataColumns />
+                      <ShowHeadings>true</ShowHeadings>
+                      <ShowOther>false</ShowOther>
+                      <ShowTotal>false</ShowTotal>
+                      <RowLimit xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <Order>Ascending</Order>
+                      <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <FreezeColumnCount>0</FreezeColumnCount>
+                    <LimitSize>true</LimitSize>
+                    <HighlightColor>0,0,0,0</HighlightColor>
+                    <FontSize>10</FontSize>
+                    <EnableSort>true</EnableSort>
+                    <EnableFiltering>true</EnableFiltering>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression="LET $tableColumns :=&#xA;ARRAY(&#xA;  HASH(&quot;heading&quot;, &quot;Contract Number&quot;, &#x9;&quot;width&quot;, 340, &quot;format&quot;, &quot;&quot;),&#xA;  HASH(&quot;heading&quot;, &quot;Department&quot;, &#x9;&#x9;&quot;width&quot;, 340, &quot;format&quot;, &quot;C&quot;),&#xA;  HASH(&quot;heading&quot;, &quot;Total Contract Value&quot;, &#x9;&quot;width&quot;, 340, &quot;format&quot;, &quot;C&quot;)&#xA;);&#xA;&#xA;LET $columns :=&#xA;ARRAY_SELECT(&#xA;  $tableColumns, $(i, item) &#xA;  HASH_GET($item, &quot;heading&quot;)&#xA;);&#xA;&#xA;LET $formats :=&#xA;ARRAY_SELECT(&#xA;  $tableColumns, $(i, item) &#xA;  HASH_GET($item, &quot;format&quot;)&#xA;);&#xA;&#xA;LET $tableData :=&#xA;ARRAY_SELECT(&#xA;&#x9;[Report Data 4], $(s, set) &#xA;&#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;$columns, $(c, column) &#xA;&#x9;    LET $value := HASH_GET($set, $column);&#xA;&#x9;    LET $format := ARRAY_INDEX($formats, $c);&#xA;&#x9;    RETURN &#xA;&#x9;    HASH(&#xA;&#x9;&#x9;  &quot;value&quot;, $value, &#xA;&#x9;&#x9;  &quot;format&quot;, $format,&#xA;&#x9;&#x9;  &quot;url&quot;, EBMS_GET_EFORMRECORD_URL(&quot;Contract&quot;, HASH_GET($set, &quot;RecordID&quot;))&#xA;&#x9;&#x9;)  &#xA;&#x9;)&#xA;);&#xA;&#xA;RETURN &#xA;HASH(&#xA;  &quot;columns&quot;, $tableColumns, &#xA;  &quot;rows&quot;, $tableData&#xA;)" />
+                    </FormulaBindings>
+                  </ReportingTable>
+                  <TextBox ID="Control252" IsReadOnly="false" LineNumber="1" Left="2" Top="8" Width="8" Height="4" TabIndex="11" Visible="false" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>224,224,224,255</BorderColor>
+                    <ReferencedDataColumn>Report Data 4</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,222,245,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <ReportingRadarChart Title="" LegendPosition="Top" ShowLegend="true" ShowLegendBorders="false" ShowPaneBorders="false" ID="Control255" IsReadOnly="false" LineNumber="1" Left="27" Top="6" Width="26" Height="30" TabIndex="12" Visible="true" ShowBorder="false" PrintBorder="true" ShowWhenPrinting="true">
+                    <Data>
+                      <ReferencedEForm xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CategoryColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <Pivot>true</Pivot>
+                      <SplitColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <OrderIndex>0</OrderIndex>
+                      <PivotOrderValue xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <Columns />
+                      <Filter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                      <GenerateDrillDownLinks>false</GenerateDrillDownLinks>
+                      <GeneratedDrillDownLinkProfile xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    </Data>
+                    <FormulaBindings>
+                      <Binding PropertyName="ImmediateData" Expression="//----These variables must be the same length&#xA;LET $seriesNames := &#xA;IF(&#xA;  [Department - Value or Count] = &quot;Count&quot;,&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Count&quot;&#xA;&#x9;),&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Contract Value&quot;,&#xA;&#x9;  &quot;Approved Variation Value&quot;&#xA;&#x9;)&#xA;); &#xA;&#xA;LET $target := &#xA;IF(&#xA;  [Department - Value or Count] = &quot;Count&quot;,&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;RecordID&quot;&#xA;&#x9;),&#xA;&#x9;ARRAY(&#xA;&#x9;  &quot;Initial Contract Value Incl. Tax&quot;,&#xA;&#x9;  &quot;Approved Variation Value&quot;&#xA;&#x9;)&#xA;); &#xA;&#xA;LET $types := &#xA;ARRAY(&#xA;  &quot;bar&quot;,&#xA;  &quot;bar&quot;&#xA;); &#xA;&#xA;LET $split := &#xA;ARRAY_DISTINCT(&#xA;  ARRAY_SELECT(&#xA;    [Report Data 4], $(i, item) &#xA;    COALESCE(HASH_GET($item, &quot;Department&quot;), &quot;None&quot;)&#xA;  )&#xA;);&#xA;&#xA;LET $labels := $split; &#xA;&#xA;LET $seriesData := &#xA;ARRAY_SELECTMANY(&#xA;  $seriesNames, $(s, series)&#xA;  ARRAY(&#xA;&#x9;  HASH(&#xA;&#x9;    &quot;label&quot;, $series, &#xA;&#x9;&#x9;&quot;color&quot;, ARRAY_INDEX([Theme Colours], $s)&#xA;&#x9;  )&#xA;  )&#xA;);&#xA;&#xA;LET $chartData := &#xA;ARRAY_SELECT(&#xA;  $seriesNames, $(seriesNumber, series)&#xA;  HASH(&#xA;&#x9;&quot;type&quot;, ARRAY_INDEX($types, $seriesNumber),&#xA;&#x9;&#xA;&#x9;&quot;data&quot;, &#xA;&#x9;ARRAY_SELECT(&#xA;&#x9;  $split, $(s, type) &#xA;&#x9;  (&#x9;&#xA;&#x9;&#x9;LET $matches := &#xA;&#x9;&#x9;  ARRAY_WHERE(&#xA;&#x9;&#x9;&#x9;[Report Data 4], $(i, item)&#xA;&#x9;&#x9;&#x9;HASH_GET($item, &quot;Department&quot;) = IF($type = &quot;None&quot;, NULL(), $type) &#xA;&#x9;&#x9;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;LET $result := &#xA;&#x9;&#x9;ARRAY_SELECT(&#xA;&#x9;&#x9;  $matches, $(i, item) &#xA;&#x9;&#x9;  HASH_GET($item, ARRAY_INDEX($target, $seriesNumber))&#xA;&#x9;&#x9;);&#xA;&#xA;&#x9;&#x9;RETURN IF([Department - Value or Count] = &quot;Value&quot;, SUM($result), COUNT($result))&#xA;&#x9;  )&#xA;&#x9;)&#xA;  )&#xA;);&#xA;&#xA;//----Build chart----&#xA;RETURN &#xA;HASH(&#xA;    &quot;series&quot;, $seriesData,&#xA;    &quot;panes&quot;, &#xA;    ARRAY(&#xA;        HASH(&#xA;            &quot;labels&quot;, $labels,&#xA;&#x9;&#x9;&#x9;&quot;layers&quot;, $chartData&#xA;        )&#xA;    )&#xA;)" />
+                    </FormulaBindings>
+                  </ReportingRadarChart>
+                  <Box ID="Control264" IsReadOnly="false" LineNumber="1" Left="0" Top="0" Width="54" Height="58" TabIndex="0" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BackColor>246,246,246,255</BackColor>
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <Radius>4</Radius>
+                    <FormulaBindings />
+                  </Box>
+                </Controls>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Contracts by department - active within period</HeadingText>
+                <HeadingHeight>3</HeadingHeight>
+                <BodyHeight>58</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>14</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>InheritFromView</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block8">
+                <Controls>
+                  <DatePicker ID="Control205" IsReadOnly="true" LineNumber="1" Left="47" Top="2" Width="6" Height="3" TabIndex="1" Visible="true" ShowBorder="true" PrintBorder="false" ShowWhenPrinting="false">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <ReferencedDataColumn>Next Generation Date</ReferencedDataColumn>
+                    <ShowDatePopup>true</ShowDatePopup>
+                    <ShowTimePopup>false</ShowTimePopup>
+                    <TimeStartOffset>0</TimeStartOffset>
+                    <TimeInterval>60</TimeInterval>
+                    <Use24HourTime>false</Use24HourTime>
+                    <YearStart>1950</YearStart>
+                    <YearEnd>2050</YearEnd>
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>224,224,224,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </DatePicker>
+                  <DatePicker ID="Control206" IsReadOnly="true" LineNumber="1" Left="35" Top="2" Width="6" Height="3" TabIndex="2" Visible="true" ShowBorder="true" PrintBorder="false" ShowWhenPrinting="false">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <ReferencedDataColumn>Last Generation Date</ReferencedDataColumn>
+                    <ShowDatePopup>true</ShowDatePopup>
+                    <ShowTimePopup>false</ShowTimePopup>
+                    <TimeStartOffset>0</TimeStartOffset>
+                    <TimeInterval>60</TimeInterval>
+                    <Use24HourTime>false</Use24HourTime>
+                    <YearStart>1950</YearStart>
+                    <YearEnd>2050</YearEnd>
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>224,224,224,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </DatePicker>
+                  <Label Text="Last generation" ID="Control208" IsReadOnly="false" LineNumber="1" Left="30" Top="2" Width="5" Height="3" TabIndex="4" Visible="true" ShowBorder="false" PrintBorder="false" ShowWhenPrinting="false">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <GenerateFileButton ID="Control209" IsReadOnly="false" LineNumber="1" Left="1" Top="2" Width="8" Height="3" TabIndex="5" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="false">
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Text>Export PDF</Text>
+                    <FileGenerator>
+                      <RenderedView>
+                        <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        <ResultFileNameTemplate>CEO Report.pdf</ResultFileNameTemplate>
+                        <ExpandAllBlocks>false</ExpandAllBlocks>
+                      </RenderedView>
+                    </FileGenerator>
+                    <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <TypeOfButton>Custom</TypeOfButton>
+                    <BorderColor>180,180,180,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </GenerateFileButton>
+                  <ManageAttachedDocumentsButton Text="View Historical PDFs" Path="History" ShowAttachmentCount="true" ID="Control210" IsReadOnly="false" LineNumber="1" Left="10" Top="2" Width="8" Height="3" TabIndex="6" Visible="true" ShowBorder="true" PrintBorder="false" ShowWhenPrinting="false">
+                    <TypeOfButton>Custom</TypeOfButton>
+                    <BorderColor>180,180,180,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </ManageAttachedDocumentsButton>
+                  <Label Text="Next generation" ID="Control211" IsReadOnly="false" LineNumber="1" Left="42" Top="2" Width="5" Height="3" TabIndex="7" Visible="true" ShowBorder="false" PrintBorder="false" ShowWhenPrinting="false">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <BackColor>0,0,0,0</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </Label>
+                  <TextBox ID="Control212" IsReadOnly="false" LineNumber="1" Left="23" Top="2" Width="6" Height="3" TabIndex="8" Visible="false" ShowBorder="true" PrintBorder="false" ShowWhenPrinting="false">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <ReferencedDataColumn>Generate</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,222,245,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <Box ID="Control265" IsReadOnly="false" LineNumber="1" Left="0" Top="0" Width="54" Height="7" TabIndex="0" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BackColor>246,246,246,255</BackColor>
+                    <BorderColor>255,255,255,255</BorderColor>
+                    <Radius>4</Radius>
+                    <FormulaBindings />
+                  </Box>
+                </Controls>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText>Heading</HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>7</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>0,0,0,0</BackColor>
+                <HeadingBackColor>255,255,255,255</HeadingBackColor>
+                <HeadingTextColor>0,85,122,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>255,255,255,255</BorderColor>
+                <BorderWidth>1</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>Automatic</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>true</Visible>
+              </Block>
+              <Block IsReadOnly="false" ID="Block10">
+                <Controls>
+                  <TextBox ID="Control220" IsReadOnly="true" LineNumber="1" Left="1" Top="1" Width="52" Height="10" TabIndex="7" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <ReferencedDataColumn>Data</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <TextBox ID="Control221" IsReadOnly="true" LineNumber="1" Left="1" Top="16" Width="52" Height="10" TabIndex="8" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <BorderColor>0,0,0,255</BorderColor>
+                    <ReferencedDataColumn>Theme Colours</ReferencedDataColumn>
+                    <TextMode>Guess</TextMode>
+                    <PlaceholderText xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>0,0,0,255</TextColor>
+                    <TextAlign>Left</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>9</FontSize>
+                    <FormulaBindings />
+                  </TextBox>
+                  <DropDown ID="Control236" IsReadOnly="false" LineNumber="1" Left="1" Top="12" Width="6" Height="3" TabIndex="9" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Values />
+                    <ReferencedDataColumn>Earliest Year of Data</ReferencedDataColumn>
+                    <Event>
+                      <Tasks>
+                        <TriggerCustomEvent>
+                          <EventNameTemplate>Update Dates</EventNameTemplate>
+                          <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RetainLastResultOnly>false</RetainLastResultOnly>
+                          <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+                          <RunInsideDataLayer>false</RunInsideDataLayer>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </TriggerCustomEvent>
+                      </Tasks>
+                    </Event>
+                    <BorderColor>64,64,64,255</BorderColor>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Values" Expression="LET $earliestYear := &#xA;&#xA;GREATEST(&#xA;  YEAR(LEAST(ARRAY_SELECT(&#xA;  &#x9;[Data], $(i, item) &#xA;  &#x9;HASH_GET($item, &quot;Start Date&quot;)&#xA;  ))), &#xA;  2015&#xA;);&#xA;&#xA;LET $latestYear := &#xA;YEAR(GREATEST(ARRAY_SELECT(&#xA;  [Data], $(i, item) &#xA;  HASH_GET($item, &quot;Current End Date&quot;)&#xA;)));&#xA;&#xA;LET $yearsCovered := $latestYear - $earliestYear - 1;&#xA;&#xA;LET $list := &#xA;ARRAY_SELECT(&#xA;&#x9;RANGE($earliestYear, $yearsCovered), $(i, item)&#xA;&#x9;LET $year := YEAR(NOW()) + $i;&#xA;&#x9;LET $text := RIGHT($year, 2) &amp; &quot;/&quot; &amp; N(RIGHT($year, 2)) + 1;&#xA;&#x9;RETURN &#xA;&#x9;HASH(&#xA;&#x9;  &quot;text&quot;, $text, &#xA;&#x9;  &quot;value&quot;, $year&#xA;&#x9;)&#x9;&#x9;  &#xA;);&#xA;&#xA;RETURN &#xA;ARRAY_CONCAT(&#xA;  ARRAY(HASH(&quot;text&quot;, &quot;All&quot;, &quot;value&quot;, 0)),&#xA;  $list&#xA;)&#xA;&#xA;" />
+                    </FormulaBindings>
+                  </DropDown>
+                  <DropDown ID="Control237" IsReadOnly="false" LineNumber="1" Left="8" Top="12" Width="6" Height="3" TabIndex="10" Visible="true" ShowBorder="true" PrintBorder="true" ShowWhenPrinting="true">
+                    <Values />
+                    <ReferencedDataColumn>Latest Year of Data</ReferencedDataColumn>
+                    <Event>
+                      <Tasks>
+                        <TriggerCustomEvent>
+                          <EventNameTemplate>Update Dates</EventNameTemplate>
+                          <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RetainLastResultOnly>false</RetainLastResultOnly>
+                          <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+                          <RunInsideDataLayer>false</RunInsideDataLayer>
+                          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                        </TriggerCustomEvent>
+                      </Tasks>
+                    </Event>
+                    <BorderColor>64,64,64,255</BorderColor>
+                    <BackColor>255,255,255,255</BackColor>
+                    <TextColor>64,64,64,255</TextColor>
+                    <TextAlign>Center</TextAlign>
+                    <FontName>Default</FontName>
+                    <Bold>false</Bold>
+                    <Italic>false</Italic>
+                    <Underline>false</Underline>
+                    <FontSize>10</FontSize>
+                    <FormulaBindings>
+                      <Binding PropertyName="Values" Expression="LET $earliestYear := &#xA;&#xA;GREATEST(&#xA;  YEAR(LEAST(ARRAY_SELECT(&#xA;  &#x9;[Data], $(i, item) &#xA;  &#x9;HASH_GET($item, &quot;Start Date&quot;)&#xA;  ))), &#xA;  2015&#xA;);&#xA;&#xA;LET $latestYear := &#xA;YEAR(GREATEST(ARRAY_SELECT(&#xA;  [Data], $(i, item) &#xA;  HASH_GET($item, &quot;Current End Date&quot;)&#xA;)));&#xA;&#xA;LET $yearsCovered := $latestYear - $earliestYear - 1;&#xA;&#xA;LET $list := &#xA;ARRAY_SELECT(&#xA;&#x9;RANGE($earliestYear, $yearsCovered), $(i, item)&#xA;&#x9;LET $year := YEAR(NOW()) + $i;&#xA;&#x9;LET $text := RIGHT($year, 2) &amp; &quot;/&quot; &amp; N(RIGHT($year, 2)) + 1;&#xA;&#x9;RETURN &#xA;&#x9;HASH(&#xA;&#x9;  &quot;text&quot;, $text, &#xA;&#x9;  &quot;value&quot;, $year&#xA;&#x9;)&#x9;&#x9;  &#xA;);&#xA;&#xA;RETURN &#xA;ARRAY_CONCAT(&#xA;  ARRAY(HASH(&quot;text&quot;, &quot;All&quot;, &quot;value&quot;, 0)),&#xA;  $list&#xA;)&#xA;&#xA;" />
+                    </FormulaBindings>
+                  </DropDown>
+                </Controls>
+                <ExpanderVisible>No</ExpanderVisible>
+                <HeadingText></HeadingText>
+                <HeadingHeight>0</HeadingHeight>
+                <BodyHeight>27</BodyHeight>
+                <IsHeader>false</IsHeader>
+                <IsCollapsed>false</IsCollapsed>
+                <IsPrintable>true</IsPrintable>
+                <EnableScrolling>false</EnableScrolling>
+                <BackColor>255,222,245,255</BackColor>
+                <HeadingBackColor>128,128,128,255</HeadingBackColor>
+                <HeadingTextColor>255,255,255,255</HeadingTextColor>
+                <HeadingTextSize>10</HeadingTextSize>
+                <HeadingTextAlign>Left</HeadingTextAlign>
+                <BorderColor>100,100,100,255</BorderColor>
+                <BorderWidth>0</BorderWidth>
+                <BorderStyle>Solid</BorderStyle>
+                <TabOrderMode>InheritFromView</TabOrderMode>
+                <Event xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                <FormulaBindings />
+                <Visible>false</Visible>
+              </Block>
+            </Blocks>
+          </Section>
+        </Sections>
+        <EnableSquash>false</EnableSquash>
+        <BannerHtmlTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </View>
+    </ViewEntry>
+  </Views>
+  <Security>
+    <PermissionSetName>Custom</PermissionSetName>
+    <Roles>
+      <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+    </Roles>
+    <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+    <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ComponentAccessControlGroups />
+  </Security>
+  <SecurityParts>
+    <Security>
+      <PermissionSetName>Custom</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Open Access</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Department Level Access</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - CompareCoOps</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Boroondara</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Cenitex</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - CoGD</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Ombudsman</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Obsolete - Open Set</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Obsolete - Implementation Set</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+    <Security>
+      <PermissionSetName>Custom - Stonnington</PermissionSetName>
+      <Roles>
+        <RoleEntry Read="true" Write="true" Delete="true" Administrate="true">
+          <Role>Administrators</Role>
+        </RoleEntry>
+        <RoleEntry Read="true" Write="true" Delete="false" Administrate="false">
+          <Role>Everyone</Role>
+        </RoleEntry>
+      </Roles>
+      <UseFilterPermissionsForNewRecords>false</UseFilterPermissionsForNewRecords>
+      <RecordReadAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordWriteAccessFilter xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ComponentAccessControlGroups />
+    </Security>
+  </SecurityParts>
+  <Categories>
+    <CategoryRef>Contracts</CategoryRef>
+  </Categories>
+  <Workflow>
+    <EnableAutomatedWorkflow>false</EnableAutomatedWorkflow>
+    <AllowManualOverride>true</AllowManualOverride>
+    <PromptUserOnWorkflowChange>false</PromptUserOnWorkflowChange>
+    <States>
+      <State Name="Start" Left="100" Top="100">
+        <Transitions />
+        <NotificationTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <SendNotification>false</SendNotification>
+        <ForceAssigneeTo xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </State>
+      <State Name="Closed" Left="100" Top="200">
+        <Transitions />
+        <NotificationTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <SendNotification>false</SendNotification>
+        <ForceAssigneeTo xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      </State>
+    </States>
+  </Workflow>
+  <Settings>
+    <DefaultView>Default</DefaultView>
+    <NotifyOnSave>Never</NotifyOnSave>
+    <DefaultToNotifyOnSave>false</DefaultToNotifyOnSave>
+    <NotifyOnSaveTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <NotifyOnCreate>false</NotifyOnCreate>
+    <NotifyOnCreateRecordTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <IncludeRenderedViewInCreateRecordNotification>false</IncludeRenderedViewInCreateRecordNotification>
+    <NotifyOnWorkflowChange>false</NotifyOnWorkflowChange>
+    <NotifyOnWorkflowChangeTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <NotifyOnClosed>false</NotifyOnClosed>
+    <NotifyOnClosedTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <AllowUserToPreviewNotifications>false</AllowUserToPreviewNotifications>
+    <DefaultUserToPreviewNotifications>false</DefaultUserToPreviewNotifications>
+    <DeleteWithParent>true</DeleteWithParent>
+    <EnableManualLinkedEFormRecordsManagement>false</EnableManualLinkedEFormRecordsManagement>
+    <IsQuickSearchable>true</IsQuickSearchable>
+    <AssignNewRecordsToCurrentUser>false</AssignNewRecordsToCurrentUser>
+    <EnableDuplicatingRecords>true</EnableDuplicatingRecords>
+    <EnableDeleteFromTabularView>false</EnableDeleteFromTabularView>
+    <EnableAddFromTabularView>true</EnableAddFromTabularView>
+    <PromptUserBeforeNavigatingAway>false</PromptUserBeforeNavigatingAway>
+  </Settings>
+  <Attachments>
+    <Folders>
+      <Folder>
+        <Path>History</Path>
+        <Guid>57d70dc5-a166-4995-9c2d-382a1bf6e017</Guid>
+        <AccessControlGroupMemberships />
+        <AccessControlGroups />
+      </Folder>
+    </Folders>
+  </Attachments>
+  <Dependants>
+    <Selectors />
+  </Dependants>
+  <Credentials>
+    <Credentials />
+  </Credentials>
+  <CustomEvents>
+    <Event>
+      <Name>Generate Report</Name>
+      <Guid>aee148ad-fb8c-4061-9d74-70f1e3799222</Guid>
+      <Description></Description>
+      <Tasks>
+        <AttachFiles>
+          <Attachments>
+            <RenderedView>
+              <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <ResultFileNameTemplate>{"Summary Report " &amp; DATEFORMAT(NOW(), "dd-MMM-yyyy")}</ResultFileNameTemplate>
+              <ExpandAllBlocks>false</ExpandAllBlocks>
+            </RenderedView>
+          </Attachments>
+          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <TargetPathTemplate>History</TargetPathTemplate>
+          <UpdateTargetRecord>true</UpdateTargetRecord>
+          <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <PushCreatedFilesIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </AttachFiles>
+        <ChangeFieldValues>
+          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <FieldEntries>
+            <FieldEntry>
+              <ColumnName>Last Generation Date</ColumnName>
+              <AssignWholeColumn>false</AssignWholeColumn>
+              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <Formula>TODAY()</Formula>
+            </FieldEntry>
+            <FieldEntry>
+              <ColumnName>Next Generation Date</ColumnName>
+              <AssignWholeColumn>false</AssignWholeColumn>
+              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <Formula>TODAY(DATEADD("month", 1, NOW()))</Formula>
+            </FieldEntry>
+          </FieldEntries>
+          <UpdateRecordFormulas>false</UpdateRecordFormulas>
+          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </ChangeFieldValues>
+        <Save>
+          <WorkflowNotesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <DisplaySuccessMessage>false</DisplaySuccessMessage>
+          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </Save>
+      </Tasks>
+    </Event>
+    <Event>
+      <Name>Swap Dates</Name>
+      <Guid>1afbd464-09e5-4d18-9c0d-e7fe458d7baf</Guid>
+      <Description></Description>
+      <Tasks>
+        <ChangeFieldValues>
+          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <FieldEntries>
+            <FieldEntry>
+              <ColumnName>Temp</ColumnName>
+              <AssignWholeColumn>false</AssignWholeColumn>
+              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <Formula>ARRAY([Date From], [Date To])</Formula>
+            </FieldEntry>
+            <FieldEntry>
+              <ColumnName>Date From</ColumnName>
+              <AssignWholeColumn>false</AssignWholeColumn>
+              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <Formula>ARRAY_INDEX([Temp], 2)</Formula>
+            </FieldEntry>
+            <FieldEntry>
+              <ColumnName>Date To</ColumnName>
+              <AssignWholeColumn>false</AssignWholeColumn>
+              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <Formula>ARRAY_INDEX([Temp], 1)</Formula>
+            </FieldEntry>
+          </FieldEntries>
+          <UpdateRecordFormulas>false</UpdateRecordFormulas>
+          <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </ChangeFieldValues>
+      </Tasks>
+    </Event>
+    <Event>
+      <Name>Update Dates</Name>
+      <Guid>8d92dcbb-577e-42d9-b893-2ad79c9ffb57</Guid>
+      <Description></Description>
+      <Tasks>
+        <ChangeFieldValues>
+          <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <FieldEntries>
+            <FieldEntry>
+              <ColumnName>Date From</ColumnName>
+              <AssignWholeColumn>false</AssignWholeColumn>
+              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <Formula>LET $result := 
+DATE(
+  IF( 
+	[Financial Quarter] &gt; 2, [Financial Year] + 1, 
+	[Financial Year]
+  ),
+  IF(
+	[Financial Quarter] = 0, 7, 
+	[Financial Quarter] = 1, 7, 
+	[Financial Quarter] = 2, 10, 
+	[Financial Quarter] = 3, 1, 
+	[Financial Quarter] = 4, 4 
+  )
+); 
+
+RETURN 
+IF(
+  OR(
+	$result &lt; DATE(2000), 
+	$result &gt; DATE(3000)
+  ), 
+  EBMS_GET_FINANCIAL_YEAR_START(DATE([Earliest Year of Data] + 1)), 
+  $result
+)
+</Formula>
+            </FieldEntry>
+            <FieldEntry>
+              <ColumnName>Date To</ColumnName>
+              <AssignWholeColumn>false</AssignWholeColumn>
+              <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+              <Formula>LET $result :=  
+DATE(
+  IF( 
+	[Financial Quarter] = 0, [Financial Year] + 1, 
+	[Financial Quarter] &gt;= 2, [Financial Year] + 1, 
+	[Financial Year]
+  ),
+  IF(
+	[Financial Quarter] = 0, 7, 
+	[Financial Quarter] = 1, 10, 
+	[Financial Quarter] = 2, 1, 
+	[Financial Quarter] = 3, 4, 
+	[Financial Quarter] = 4, 7 
+  )
+);
+
+RETURN 
+IF(
+  OR(
+	$result &lt; DATE(2000), 
+	$result &gt; DATE(3000)
+  ), 
+  DATEADD("second", -1, EBMS_GET_FINANCIAL_YEAR_START(DATE([Latest Year of Data]))),
+  DATEADD("second", -1, $result)
+)</Formula>
+            </FieldEntry>
+          </FieldEntries>
+          <UpdateRecordFormulas>false</UpdateRecordFormulas>
+          <Description>Updates Date Range</Description>
+          <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        </ChangeFieldValues>
+      </Tasks>
+    </Event>
+  </CustomEvents>
+</EForm>

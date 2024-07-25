@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Conflict of Interest Declaration</EForm>
+  <Name>COI Decision Notification</Name>
+  <Description>To: Procurement Officer</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>role:"{[Procurement Officer]}"</ToAddressesTemplate>
+    <CcAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <BccAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <ReplyToAddressesTemplate
+      xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    <SubjectTemplate>Conflict of Interest Declaration ({[Type]}) - {IF(
+  	[Status] = "Agreed: No conflicts", "agreed with no conflict",
+  	[Status] = "Agreed: Conflicts acknowledged", "agreed with conflicts acknowledged",
+  	[Status] = "Not agreed", "did not agree"
+	)} ({[Signed by Display Name]})</SubjectTemplate>
+    <BodyTemplate>Hello {EBMS_GET_ROLE_DISPLAYNAME([Procurement Officer])},
+
+This notification relates to {
+IF([Evaluation RecordID] &lt;&gt; NULL, 
+  "Procurement '" &amp; [Procurement Title] &amp; "'",
+  "Evaluation '" &amp; [Procurement Title] &amp; "'"
+)}
+
+The following Conflict of Interest Declaration has been made.
+Panel Member: {[Signed by Display Name]}
+Declaration: {[Status]}
+Date of Declaration: {[Date Signed]}
+
+Click the link below to see any details associated with this decision: 
+{EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID])}
+{IF(
+  [Type] = "Evaluation",
+  NEWLINE() &amp; "Click this link to go to the evaluation process: "  &amp; NEWLINE() &amp; 
+  EBMS_GET_EFORMRECORD_URL("Evaluation", [Evaluation RecordID])
+)
+}
+
+
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>

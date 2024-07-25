@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="RecordID" Alias="" Aggregate="None" Width="103" />
+    <Column Name="Name" Alias="" Aggregate="None" Width="229" />
+    <Column Name="Indicated Cost" Alias="" Aggregate="None" Width="120" />
+    <Column Name="ID" Alias="" Aggregate="None" Width="130" />
+    <Column Name="Opportunity ID" Alias="" Aggregate="None" Width="131" />
+    <Column Name="Reference Number" Alias="" Aggregate="None" Width="157" />
+    <Column Name="Created Date" Alias="" Aggregate="None" Width="120" />
+    <Column Name="Modified Date" Alias="" Aggregate="None" Width="120" />
+    <Column Name="Decision Date" Alias="" Aggregate="None" Width="150" />
+    <Column Name="Is Complete" Alias="" Aggregate="None" Width="108" />
+    <Column Name="State" Alias="" Aggregate="None" Width="104" />
+    <Column Name="Late Response" Alias="" Aggregate="None" Width="115" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children />
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>true</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[Name] ASC</OrderBy>
+  <GroupBy></GroupBy>
+  <GroupsStartCollapsed>true</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

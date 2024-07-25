@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabularReportProfile xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Columns>
+    <Column Name="Contract Number" Alias="" Aggregate="None" Width="145" />
+    <Column Name="Contract Title" Alias="" Aggregate="None" Width="160" />
+    <AdvancedColumn Name="Vendor" Width="150" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>STEP TO PARENT [Contract] 
+ON [To].[RecordID] FAST_EQUAL_TO [Contract RecordID]
+AND [To].[LineNumber] FAST_EQUAL_TO 1
+GET FIRST([Vendor Name])</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <AdvancedColumn Name="Contract End Date" Width="136" Aggregate="None">
+      <Criterion>
+        <TextCriterion>
+          <Text>STEP TO PARENT [Contract] 
+ON [To].[RecordID] FAST_EQUAL_TO [Contract RecordID]
+AND [To].[LineNumber] FAST_EQUAL_TO 1
+GET FIRST([Current End Date])</Text>
+        </TextCriterion>
+      </Criterion>
+    </AdvancedColumn>
+    <Column Name="Security Type" Alias="" Aggregate="None" Width="136" />
+    <Column Name="Status" Alias="" Aggregate="None" Width="110" />
+    <Column Name="Bank Guarantee Expiry Date" Alias="" Aggregate="None" Width="186" />
+    <Column Name="Notes" Alias="" Aggregate="None" Width="156" />
+  </Columns>
+  <BackgroundColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <BackgroundColourRules />
+  <TextColourColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <TextColourRules />
+  <AutomaticUpdates>0</AutomaticUpdates>
+  <Filter>
+    <GroupingExpression Operator="And">
+      <Children />
+    </GroupingExpression>
+  </Filter>
+  <ShowOnlyMyEForms>false</ShowOnlyMyEForms>
+  <Status xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <StatusNotClosed>false</StatusNotClosed>
+  <ShowOnlyFirstLine>false</ShowOnlyFirstLine>
+  <Priority xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <OrderBy>[Contract Number] ASC</OrderBy>
+  <GroupBy>[Status] DESC</GroupBy>
+  <GroupsStartCollapsed>false</GroupsStartCollapsed>
+  <DefaultPageSize>50</DefaultPageSize>
+  <PdfSettings>
+    <PageLayout>A4Landscape</PageLayout>
+    <Scale>1</Scale>
+  </PdfSettings>
+  <ExportViewLinks>false</ExportViewLinks>
+  <OpenPopup>false</OpenPopup>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+      <RoleEntry Read="true" Administrate="false">
+        <Role>Everyone</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</TabularReportProfile>

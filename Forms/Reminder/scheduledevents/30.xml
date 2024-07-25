@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScheduledEvent xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <Enabled>true</Enabled>
+  <Description>AUTOMATION - Send and Update Reminders</Description>
+  <TriggeredByRecords>true</TriggeredByRecords>
+  <EFormRef>Reminder</EFormRef>
+  <RecordFilter>
+    <GroupingExpression Operator="And">
+      <Children>
+        <CriterionExpression>
+          <Criterion>
+            <TextCriterion>
+              <Text>[Reminder Enabled] = TRUE</Text>
+            </TextCriterion>
+          </Criterion>
+        </CriterionExpression>
+      </Children>
+    </GroupingExpression>
+  </RecordFilter>
+  <Tasks>
+    <Update>
+      <Description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </Update>
+    <TriggerCustomEvent>
+      <EventNameTemplate>Build HTML Report</EventNameTemplate>
+      <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RetainLastResultOnly>false</RetainLastResultOnly>
+      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+      <RunInsideDataLayer>false</RunInsideDataLayer>
+      <Description>Build HTML Report</Description>
+      <RunOnlyWhen xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </TriggerCustomEvent>
+    <Notification>
+      <AttachRecordViewAsPdf>false</AttachRecordViewAsPdf>
+      <SendEmailImmediately>true</SendEmailImmediately>
+      <AttachLogo>false</AttachLogo>
+      <AttachRecordViewName xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <AttachedRecordViewFilenameTemplate></AttachedRecordViewFilenameTemplate>
+      <Attachments />
+      <DontSendToCurrentRole>false</DontSendToCurrentRole>
+      <Template>
+        <ToAddressesTemplate></ToAddressesTemplate>
+        <CcAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <BccAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <ReplyToAddressesTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <SubjectTemplate>Untitled email</SubjectTemplate>
+        <BodyTemplate>Dear user,
+
+{ EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID]) }
+Regards</BodyTemplate>
+        <IsBodyHtml>false</IsBodyHtml>
+        <UseDefaultFrame>true</UseDefaultFrame>
+      </Template>
+      <LibraryEmailTemplateNameTemplate>Custom Reminder</LibraryEmailTemplateNameTemplate>
+      <Location>Library</Location>
+      <DisplayLogMessages>true</DisplayLogMessages>
+      <SendFromTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <Description>Send Reminder Email if reminder date = TODAY
+Applicable to 'standard' reminders - i.e. sends reminder for a single record</Description>
+      <RunOnlyWhen>
+        <GroupingExpression Operator="And">
+          <Children>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="EqualTo">
+                  <Left>
+                    <CurrentEFormFieldReferenceCriterion ColumnName="Next Reminder Date">
+                      <LineNumber>1</LineNumber>
+                    </CurrentEFormFieldReferenceCriterion>
+                  </Left>
+                  <Right>
+                    <FormulaCriterion>
+                      <Formula>TODAY()</Formula>
+                    </FormulaCriterion>
+                  </Right>
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="IsEmpty">
+                  <Left>
+                    <CurrentEFormFieldReferenceCriterion ColumnName="Group on User">
+                      <LineNumber>1</LineNumber>
+                    </CurrentEFormFieldReferenceCriterion>
+                  </Left>
+                  <Right xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="NotEqualTo">
+                  <Left>
+                    <CurrentEFormFieldReferenceCriterion ColumnName="System Wide Reminder">
+                      <LineNumber>1</LineNumber>
+                    </CurrentEFormFieldReferenceCriterion>
+                  </Left>
+                  <Right>
+                    <ConstantCriterion>
+                      <Value>
+                        <Boolean>true</Boolean>
+                      </Value>
+                    </ConstantCriterion>
+                  </Right>
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+            <CriterionExpression>
+              <Criterion>
+                <FormulaCriterion>
+                  <Formula>TODAY() &gt; ARRAY_LAST([Date Email Sent])</Formula>
+                </FormulaCriterion>
+              </Criterion>
+            </CriterionExpression>
+          </Children>
+        </GroupingExpression>
+      </RunOnlyWhen>
+    </Notification>
+    <TriggerCustomEvent>
+      <EventNameTemplate>Trigger Emails</EventNameTemplate>
+      <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <TargetRecordsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <EventArgumentsFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RetainLastResultOnly>false</RetainLastResultOnly>
+      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+      <RunInsideDataLayer>false</RunInsideDataLayer>
+      <Description>Trigger System Wide Email
+Applicable to 'system wide' reminders - i.e. sends reminder for all applicable records of an EForm Type - [System Wide Reminder] = TRUE AND [Group on User] IS EMPTY</Description>
+      <RunOnlyWhen>
+        <GroupingExpression Operator="And">
+          <Children>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="IsEmpty">
+                  <Left>
+                    <CurrentEFormFieldReferenceCriterion ColumnName="Group on User">
+                      <LineNumber>1</LineNumber>
+                    </CurrentEFormFieldReferenceCriterion>
+                  </Left>
+                  <Right xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="EqualTo">
+                  <Left>
+                    <CurrentEFormFieldReferenceCriterion ColumnName="Next Reminder Date">
+                      <LineNumber>1</LineNumber>
+                    </CurrentEFormFieldReferenceCriterion>
+                  </Left>
+                  <Right>
+                    <FormulaCriterion>
+                      <Formula>TODAY()</Formula>
+                    </FormulaCriterion>
+                  </Right>
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+            <CriterionExpression>
+              <Criterion>
+                <FormulaCriterion>
+                  <Formula>TODAY() &gt; ARRAY_LAST([Date Email Sent])</Formula>
+                </FormulaCriterion>
+              </Criterion>
+            </CriterionExpression>
+          </Children>
+        </GroupingExpression>
+      </RunOnlyWhen>
+    </TriggerCustomEvent>
+    <TriggerCustomEvent>
+      <EventNameTemplate>Prepare Targeted Digest Emails</EventNameTemplate>
+      <TraceNameTemplate xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <TargetRecordsFormula></TargetRecordsFormula>
+      <EventArgumentsFormula></EventArgumentsFormula>
+      <ResultIntoColumn xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RetainLastResultOnly>false</RetainLastResultOnly>
+      <CredentialToken xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <ShowWarningIfNoMatchingEvent>false</ShowWarningIfNoMatchingEvent>
+      <RunInsideDataLayer>false</RunInsideDataLayer>
+      <Description>Build Digest Emails 
+[Digest Email] = TRUE</Description>
+      <RunOnlyWhen>
+        <GroupingExpression Operator="And">
+          <Children>
+            <CriterionExpression>
+              <Criterion>
+                <FormulaCriterion>
+                  <Formula>TODAY() &gt; ARRAY_LAST([Date Email Sent])</Formula>
+                </FormulaCriterion>
+              </Criterion>
+            </CriterionExpression>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="EqualTo">
+                  <Left>
+                    <CurrentEFormFieldReferenceCriterion ColumnName="Next Reminder Date">
+                      <LineNumber>1</LineNumber>
+                    </CurrentEFormFieldReferenceCriterion>
+                  </Left>
+                  <Right>
+                    <FormulaCriterion>
+                      <Formula>TODAY()</Formula>
+                    </FormulaCriterion>
+                  </Right>
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="IsNotEmpty">
+                  <Left>
+                    <CurrentEFormFieldReferenceCriterion ColumnName="Group on User">
+                      <LineNumber>1</LineNumber>
+                    </CurrentEFormFieldReferenceCriterion>
+                  </Left>
+                  <Right xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="EqualTo">
+                  <Left>
+                    <CurrentEFormFieldReferenceCriterion ColumnName="Digest Email">
+                      <LineNumber>1</LineNumber>
+                    </CurrentEFormFieldReferenceCriterion>
+                  </Left>
+                  <Right>
+                    <ConstantCriterion>
+                      <Value>
+                        <Boolean>true</Boolean>
+                      </Value>
+                    </ConstantCriterion>
+                  </Right>
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+          </Children>
+        </GroupingExpression>
+      </RunOnlyWhen>
+    </TriggerCustomEvent>
+    <ChangeFieldValues>
+      <EFormRef xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <RecordIDFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+      <FieldEntries>
+        <FieldEntry>
+          <ColumnName>Date Email Sent</ColumnName>
+          <AssignWholeColumn>false</AssignWholeColumn>
+          <LineNumberFormula xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          <Formula>IF( 
+  [Date Email Sent] = NULL(), 
+  ARRAY(NOW()), 
+  ARRAY_CONCAT(
+	[Date Email Sent], 
+	ARRAY(NOW())
+  )
+)</Formula>
+        </FieldEntry>
+      </FieldEntries>
+      <UpdateRecordFormulas>false</UpdateRecordFormulas>
+      <Description>Log Date Email Sent
+Applicable to 'standard' reminders - i.e. sends reminder for a single record</Description>
+      <RunOnlyWhen>
+        <GroupingExpression Operator="And">
+          <Children>
+            <CriterionExpression>
+              <Criterion>
+                <ComparisonCriterion Operator="EqualTo">
+                  <Left>
+                    <CurrentEFormFieldReferenceCriterion ColumnName="Next Reminder Date">
+                      <LineNumber>1</LineNumber>
+                    </CurrentEFormFieldReferenceCriterion>
+                  </Left>
+                  <Right>
+                    <FormulaCriterion>
+                      <Formula>TODAY()</Formula>
+                    </FormulaCriterion>
+                  </Right>
+                </ComparisonCriterion>
+              </Criterion>
+            </CriterionExpression>
+          </Children>
+        </GroupingExpression>
+      </RunOnlyWhen>
+    </ChangeFieldValues>
+  </Tasks>
+  <Timing>
+    <DailyWeekly>
+      <Days>
+        <Day>Monday</Day>
+        <Day>Tuesday</Day>
+        <Day>Wednesday</Day>
+        <Day>Thursday</Day>
+        <Day>Friday</Day>
+        <Day>Saturday</Day>
+        <Day>Sunday</Day>
+      </Days>
+    </DailyWeekly>
+  </Timing>
+  <StartAfterDate>2020-06-17T05:17:36.0000000Z</StartAfterDate>
+  <StartTime>0001-01-01T07:00:00.0000000Z</StartTime>
+  <EndTime>0001-01-01T10:00:00.0000000Z</EndTime>
+  <RepeatHours xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+  <LastRun>2024-06-05T21:02:52.6990000Z</LastRun>
+  <Role>system</Role>
+  <SaveRecordOnCompletion>true</SaveRecordOnCompletion>
+  <Security>
+    <Roles>
+      <RoleEntry Read="true" Administrate="true">
+        <Role>Administrators</Role>
+      </RoleEntry>
+    </Roles>
+  </Security>
+</ScheduledEvent>

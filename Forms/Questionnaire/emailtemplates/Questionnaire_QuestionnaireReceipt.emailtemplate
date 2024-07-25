@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PredefinedEmailTemplate xmlns="http://ebms.com.au/schema/interchange/1.1">
+  <EForm>Questionnaire</EForm>
+  <Name>Questionnaire Receipt</Name>
+  <Description>A receipt to participant</Description>
+  <ContentTemplate>
+    <ToAddressesTemplate>role:"{[Assessment Submitted by]}"</ToAddressesTemplate>
+    <CcAddressesTemplate></CcAddressesTemplate>
+    <BccAddressesTemplate></BccAddressesTemplate>
+    <ReplyToAddressesTemplate></ReplyToAddressesTemplate>
+    <SubjectTemplate>Thank you for your participation</SubjectTemplate>
+    <BodyTemplate>Hello {[Assessor Name]},
+
+You have completed a questionnaire, please click the link to view the result. 
+{EBMS_GET_EFORMRECORD_URL([EFormType], [RecordID])&amp;"?$View=Results"}
+
+Thanks,
+The VendorPanel Team</BodyTemplate>
+    <IsBodyHtml>false</IsBodyHtml>
+    <UseDefaultFrame>true</UseDefaultFrame>
+  </ContentTemplate>
+  <AttachedFileGenerators />
+</PredefinedEmailTemplate>
